@@ -183,7 +183,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
           <div class="ir"><span class="il">発生日時</span><span class="iv" id="q-time">－</span></div>
           <div class="ir"><span class="il">震源地</span><span class="iv" id="q-epi">－</span></div>
           <div class="ir"><span class="il">最大震度</span><span class="iv" id="q-shindo">－</span></div>
-          <div class="ir"><span class="il">津波の心配</span><span class="iv" id="q-tsunami">－</span></div>
+          <div class="ir"><span class="il">津波の恐れ</span><span class="iv" id="q-tsunami">－</span></div>
         </div>
       </div>
       <div class="sec">
@@ -200,7 +200,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
         <div class="nt"><i class="ti ti-info-circle" style="font-size:13px;vertical-align:-2px;margin-right:4px"></i>震源近傍のRCは別途現地報告をお待ちください。</div>
       </div>
       <div class="sec">
-        <h3 style="font-size:11px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">各オフィス（ネット情報による速報）</h3>
+        <h3 style="font-size:11px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">各オフィス（地震情報による速報）</h3>
         <div id="office-grid" class="bg"></div>
         <div class="nt"><i class="ti ti-info-circle" style="font-size:13px;vertical-align:-2px;margin-right:4px"></i>震源近傍のオフィスは別途現地報告をお待ちください。</div>
       </div>
@@ -249,7 +249,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
       </div>
       <div class="sec">
         <h3 style="font-size:11px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">各社 交通情報</h3>
-        <div class="lr"><span>JARTIC 道路交通情報</span><a href="https://www.jartic.or.jp/" target="_blank" style="color:var(--info);font-size:12px;display:flex;align-items:center;gap:3px"><i class="ti ti-external-link" style="font-size:14px"></i> 開く</a></div>
+        <div class="lr"><span>道路交通情報センター（JARTIC）</span><a href="https://www.jartic.or.jp/" target="_blank" style="color:var(--info);font-size:12px;display:flex;align-items:center;gap:3px"><i class="ti ti-external-link" style="font-size:14px"></i> 開く</a></div>
         <div class="lr"><span>NEXCO東日本</span><a href="https://www.e-nexco.co.jp/traffic_info/" target="_blank" style="color:var(--info);font-size:12px;display:flex;align-items:center;gap:3px"><i class="ti ti-external-link" style="font-size:14px"></i> 開く</a></div>
         <div class="lr"><span>NEXCO中日本</span><a href="https://www.c-nexco.co.jp/traffic/traffic_info.html" target="_blank" style="color:var(--info);font-size:12px;display:flex;align-items:center;gap:3px"><i class="ti ti-external-link" style="font-size:14px"></i> 開く</a></div>
         <div class="lr"><span>NEXCO西日本</span><a href="https://www.w-nexco.co.jp/activity/traffic_info/" target="_blank" style="color:var(--info);font-size:12px;display:flex;align-items:center;gap:3px"><i class="ti ti-external-link" style="font-size:14px"></i> 開く</a></div>
@@ -770,7 +770,7 @@ function buildMapLinks(epi){
       <i class="ti ti-chevron-right" style="color:var(--text2);font-size:16px"></i></a>
     <a class="mc" href="https://www.jartic.or.jp/" target="_blank">
       <div style="display:flex;align-items:center;gap:10px"><div class="mi"><i class="ti ti-car"></i></div>
-      <div><div class="mt">JARTIC 道路交通情報</div><div class="ms">通行止め・規制をリアルタイム確認</div></div></div>
+      <div><div class="mt">道路交通情報センター（JARTIC）</div><div class="ms">通行止め・規制をリアルタイム確認</div></div></div>
       <i class="ti ti-chevron-right" style="color:var(--text2);font-size:16px"></i></a>
     <a class="mc" href="${nx.url}" target="_blank">
       <div style="display:flex;align-items:center;gap:10px"><div class="mi"><i class="ti ti-road"></i></div>
@@ -1052,7 +1052,7 @@ function buildText(){
   rcSec+='※震源近傍のRCは別途現地報告をお待ちください。';
   let officeSec='';
   if(OFFICE_LIST.length>0){
-    officeSec='\n\n■ 各オフィス（ネット情報による速報）\n';
+    officeSec='\n\n■ 各オフィス（地震情報による速報）\n';
     OFFICE_LIST.forEach((o,i)=>{
       const el=document.getElementById('office-s-'+i);
       const st=el?el.textContent.trim():'未確認';
@@ -1068,7 +1068,7 @@ function buildText(){
   roadSec+=S.roads.length>0
     ?S.roads.map(r=>`・${r.road} ${r.section}（${r.direction}）：${r.status}`).join('\n')
     :'・通行止め情報なし（現時点）';
-  if(S.mapLinks){roadSec+=`\n・地図（渋滞表示）：${S.mapLinks.google}\n・JARTIC：https://www.jartic.or.jp/`;}
+  if(S.mapLinks){roadSec+=`\n・地図（渋滞表示）：${S.mapLinks.google}\n・道路交通情報センター（JARTIC）：https://www.jartic.or.jp/`;}
   function delLine(co){
     if(!co)return '確認中';
     if(co.status==='suspended')return '[制限あり]'+(co.detail?' '+co.detail:'');
@@ -1080,7 +1080,7 @@ function buildText(){
   if(S.news&&S.news.length>0){newsSec='\n\n■ 参考情報（輸送・インフラ）\n'+S.news.map(n=>`・${n.summary}（${n.source||''}）`).join('\n');}
   let airportSec='';
   if(S.airports&&S.airports.length>0){airportSec='\n\n■ 空港便（成田・羽田）\n'+S.airports.map(n=>`・${n.summary}（${n.source||''}）`).join('\n');}
-  const footer='\n\n物流関連情報に変化があり次第、改めて本チャネルにて報告します。\n\n---------------------\n「参考リンク」\n・気象庁 地震情報：https://www.jma.go.jp/jp/quake/\n・NHK 防災・気象情報：https://www3.nhk.or.jp/sokuho/jishin/\n・ヤマト運輸 集配遅延情報：https://www.kuronekoyamato.co.jp/ytc/chien/chien_hp.html\n・佐川急便 集配遅延情報：https://www2.sagawa-exp.co.jp/information/list/\n・成田空港 運航状況：https://www.narita-airport.jp/ja/flight/\n・羽田空港 運航状況：https://www.haneda-airport.jp/inter/flight/';
+  const footer='\n\n物流関連情報に変化があり次第、改めて本チャネルにて報告します。\n\n---------------------\n「参考リンク」\n・気象庁 地震情報：https://www.jma.go.jp/jp/quake/\n・NHK 防災・気象情報：https://www3.nhk.or.jp/sokuho/jishin/\n・ヤマト運輸 集配遅延情報：https://www.kuronekoyamato.co.jp/ytc/chien/chien_hp.html\n・佐川急便 集配遅延情報：https://www2.sagawa-exp.co.jp/information/list/\n・成田空港 運航状況：https://www.narita-airport.jp/ja/flight/\n・羽田空港 運航状況：https://tokyo-haneda.com/flight/index.html\n・道路交通情報センター（JARTIC）：https://www.jartic.or.jp/';
   const body=`${urgency}\n\n${callout}\n\n${qSec}${shindoSec}${rcSec}${officeSec}${roadSec}${delSec}${newsSec}${airportSec}${footer}`;
   document.getElementById('t-body').textContent=body;
   return{title,body};
