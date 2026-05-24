@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <meta name="theme-color" content="#E24B4A">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -14,86 +14,75 @@
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 <style>
-:root {
-  --bg:#ffffff; --bg2:#f5f5f3; --bg3:#eeece6;
-  --text:#1a1a18; --text2:#5f5e5a; --text3:#888780;
-  --border:rgba(0,0,0,0.12); --border2:rgba(0,0,0,0.22);
-  --info-bg:#e6f1fb; --info:#185fa5;
-  --r-md:8px; --r-lg:12px;
+:root{
+  --bg:#fff;--bg2:#f5f5f3;--bg3:#eeece6;
+  --text:#1a1a18;--text2:#5f5e5a;--text3:#888780;
+  --border:rgba(0,0,0,.12);--border2:rgba(0,0,0,.22);
+  --info-bg:#e6f1fb;--info:#185fa5;
+  --r-md:8px;--r-lg:12px;
   --safe-top:env(safe-area-inset-top,0px);
   --safe-bottom:env(safe-area-inset-bottom,0px);
 }
 @media(prefers-color-scheme:dark){
-  :root{
-    --bg:#1c1c1a; --bg2:#252523; --bg3:#2e2e2b;
-    --text:#f0ede6; --text2:#a8a69f; --text3:#6e6c66;
-    --border:rgba(255,255,255,0.1); --border2:rgba(255,255,255,0.2);
-    --info-bg:#0c2e52; --info:#7ab8f0;
-  }
+  :root{--bg:#1c1c1a;--bg2:#252523;--bg3:#2e2e2b;--text:#f0ede6;--text2:#a8a69f;--text3:#6e6c66;--border:rgba(255,255,255,.1);--border2:rgba(255,255,255,.2);--info-bg:#0c2e52;--info:#7ab8f0;}
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans','Noto Sans JP',sans-serif;font-size:14px;color:var(--text);background:var(--bg3)}
 #app{display:flex;flex-direction:column;height:100%;padding-top:var(--safe-top)}
+#install-banner{display:none;background:var(--info-bg);color:var(--info);padding:10px 14px;font-size:12px;align-items:center;justify-content:space-between;gap:8px;flex-shrink:0}
+#install-banner button{font-size:12px;font-weight:500;padding:5px 12px;border:none;border-radius:var(--r-md);cursor:pointer}
+.ib-install{background:var(--info);color:#fff}
+.ib-later{background:transparent;color:var(--info);border:0.5px solid var(--info)!important}
 #header{background:var(--bg);border-bottom:0.5px solid var(--border);padding:10px 16px 8px;flex-shrink:0}
 #header h1{font-size:16px;font-weight:500;display:flex;align-items:center;gap:8px}
 #header h1 i{font-size:20px;color:#E24B4A}
-#timer-bar{display:none;align-items:center;gap:8px;padding:5px 16px 6px;background:var(--bg2);border-bottom:0.5px solid var(--border);font-size:12px;color:var(--text2)}
+#timer-bar{display:none;align-items:center;gap:8px;padding:5px 16px 6px;background:var(--bg2);border-bottom:0.5px solid var(--border);font-size:12px;color:var(--text2);flex-shrink:0}
 #timer-bar.active{display:flex}
 #timer-bar.warn{background:#fff3cd;color:#856404}
 @media(prefers-color-scheme:dark){#timer-bar.warn{background:#3d2c00;color:#f5c842}}
-#timer-countdown{font-size:14px;font-weight:500;color:var(--text);font-variant-numeric:tabular-nums;min-width:38px}
-#timer-bar.warn #timer-countdown{color:#856404}
-@media(prefers-color-scheme:dark){#timer-bar.warn #timer-countdown{color:#f5c842}}
-#btn-open-teams{display:none;width:100%;padding:12px;border-radius:var(--r-lg);background:#6264a7;color:#fff;font-size:14px;font-weight:500;border:none;cursor:pointer;margin-top:8px;align-items:center;justify-content:center;gap:8px}
-#btn-open-teams.show{display:flex}
+#timer-cd{font-size:14px;font-weight:500;color:var(--text);font-variant-numeric:tabular-nums;min-width:38px}
+#timer-bar.warn #timer-cd{color:#856404}
+@media(prefers-color-scheme:dark){#timer-bar.warn #timer-cd{color:#f5c842}}
 #content{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:12px 12px 16px}
-#tab-bar{background:var(--bg);border-top:0.5px solid var(--border);display:flex;padding-bottom:var(--safe-bottom);flex-shrink:0;z-index:10}
-.tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:8px 2px 6px;font-size:9px;font-weight:500;color:var(--text3);background:none;border:none;cursor:pointer}
+#tab-bar{background:var(--bg);border-top:0.5px solid var(--border);display:flex;padding-bottom:var(--safe-bottom);flex-shrink:0}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:8px 2px 6px;font-size:9px;font-weight:500;color:var(--text3);background:none;border:none;cursor:pointer;transition:color .15s;-webkit-tap-highlight-color:transparent}
 .tab i{font-size:20px}
 .tab.active{color:#E24B4A}
-.pane{display:none}
-.pane.active{display:block}
+.pane{display:none}.pane.active{display:block}
 .sec{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--r-lg);padding:14px 16px;margin-bottom:10px}
 .sec-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
 .sec-h h3{font-size:11px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.06em}
 .bdg{display:inline-block;font-size:11px;font-weight:500;padding:2px 8px;border-radius:var(--r-md)}
-.bdg-red{background:#fcebeb;color:#a32d2d}
-.bdg-amb{background:#faeeda;color:#854f0b}
-.bdg-grn{background:#eaf3de;color:#3b6d11}
-.bdg-blu{background:#e6f1fb;color:#185fa5}
-.bdg-gry{background:#f1efe8;color:#5f5e5a}
-.bdg-pur{background:#eeedfe;color:#3c3489}
+.bdg-red{background:#fcebeb;color:#a32d2d}.bdg-amb{background:#faeeda;color:#854f0b}
+.bdg-grn{background:#eaf3de;color:#3b6d11}.bdg-blu{background:#e6f1fb;color:#185fa5}
+.bdg-gry{background:#f1efe8;color:#5f5e5a}.bdg-pur{background:#eeedfe;color:#3c3489}
 @media(prefers-color-scheme:dark){
-  .bdg-red{background:#4a1515;color:#f09595}
-  .bdg-amb{background:#412402;color:#fac775}
-  .bdg-grn{background:#173404;color:#97c459}
-  .bdg-blu{background:#042c53;color:#85b7eb}
-  .bdg-gry{background:#2c2c2a;color:#b4b2a9}
-  .bdg-pur{background:#26215c;color:#afa9ec}
+  .bdg-red{background:#4a1515;color:#f09595}.bdg-amb{background:#412402;color:#fac775}
+  .bdg-grn{background:#173404;color:#97c459}.bdg-blu{background:#042c53;color:#85b7eb}
+  .bdg-gry{background:#2c2c2a;color:#b4b2a9}.bdg-pur{background:#26215c;color:#afa9ec}
 }
 .ir{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:0.5px solid var(--border);font-size:13px}
 .ir:last-child{border-bottom:none}
-.il{color:var(--text2);flex-shrink:0;margin-right:8px}
-.iv{font-weight:500;text-align:right}
+.il{color:var(--text2);flex-shrink:0;margin-right:8px}.iv{font-weight:500;text-align:right}
 .tbl{width:100%;font-size:12px;border-collapse:collapse}
 .tbl th{text-align:left;padding:4px 6px;font-weight:500;color:var(--text2);border-bottom:0.5px solid var(--border)}
 .tbl td{padding:5px 6px;border-bottom:0.5px solid var(--border)}
 .tbl tr:last-child td{border-bottom:none}
-.tbl-fx{table-layout:fixed}
-.tbl-fx td{word-break:break-all;vertical-align:top}
+.tbl-fx{table-layout:fixed}.tbl-fx td{word-break:break-all;vertical-align:top}
 .rb{display:flex;align-items:center;gap:4px;font-size:12px;color:var(--text2);background:none;border:none;cursor:pointer;padding:4px;border-radius:var(--r-md)}
 .fb{width:100%;padding:12px;font-size:14px;font-weight:500;background:var(--info-bg);color:var(--info);border:none;border-radius:var(--r-md);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px}
-.fb:active,.bo:active,.bi:active,.share-btn:active,.teams-post-btn:active{transform:scale(.98)}
+.fb:active,.bo:active,.share-btn:active{transform:scale(.98)}
 .bo{width:100%;margin-top:8px;padding:10px;font-size:13px;font-weight:500;border:0.5px solid var(--border2);border-radius:var(--r-md);background:var(--bg);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;color:var(--text)}
-.bi{width:100%;margin-top:8px;padding:12px;font-size:13px;font-weight:500;border:none;border-radius:var(--r-md);background:var(--info-bg);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;color:var(--info)}
 .share-btn{width:100%;margin-top:8px;padding:12px;font-size:13px;font-weight:500;border:none;border-radius:var(--r-md);background:#464EB8;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;color:#fff}
 .teams-post-btn{width:100%;margin-top:8px;padding:12px;font-size:13px;font-weight:500;border:none;border-radius:var(--r-md);background:#107C41;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;color:#fff}
+.teams-post-btn:active{transform:scale(.98)}
+#btn-open-teams{display:none;width:100%;margin-top:8px;padding:12px;font-size:13px;font-weight:500;border:none;border-radius:var(--r-md);background:#6264a7;cursor:pointer;align-items:center;justify-content:center;gap:6px;color:#fff}
+#btn-open-teams.show{display:flex}
 .mc{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;border-radius:var(--r-md);border:0.5px solid var(--border);margin-bottom:8px;text-decoration:none;background:var(--bg)}
 .mc:last-child{margin-bottom:0}
 .mi{width:30px;height:30px;border-radius:var(--r-md);background:var(--info-bg);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .mi i{font-size:15px;color:var(--info)}
-.mt{font-size:13px;font-weight:500;color:var(--text)}
-.ms{font-size:11px;color:var(--text2);margin-top:1px}
+.mt{font-size:13px;font-weight:500;color:var(--text)}.ms{font-size:11px;color:var(--text2);margin-top:1px}
 .dc{background:var(--bg2);border-radius:var(--r-md);padding:10px 12px;margin-bottom:8px}
 .dh{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
 .dl{display:flex;flex-direction:column;gap:4px;margin-top:8px}
@@ -104,41 +93,33 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
 .lr:last-child{border-bottom:none}
 .al{border-radius:var(--r-md);padding:9px 12px;font-size:13px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
 .al i{font-size:17px;flex-shrink:0}
-.al-red{background:#fcebeb;color:#a32d2d}
-.al-amb{background:#faeeda;color:#854f0b}
-@media(prefers-color-scheme:dark){
-  .al-red{background:#4a1515;color:#f09595}
-  .al-amb{background:#412402;color:#fac775}
-}
-.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:8px}
+.al-red{background:#fcebeb;color:#a32d2d}.al-amb{background:#faeeda;color:#854f0b}
+@media(prefers-color-scheme:dark){.al-red{background:#4a1515;color:#f09595}.al-amb{background:#412402;color:#fac775}}
+.bg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:8px}
 .bc{background:var(--bg2);border-radius:var(--r-md);padding:8px 10px}
-.bl{font-size:10px;color:var(--text2);margin-bottom:2px}
-.bn{font-size:13px;font-weight:500}
+.bl{font-size:10px;color:var(--text2);margin-bottom:2px}.bn{font-size:13px;font-weight:500}
 .bs{font-size:11px;margin-top:4px;display:flex;align-items:center}
 .sd{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:5px;flex-shrink:0}
 .nc{border-radius:var(--r-md);border:0.5px solid var(--border);padding:10px 12px;margin-bottom:8px;background:var(--bg)}
 .nc:last-child{margin-bottom:0}
 .ncat{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:500;padding:2px 7px;border-radius:var(--r-md);margin-bottom:6px}
-.cat-rail{background:#eeedfe;color:#3c3489}
-.cat-port{background:#e1f5ee;color:#085041}
-.cat-infra{background:#faeeda;color:#633806}
+.cat-rail{background:#eeedfe;color:#3c3489}.cat-port{background:#e1f5ee;color:#085041}
+.cat-infra{background:#faeeda;color:#633806}.cat-other{background:#f1efe8;color:#444441}
 .cat-airport{background:#fef3e2;color:#7c4e00}
-.cat-other{background:#f1efe8;color:#444441}
 @media(prefers-color-scheme:dark){
-  .cat-rail{background:#26215c;color:#afa9ec}
-  .cat-port{background:#04342c;color:#5dcaa5}
-  .cat-infra{background:#412402;color:#ef9f27}
-.cat-airport{background:#3d2500;color:#f5b84a}
-  .cat-other{background:#2c2c2a;color:#b4b2a9}
+  .cat-rail{background:#26215c;color:#afa9ec}.cat-port{background:#04342c;color:#5dcaa5}
+  .cat-infra{background:#412402;color:#ef9f27}.cat-other{background:#2c2c2a;color:#b4b2a9}
+  .cat-airport{background:#3d2500;color:#f5b84a}
 }
 .to{font-size:12px;line-height:1.75;white-space:pre-wrap;background:var(--bg2);border:0.5px solid var(--border);border-radius:var(--r-md);padding:12px;max-height:360px;overflow-y:auto;color:var(--text);font-family:'Courier New',monospace}
 .tb{font-size:12px;font-weight:500;padding:9px 10px;background:var(--bg2);border-radius:var(--r-md);border:0.5px solid var(--border);color:var(--text);margin-bottom:10px;word-break:break-all;line-height:1.5}
-.row-item{display:flex;align-items:flex-start;gap:8px;padding:10px 0;border-bottom:0.5px solid var(--border)}
-.row-item:last-child{border-bottom:none}
-.row-num{font-size:11px;font-weight:500;color:var(--text2);width:16px;flex-shrink:0;text-align:center;padding-top:8px}
-.row-inputs{flex:1;display:flex;flex-direction:column;gap:6px}
-.row-inputs input,.field-inp{font-size:13px;padding:9px 12px;border-radius:var(--r-md);border:0.5px solid var(--border2);background:var(--bg);color:var(--text);width:100%}
-.row-del{background:none;border:none;cursor:pointer;color:var(--text2);padding:6px;border-radius:var(--r-md);display:flex;align-items:center;flex-shrink:0;margin-top:4px}
+.rc-row{display:flex;align-items:flex-start;gap:8px;padding:10px 0;border-bottom:0.5px solid var(--border)}
+.rc-row:last-child{border-bottom:none}
+.rc-num{font-size:11px;font-weight:500;color:var(--text2);width:16px;flex-shrink:0;text-align:center;padding-top:8px}
+.rc-inputs{flex:1;display:flex;flex-direction:column;gap:6px}
+.rc-inputs input,.field-input{font-size:13px;padding:9px 12px;border-radius:var(--r-md);border:0.5px solid var(--border2);background:var(--bg);color:var(--text);width:100%}
+.field-input:focus,.rc-inputs input:focus{outline:2px solid var(--info);outline-offset:0}
+.rc-del{background:none;border:none;cursor:pointer;color:var(--text2);padding:6px;border-radius:var(--r-md);display:flex;align-items:center;flex-shrink:0;margin-top:4px}
 .add-btn{width:100%;padding:8px;font-size:12px;font-weight:500;border:0.5px dashed var(--border2);border-radius:var(--r-md);background:transparent;cursor:pointer;color:var(--text2);display:flex;align-items:center;justify-content:center;gap:5px;margin-top:8px}
 .save-bar{display:flex;justify-content:flex-end;align-items:center;gap:8px;margin-top:12px}
 .sb{padding:7px 14px;font-size:12px;font-weight:500;border:none;border-radius:var(--r-md);cursor:pointer;display:flex;align-items:center;gap:5px}
@@ -154,23 +135,14 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
 .sp{width:22px;height:22px;border:2px solid var(--border2);border-top-color:var(--text2);border-radius:50%;animation:spin .8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 .key-row{display:flex;gap:8px;align-items:center}
-.key-row .field-inp{flex:1;font-family:monospace;letter-spacing:.05em}
+.key-row .field-input{flex:1;font-family:monospace;letter-spacing:.05em}
 .key-toggle{background:none;border:none;cursor:pointer;color:var(--text2);padding:8px;flex-shrink:0}
 .status-pill{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;margin-bottom:8px}
-.pill-ok{background:#eaf3de;color:#3b6d11}
-.pill-ng{background:#fcebeb;color:#a32d2d}
-.pill-na{background:#f1efe8;color:#5f5e5a}
-@media(prefers-color-scheme:dark){
-  .pill-ok{background:#173404;color:#97c459}
-  .pill-ng{background:#4a1515;color:#f09595}
-  .pill-na{background:#2c2c2a;color:#b4b2a9}
-}
-.wh-badge{font-size:10px;font-weight:500;padding:1px 7px;border-radius:4px;background:rgba(70,78,184,0.13);color:#464EB8;margin-left:6px}
-@media(prefers-color-scheme:dark){.wh-badge{background:rgba(70,78,184,0.27);color:#9ea4f0}}
-#install-banner{display:none;background:var(--info-bg);color:var(--info);padding:10px 14px;font-size:12px;align-items:center;justify-content:space-between;gap:8px;flex-shrink:0}
-#install-banner button{font-size:12px;font-weight:500;padding:5px 12px;border:none;border-radius:var(--r-md);cursor:pointer}
-.ib-install{background:var(--info);color:#fff}
-.ib-later{background:transparent;color:var(--info)}
+.pill-ok{background:#eaf3de;color:#3b6d11}.pill-ng{background:#fcebeb;color:#a32d2d}.pill-na{background:#f1efe8;color:#5f5e5a}
+@media(prefers-color-scheme:dark){.pill-ok{background:#173404;color:#97c459}.pill-ng{background:#4a1515;color:#f09595}.pill-na{background:#2c2c2a;color:#b4b2a9}}
+.webhook-row{display:flex;flex-direction:column;gap:6px}
+.webhook-badge{font-size:10px;font-weight:500;padding:1px 7px;border-radius:4px;background:#464EB822;color:#464EB8;margin-left:6px}
+@media(prefers-color-scheme:dark){.webhook-badge{background:#464EB844;color:#9ea4f0}}
 #toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:#1a1a18ee;color:#fff;font-size:12px;padding:8px 16px;border-radius:20px;opacity:0;transition:all .25s;pointer-events:none;white-space:nowrap;z-index:9999}
 #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 #progress{position:fixed;top:0;left:0;height:2px;background:#E24B4A;width:0%;transition:width .3s;z-index:9999;pointer-events:none}
@@ -180,7 +152,6 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
 <div id="progress"></div>
 <div id="toast"></div>
 <div id="app">
-
   <div id="install-banner">
     <span><i class="ti ti-download" style="vertical-align:-2px;margin-right:4px"></i>ホーム画面に追加できます</span>
     <div style="display:flex;gap:6px">
@@ -188,22 +159,15 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
       <button class="ib-later" onclick="document.getElementById('install-banner').style.display='none'">後で</button>
     </div>
   </div>
-
   <div id="header">
-    <h1>
-      <i class="ti ti-ripple" aria-hidden="true"></i>
-      地震 物流影響 速報ツール
-      <span id="api-dot" style="width:7px;height:7px;border-radius:50%;background:#888780;display:inline-block;margin-left:4px;flex-shrink:0"></span>
-    </h1>
+    <h1><i class="ti ti-ripple" aria-hidden="true"></i>地震 物流影響 速報ツール<span id="api-dot" style="width:7px;height:7px;border-radius:50%;background:#888780;display:inline-block;margin-left:4px;flex-shrink:0"></span></h1>
   </div>
   <div id="timer-bar">
     <i class="ti ti-clock" style="font-size:14px;flex-shrink:0" aria-hidden="true"></i>
-    <span>投稿まで</span>
-    <span id="timer-countdown">--:--</span>
+    <span>投稿まで</span><span id="timer-cd">--:--</span>
     <span style="flex:1"></span>
-    <button onclick="stopPostTimer()" style="font-size:11px;padding:3px 8px;border-radius:6px;border:0.5px solid var(--border2);background:var(--bg);color:var(--text2);cursor:pointer">停止</button>
+    <button onclick="stopTimer()" style="font-size:11px;padding:3px 8px;border-radius:6px;border:0.5px solid var(--border2);background:var(--bg);color:var(--text2);cursor:pointer">停止</button>
   </div>
-
   <div id="content">
 
     <!-- 情報収集タブ -->
@@ -216,45 +180,38 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
         <div id="ld-q" class="ld"><div class="sp"></div><span>地震情報を取得中...</span></div>
         <div id="q-content">
           <div id="alert-box"></div>
-          <div class="ir"><span class="il">発生日時</span><span class="iv" id="q-time">-</span></div>
-          <div class="ir"><span class="il">震源地</span><span class="iv" id="q-epi">-</span></div>
-          <div class="ir"><span class="il">最大震度</span><span class="iv" id="q-shindo">-</span></div>
-          <div class="ir"><span class="il">津波の心配</span><span class="iv" id="q-tsunami">-</span></div>
+          <div class="ir"><span class="il">発生日時</span><span class="iv" id="q-time">－</span></div>
+          <div class="ir"><span class="il">震源地</span><span class="iv" id="q-epi">－</span></div>
+          <div class="ir"><span class="il">最大震度</span><span class="iv" id="q-shindo">－</span></div>
+          <div class="ir"><span class="il">津波の心配</span><span class="iv" id="q-tsunami">－</span></div>
         </div>
       </div>
-
       <div class="sec">
         <div class="sec-h">
           <h3>震度別エリア</h3>
           <div class="seg-wrap" id="shindo-filter"></div>
         </div>
-        <table class="tbl">
-          <thead><tr><th style="width:70px">震度</th><th>主な地域</th></tr></thead>
-          <tbody id="shindo-body"><tr><td colspan="2" style="color:var(--text2);text-align:center;padding:14px 0;font-size:12px">取得後に表示</td></tr></tbody>
-        </table>
+        <table class="tbl"><thead><tr><th style="width:70px">震度</th><th>主な地域</th></tr></thead>
+        <tbody id="shindo-body"><tr><td colspan="2" style="color:var(--text2);text-align:center;padding:14px 0;font-size:12px">取得後に表示</td></tr></tbody></table>
       </div>
-
       <div class="sec">
-        <h3 style="font-size:11px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">各RC（ネット情報による速報）</h3>
-        <div id="rc-grid" class="grid2"></div>
-        <div class="nt" style="margin-top:8px"><i class="ti ti-info-circle" style="font-size:13px;vertical-align:-2px;margin-right:4px"></i>震源近傍の各RCは別途現地報告をお待ちください。</div>
+        <h3 style="font-size:11px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">各RC拠点（ネット情報による速報）</h3>
+        <div id="rc-grid" class="bg"></div>
+        <div class="nt"><i class="ti ti-info-circle" style="font-size:13px;vertical-align:-2px;margin-right:4px"></i>震源近傍のRCは別途現地報告をお待ちください。</div>
       </div>
-
       <div class="sec">
         <h3 style="font-size:11px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">各オフィス（ネット情報による速報）</h3>
-        <div id="office-grid" class="grid2"></div>
-        <div class="nt" style="margin-top:8px"><i class="ti ti-info-circle" style="font-size:13px;vertical-align:-2px;margin-right:4px"></i>震源近傍のオフィスは別途現地報告をお待ちください。</div>
+        <div id="office-grid" class="bg"></div>
+        <div class="nt"><i class="ti ti-info-circle" style="font-size:13px;vertical-align:-2px;margin-right:4px"></i>震源近傍のオフィスは別途現地報告をお待ちください。</div>
       </div>
-
       <div class="sec">
         <div class="sec-h">
           <h3>空港便 影響情報 <span class="bdg bdg-pur" style="font-size:9px">成田・羽田</span></h3>
           <button class="rb" onclick="fetchAirports()"><i class="ti ti-refresh" style="font-size:14px"></i> 更新</button>
         </div>
-        <div id="ld-a" class="ld"><div class="sp"></div><span>空港便情報を取得中...</span></div>
+        <div id="ld-ap" class="ld"><div class="sp"></div><span>空港便情報を取得中...</span></div>
         <div id="airport-area"><div style="font-size:12px;color:var(--text2);padding:6px 0">取得後に成田・羽田発着便の影響情報を表示します</div></div>
       </div>
-
       <div class="sec">
         <div class="sec-h">
           <h3>物流関連 参考情報 <span class="bdg bdg-pur" style="font-size:9px">NHK・各社</span></h3>
@@ -278,19 +235,17 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
       </div>
       <div class="sec">
         <div class="sec-h">
-          <h3>地図で確認する <span class="bdg bdg-blu" style="font-size:9px">湋汚・通行止め</span></h3>
+          <h3>地図で確認する <span class="bdg bdg-blu" style="font-size:9px">渋滞・通行止め</span></h3>
           <div style="display:flex;gap:6px">
-            <button class="rb" id="map-zoom-out" onclick="adjustMapZoom(-1)" title="縮小"><i class="ti ti-minus" style="font-size:13px"></i></button>
-            <button class="rb" id="map-zoom-in" onclick="adjustMapZoom(1)" title="拡大"><i class="ti ti-plus" style="font-size:13px"></i></button>
+            <button class="rb" onclick="adjustZoom(-1)" title="縮小"><i class="ti ti-minus" style="font-size:13px"></i></button>
+            <button class="rb" onclick="adjustZoom(1)" title="拡大"><i class="ti ti-plus" style="font-size:13px"></i></button>
           </div>
         </div>
         <div id="map-links"><div style="font-size:12px;color:var(--text2);padding:4px 0">情報収集タブで地震情報を取得するとリンクが生成されます</div></div>
         <div id="map-frame-wrap" style="margin-top:10px;border-radius:10px;overflow:hidden;display:none">
           <iframe id="map-frame" width="100%" height="340" style="border:0;display:block" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div id="map-note" style="display:none;font-size:11px;color:var(--text2);margin-top:6px;line-height:1.6">
-          <i class="ti ti-info-circle" style="font-size:12px;vertical-align:-1px;margin-right:3px"></i>湋汚レイヤー表示。地図をタップしてズームや移動できます。通行止めは上のテキスト情報もご確認ください。
-        </div>
+        <div id="map-note" style="display:none;font-size:11px;color:var(--text2);margin-top:6px;line-height:1.6"><i class="ti ti-info-circle" style="font-size:12px;vertical-align:-1px;margin-right:3px"></i>渋滞レイヤー表示。地図をタップしてズームや移動できます。</div>
       </div>
       <div class="sec">
         <h3 style="font-size:11px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">各社 交通情報</h3>
@@ -308,7 +263,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
         <div class="dc">
           <div class="dh"><div style="font-size:13px;font-weight:500">ヤマト運輸</div><span class="bdg bdg-gry" id="y-bdg">未確認</span></div>
           <div id="y-det" style="font-size:12px;color:var(--text2);line-height:1.6">取得後に表示</div>
-          <div style="font-size:11px;color:var(--text2);margin-top:4px" id="y-time">-</div>
+          <div style="font-size:11px;color:var(--text2);margin-top:4px" id="y-time">－</div>
           <div class="dl">
             <a class="dlink" href="https://www.kuronekoyamato.co.jp/ytc/chien/chien_hp.html" target="_blank">
               <span class="dlink-label"><i class="ti ti-alert-circle" style="font-size:12px"></i>集荷・配達制限 / お届け遅延情報</span>
@@ -323,7 +278,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
         <div class="dc">
           <div class="dh"><div style="font-size:13px;font-weight:500">佐川急便</div><span class="bdg bdg-gry" id="s-bdg">未確認</span></div>
           <div id="s-det" style="font-size:12px;color:var(--text2);line-height:1.6">取得後に表示</div>
-          <div style="font-size:11px;color:var(--text2);margin-top:4px" id="s-time">-</div>
+          <div style="font-size:11px;color:var(--text2);margin-top:4px" id="s-time">－</div>
           <div class="dl">
             <a class="dlink" href="https://www2.sagawa-exp.co.jp/information/list/" target="_blank">
               <span class="dlink-label"><i class="ti ti-alert-circle" style="font-size:12px"></i>集荷・配達制限 / お届け遅延情報</span>
@@ -350,7 +305,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
           <h3>投稿本文</h3>
           <button class="rb" onclick="buildText()"><i class="ti ti-refresh" style="font-size:14px"></i> 再生成</button>
         </div>
-        <div id="t-body" class="to">情報収集タブで情報を取得してください。</div>
+        <div id="t-body" class="to">「情報収集」タブで情報を取得してください。</div>
         <button class="bo" onclick="cpAll()" id="btn-cp"><i class="ti ti-copy" aria-hidden="true"></i> タイトル＋本文をコピー</button>
         <button id="btn-open-teams" onclick="openTeams()"><i class="ti ti-brand-teams" aria-hidden="true"></i> Teamsを開く</button>
         <button class="share-btn" onclick="shareToTeams()" id="btn-share"><i class="ti ti-share" aria-hidden="true"></i> 共有してTeamsに送る</button>
@@ -365,43 +320,33 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
 
     <!-- 設定タブ -->
     <div id="pane-settings" class="pane">
-
       <div class="sec">
         <div class="sec-h"><h3>Anthropic APIキー</h3><span id="api-status-pill" class="status-pill pill-na"><i class="ti ti-circle" style="font-size:10px"></i> 未設定</span></div>
-        <p style="font-size:12px;color:var(--text2);margin-bottom:10px;line-height:1.6">
-          Anthropic Consoleで発行したAPIキーを入力してください。端末内のみに保存されます。<br>
-          <a href="https://console.anthropic.com/" target="_blank" style="color:var(--info);font-size:11px">console.anthropic.com で発行 &rarr;</a>
-        </p>
+        <p style="font-size:12px;color:var(--text2);margin-bottom:10px;line-height:1.6">Anthropic Consoleで発行したAPIキーを入力してください。端末内のみに保存されます。<br><a href="https://console.anthropic.com/" target="_blank" style="color:var(--info);font-size:11px">console.anthropic.com で発行 →</a></p>
         <div class="key-row">
-          <input class="field-inp" type="password" id="api-key-input" placeholder="sk-ant-api03-..." autocomplete="off" oninput="onApiKeyInput()">
+          <input class="field-input" type="password" id="api-key-input" placeholder="sk-ant-api03-..." autocomplete="off" oninput="onApiKeyInput()">
           <button class="key-toggle" onclick="toggleKeyVis()" id="key-eye"><i class="ti ti-eye" style="font-size:18px"></i></button>
         </div>
-        <div class="nt" style="margin-top:8px">
-          <i class="ti ti-shield-lock" style="font-size:13px;vertical-align:-2px;margin-right:4px"></i>
-          端末のlocalStorageのみに保存。月額上限は <a href="https://console.anthropic.com/settings/limits" target="_blank" style="color:var(--info)">Consoleで$5目安に設定推奨</a>
-        </div>
+        <div class="nt" style="margin-top:8px"><i class="ti ti-shield-lock" style="font-size:13px;vertical-align:-2px;margin-right:4px"></i>キーはこの端末のlocalStorageのみに保存。サーバーには送信されません。月額上限は <a href="https://console.anthropic.com/settings/limits" target="_blank" style="color:var(--info)">Consoleで設定推奨</a>（$5目安）。</div>
         <div class="save-bar">
           <span class="saved-msg" id="saved-api-msg"><i class="ti ti-check" style="font-size:13px"></i> 保存しました</span>
           <button class="sb sb-grn" onclick="saveApiKey()"><i class="ti ti-device-floppy" style="font-size:14px"></i> 保存する</button>
         </div>
       </div>
-
       <div class="sec">
-        <div class="sec-h">
-          <h3>Teams Webhook URL <span class="wh-badge">Power Automate</span></h3>
-          <span id="wh-status-pill" class="status-pill pill-na"><i class="ti ti-circle" style="font-size:10px"></i> 未設定</span>
+        <div class="sec-h"><h3>Teams Webhook URL <span class="webhook-badge">Power Automate</span></h3><span id="wh-status-pill" class="status-pill pill-na"><i class="ti ti-circle" style="font-size:10px"></i> 未設定</span></div>
+        <p style="font-size:12px;color:var(--text2);margin-bottom:10px;line-height:1.6">設定するとTeamsに1タップで自動投稿できます。任意項目です。</p>
+        <div class="webhook-row">
+          <input class="field-input" type="url" id="webhook-input" placeholder="https://prod-xx.westus.logic.azure.com/..." autocomplete="off" oninput="onWebhookInput()">
         </div>
-        <p style="font-size:12px;color:var(--text2);margin-bottom:10px;line-height:1.6">設定するとTeamsに1タップで自動投稿できます（任意）。</p>
-        <input class="field-inp" type="url" id="webhook-input" placeholder="https://prod-xx.westus.logic.azure.com/..." autocomplete="off" oninput="onWebhookInput()">
         <div class="save-bar">
           <span class="saved-msg" id="saved-wh-msg"><i class="ti ti-check" style="font-size:13px"></i> 保存しました</span>
-          <button class="sb" style="background:rgba(70,78,184,0.13);color:#464EB8" onclick="testWebhook()"><i class="ti ti-send" style="font-size:14px"></i> テスト</button>
+          <button class="sb" style="background:#464EB822;color:#464EB8" onclick="testWebhook()"><i class="ti ti-send" style="font-size:14px"></i> テスト送信</button>
           <button class="sb sb-grn" onclick="saveWebhook()"><i class="ti ti-device-floppy" style="font-size:14px"></i> 保存する</button>
         </div>
       </div>
-
       <div class="sec">
-        <div class="sec-h"><h3>各RC 登録・編集</h3><span style="font-size:11px;color:var(--text2)">最大6拠点</span></div>
+        <div class="sec-h"><h3>RC拠点 登録・編集</h3><span style="font-size:11px;color:var(--text2)">最大6拠点</span></div>
         <div id="rc-editor"></div>
         <button class="add-btn" id="add-rc-btn" onclick="addRcRow()"><i class="ti ti-plus" style="font-size:14px"></i> 拠点を追加</button>
         <div class="save-bar">
@@ -409,9 +354,8 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
           <button class="sb sb-grn" onclick="saveRc()"><i class="ti ti-device-floppy" style="font-size:14px"></i> 保存する</button>
         </div>
       </div>
-
       <div class="sec">
-        <div class="sec-h"><h3>各オフィス 登録・編集</h3><span style="font-size:11px;color:var(--text2)">最大5拠点</span></div>
+        <div class="sec-h"><h3>オフィス 登録・編集</h3><span style="font-size:11px;color:var(--text2)">最大5拠点</span></div>
         <div id="office-editor"></div>
         <button class="add-btn" id="add-office-btn" onclick="addOfficeRow()"><i class="ti ti-plus" style="font-size:14px"></i> オフィスを追加</button>
         <div class="save-bar">
@@ -419,22 +363,21 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
           <button class="sb sb-grn" onclick="saveOffice()"><i class="ti ti-device-floppy" style="font-size:14px"></i> 保存する</button>
         </div>
       </div>
-
       <div class="sec">
-        <div class="sec">
-          <div class="sec-h"><h3>投稿タイマー設定</h3></div>
-          <div style="font-size:12px;color:var(--text2);margin-bottom:8px">地震情報取得後、指定時間後に投稿を促すカウントダウンを表示します</div>
-          <div class="seg-wrap" id="timer-min-setting">
-            <button class="seg-btn" data-val="30" onclick="setTimerMin(this)">30分</button>
-            <button class="seg-btn active" data-val="45" onclick="setTimerMin(this)">45分</button>
-            <button class="seg-btn" data-val="60" onclick="setTimerMin(this)">60分</button>
-            <button class="seg-btn" data-val="90" onclick="setTimerMin(this)">90分</button>
-          </div>
-          <div style="margin-top:10px;display:flex;gap:8px;align-items:center">
-            <button class="sb sb-grn" onclick="saveTimerSetting()"><i class="ti ti-device-floppy" style="font-size:14px"></i> 保存する</button>
-            <span id="saved-timer-msg" style="font-size:12px;color:#3b6d11;opacity:0;transition:opacity .4s">保存しました</span>
-          </div>
+        <div class="sec-h"><h3>投稿タイマー設定</h3></div>
+        <div style="font-size:12px;color:var(--text2);margin-bottom:8px">地震情報取得後、指定時間後に投稿を促すカウントダウンを表示します</div>
+        <div class="seg-wrap" id="timer-setting">
+          <button class="seg-btn" data-val="30" onclick="setTimerMin(this)">30分</button>
+          <button class="seg-btn active" data-val="45" onclick="setTimerMin(this)">45分</button>
+          <button class="seg-btn" data-val="60" onclick="setTimerMin(this)">60分</button>
+          <button class="seg-btn" data-val="90" onclick="setTimerMin(this)">90分</button>
         </div>
+        <div class="save-bar">
+          <span class="saved-msg" id="saved-timer-msg"><i class="ti ti-check" style="font-size:13px"></i> 保存しました</span>
+          <button class="sb sb-grn" onclick="saveTimerSetting()"><i class="ti ti-device-floppy" style="font-size:14px"></i> 保存する</button>
+        </div>
+      </div>
+      <div class="sec">
         <div class="sec-h"><h3>震度表示フィルター</h3></div>
         <p style="font-size:12px;color:var(--text2);margin-bottom:10px">震度別エリアに表示する最小震度</p>
         <div class="seg-wrap" id="min-shindo-setting">
@@ -448,19 +391,14 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
           <button class="sb sb-grn" onclick="saveShindoSetting()"><i class="ti ti-device-floppy" style="font-size:14px"></i> 保存する</button>
         </div>
       </div>
-
       <div class="sec">
-        <h3 style="font-size:11px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">登録済みプレビュー</h3>
+        <h3 style="font-size:11px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">登録済み拠点プレビュー</h3>
         <div id="rc-preview" style="font-size:12px;color:var(--text2)">保存後に表示されます</div>
       </div>
-
-      <div class="nt" style="margin-bottom:10px">
-        <i class="ti ti-info-circle" style="font-size:13px;vertical-align:-2px;margin-right:4px"></i>
-        拠点名と都道府県・市区町村を入力してください。震度判定に使用します。
-      </div>
+      <div class="nt" style="margin-bottom:10px"><i class="ti ti-info-circle" style="font-size:13px;vertical-align:-2px;margin-right:4px"></i>拠点名と都道府県・市区町村を入力してください。震度判定に使用します。</div>
     </div>
 
-  </div>
+  </div><!-- /content -->
 
   <div id="tab-bar">
     <button class="tab active" onclick="sw('collect',this)"><i class="ti ti-search" aria-hidden="true"></i>情報収集</button>
@@ -472,1047 +410,742 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
 </div>
 
 <script>
-var DEFAULT_RC = [
-  {name:'東RC', pref:'神奈川県', city:'川崎市'},
-  {name:'中RC', pref:'愛知県', city:'稲沢市'},
-  {name:'西RC', pref:'兵庫県', city:'三田市'},
-  {name:'西第2RC', pref:'兵庫県', city:'川西市'}
+// ─── State ─────────────────────────────────────────────────────
+const DEFAULT_RC=[
+  {name:'東RC',pref:'神奈川県',city:'川崎市'},
+  {name:'中RC',pref:'愛知県',city:'稲沢市'},
+  {name:'西RC',pref:'兵庫県',city:'三田市'},
+  {name:'西第2RC',pref:'兵庫県',city:'川西市'}
 ];
-var DEFAULT_OFFICE = [];
-var S = {quake:null, shindo:[], roads:[], yamato:null, sagawa:null, news:[], airports:[], mapLinks:null, title:'', body:''};
-var TIMER_MIN = 45;
-var postTimerInterval = null;
-var postTimerEnd = null;
-var RC_LIST = [];
-var OFFICE_LIST = [];
-var MIN_SHINDO = 4;
-var deferredInstall = null;
+const DEFAULT_OFFICE=[];
+const S={quake:null,shindo:[],roads:[],yamato:null,sagawa:null,news:[],airports:[],mapLinks:null};
+let RC_LIST=[],OFFICE_LIST=[],MIN_SHINDO=4,TIMER_MIN=45;
+let timerInterval=null,timerEnd=null;
+let mapZ=9;
+let deferredInstall=null;
 
-function lsGet(k, d) {
-  try { var v = localStorage.getItem(k); return v !== null ? JSON.parse(v) : d; } catch(e) { return d; }
-}
-function lsSet(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch(e) {} }
-function lsStr(k, d) { try { return localStorage.getItem(k) || d; } catch(e) { return d || ''; } }
-function lsSetStr(k, v) { try { localStorage.setItem(k, v); } catch(e) {} }
+// ─── LocalStorage ───────────────────────────────────────────────
+const ls={
+  get:(k,d)=>{try{const v=localStorage.getItem(k);return v!==null?JSON.parse(v):d;}catch(e){return d;}},
+  set:(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}},
+  str:(k,d='')=>{try{return localStorage.getItem(k)||d;}catch(e){return d;}},
+  setStr:(k,v)=>{try{localStorage.setItem(k,v);}catch(e){}}
+};
 
-function init() {
-  RC_LIST = lsGet('rc-list', DEFAULT_RC);
-  OFFICE_LIST = lsGet('office-list', DEFAULT_OFFICE);
-  MIN_SHINDO = lsGet('min-shindo', 4);
-  TIMER_MIN = lsGet('timer-min', 45);
-  syncTimerSettingUI();
-  loadApiKeyUI();
-  loadWebhookUI();
-  updateApiDot();
-  renderRcEditor(); renderRcGrid(); renderRcPreview();
-  renderOfficeEditor(); renderOfficeGrid();
-  renderShindoFilterUI(); syncShindoSettingUI();
-  if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('sw.js').catch(function() {});
-  }
+// ─── Init ───────────────────────────────────────────────────────
+function init(){
+  RC_LIST=ls.get('rc-list',DEFAULT_RC);
+  OFFICE_LIST=ls.get('office-list',DEFAULT_OFFICE);
+  MIN_SHINDO=ls.get('min-shindo',4);
+  TIMER_MIN=ls.get('timer-min',45);
+  loadApiKeyUI();loadWebhookUI();updateApiDot();
+  renderRcEditor();renderRcGrid();renderRcPreview();
+  renderOfficeEditor();renderOfficeGrid();
+  renderShindoFilterUI();syncShindoSettingUI();syncTimerSettingUI();
+  if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
 }
 
-window.addEventListener('beforeinstallprompt', function(e) {
-  e.preventDefault();
-  deferredInstall = e;
-  document.getElementById('install-banner').style.display = 'flex';
+// ─── PWA Install ────────────────────────────────────────────────
+window.addEventListener('beforeinstallprompt',e=>{
+  e.preventDefault();deferredInstall=e;
+  document.getElementById('install-banner').style.display='flex';
 });
-
-window.addEventListener('appinstalled', function() {
-  document.getElementById('install-banner').style.display = 'none';
-});
-
-function installPWA() {
-  if (!deferredInstall) return;
+function installPWA(){
+  if(!deferredInstall)return;
   deferredInstall.prompt();
-  deferredInstall.userChoice.then(function() {
-    deferredInstall = null;
-    document.getElementById('install-banner').style.display = 'none';
-  });
+  deferredInstall.userChoice.then(()=>{deferredInstall=null;document.getElementById('install-banner').style.display='none';});
 }
+window.addEventListener('appinstalled',()=>{document.getElementById('install-banner').style.display='none';});
 
-function sw(id, el) {
-  var tabs = document.querySelectorAll('.tab');
-  var panes = document.querySelectorAll('.pane');
-  for (var i = 0; i < tabs.length; i++) tabs[i].classList.remove('active');
-  for (var i = 0; i < panes.length; i++) panes[i].classList.remove('active');
-  document.getElementById('pane-' + id).classList.add('active');
+// ─── Tab ────────────────────────────────────────────────────────
+function sw(id,el){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.pane').forEach(p=>p.classList.remove('active'));
+  document.getElementById('pane-'+id).classList.add('active');
   el.classList.add('active');
-  document.getElementById('content').scrollTop = 0;
-  if (id === 'teams') buildText();
-  if (id === 'settings') { loadApiKeyUI(); loadWebhookUI(); }
+  document.getElementById('content').scrollTop=0;
+  if(id==='teams') buildText();
+  if(id==='settings'){loadApiKeyUI();loadWebhookUI();}
 }
 
-function getApiKey() { return lsStr('anthropic-api-key', ''); }
-
-function loadApiKeyUI() {
-  var k = getApiKey();
-  var inp = document.getElementById('api-key-input');
-  if (inp && k) inp.value = k;
+// ─── API Key ────────────────────────────────────────────────────
+function getApiKey(){return ls.str('anthropic-api-key','');}
+function loadApiKeyUI(){
+  const k=getApiKey();
+  const inp=document.getElementById('api-key-input');
+  if(inp&&k) inp.value=k;
   updateApiStatusPill();
 }
-
-function onApiKeyInput() {
-  var k = document.getElementById('api-key-input').value.trim();
-  updateApiStatusPill(k);
+function onApiKeyInput(){updateApiStatusPill(document.getElementById('api-key-input').value.trim());}
+function saveApiKey(){
+  const k=document.getElementById('api-key-input').value.trim();
+  if(!k){showToast('APIキーを入力してください');return;}
+  if(!k.startsWith('sk-ant-')){showToast('キーの形式が正しくありません（sk-ant- で始まる必要があります）');return;}
+  ls.setStr('anthropic-api-key',k);
+  updateApiDot();updateApiStatusPill(k);
+  flash('saved-api-msg');showToast('APIキーを保存しました');
+}
+function toggleKeyVis(){
+  const inp=document.getElementById('api-key-input');
+  const eye=document.getElementById('key-eye');
+  if(inp.type==='password'){inp.type='text';eye.innerHTML='<i class="ti ti-eye-off" style="font-size:18px"></i>';}
+  else{inp.type='password';eye.innerHTML='<i class="ti ti-eye" style="font-size:18px"></i>';}
+}
+function updateApiStatusPill(key){
+  const k=key!==undefined?key:getApiKey();
+  const pill=document.getElementById('api-status-pill');if(!pill)return;
+  if(k&&k.startsWith('sk-ant-')){pill.className='status-pill pill-ok';pill.innerHTML='<i class="ti ti-check" style="font-size:10px"></i> 設定済み';}
+  else if(k){pill.className='status-pill pill-ng';pill.innerHTML='<i class="ti ti-x" style="font-size:10px"></i> 形式エラー';}
+  else{pill.className='status-pill pill-na';pill.innerHTML='<i class="ti ti-circle" style="font-size:10px"></i> 未設定';}
+}
+function updateApiDot(){
+  const dot=document.getElementById('api-dot');if(!dot)return;
+  const k=getApiKey();
+  dot.style.background=(k&&k.startsWith('sk-ant-'))?'#639922':'#E24B4A';
 }
 
-function saveApiKey() {
-  var k = document.getElementById('api-key-input').value.trim();
-  if (!k) { showToast('APIキーを入力してください'); return; }
-  if (k.indexOf('sk-ant-') !== 0) { showToast('キーの形式が正しくありません'); return; }
-  lsSetStr('anthropic-api-key', k);
-  updateApiDot(); updateApiStatusPill(k);
-  flash('saved-api-msg'); showToast('APIキーを保存しました');
-}
-
-function toggleKeyVis() {
-  var inp = document.getElementById('api-key-input');
-  var eye = document.getElementById('key-eye');
-  if (inp.type === 'password') {
-    inp.type = 'text';
-    eye.innerHTML = '<i class="ti ti-eye-off" style="font-size:18px"></i>';
-  } else {
-    inp.type = 'password';
-    eye.innerHTML = '<i class="ti ti-eye" style="font-size:18px"></i>';
-  }
-}
-
-function updateApiStatusPill(key) {
-  var k = key !== undefined ? key : getApiKey();
-  var pill = document.getElementById('api-status-pill');
-  if (!pill) return;
-  if (k && k.indexOf('sk-ant-') === 0) {
-    pill.className = 'status-pill pill-ok';
-    pill.innerHTML = '<i class="ti ti-check" style="font-size:10px"></i> 設定済み';
-  } else if (k) {
-    pill.className = 'status-pill pill-ng';
-    pill.innerHTML = '<i class="ti ti-x" style="font-size:10px"></i> 形式エラー';
-  } else {
-    pill.className = 'status-pill pill-na';
-    pill.innerHTML = '<i class="ti ti-circle" style="font-size:10px"></i> 未設定';
-  }
-}
-
-function updateApiDot() {
-  var dot = document.getElementById('api-dot');
-  if (!dot) return;
-  var k = getApiKey();
-  dot.style.background = (k && k.indexOf('sk-ant-') === 0) ? '#639922' : '#E24B4A';
-}
-
-function getWebhookUrl() { return lsStr('teams-webhook-url', ''); }
-
-function loadWebhookUI() {
-  var u = getWebhookUrl();
-  var inp = document.getElementById('webhook-input');
-  if (inp && u) inp.value = u;
+// ─── Webhook ────────────────────────────────────────────────────
+function getWebhookUrl(){return ls.str('teams-webhook-url','');}
+function loadWebhookUI(){
+  const u=getWebhookUrl();
+  const inp=document.getElementById('webhook-input');
+  if(inp&&u) inp.value=u;
   updateWebhookStatusPill(u);
-  document.getElementById('btn-webhook').style.display = u ? 'flex' : 'none';
+  document.getElementById('btn-webhook').style.display=u?'flex':'none';
 }
-
-function onWebhookInput() {
-  updateWebhookStatusPill(document.getElementById('webhook-input').value.trim());
-}
-
-function saveWebhook() {
-  var u = document.getElementById('webhook-input').value.trim();
-  lsSetStr('teams-webhook-url', u);
+function onWebhookInput(){updateWebhookStatusPill(document.getElementById('webhook-input').value.trim());}
+function saveWebhook(){
+  const u=document.getElementById('webhook-input').value.trim();
+  ls.setStr('teams-webhook-url',u);
   updateWebhookStatusPill(u);
-  document.getElementById('btn-webhook').style.display = u ? 'flex' : 'none';
-  flash('saved-wh-msg'); showToast(u ? 'Webhook URLを保存しました' : 'URLをクリアしました');
+  document.getElementById('btn-webhook').style.display=u?'flex':'none';
+  flash('saved-wh-msg');showToast(u?'Webhook URLを保存しました':'Webhook URLをクリアしました');
 }
-
-function updateWebhookStatusPill(url) {
-  var pill = document.getElementById('wh-status-pill');
-  if (!pill) return;
-  if (url && url.indexOf('https://') === 0) {
-    pill.className = 'status-pill pill-ok';
-    pill.innerHTML = '<i class="ti ti-check" style="font-size:10px"></i> 設定済み';
-  } else if (url) {
-    pill.className = 'status-pill pill-ng';
-    pill.innerHTML = '<i class="ti ti-x" style="font-size:10px"></i> 形式エラー';
-  } else {
-    pill.className = 'status-pill pill-na';
-    pill.innerHTML = '<i class="ti ti-circle" style="font-size:10px"></i> 未設定（任意）';
-  }
+function updateWebhookStatusPill(url){
+  const pill=document.getElementById('wh-status-pill');if(!pill)return;
+  if(url&&url.startsWith('https://')){pill.className='status-pill pill-ok';pill.innerHTML='<i class="ti ti-check" style="font-size:10px"></i> 設定済み';}
+  else if(url){pill.className='status-pill pill-ng';pill.innerHTML='<i class="ti ti-x" style="font-size:10px"></i> 形式エラー';}
+  else{pill.className='status-pill pill-na';pill.innerHTML='<i class="ti ti-circle" style="font-size:10px"></i> 未設定（任意）';}
 }
-
-function testWebhook() {
-  var u = document.getElementById('webhook-input').value.trim();
-  if (!u) { showToast('URLを入力してください'); return; }
+async function testWebhook(){
+  const u=document.getElementById('webhook-input').value.trim();
+  if(!u){showToast('Webhook URLを入力してください');return;}
   showToast('テスト送信中...');
-  fetch(u, {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({text: '[確認] 地震速報ツール：Webhook接続テストです。このメッセージが届けば設定は正常です。'})
-  }).then(function() {
-    showToast('テスト送信完了 - Teamsを確認してください');
-  }).catch(function(e) {
-    showToast('送信エラー: ' + e.message);
+  try{
+    await fetch(u,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:'✅ 地震速報ツール：Webhook接続テストです。このメッセージが届けば設定は正常です。'})});
+    showToast('テスト送信完了 — Teamsを確認してください');
+  }catch(e){showToast('送信エラー: '+e.message);}
+}
+
+// ─── Shindo helpers ─────────────────────────────────────────────
+function shindoNum(s){
+  const m={'7':7,'6強':6,'6弱':5.5,'5強':5,'5弱':4.5,'4':4,'3':3,'2':2,'1':1};
+  return m[s]||parseFloat(s)||0;
+}
+function shindoClass(s){
+  const n=shindoNum(s);
+  if(n>=5.5)return 'bdg-red';if(n>=4.5)return 'bdg-amb';if(n>=4)return 'bdg-blu';return 'bdg-gry';
+}
+function shindoLabel(n){
+  if(n>=5)return '5強';if(n>=4.5)return '5弱';if(n>=4)return '4';return String(n);
+}
+
+// ─── Shindo filter ──────────────────────────────────────────────
+function renderShindoFilterUI(){
+  const f=[{num:3,label:'3以上'},{num:4,label:'4以上'},{num:4.5,label:'5弱以上'},{num:5,label:'5強以上'}];
+  document.getElementById('shindo-filter').innerHTML=f.map(x=>
+    `<button class="seg-btn${x.num===MIN_SHINDO?' active':''}" data-num="${x.num}" onclick="setFilterInline(this)">${x.label}</button>`
+  ).join('');
+}
+function setFilterInline(el){
+  MIN_SHINDO=parseFloat(el.dataset.num);
+  document.querySelectorAll('#shindo-filter .seg-btn').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');syncShindoSettingUI();renderShindoTable();
+}
+function syncShindoSettingUI(){
+  document.querySelectorAll('#min-shindo-setting .seg-btn').forEach(b=>{
+    b.classList.toggle('active',parseFloat(b.dataset.val)===MIN_SHINDO);
   });
 }
-
-function shindoNum(s) {
-  var m = {'7':7,'6強':6,'6弱':5.5,'5強':5,'5弱':4.5,'4':4,'3':3,'2':2,'1':1};
-  return m[s] || parseFloat(s) || 0;
+function setMinShindo(el){
+  MIN_SHINDO=parseFloat(el.dataset.val);
+  document.querySelectorAll('#min-shindo-setting .seg-btn').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');renderShindoFilterUI();renderShindoTable();
+}
+function saveShindoSetting(){ls.set('min-shindo',MIN_SHINDO);flash('saved-shindo-msg');}
+function renderShindoTable(){
+  const f=S.shindo.filter(r=>shindoNum(r.level)>=MIN_SHINDO);
+  document.getElementById('shindo-body').innerHTML=f.length>0
+    ?f.map(r=>`<tr><td><span class="bdg ${shindoClass(r.level)}">震度${r.level}</span></td><td style="font-size:12px">${r.area}</td></tr>`).join('')
+    :`<tr><td colspan="2" style="color:var(--text2);text-align:center;padding:12px 0;font-size:12px">該当する震度の情報なし</td></tr>`;
 }
 
-function shindoClass(s) {
-  var n = shindoNum(s);
-  if (n >= 5.5) return 'bdg-red';
-  if (n >= 4.5) return 'bdg-amb';
-  if (n >= 4) return 'bdg-blu';
-  return 'bdg-gry';
+// ─── Timer ──────────────────────────────────────────────────────
+function setTimerMin(el){
+  document.querySelectorAll('#timer-setting .seg-btn').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');TIMER_MIN=parseInt(el.dataset.val,10);
 }
-
-function shindoLabel(n) {
-  if (n >= 5) return '5強';
-  if (n >= 4.5) return '5弱';
-  if (n >= 4) return '4';
-  return String(n);
+function syncTimerSettingUI(){
+  document.querySelectorAll('#timer-setting .seg-btn').forEach(b=>{
+    b.classList.toggle('active',parseInt(b.dataset.val,10)===TIMER_MIN);
+  });
 }
-
-function renderShindoFilterUI() {
-  var filters = [{num:3,label:'3以上'},{num:4,label:'4以上'},{num:4.5,label:'5弱以上'},{num:5,label:'5強以上'}];
-  var html = '';
-  for (var i = 0; i < filters.length; i++) {
-    var f = filters[i];
-    html += '<button class="seg-btn' + (f.num === MIN_SHINDO ? ' active' : '') + '" data-num="' + f.num + '" onclick="setFilterInline(this)">' + f.label + '</button>';
+function saveTimerSetting(){ls.set('timer-min',TIMER_MIN);flash('saved-timer-msg');}
+function startTimer(){
+  stopTimer();
+  timerEnd=Date.now()+TIMER_MIN*60*1000;
+  const bar=document.getElementById('timer-bar');
+  bar.classList.add('active');bar.classList.remove('warn');
+  tickTimer();timerInterval=setInterval(tickTimer,1000);
+}
+function tickTimer(){
+  const rem=timerEnd-Date.now();
+  const bar=document.getElementById('timer-bar');
+  const cd=document.getElementById('timer-cd');
+  if(rem<=0){
+    cd.textContent='00:00';bar.classList.add('warn');
+    showToast('投稿時刻になりました。Teams文タブから投稿してください');
+    clearInterval(timerInterval);timerInterval=null;return;
   }
-  document.getElementById('shindo-filter').innerHTML = html;
+  if(rem<=5*60*1000) bar.classList.add('warn');
+  const m=Math.floor(rem/60000),s=Math.floor((rem%60000)/1000);
+  cd.textContent=(m<10?'0':'')+m+':'+(s<10?'0':'')+s;
+}
+function stopTimer(){
+  if(timerInterval){clearInterval(timerInterval);timerInterval=null;}
+  timerEnd=null;
+  const bar=document.getElementById('timer-bar');
+  bar.classList.remove('active','warn');
 }
 
-function setFilterInline(el) {
-  MIN_SHINDO = parseFloat(el.getAttribute('data-num'));
-  var btns = document.querySelectorAll('#shindo-filter .seg-btn');
-  for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
-  el.classList.add('active');
-  syncShindoSettingUI(); renderShindoTable();
-}
-
-function syncShindoSettingUI() {
-  var btns = document.querySelectorAll('#min-shindo-setting .seg-btn');
-  for (var i = 0; i < btns.length; i++) {
-    var v = parseFloat(btns[i].getAttribute('data-val'));
-    if (v === MIN_SHINDO) btns[i].classList.add('active');
-    else btns[i].classList.remove('active');
-  }
-}
-
-function setMinShindo(el) {
-  MIN_SHINDO = parseFloat(el.getAttribute('data-val'));
-  var btns = document.querySelectorAll('#min-shindo-setting .seg-btn');
-  for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
-  el.classList.add('active');
-  renderShindoFilterUI(); renderShindoTable();
-}
-
-function saveShindoSetting() { lsSet('min-shindo', MIN_SHINDO); flash('saved-shindo-msg'); }
-
-function renderShindoTable() {
-  var filtered = [];
-  for (var i = 0; i < S.shindo.length; i++) {
-    if (shindoNum(S.shindo[i].level) >= MIN_SHINDO) filtered.push(S.shindo[i]);
-  }
-  var html = '';
-  if (filtered.length > 0) {
-    for (var i = 0; i < filtered.length; i++) {
-      html += '<tr><td><span class="bdg ' + shindoClass(filtered[i].level) + '">震度' + filtered[i].level + '</span></td><td style="font-size:12px">' + filtered[i].area + '</td></tr>';
-    }
-  } else {
-    html = '<tr><td colspan="2" style="color:var(--text2);text-align:center;padding:12px 0;font-size:12px">該当する震度の情報なし</td></tr>';
-  }
-  document.getElementById('shindo-body').innerHTML = html;
-}
-
-function makeLocationEditor(listVar, editorId, addBtnId, maxCount) {
-  var ed = document.getElementById(editorId);
-  if (!ed) return;
-  ed.innerHTML = '';
-  for (var i = 0; i < listVar.length; i++) {
-    var item = listVar[i];
-    var row = document.createElement('div');
-    row.className = 'row-item';
-    row.innerHTML = '<span class="row-num">' + (i+1) + '</span>' +
-      '<div class="row-inputs">' +
-      '<input type="text" placeholder="名称" value="' + (item.name||'') + '" data-list="' + editorId + '" data-idx="' + i + '" data-field="name" oninput="onLocationInput(this)">' +
-      '<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">' +
-      '<input type="text" placeholder="都道府県" value="' + (item.pref||'') + '" data-list="' + editorId + '" data-idx="' + i + '" data-field="pref" oninput="onLocationInput(this)">' +
-      '<input type="text" placeholder="市区町村" value="' + (item.city||'') + '" data-list="' + editorId + '" data-idx="' + i + '" data-field="city" oninput="onLocationInput(this)">' +
-      '</div></div>' +
-      '<button class="row-del" onclick="delLocationRow(\'' + editorId + '\',' + i + ')"><i class="ti ti-trash" style="font-size:15px"></i></button>';
+// ─── RC management ──────────────────────────────────────────────
+function renderRcEditor(){
+  const ed=document.getElementById('rc-editor');ed.innerHTML='';
+  RC_LIST.forEach((rc,i)=>{
+    const row=document.createElement('div');row.className='rc-row';
+    row.innerHTML=`<span class="rc-num">${i+1}</span>
+      <div class="rc-inputs">
+        <input type="text" placeholder="拠点名（例：東RC）" value="${rc.name||''}" data-idx="${i}" data-field="name" oninput="onRcInput(this)">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+          <input type="text" placeholder="都道府県" value="${rc.pref||''}" data-idx="${i}" data-field="pref" oninput="onRcInput(this)">
+          <input type="text" placeholder="市区町村" value="${rc.city||''}" data-idx="${i}" data-field="city" oninput="onRcInput(this)">
+        </div>
+      </div>
+      <button class="rc-del" onclick="delRcRow(${i})"><i class="ti ti-trash" style="font-size:15px"></i></button>`;
     ed.appendChild(row);
-  }
-  var addBtn = document.getElementById(addBtnId);
-  if (addBtn) addBtn.style.display = listVar.length >= maxCount ? 'none' : 'flex';
+  });
+  document.getElementById('add-rc-btn').style.display=RC_LIST.length>=6?'none':'flex';
 }
-
-function onLocationInput(el) {
-  var listId = el.getAttribute('data-list');
-  var idx = parseInt(el.getAttribute('data-idx'));
-  var field = el.getAttribute('data-field');
-  var list = listId === 'rc-editor' ? RC_LIST : OFFICE_LIST;
-  list[idx][field] = el.value;
+function onRcInput(el){RC_LIST[parseInt(el.dataset.idx)][el.dataset.field]=el.value;}
+function addRcRow(){if(RC_LIST.length>=6)return;RC_LIST.push({name:'',pref:'',city:''});renderRcEditor();}
+function delRcRow(i){RC_LIST.splice(i,1);renderRcEditor();}
+function saveRc(){ls.set('rc-list',RC_LIST);renderRcGrid();renderRcPreview();flash('saved-rc-msg');}
+function renderRcGrid(){
+  const g=document.getElementById('rc-grid');
+  if(!RC_LIST.length){g.innerHTML='<div style="font-size:12px;color:var(--text2);grid-column:span 2;padding:8px 0">設定タブで拠点を登録してください</div>';return;}
+  g.innerHTML=RC_LIST.map((rc,i)=>`
+    <div class="bc"><div class="bl">${rc.pref||''}${rc.city||''}</div>
+    <div class="bn">${rc.name||'拠点'+(i+1)}</div>
+    <div class="bs" id="rc-s-${i}"><span class="sd" style="background:#888780"></span><span style="color:var(--text2);font-size:11px">未確認</span></div></div>`).join('');
 }
-
-function delLocationRow(editorId, i) {
-  if (editorId === 'rc-editor') {
-    RC_LIST.splice(i, 1);
-    renderRcEditor();
-  } else {
-    OFFICE_LIST.splice(i, 1);
-    renderOfficeEditor();
-  }
+function renderRcPreview(){
+  const p=document.getElementById('rc-preview');
+  if(!RC_LIST.length){p.textContent='拠点が登録されていません';return;}
+  p.innerHTML=RC_LIST.map((rc,i)=>`
+    <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:0.5px solid var(--border)">
+      <span style="font-size:11px;color:var(--text2);width:14px">${i+1}</span>
+      <span style="font-weight:500;min-width:70px">${rc.name||'（未入力）'}</span>
+      <span style="color:var(--text2)">${rc.pref||''}${rc.city||''}</span>
+    </div>`).join('');
 }
-
-function renderRcEditor() { makeLocationEditor(RC_LIST, 'rc-editor', 'add-rc-btn', 6); }
-function addRcRow() { if (RC_LIST.length >= 6) return; RC_LIST.push({name:'',pref:'',city:''}); renderRcEditor(); }
-function saveRc() { lsSet('rc-list', RC_LIST); renderRcGrid(); renderRcPreview(); flash('saved-rc-msg'); }
-
-function renderOfficeEditor() { makeLocationEditor(OFFICE_LIST, 'office-editor', 'add-office-btn', 5); }
-function addOfficeRow() { if (OFFICE_LIST.length >= 5) return; OFFICE_LIST.push({name:'',pref:'',city:''}); renderOfficeEditor(); }
-function saveOffice() { lsSet('office-list', OFFICE_LIST); renderOfficeGrid(); flash('saved-office-msg'); }
-
-function getShindoForLocation(item) {
-  var hit = [];
-  for (var i = 0; i < S.shindo.length; i++) {
-    var r = S.shindo[i];
-    if (r.area && ((item.pref && r.area.indexOf(item.pref) !== -1) || (item.city && r.area.indexOf(item.city) !== -1))) {
-      hit.push(r);
+function updateRcStatus(shindo){
+  RC_LIST.forEach((rc,i)=>{
+    const el=document.getElementById('rc-s-'+i);if(!el)return;
+    const hit=shindo.filter(r=>r.area&&((rc.pref&&r.area.includes(rc.pref))||(rc.city&&r.area.includes(rc.city))));
+    if(hit.length>0){
+      const mx=hit.reduce((a,b)=>shindoNum(a.level)>shindoNum(b.level)?a:b);
+      const lv=mx.level;let bg='#888780',col='var(--text2)';
+      if(['7','6強','6弱','5強'].includes(lv)){bg='#E24B4A';col='#A32D2D';}
+      else if(lv==='5弱'){bg='#EF9F27';col='#854F0B';}
+      else if(lv==='4'){bg='#378ADD';col='#185FA5';}
+      else{bg='#639922';col='#3B6D11';}
+      el.innerHTML=`<span class="sd" style="background:${bg}"></span><span style="color:${col};font-size:11px;font-weight:500">震度${lv}</span>`;
+    }else{
+      el.innerHTML=`<span class="sd" style="background:#639922"></span><span style="color:#3B6D11;font-size:11px;font-weight:500">影響なし</span>`;
     }
-  }
-  if (hit.length === 0) return null;
-  var mx = hit[0];
-  for (var i = 1; i < hit.length; i++) {
-    if (shindoNum(hit[i].level) > shindoNum(mx.level)) mx = hit[i];
-  }
-  return mx;
-}
-
-function renderLocationGrid(list, gridId, statusPrefix) {
-  var g = document.getElementById(gridId);
-  if (!g) return;
-  if (!list.length) {
-    g.innerHTML = '<div style="font-size:12px;color:var(--text2);grid-column:span 2;padding:8px 0">設定タブで登録してください</div>';
-    return;
-  }
-  var html = '';
-  for (var i = 0; i < list.length; i++) {
-    html += '<div class="bc"><div class="bl">' + (list[i].pref||'') + (list[i].city||'') + '</div>' +
-      '<div class="bn">' + (list[i].name||('拠点'+(i+1))) + '</div>' +
-      '<div class="bs" id="' + statusPrefix + i + '"><span class="sd" style="background:#888780"></span><span style="color:var(--text2);font-size:11px">未確認</span></div></div>';
-  }
-  g.innerHTML = html;
-}
-
-function renderRcGrid() { renderLocationGrid(RC_LIST, 'rc-grid', 'rc-s-'); }
-function renderOfficeGrid() { renderLocationGrid(OFFICE_LIST, 'office-grid', 'office-s-'); }
-
-function renderRcPreview() {
-  var p = document.getElementById('rc-preview');
-  if (!RC_LIST.length && !OFFICE_LIST.length) { p.textContent = '登録されていません'; return; }
-  var html = '<div style="font-size:11px;color:var(--text2);margin-bottom:6px;font-weight:500">RC拠点</div>';
-  for (var i = 0; i < RC_LIST.length; i++) {
-    html += '<div style="display:flex;align-items:center;gap:8px;padding:4px 0;border-bottom:0.5px solid var(--border)">' +
-      '<span style="font-size:11px;color:var(--text2);width:14px">' + (i+1) + '</span>' +
-      '<span style="font-weight:500;min-width:70px">' + (RC_LIST[i].name||'（未入力）') + '</span>' +
-      '<span style="color:var(--text2)">' + (RC_LIST[i].pref||'') + (RC_LIST[i].city||'') + '</span></div>';
-  }
-  if (OFFICE_LIST.length) {
-    html += '<div style="font-size:11px;color:var(--text2);margin:10px 0 6px;font-weight:500">オフィス</div>';
-    for (var i = 0; i < OFFICE_LIST.length; i++) {
-      html += '<div style="display:flex;align-items:center;gap:8px;padding:4px 0;border-bottom:0.5px solid var(--border)">' +
-        '<span style="font-size:11px;color:var(--text2);width:14px">' + (i+1) + '</span>' +
-        '<span style="font-weight:500;min-width:70px">' + (OFFICE_LIST[i].name||'（未入力）') + '</span>' +
-        '<span style="color:var(--text2)">' + (OFFICE_LIST[i].pref||'') + (OFFICE_LIST[i].city||'') + '</span></div>';
-    }
-  }
-  p.innerHTML = html;
-}
-
-function updateLocationStatus(list, statusPrefix) {
-  for (var i = 0; i < list.length; i++) {
-    var el = document.getElementById(statusPrefix + i);
-    if (!el) continue;
-    var mx = getShindoForLocation(list[i]);
-    if (mx) {
-      var lv = mx.level;
-      var bg = '#888780'; var col = 'var(--text2)';
-      if (lv === '7' || lv === '6強' || lv === '6弱' || lv === '5強') { bg = '#E24B4A'; col = '#A32D2D'; }
-      else if (lv === '5弱') { bg = '#EF9F27'; col = '#854F0B'; }
-      else if (lv === '4') { bg = '#378ADD'; col = '#185FA5'; }
-      else { bg = '#639922'; col = '#3B6D11'; }
-      el.innerHTML = '<span class="sd" style="background:' + bg + '"></span><span style="color:' + col + ';font-size:11px;font-weight:500">震度' + lv + '</span>';
-    } else {
-      el.innerHTML = '<span class="sd" style="background:#639922"></span><span style="color:#3B6D11;font-size:11px;font-weight:500">影響なし</span>';
-    }
-  }
-}
-
-var COORDS = {
-  '北海道':{lat:43.1,lng:141.4,z:8},
-  '青森県':{lat:40.8,lng:140.7,z:9},'岩手県':{lat:39.7,lng:141.1,z:9},'宮城県':{lat:38.3,lng:140.9,z:9},
-  '秋田県':{lat:39.7,lng:140.1,z:9},'山形県':{lat:38.2,lng:140.4,z:9},'福島県':{lat:37.7,lng:140.5,z:9},
-  '茨城県':{lat:36.3,lng:140.4,z:9},'栃木県':{lat:36.6,lng:139.9,z:9},'群馬県':{lat:36.4,lng:139.1,z:9},
-  '埼玉県':{lat:35.9,lng:139.6,z:10},'千葉県':{lat:35.6,lng:140.1,z:10},'東京都':{lat:35.7,lng:139.7,z:10},
-  '神奈川県':{lat:35.5,lng:139.6,z:10},'新潟県':{lat:37.9,lng:139.0,z:9},'富山県':{lat:36.7,lng:137.2,z:9},
-  '石川県':{lat:36.6,lng:136.6,z:9},'福井県':{lat:36.1,lng:136.2,z:9},'山梨県':{lat:35.7,lng:138.6,z:9},
-  '長野県':{lat:36.7,lng:138.2,z:9},'岐阜県':{lat:35.4,lng:136.7,z:9},'静岡県':{lat:35.0,lng:138.4,z:9},
-  '愛知県':{lat:35.2,lng:136.9,z:9},'三重県':{lat:34.7,lng:136.5,z:9},'滋賀県':{lat:35.0,lng:135.9,z:9},
-  '京都府':{lat:35.0,lng:135.8,z:10},'大阪府':{lat:34.7,lng:135.5,z:10},'兵庫県':{lat:34.7,lng:135.2,z:9},
-  '奈良県':{lat:34.7,lng:135.8,z:9},'和歌山県':{lat:34.2,lng:135.2,z:9},'鳥取県':{lat:35.5,lng:134.2,z:9},
-  '島根県':{lat:35.5,lng:133.1,z:9},'岡山県':{lat:34.7,lng:133.9,z:9},'広島県':{lat:34.4,lng:132.5,z:9},
-  '山口県':{lat:34.2,lng:131.5,z:9},'徳島県':{lat:34.1,lng:134.6,z:9},'香川県':{lat:34.3,lng:134.0,z:9},
-  '愛媛県':{lat:33.8,lng:132.8,z:9},'高知県':{lat:33.6,lng:133.5,z:9},'福岡県':{lat:33.6,lng:130.4,z:9},
-  '佐賀県':{lat:33.3,lng:130.3,z:9},'長崎県':{lat:32.7,lng:129.9,z:9},'熊本県':{lat:32.8,lng:130.7,z:9},
-  '大分県':{lat:33.2,lng:131.6,z:9},'宮崎県':{lat:31.9,lng:131.4,z:9},'鹿児島県':{lat:31.6,lng:130.6,z:9},
-  '沖縄県':{lat:26.2,lng:127.7,z:9},
-  '三陸沖':{lat:38.9,lng:142.1,z:9},'宮城県沖':{lat:38.9,lng:142.1,z:9},'岩手県沖':{lat:39.5,lng:142.0,z:9},
-  '福島県沖':{lat:37.3,lng:141.8,z:9},'茨城県沖':{lat:36.2,lng:141.2,z:9},'千葉県東方沖':{lat:35.7,lng:141.0,z:9},
-  '沖縄本島近海':{lat:26.5,lng:127.9,z:9},'奄美大島近海':{lat:28.3,lng:129.5,z:9},
-  '種子島近海':{lat:30.4,lng:130.9,z:9},'日向灘':{lat:32.0,lng:132.0,z:9},
-  '薩摩半島西方沖':{lat:31.0,lng:129.5,z:9},'トカラ列島近海':{lat:29.5,lng:129.5,z:9},
-  '奄美南部':{lat:27.8,lng:129.0,z:9},'与論島近海':{lat:27.0,lng:128.5,z:9}
-};
-
-function getCoords(epi) {
-  if (!epi) return {lat:36.5, lng:138.0, z:7};
-  for (var k in COORDS) {
-    if (epi.indexOf(k) !== -1) return COORDS[k];
-  }
-  return {lat:36.5, lng:138.0, z:7};
-}
-
-function nexcoInfo(lng) {
-  if (lng >= 137.5) return {name:'NEXCO東日本', url:'https://www.e-nexco.co.jp/traffic_info/'};
-  if (lng >= 135.5) return {name:'NEXCO中日本', url:'https://www.c-nexco.co.jp/traffic/traffic_info.html'};
-  return {name:'NEXCO西日本', url:'https://www.w-nexco.co.jp/activity/traffic_info/'};
-}
-
-function gMapUrl(lat, lng, z) {
-  return 'https://www.google.com/maps/@' + lat + ',' + lng + ',' + z + 'z/data=!5m1!1e1';
-}
-
-function buildMapLinks(epi) {
-  var c = getCoords(epi);
-  var nx = nexcoInfo(c.lng);
-  var gUrl = gMapUrl(c.lat, c.lng, c.z);
-  S.mapLinks = {google: gUrl, jartic: 'https://www.jartic.or.jp/', nexcoName: nx.name, nexcoUrl: nx.url, lat: c.lat, lng: c.lng, z: c.z};
-  document.getElementById('map-links').innerHTML =
-    '<a class="mc" href="' + gUrl + '" target="_blank">' +
-    '<div style="display:flex;align-items:center;gap:10px"><div class="mi"><i class="ti ti-external-link" aria-hidden="true"></i></div>' +
-    '<div><div class="mt">Google マップで開く</div><div class="ms">' + (epi||'震源地') + '周辺（湋汚レイヤー）</div></div></div>' +
-    '<i class="ti ti-chevron-right" style="color:var(--text2);font-size:16px" aria-hidden="true"></i></a>' +
-    '<a class="mc" href="https://www.jartic.or.jp/" target="_blank">' +
-    '<div style="display:flex;align-items:center;gap:10px"><div class="mi"><i class="ti ti-car" aria-hidden="true"></i></div>' +
-    '<div><div class="mt">JARTIC 道路交通情報</div><div class="ms">通行止め・規制をリアルタイム確認</div></div></div>' +
-    '<i class="ti ti-chevron-right" style="color:var(--text2);font-size:16px" aria-hidden="true"></i></a>' +
-    '<a class="mc" href="' + nx.url + '" target="_blank">' +
-    '<div style="display:flex;align-items:center;gap:10px"><div class="mi"><i class="ti ti-road" aria-hidden="true"></i></div>' +
-    '<div><div class="mt">' + nx.name + '</div><div class="ms">震源エリア担当</div></div></div>' +
-    '<i class="ti ti-chevron-right" style="color:var(--text2);font-size:16px" aria-hidden="true"></i></a>';
-  renderMapFrame(c.lat, c.lng, c.z);
-}
-
-function renderMapFrame(lat, lng, z) {
-  var wrap = document.getElementById('map-frame-wrap');
-  var frame = document.getElementById('map-frame');
-  var note = document.getElementById('map-note');
-  if (!wrap || !frame) return;
-  var src = 'https://maps.google.com/maps?q=' + lat + ',' + lng + '&z=' + z + '&layer=t&output=embed';
-  frame.src = src;
-  wrap.style.display = 'block';
-  if (note) note.style.display = 'block';
-}
-
-function adjustMapZoom(delta) {
-  if (!S.mapLinks) return;
-  var z = Math.min(13, Math.max(6, S.mapLinks.z + delta));
-  S.mapLinks.z = z;
-  renderMapFrame(S.mapLinks.lat, S.mapLinks.lng, z);
-}
-
-
-function makeTitle(q) {
-  if (!q || !q.time) return '(地震情報を取得してください)';
-  var m = q.time.match(/(\d{4})[\/\-\u5e74](\d{1,2})[\/\-\u6708](\d{1,2})[\s\u65e5]*(\d{1,2})[::\u6642](\d{1,2})/);
-  if (m) {
-    var yy = String(m[1]).slice(2);
-    var mm = ('0'+m[2]).slice(-2);
-    var dd = ('0'+m[3]).slice(-2);
-    var hh = ('0'+m[4]).slice(-2);
-    var mn = ('0'+m[5]).slice(-2);
-    return yy+mm+dd+'_'+hh+':'+mn+'\u9803\u767a\u751f\uff1a'+(q.epicenter||'\u9707\u6e90\u5730\u4e0d\u660e')+'\u5730\u9707\uff08\u6700\u5927\u9707\u5ea6\uff1a'+(q.maxShindo||'\u4e0d\u660e')+'\uff09';
-  }
-  return q.time+'\u9803\u767a\u751f\uff1a'+(q.epicenter||'\u9707\u6e90\u5730\u4e0d\u660e')+'\u5730\u9707\uff08\u6700\u5927\u9707\u5ea6\uff1a'+(q.maxShindo||'\u4e0d\u660e')+'\uff09';
-}
-
-function callClaude(system, userMsg, cb, useSearch) {
-  if (useSearch === undefined) useSearch = true;
-  var key = getApiKey();
-  if (!key) { cb(new Error('API\u30ad\u30fc\u304c\u672a\u8a2d\u5b9a\u3067\u3059\u3002\u8a2d\u5b9a\u30bf\u30d6\u3067\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044\u3002'), null); return; }
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'https://api.anthropic.com/v1/messages', true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.setRequestHeader('x-api-key', key);
-  xhr.setRequestHeader('anthropic-version', '2023-06-01');
-  xhr.setRequestHeader('anthropic-dangerous-direct-browser-access', 'true');
-  xhr.onload = function() {
-    if (xhr.status !== 200) {
-      var err = '';
-      try { err = JSON.parse(xhr.responseText).error.message; } catch(e) { err = 'HTTP ' + xhr.status; }
-      cb(new Error(err), null); return;
-    }
-    try {
-      var data = JSON.parse(xhr.responseText);
-      var text = '';
-      for (var i = 0; i < data.content.length; i++) {
-        if (data.content[i].type === 'text') text += data.content[i].text;
-      }
-      cb(null, text);
-    } catch(e) { cb(e, null); }
-  };
-  xhr.onerror = function() { cb(new Error('\u901a\u4fe1\u30a8\u30e9\u30fc\u3002\u30cd\u30c3\u30c8\u30ef\u30fc\u30af\u3092\u78ba\u8a8d\u3057\u3066\u304f\u3060\u3055\u3044\u3002'), null); };
-  var body = {
-    model: 'claude-sonnet-4-6',
-    max_tokens: 1000,
-    system: system,
-    messages: [{role: 'user', content: userMsg}]
-  };
-  if (useSearch !== false) body.tools = [{type: 'web_search_20250305', name: 'web_search'}];
-  xhr.send(JSON.stringify(body));
-}
-
-function parseJ(raw) {
-  if (!raw) return null;
-  try { return JSON.parse(raw.replace(/```json|```/g, '').trim()); } catch(e) { return null; }
-}
-
-var progTimer = null;
-function setProgress(p) { document.getElementById('progress').style.width = p + '%'; }
-function resetProgress() { setProgress(0); }
-
-var toastTimer = null;
-function showToast(msg) {
-  var t = document.getElementById('toast');
-  t.textContent = msg; t.classList.add('show');
-  if (toastTimer) clearTimeout(toastTimer);
-  toastTimer = setTimeout(function() { t.classList.remove('show'); }, 2800);
-}
-
-function flash(id) {
-  var el = document.getElementById(id);
-  if (!el) return;
-  el.style.opacity = '1';
-  setTimeout(function() { el.style.opacity = '0'; }, 2000);
-}
-
-function flashBtn(id, onHtml, offHtml) {
-  var b = document.getElementById(id);
-  if (!b) return;
-  b.innerHTML = onHtml;
-  setTimeout(function() { b.innerHTML = offHtml; }, 2200);
-}
-
-function ld(id, show) {
-  var el = document.getElementById(id);
-  if (el) el.style.display = show ? 'flex' : 'none';
-}
-
-var CAT_MAP = {
-  rail: {label:'\u9244\u9053', cls:'cat-rail', icon:'ti-train'},
-  port: {label:'\u6e2f\u6e7e\u30fb\u7a7a\u6e2f', cls:'cat-port', icon:'ti-ship'},
-  infra: {label:'\u30e9\u30a4\u30d5\u30e9\u30a4\u30f3', cls:'cat-infra', icon:'ti-bolt'},
-  other: {label:'その他', cls:'cat-other', icon:'ti-news'},
-  airport: {label:'空港便', cls:'cat-airport', icon:'ti-plane'}
-};
-
-function renderNews(items) {
-  var area = document.getElementById('news-area');
-  if (!items || items.length === 0) {
-    area.innerHTML = '<div style="font-size:13px;color:#3b6d11;display:flex;align-items:center;gap:6px;padding:6px 0"><span class="bdg bdg-grn">\u60c5\u5831\u306a\u3057</span><span>\u7269\u6d41\u5f71\u97ff\u306b\u3064\u306a\u304c\u308b\u60c5\u5831\u306f\u73fe\u6642\u70b9\u3067\u78ba\u8a8d\u3055\u308c\u3066\u3044\u307e\u305b\u3093</span></div>';
-    return;
-  }
-  var html = '';
-  for (var i = 0; i < items.length; i++) {
-    var n = items[i];
-    var cat = CAT_MAP[n.category] || CAT_MAP.other;
-    html += '<div class="nc"><span class="ncat ' + cat.cls + '"><i class="ti ' + cat.icon + '" aria-hidden="true" style="font-size:11px"></i> ' + cat.label + '</span>' +
-      '<div style="font-size:12px;color:var(--text);line-height:1.65">' + n.summary + '</div>' +
-      '<div style="font-size:10px;color:var(--text2);margin-top:5px"><i class="ti ti-clock" aria-hidden="true" style="font-size:11px;vertical-align:-1px;margin-right:3px"></i>' + (n.source||'') + (n.time?' - '+n.time:'') + '</div></div>';
-  }
-  area.innerHTML = html;
-}
-
-function fetchQuakeWithCallback(cb) {
-  if (!getApiKey()) { showToast('設定タブでAPIキーを入力してください'); if (cb) cb(); return; }
-  ld('ld-q', true);
-  callClaude(
-    '地震情報を気象庁等から検索しJSONのみ返してください。前置き不要。
-{"time":"2026/05/20 11:46","epicenter":"沖縄本峳近海","maxShindo":"5強","tsunami":"なし","shindoAreas":[{"level":"5強","area":"鹿児峳県与論町"}],"alertLevel":"normal|watch|alert"}
-alertLevel:5強以上=alert、5弱=watch、4以下=normal。shindoAreasは震度3以上すべて含める。',
-    '日本の最新地震情報（直近の震度5弱以上）を検索してJSON形式で返してください。',
-    function(err, raw) {
-      ld('ld-q', false);
-      if (err) { document.getElementById('q-epi').textContent = '取得エラー'; showToast(err.message); if (cb) cb(); return; }
-      var q = parseJ(raw) || {time:'取得中',epicenter:'確認中',maxShindo:'-',tsunami:'確認中',shindoAreas:[],alertLevel:'normal'};
-      S.quake = q; S.shindo = q.shindoAreas || [];
-      document.getElementById('q-time').textContent = q.time || '-';
-      document.getElementById('q-epi').textContent = q.epicenter || '-';
-      document.getElementById('q-tsunami').textContent = q.tsunami || '-';
-      document.getElementById('q-shindo').innerHTML = '<span class="bdg ' + shindoClass(q.maxShindo||'0') + '">震度' + (q.maxShindo||'-') + '</span>';
-      var ab = document.getElementById('alert-box');
-      if (q.alertLevel === 'alert') {
-        ab.innerHTML = '<div class="al al-red"><i class="ti ti-alert-triangle" aria-hidden="true"></i>震度5強以上—必須社内連携対象です</div>';
-      } else if (q.alertLevel === 'watch') {
-        ab.innerHTML = '<div class="al al-amb"><i class="ti ti-info-circle" aria-hidden="true"></i>震度5弱—参考情報として共有してください</div>';
-      } else {
-        ab.innerHTML = '';
-      }
-      renderShindoTable(); renderShindoFilterUI();
-      updateLocationStatus(RC_LIST, 'rc-s-');
-      updateLocationStatus(OFFICE_LIST, 'office-s-');
-      buildMapLinks(q.epicenter);
-      startPostTimer();
-      if (cb) cb();
-    }
-  );
-}
-
-function fetchQuake() {
-  if (!getApiKey()) { showToast('\u8a2d\u5b9a\u30bf\u30d6\u3067API\u30ad\u30fc\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044'); return; }
-  ld('ld-q', true);
-  callClaude(
-    '\u5730\u9707\u60c5\u5831\u3092\u6c17\u8c61\u5e81\u7b49\u304b\u3089\u691c\u7d22\u3057JSON\u306e\u307f\u8fd4\u3057\u3066\u304f\u3060\u3055\u3044\u3002\u524d\u7f6e\u304d\u4e0d\u8981\u3002\n{"time":"2026/05/20 11:46","epicenter":"\u6c96\u7e04\u672c\u5cf3\u8fd1\u6d77","maxShindo":"5\u5f37","tsunami":"\u306a\u3057","shindoAreas":[{"level":"5\u5f37","area":"\u9e7f\u5150\u5cf3\u770c\u4e0e\u8ad6\u753a"},{"level":"4","area":"\u9e7f\u5150\u5cf3\u770c\u5929\u57ce\u753a"}],"alertLevel":"normal|watch|alert"}\nalertLevel:5\u5f37\u4ee5\u4e0a=alert\u30015\u5f31=watch\u30014\u4ee5\u4e0b=normal\u3002shindoAreas\u306f\u9707\u5ea63\u4ee5\u4e0a\u3059\u3079\u3066\u542b\u3081\u308b\u3002',
-    '\u65e5\u672c\u306e\u6700\u65b0\u5730\u9707\u60c5\u5831\uff08\u76f4\u8fd1\u306e\u9707\u5ea65\u5f31\u4ee5\u4e0a\uff09\u3092\u691c\u7d22\u3057\u3066JSON\u5f62\u5f0f\u3067\u8fd4\u3057\u3066\u304f\u3060\u3055\u3044\u3002',
-    function(err, raw) {
-      ld('ld-q', false);
-      if (err) { document.getElementById('q-epi').textContent = '\u53d6\u5f97\u30a8\u30e9\u30fc'; showToast(err.message); return; }
-      var q = parseJ(raw) || {time:'\u53d6\u5f97\u4e2d',epicenter:'\u78ba\u8a8d\u4e2d',maxShindo:'-',tsunami:'\u78ba\u8a8d\u4e2d',shindoAreas:[],alertLevel:'normal'};
-      S.quake = q; S.shindo = q.shindoAreas || [];
-      document.getElementById('q-time').textContent = q.time || '-';
-      document.getElementById('q-epi').textContent = q.epicenter || '-';
-      document.getElementById('q-tsunami').textContent = q.tsunami || '-';
-      document.getElementById('q-shindo').innerHTML = '<span class="bdg ' + shindoClass(q.maxShindo||'0') + '">\u9707\u5ea6' + (q.maxShindo||'-') + '</span>';
-      var ab = document.getElementById('alert-box');
-      if (q.alertLevel === 'alert') {
-        ab.innerHTML = '<div class="al al-red"><i class="ti ti-alert-triangle" aria-hidden="true"></i>\u9707\u5ea65\u5f37\u4ee5\u4e0a\u2014\u5fc5\u9808\u793e\u5185\u9023\u643a\u5bfe\u8c61\u3067\u3059</div>';
-      } else if (q.alertLevel === 'watch') {
-        ab.innerHTML = '<div class="al al-amb"><i class="ti ti-info-circle" aria-hidden="true"></i>\u9707\u5ea65\u5f31\u2014\u53c2\u8003\u60c5\u5831\u3068\u3057\u3066\u5171\u6709\u3057\u3066\u304f\u3060\u3055\u3044</div>';
-      } else {
-        ab.innerHTML = '';
-      }
-      renderShindoTable(); renderShindoFilterUI();
-      updateLocationStatus(RC_LIST, 'rc-s-');
-      updateLocationStatus(OFFICE_LIST, 'office-s-');
-      buildMapLinks(q.epicenter);
-      startPostTimer();
-    }
-  );
-}
-
-function fetchNews() {
-  if (!S.quake) { showToast('\u5148\u306b\u5730\u9707\u60c5\u5831\u3092\u53d6\u5f97\u3057\u3066\u304f\u3060\u3055\u3044'); return; }
-  ld('ld-n', true);
-  document.getElementById('news-area').innerHTML = '';
-  callClaude(
-    'NHKニュース等から地震による物流・輸送への影響情報を検索しJSONのみ返してください。前置き不要。
-対象：新幹線・在来線運行見合わせ、港湾閉鎖・欠航、高速バス運休、ライフライン停止、工場・物流施設の操業停止、成田・羽田空港の欠航・遅延・貨物还集。人的・建物被害は除外。最大５件。
-{"items":[{"category":"rail|port|infra|airport|other","summary":"簡潔な内容","source":"NHK等","time":"報道時刻"}]}
-情報なければitemsは空配列。airportカテゴリは成田または羽田の空港便・貨物便の欠航・遅延・貨物还集情報に使用。',
-    '震源：' + S.quake.epicenter + '、最大震度' + S.quake.maxShindo + 'の地震に関する物流・輸送影響情報（鉄道・バス・港湾・ライフライン）および成田・羽田空港の発着便の欠航・遅延・貨物还集情報をNHKや各社公式から検索してください。',
-    function(err, raw) {
-      ld('ld-n', false);
-      if (err) { document.getElementById('news-area').innerHTML = '<div style="font-size:12px;color:var(--text2)">\u53d6\u5f97\u30a8\u30e9\u30fc\uff1a' + err.message + '</div>'; return; }
-      var nd = parseJ(raw) || {items:[]};
-      var allItems = nd.items || [];
-      S.news = allItems.filter(function(x){return x.category !== "airport";});
-      S.airports = allItems.filter(function(x){return x.category === "airport";});
-      renderNews(S.news);
-      renderAirportNews(S.airports);
-    }
-  );
-}
-
-function renderAirportNews(items) {
-  var area = document.getElementById("airport-area");
-  if (!area) return;
-  if (!items || items.length === 0) {
-    area.innerHTML = '<div style="font-size:12px;color:var(--text2);padding:6px 0">現時点で成田・羽田発着便の影響情報は確認されていません</div>';
-    return;
-  }
-  var html = '';
-  for (var i = 0; i < items.length; i++) {
-    var n = items[i];
-    html += '<div class="nc"><span class="ncat cat-airport"><i class="ti ti-plane" aria-hidden="true" style="font-size:11px"></i> 空港便</span>' +
-      '<div style="font-size:12px;color:var(--text);line-height:1.65">' + n.summary + '</div>' +
-      '<div style="font-size:10px;color:var(--text2);margin-top:5px"><i class="ti ti-clock" aria-hidden="true" style="font-size:11px;vertical-align:-1px;margin-right:3px"></i>' + (n.source||"") + (n.time?" - "+n.time:"") + '</div></div>';
-  }
-  area.innerHTML = html;
-}
-
-function fetchRoads() {
-  if (!S.quake) { showToast('\u5148\u306b\u300c\u60c5\u5831\u53ce\u96c6\u300d\u30bf\u30d6\u3067\u5730\u9707\u60c5\u5831\u3092\u53d6\u5f97\u3057\u3066\u304f\u3060\u3055\u3044'); return; }
-  ld('ld-r', true);
-  callClaude(
-    'NEXCO\u30fbJARTIC\u306e\u60c5\u5831\u3092\u3082\u3068\u306b\u5730\u9707\u306b\u3088\u308b\u9ad8\u901f\u9053\u8def\u901a\u884c\u6b62\u3081\u60c5\u5831\u3092JSON\u306e\u307f\u8fd4\u3057\u3066\u304f\u3060\u3055\u3044\u3002\u524d\u7f6e\u304d\u4e0d\u8981\u3002\n{"hasClosure":true,"closures":[{"road":"\u8def\u7dda\u540d","section":"XXIC-XXIC","direction":"\u4e0a\u4e0b\u7dda/\u4e0a\u308a/\u4e0b\u308a","status":"\u901a\u884c\u6b62\u3081/\u901f\u5ea6\u898f\u5236"}],"updated":"\u78ba\u8a8d\u6642\u523b"}\n\u60c5\u5831\u306a\u3051\u308c\u3070hasClosure:false\u3001closures:[]',
-    '\u9707\u6e90\uff1a' + S.quake.epicenter + '\u3001\u6700\u5927\u9707\u5ea6' + S.quake.maxShindo + '\u306e\u5730\u9707\u306b\u3088\u308b\u9ad8\u901f\u9053\u8def\u901a\u884c\u6b62\u3081\u60c5\u5831\u3092\u691c\u7d22\u3057\u3066\u304f\u3060\u3055\u3044\u3002',
-    function(err, raw) {
-      ld('ld-r', false);
-      var rr = document.getElementById('road-result');
-      if (err) { rr.innerHTML = '<div style="font-size:12px;color:var(--text2)">\u53d6\u5f97\u30a8\u30e9\u30fc\uff1a' + err.message + '</div>'; return; }
-      var rd = parseJ(raw) || {hasClosure:false, closures:[], updated:'-'};
-      S.roads = rd.closures || [];
-      if (!rd.hasClosure || S.roads.length === 0) {
-        rr.innerHTML = '<div style="display:flex;align-items:center;gap:6px;padding:8px 0;font-size:13px;color:#3b6d11"><span class="bdg bdg-grn">\u901a\u884c\u6b62\u3081\u306a\u3057</span><span>\u73fe\u6642\u70b9\u3067\u901a\u884c\u6b62\u3081\u60c5\u5831\u306f\u78ba\u8a8d\u3055\u308c\u3066\u3044\u307e\u305b\u3093</span></div>';
-      } else {
-        var rows = '';
-        for (var i = 0; i < S.roads.length; i++) {
-          var r = S.roads[i];
-          rows += '<tr><td style="font-weight:500">' + (r.road||'') + '</td><td>' + (r.section||'') + '</td>' +
-            '<td><span class="bdg bdg-gry" style="font-size:10px">' + (r.direction||'') + '</span></td>' +
-            '<td><span class="bdg bdg-red" style="font-size:10px">' + (r.status||'\u901a\u884c\u6b62\u3081') + '</span></td></tr>';
-        }
-        rr.innerHTML = '<div style="overflow-x:auto"><table class="tbl tbl-fx"><thead><tr>' +
-          '<th style="width:22%">\u8def\u7dda</th><th style="width:38%">\u533a\u9593</th>' +
-          '<th style="width:17%">\u65b9\u5411</th><th style="width:23%">\u72b6\u6cc1</th>' +
-          '</tr></thead><tbody>' + rows + '</tbody></table></div>' +
-          '<div style="font-size:11px;color:var(--text2);margin-top:6px">\u78ba\u8a8d\u6642\u523b\uff1a' + (rd.updated||'-') + '</div>';
-      }
-    }
-  );
-}
-
-function fetchDelivery() {
-  function setDLoading(co) {
-    document.getElementById(co + '-bdg').className = 'bdg bdg-gry';
-    document.getElementById(co + '-bdg').textContent = '\u53d6\u5f97\u4e2d...';
-    document.getElementById(co + '-det').textContent = '\u60c5\u5831\u3092\u53d6\u5f97\u3057\u3066\u3044\u307e\u3059...';
-    document.getElementById(co + '-time').textContent = '-';
-  }
-  function setDResult(co, info) {
-    var sm = {suspended:['bdg-red','\u5236\u9650\u3042\u308a'], partial:['bdg-amb','\u4e00\u90e8\u5236\u9650\u30fb\u9045\u5ef6\u3042\u308a'], normal:['bdg-grn','\u5236\u9650\u306a\u3057']};
-    var cls_lbl = sm[info.status] || ['bdg-grn','\u5236\u9650\u306a\u3057'];
-    document.getElementById(co + '-bdg').className = 'bdg ' + cls_lbl[0];
-    document.getElementById(co + '-bdg').textContent = cls_lbl[1];
-    var det = info.detail && info.detail !== '\u60c5\u5831\u53d6\u5f97\u4e2d' ? info.detail : '\u73fe\u6642\u70b9\u3067\u5236\u9650\u30fb\u9045\u5ef6\u60c5\u5831\u306f\u78ba\u8a8d\u3055\u308c\u3066\u3044\u307e\u305b\u3093';
-    document.getElementById(co + '-det').textContent = det;
-    document.getElementById(co + '-time').textContent = info.updated || '-';
-  }
-  function setDError(co, msg) {
-    document.getElementById(co + '-bdg').className = 'bdg bdg-gry';
-    document.getElementById(co + '-bdg').textContent = '\u53d6\u5f97\u30a8\u30e9\u30fc';
-    document.getElementById(co + '-det').textContent = msg || '\u516c\u5f0f\u30ea\u30f3\u30af\u3092\u3054\u78ba\u8a8d\u304f\u3060\u3055\u3044\u3002';
-    document.getElementById(co + '-time').textContent = '-';
-  }
-  setDLoading('y');
-  setDLoading('s');
-  if (!S.quake) {
-    setDError('y', '\u5148\u306b\u300c\u60c5\u5831\u53ce\u96c6\u300d\u30bf\u30d6\u3067\u5730\u9707\u60c5\u5831\u3092\u53d6\u5f97\u3057\u3066\u304f\u3060\u3055\u3044\u3002');
-    setDError('s', '\u5148\u306b\u300c\u60c5\u5831\u53ce\u96c6\u300d\u30bf\u30d6\u3067\u5730\u9707\u60c5\u5831\u3092\u53d6\u5f97\u3057\u3066\u304f\u3060\u3055\u3044\u3002');
-    return;
-  }
-  callClaude(
-    '\u4ee5\u4e0b\u306eJSON\u5f62\u5f0f\u306e\u307f\u3067\u5fc5\u305a\u8fd4\u7b54\u3057\u3066\u304f\u3060\u3055\u3044\u3002\u4ed6\u306e\u6587\u7ae0\u3084\u8aac\u660e\u306f\u4e00\u5207\u4e0d\u8981\u3067\u3059\u3002\n{"yamato":{"status":"normal","detail":"\u73fe\u6642\u70b9\u3067\u5236\u9650\u30fb\u9045\u5ef6\u60c5\u5831\u306f\u78ba\u8a8d\u3055\u308c\u3066\u3044\u307e\u305b\u3093","updated":"\u78ba\u8a8d\u6642\u523b"},"sagawa":{"status":"normal","detail":"\u73fe\u6642\u70b9\u3067\u5236\u9650\u30fb\u9045\u5ef6\u60c5\u5831\u306f\u78ba\u8a8d\u3055\u308c\u3066\u3044\u307e\u305b\u3093","updated":"\u78ba\u8a8d\u6642\u523b"}}\nstatus\u306fnormal/partial/suspended\u306e\u3044\u305a\u308c\u304b\u5fc5\u9808\u3002\u5730\u9707\u306b\u3088\u308b\u96c6\u8377\u30fb\u914d\u9001\u5236\u9650\u30fb\u904b\u4f11\u306e\u5831\u544a\u304c\u3042\u308b\u5834\u5408\u306fsuspended\u307e\u305f\u306fpartial\u3092\u4f7f\u7528\u3002\u305d\u308c\u4ee5\u5916\u306fnormal\u3002',
-    '\u9707\u6e90' + S.quake.epicenter + '\u3001\u6700\u5927\u9707\u5ea6' + S.quake.maxShindo + '\u306e\u5730\u9707\u306b\u95a2\u3059\u308b\u30e4\u30de\u30c8\u904b\u8f38\u3068\u4f50\u5ddd\u6025\u4fbf\u306e\u96c6\u8377\u30fb\u914d\u9001\u5236\u9650\u304a\u3088\u3073\u304a\u5c4a\u3051\u9045\u5ef6\u60c5\u5831\u306b\u3064\u3044\u3066\u3001\u5404\u793e\u516c\u5f0f\u60c5\u5831\u3092\u3082\u3068\u306b\u5224\u65ad\u3057\u3066JSON\u3067\u8fd4\u7b54\u3057\u3066\u304f\u3060\u3055\u3044\u3002',
-    function(err, raw) {
-      if (err) { setDError('y', err.message); setDError('s', err.message); return; }
-      var d = parseJ(raw);
-      if (!d || !d.yamato || !d.sagawa) {
-        var fb = {status:'normal', detail:'\u73fe\u6642\u70b9\u3067\u5236\u9650\u30fb\u9045\u5ef6\u60c5\u5831\u306f\u78ba\u8a8d\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002\u516c\u5f0f\u30ea\u30f3\u30af\u3092\u304a\u78ba\u304b\u3081\u304f\u3060\u3055\u3044\u3002', updated:'-'};
-        S.yamato = (d && d.yamato) ? d.yamato : fb;
-        S.sagawa = (d && d.sagawa) ? d.sagawa : fb;
-        setDResult('y', S.yamato);
-        setDResult('s', S.sagawa);
-        return;
-      }
-      S.yamato = d.yamato;
-      S.sagawa = d.sagawa;
-      setDResult('y', d.yamato);
-      setDResult('s', d.sagawa);
-    },
-    false
-  );
-}
-
-function fetchAirports() {
-  if (!S.quake) { showToast('先に「情報収集」タブで地震情報を取得してください'); return; }
-  ld('ld-ap', true);
-  document.getElementById('airport-area').innerHTML = '';
-  callClaude(
-    '成田空港（NRT）と羽田空港（HND）の地震による運航影響を検索しJSONのみ返してください。前置き不要。
-{"items":[{"airport":"NRT|成田空港|HND|羽田空港","type":"cargo|旅客|両方","status":"normal|遅延|欠航|制限","summary":"簡潔な内容（1・2文）","source":"発表元","time":"報道時刻"}]}
-地震による欠航・運行見合わせ・滑走路遡封鎖等の報告があればstatusに内容を記入。空港・舗行に寓だりませず、影響がない場合はitemsは空配列。',
-    '震源：' + S.quake.epicenter + '、最大震度' + S.quake.maxShindo + 'の地震。成田空港（輸出貨物・国際貦8便）と羽田空港（国内遠距・国際便）の運航影響、欠航・遅延・滑走路遡封鎖などを各空港公式・航空会社情報から検索してください。',
-    function(err, raw) {
-      ld('ld-ap', false);
-      var area = document.getElementById('airport-area');
-      if (err) {
-        area.innerHTML = '<div style="font-size:12px;color:var(--text2)">取得エラー：' + err.message + '</div>';
-        return;
-      }
-      var nd = parseJ(raw) || {items:[]};
-      S.airports = nd.items || [];
-      if (!S.airports.length) {
-        area.innerHTML = '<div style="font-size:13px;color:#3b6d11;display:flex;align-items:center;gap:6px;padding:6px 0"><span class="bdg bdg-grn">影響なし</span><span>成田・羽田発着便への影響は現時点で確認されていません</span></div>';
-        return;
-      }
-      var html = '';
-      for (var i = 0; i < S.airports.length; i++) {
-        var ap = S.airports[i];
-        var stCls = ap.status === 'normal' ? 'bdg-grn' : ap.status === '遅延' ? 'bdg-amb' : 'bdg-red';
-        html += '<div class="nc">' +
-          '<div style="display:flex;align-items:center;gap:6px;margin-bottom:5px">' +
-          '<span class="bdg ' + stCls + '">' + ap.airport + '</span>' +
-          '<span class="bdg bdg-gry" style="font-size:10px">' + (ap.type||'') + '</span>' +
-          '<span class="bdg ' + stCls + '" style="font-size:10px">' + ap.status + '</span></div>' +
-          '<div style="font-size:12px;color:var(--text);line-height:1.65">' + ap.summary + '</div>' +
-          '<div style="font-size:10px;color:var(--text2);margin-top:4px"><i class="ti ti-clock" aria-hidden="true" style="font-size:11px;vertical-align:-1px;margin-right:3px"></i>' + (ap.source||'') + (ap.time?' · '+ap.time:'') + '</div>' +
-          '</div>';
-      }
-      area.innerHTML = html;
-    }
-  );
-}
-
-function fetchAll() {
-  if (!getApiKey()) { showToast('設定タブでAPIキーを入力してください'); return; }
-  setProgress(10);
-  fetchQuakeWithCallback(function() {
-    setProgress(50);
-    fetchNews();
-    fetchRoads();
-    fetchDelivery();
-    fetchAirports();
-    setTimeout(function() { setProgress(100); }, 3000);
-    setTimeout(function() { resetProgress(); showToast('[完了] 情報取得が完了しました'); }, 3500);
   });
 }
 
-function buildText() {
-  var q = S.quake;
-  var title = makeTitle(q);
-  document.getElementById('t-title').textContent = title;
-  var isAlert = q && q.alertLevel === 'alert';
-  var isWatch = q && q.alertLevel === 'watch';
-  var urgency = isAlert ? '[要対応] 震度5強以上 - 社内連携必須' : isWatch ? '[参考共有] 震度5弱' : '[参考共有] 地震発生';
-  var shindoText = (q && q.maxShindo) ? q.maxShindo : '不明';
-  var callout = '@LL 各位\n地震が発生しましたので、速報ベースで共有します。\n最大震度は震度' + shindoText + 'です。\n各部門におかれましては、顧客・仕入先・自拠点における異常、または業務への影響を確認・検知した場合、本チャネルにて共有をお願いします。';
-  var qSec = q
-    ? '■ 地震概要（気象庁）\n・発生日時：' + (q.time||'確認中') + '\n・震源地　：' + (q.epicenter||'確認中') + '\n・最大震度：' + (q.maxShindo||'確認中') + '\n・津波　　：' + (q.tsunami||'確認中')
-    : '■ 地震概要\n・情報取得中';
-  var shindoSec = '';
-  var filtered = [];
-  for (var i = 0; i < S.shindo.length; i++) {
-    if (shindoNum(S.shindo[i].level) >= MIN_SHINDO) filtered.push(S.shindo[i]);
-  }
-  if (filtered.length > 0) {
-    shindoSec = '\n\n■ 主要エリア震度（震度' + shindoLabel(MIN_SHINDO) + '以上）\n';
-    for (var i = 0; i < filtered.length; i++) {
-      shindoSec += '・震度' + filtered[i].level + '：' + filtered[i].area + '\n';
+// ─── Office management ──────────────────────────────────────────
+function renderOfficeEditor(){
+  const ed=document.getElementById('office-editor');if(!ed)return;ed.innerHTML='';
+  OFFICE_LIST.forEach((o,i)=>{
+    const row=document.createElement('div');row.className='rc-row';
+    row.innerHTML=`<span class="rc-num">${i+1}</span>
+      <div class="rc-inputs">
+        <input type="text" placeholder="オフィス名（例：東京本社）" value="${o.name||''}" data-idx="${i}" data-field="name" oninput="onOfficeInput(this)">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+          <input type="text" placeholder="都道府県" value="${o.pref||''}" data-idx="${i}" data-field="pref" oninput="onOfficeInput(this)">
+          <input type="text" placeholder="市区町村" value="${o.city||''}" data-idx="${i}" data-field="city" oninput="onOfficeInput(this)">
+        </div>
+      </div>
+      <button class="rc-del" onclick="delOfficeRow(${i})"><i class="ti ti-trash" style="font-size:15px"></i></button>`;
+    ed.appendChild(row);
+  });
+  const ab=document.getElementById('add-office-btn');
+  if(ab) ab.style.display=OFFICE_LIST.length>=5?'none':'flex';
+}
+function onOfficeInput(el){OFFICE_LIST[parseInt(el.dataset.idx)][el.dataset.field]=el.value;}
+function addOfficeRow(){if(OFFICE_LIST.length>=5)return;OFFICE_LIST.push({name:'',pref:'',city:''});renderOfficeEditor();}
+function delOfficeRow(i){OFFICE_LIST.splice(i,1);renderOfficeEditor();}
+function saveOffice(){ls.set('office-list',OFFICE_LIST);renderOfficeGrid();flash('saved-office-msg');}
+function renderOfficeGrid(){
+  const g=document.getElementById('office-grid');if(!g)return;
+  if(!OFFICE_LIST.length){g.innerHTML='<div style="font-size:12px;color:var(--text2);grid-column:span 2;padding:8px 0">設定タブでオフィスを登録してください</div>';return;}
+  g.innerHTML=OFFICE_LIST.map((o,i)=>`
+    <div class="bc"><div class="bl">${o.pref||''}${o.city||''}</div>
+    <div class="bn">${o.name||'オフィス'+(i+1)}</div>
+    <div class="bs" id="office-s-${i}"><span class="sd" style="background:#888780"></span><span style="color:var(--text2);font-size:11px">未確認</span></div></div>`).join('');
+}
+function updateOfficeStatus(shindo){
+  OFFICE_LIST.forEach((o,i)=>{
+    const el=document.getElementById('office-s-'+i);if(!el)return;
+    const hit=shindo.filter(r=>r.area&&((o.pref&&r.area.includes(o.pref))||(o.city&&r.area.includes(o.city))));
+    if(hit.length>0){
+      const mx=hit.reduce((a,b)=>shindoNum(a.level)>shindoNum(b.level)?a:b);
+      const lv=mx.level;let bg='#888780',col='var(--text2)';
+      if(['7','6強','6弱','5強'].includes(lv)){bg='#E24B4A';col='#A32D2D';}
+      else if(lv==='5弱'){bg='#EF9F27';col='#854F0B';}
+      else if(lv==='4'){bg='#378ADD';col='#185FA5';}
+      else{bg='#639922';col='#3B6D11';}
+      el.innerHTML=`<span class="sd" style="background:${bg}"></span><span style="color:${col};font-size:11px;font-weight:500">震度${lv}</span>`;
+    }else{
+      el.innerHTML=`<span class="sd" style="background:#639922"></span><span style="color:#3B6D11;font-size:11px;font-weight:500">影響なし</span>`;
     }
-    shindoSec = shindoSec.replace(/\n$/, '');
-  }
-  var rcSec = '\n\n■ 各RC（ネット情報による速報）\n';
-  for (var i = 0; i < RC_LIST.length; i++) {
-    var rc = RC_LIST[i];
-    var el = document.getElementById('rc-s-' + i);
-    var statusText = el ? el.textContent.trim() : '未確認';
-    var mx = getShindoForLocation(rc);
-    var shindoPart = mx ? ' / 震度' + mx.level : (S.quake ? ' / 震度情報なし' : '');
-    rcSec += '・' + rc.name + '（' + rc.pref + rc.city + '）：' + statusText + shindoPart + '\n';
-  }
-  rcSec += '※震源近傍の各RCは別途現地報告をお待ちください。';
-  var officeSec = '';
-  if (OFFICE_LIST.length > 0) {
-    officeSec = '\n\n■ 各オフィス（ネット情報による速報）\n';
-    for (var i = 0; i < OFFICE_LIST.length; i++) {
-      var o = OFFICE_LIST[i];
-      var el2 = document.getElementById('office-s-' + i);
-      var st = el2 ? el2.textContent.trim() : '未確認';
-      var mx2 = getShindoForLocation(o);
-      var sp = mx2 ? ' / 震度' + mx2.level : (S.quake ? ' / 震度情報なし' : '');
-      officeSec += '・' + o.name + '（' + o.pref + o.city + '）：' + st + sp + '\n';
+  });
+}
+
+// ─── Map links ──────────────────────────────────────────────────
+const COORDS={
+  '北海道':{lat:43.1,lng:141.4,z:8},'青森県':{lat:40.8,lng:140.7,z:9},'岩手県':{lat:39.7,lng:141.1,z:9},
+  '宮城県':{lat:38.3,lng:140.9,z:9},'秋田県':{lat:39.7,lng:140.1,z:9},'山形県':{lat:38.2,lng:140.4,z:9},
+  '福島県':{lat:37.7,lng:140.5,z:9},'茨城県':{lat:36.3,lng:140.4,z:9},'栃木県':{lat:36.6,lng:139.9,z:9},
+  '群馬県':{lat:36.4,lng:139.1,z:9},'埼玉県':{lat:35.9,lng:139.6,z:10},'千葉県':{lat:35.6,lng:140.1,z:10},
+  '東京都':{lat:35.7,lng:139.7,z:10},'神奈川県':{lat:35.5,lng:139.6,z:10},'新潟県':{lat:37.9,lng:139.0,z:9},
+  '富山県':{lat:36.7,lng:137.2,z:9},'石川県':{lat:36.6,lng:136.6,z:9},'福井県':{lat:36.1,lng:136.2,z:9},
+  '山梨県':{lat:35.7,lng:138.6,z:9},'長野県':{lat:36.7,lng:138.2,z:9},'岐阜県':{lat:35.4,lng:136.7,z:9},
+  '静岡県':{lat:35.0,lng:138.4,z:9},'愛知県':{lat:35.2,lng:136.9,z:9},'三重県':{lat:34.7,lng:136.5,z:9},
+  '滋賀県':{lat:35.0,lng:135.9,z:9},'京都府':{lat:35.0,lng:135.8,z:10},'大阪府':{lat:34.7,lng:135.5,z:10},
+  '兵庫県':{lat:34.7,lng:135.2,z:9},'奈良県':{lat:34.7,lng:135.8,z:9},'和歌山県':{lat:34.2,lng:135.2,z:9},
+  '鳥取県':{lat:35.5,lng:134.2,z:9},'島根県':{lat:35.5,lng:133.1,z:9},'岡山県':{lat:34.7,lng:133.9,z:9},
+  '広島県':{lat:34.4,lng:132.5,z:9},'山口県':{lat:34.2,lng:131.5,z:9},'徳島県':{lat:34.1,lng:134.6,z:9},
+  '香川県':{lat:34.3,lng:134.0,z:9},'愛媛県':{lat:33.8,lng:132.8,z:9},'高知県':{lat:33.6,lng:133.5,z:9},
+  '福岡県':{lat:33.6,lng:130.4,z:9},'佐賀県':{lat:33.3,lng:130.3,z:9},'長崎県':{lat:32.7,lng:129.9,z:9},
+  '熊本県':{lat:32.8,lng:130.7,z:9},'大分県':{lat:33.2,lng:131.6,z:9},'宮崎県':{lat:31.9,lng:131.4,z:9},
+  '鹿児島県':{lat:31.6,lng:130.6,z:9},'沖縄県':{lat:26.2,lng:127.7,z:9},
+  '三陸沖':{lat:38.9,lng:142.1,z:9},'福島県沖':{lat:37.3,lng:141.8,z:9},
+  '茨城県沖':{lat:36.2,lng:141.2,z:9},'沖縄本島近海':{lat:26.5,lng:127.9,z:9},
+  '日向灘':{lat:32.0,lng:132.0,z:9},'薩摩半島西方沖':{lat:31.0,lng:129.5,z:9},
+  '奄美大島近海':{lat:28.3,lng:129.5,z:9},'種子島近海':{lat:30.4,lng:130.9,z:9}
+};
+function getCoords(epi){
+  if(!epi)return{lat:36.5,lng:138.0,z:7};
+  for(const[k,v]of Object.entries(COORDS)){if(epi.includes(k))return v;}
+  return{lat:36.5,lng:138.0,z:7};
+}
+function nexcoInfo(lng){
+  if(lng>=137.5)return{name:'NEXCO東日本',url:'https://www.e-nexco.co.jp/traffic_info/'};
+  if(lng>=135.5)return{name:'NEXCO中日本',url:'https://www.c-nexco.co.jp/traffic/traffic_info.html'};
+  return{name:'NEXCO西日本',url:'https://www.w-nexco.co.jp/activity/traffic_info/'};
+}
+function buildMapLinks(epi){
+  const c=getCoords(epi),nx=nexcoInfo(c.lng);
+  const gUrl=`https://www.google.com/maps/@${c.lat},${c.lng},${c.z}z/data=!5m1!1e1`;
+  mapZ=c.z;
+  S.mapLinks={google:gUrl,lat:c.lat,lng:c.lng,z:c.z,nexcoName:nx.name,nexcoUrl:nx.url};
+  document.getElementById('map-links').innerHTML=`
+    <a class="mc" href="${gUrl}" target="_blank">
+      <div style="display:flex;align-items:center;gap:10px"><div class="mi"><i class="ti ti-external-link"></i></div>
+      <div><div class="mt">Google マップで開く</div><div class="ms">${epi||'震源地'}周辺（渋滞レイヤー）</div></div></div>
+      <i class="ti ti-chevron-right" style="color:var(--text2);font-size:16px"></i></a>
+    <a class="mc" href="https://www.jartic.or.jp/" target="_blank">
+      <div style="display:flex;align-items:center;gap:10px"><div class="mi"><i class="ti ti-car"></i></div>
+      <div><div class="mt">JARTIC 道路交通情報</div><div class="ms">通行止め・規制をリアルタイム確認</div></div></div>
+      <i class="ti ti-chevron-right" style="color:var(--text2);font-size:16px"></i></a>
+    <a class="mc" href="${nx.url}" target="_blank">
+      <div style="display:flex;align-items:center;gap:10px"><div class="mi"><i class="ti ti-road"></i></div>
+      <div><div class="mt">${nx.name}</div><div class="ms">震源エリア担当</div></div></div>
+      <i class="ti ti-chevron-right" style="color:var(--text2);font-size:16px"></i></a>`;
+  renderMapFrame(c.lat,c.lng,c.z);
+}
+function renderMapFrame(lat,lng,z){
+  const wrap=document.getElementById('map-frame-wrap');
+  const frame=document.getElementById('map-frame');
+  const note=document.getElementById('map-note');
+  if(!wrap||!frame)return;
+  frame.src=`https://maps.google.com/maps?q=${lat},${lng}&z=${z}&layer=t&output=embed`;
+  wrap.style.display='block';
+  if(note)note.style.display='block';
+}
+function adjustZoom(delta){
+  if(!S.mapLinks)return;
+  mapZ=Math.min(13,Math.max(6,mapZ+delta));
+  S.mapLinks.z=mapZ;
+  renderMapFrame(S.mapLinks.lat,S.mapLinks.lng,mapZ);
+}
+
+// ─── Title builder ──────────────────────────────────────────────
+function makeTitle(q){
+  if(!q||!q.time)return '（地震情報を取得してください）';
+  try{
+    const m=q.time.match(/(\d{4})[\/\-年](\d{1,2})[\/\-月](\d{1,2})[\s日]*(\d{1,2})[:時](\d{1,2})/);
+    if(m){
+      const yy=String(m[1]).slice(2),mm=String(m[2]).padStart(2,'0'),dd=String(m[3]).padStart(2,'0');
+      const hh=String(m[4]).padStart(2,'0'),mn=String(m[5]).padStart(2,'0');
+      return `${yy}${mm}${dd}_${hh}:${mn}頃発生：${q.epicenter||'震源地不明'}地震（最大震度：${q.maxShindo||'不明'}）`;
     }
-    officeSec += '※震源近傍のオフィスは別途現地報告をお待ちください。';
+  }catch(e){}
+  return `${q.time}頃発生：${q.epicenter||'震源地不明'}地震（最大震度：${q.maxShindo||'不明'}）`;
+}
+
+// ─── API call ───────────────────────────────────────────────────
+async function callClaude(system,userMsg,useSearch){
+  if(useSearch===undefined) useSearch=true;
+  const key=getApiKey();
+  if(!key)throw new Error('APIキーが未設定です。設定タブで入力してください。');
+  const body={
+    model:'claude-sonnet-4-6',
+    max_tokens:1000,
+    system,
+    messages:[{role:'user',content:userMsg}]
+  };
+  if(useSearch) body.tools=[{type:'web_search_20250305',name:'web_search'}];
+  const res=await fetch('https://api.anthropic.com/v1/messages',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'x-api-key':key,
+      'anthropic-version':'2023-06-01',
+      'anthropic-dangerous-direct-browser-access':'true'
+    },
+    body:JSON.stringify(body)
+  });
+  if(!res.ok){
+    const err=await res.json().catch(()=>({}));
+    throw new Error(err.error?.message||`APIエラー(${res.status})`);
   }
-  var roadSec = '\n\n■ 高速道路\n';
-  if (S.roads.length > 0) {
-    for (var i = 0; i < S.roads.length; i++) {
-      var r = S.roads[i];
-      roadSec += '・' + r.road + ' ' + r.section + '（' + r.direction + '）：' + r.status + '\n';
+  const data=await res.json();
+  return data.content.filter(b=>b.type==='text').map(b=>b.text).join('');
+}
+function parseJSON(raw){
+  try{return JSON.parse(raw.replace(/```json|```/g,'').trim());}catch(e){return null;}
+}
+
+// ─── Progress bar ───────────────────────────────────────────────
+function setProgress(p){document.getElementById('progress').style.width=p+'%';}
+function resetProgress(){document.getElementById('progress').style.width='0%';}
+
+// ─── News render ────────────────────────────────────────────────
+const CAT_MAP={
+  rail:{label:'鉄道',cls:'cat-rail',icon:'ti-train'},
+  port:{label:'港湾・空港',cls:'cat-port',icon:'ti-ship'},
+  infra:{label:'ライフライン',cls:'cat-infra',icon:'ti-bolt'},
+  airport:{label:'空港便',cls:'cat-airport',icon:'ti-plane'},
+  other:{label:'その他',cls:'cat-other',icon:'ti-news'}
+};
+function renderNews(items){
+  const area=document.getElementById('news-area');
+  if(!items||items.length===0){
+    area.innerHTML='<div style="font-size:13px;color:#3b6d11;display:flex;align-items:center;gap:6px;padding:6px 0"><span class="bdg bdg-grn">情報なし</span><span>物流影響につながる情報は確認されていません</span></div>';
+    return;
+  }
+  area.innerHTML=items.map(n=>{
+    const cat=CAT_MAP[n.category]||CAT_MAP.other;
+    return`<div class="nc"><span class="ncat ${cat.cls}"><i class="ti ${cat.icon}" style="font-size:11px"></i> ${cat.label}</span>
+      <div style="font-size:12px;color:var(--text);line-height:1.65">${n.summary}</div>
+      <div style="font-size:10px;color:var(--text2);margin-top:5px"><i class="ti ti-clock" style="font-size:11px;vertical-align:-1px;margin-right:3px"></i>${n.source||''}${n.time?' · '+n.time:''}</div>
+    </div>`;
+  }).join('');
+}
+function renderAirportNews(items){
+  const area=document.getElementById('airport-area');if(!area)return;
+  if(!items||items.length===0){
+    area.innerHTML='<div style="font-size:12px;color:var(--text2);padding:6px 0">現時点で成田・羽田発着便の影響情報は確認されていません</div>';
+    return;
+  }
+  area.innerHTML=items.map(n=>`
+    <div class="nc"><span class="ncat cat-airport"><i class="ti ti-plane" style="font-size:11px"></i> 空港便</span>
+      <div style="font-size:12px;color:var(--text);line-height:1.65">${n.summary}</div>
+      <div style="font-size:10px;color:var(--text2);margin-top:5px"><i class="ti ti-clock" style="font-size:11px;vertical-align:-1px;margin-right:3px"></i>${n.source||''}${n.time?' · '+n.time:''}</div>
+    </div>`).join('');
+}
+
+// ─── Fetch functions ─────────────────────────────────────────────
+async function fetchQuake(){
+  if(!getApiKey()){showToast('設定タブでAPIキーを入力してください');sw('settings',document.querySelectorAll('.tab')[4]);return;}
+  const ld=document.getElementById('ld-q');ld.style.display='flex';
+  try{
+    const raw=await callClaude(
+      `地震情報を気象庁等から検索しJSONのみ返してください。前置き不要。
+{"time":"2026/05/20 11:46","epicenter":"沖縄本島近海","maxShindo":"5強","tsunami":"なし","shindoAreas":[{"level":"5強","area":"鹿児島県与論町"},{"level":"5弱","area":"鹿児島県知名町"},{"level":"4","area":"鹿児島県天城町・和泊町"}],"alertLevel":"normal|watch|alert"}
+alertLevel:5強以上=alert、5弱=watch、4以下=normal。shindoAreasは震度3以上すべて含める。`,
+      '日本の最新地震情報（直近の震度5弱以上）を検索してJSON形式で返してください。'
+    );
+    const q=parseJSON(raw)||{time:'取得中',epicenter:'確認中',maxShindo:'－',tsunami:'確認中',shindoAreas:[],alertLevel:'normal'};
+    S.quake=q;S.shindo=q.shindoAreas||[];
+    document.getElementById('q-time').textContent=q.time||'－';
+    document.getElementById('q-epi').textContent=q.epicenter||'－';
+    document.getElementById('q-tsunami').textContent=q.tsunami||'－';
+    document.getElementById('q-shindo').innerHTML=`<span class="bdg ${shindoClass(q.maxShindo||0)}">震度${q.maxShindo||'－'}</span>`;
+    const ab=document.getElementById('alert-box');
+    if(q.alertLevel==='alert') ab.innerHTML=`<div class="al al-red"><i class="ti ti-alert-triangle"></i>震度5強以上 — 必須社内連携対象です</div>`;
+    else if(q.alertLevel==='watch') ab.innerHTML=`<div class="al al-amb"><i class="ti ti-info-circle"></i>震度5弱 — 参考情報として共有してください</div>`;
+    else ab.innerHTML='';
+    renderShindoTable();renderShindoFilterUI();
+    updateRcStatus(S.shindo);updateOfficeStatus(S.shindo);
+    buildMapLinks(q.epicenter);
+    startTimer();
+  }catch(e){
+    document.getElementById('q-epi').textContent='取得エラー';
+    showToast('⚠️ '+e.message);
+  }finally{ld.style.display='none';}
+}
+
+async function fetchNews(){
+  if(!S.quake){showToast('先に地震情報を取得してください');return;}
+  const ld=document.getElementById('ld-n');ld.style.display='flex';
+  document.getElementById('news-area').innerHTML='';
+  try{
+    const raw=await callClaude(
+      `NHKニュース等から地震による物流・輸送への影響情報を検索しJSONのみ返してください。前置き不要。
+対象：新幹線・在来線運行見合わせ、港湾・空港閉鎖・欠航、高速バス運休、ライフライン停止、工場・物流施設の操業停止、成田・羽田空港の欠航・遅延・貨物還集。人的・建物被害は除外。最大5件。
+{"items":[{"category":"rail|port|infra|airport|other","summary":"簡潔な内容（1〜2文）","source":"NHK・JR東日本等","time":"報道時刻"}]}
+情報なければitems空配列。airportカテゴリは成田または羽田の空港便・貨物便の欠航・遅延・貨物還集情報に使用。`,
+      `震源：${S.quake.epicenter}、最大震度${S.quake.maxShindo}の地震に関する物流・輸送影響情報（鉄道・港湾・ライフライン）および成田・羽田空港の発着便影響をNHKや各社公式から検索してください。`
+    );
+    const nd=parseJSON(raw)||{items:[]};
+    const all=nd.items||[];
+    S.news=all.filter(x=>x.category!=='airport');
+    S.airports=all.filter(x=>x.category==='airport');
+    renderNews(S.news);
+    renderAirportNews(S.airports);
+  }catch(e){
+    document.getElementById('news-area').innerHTML=`<div style="font-size:12px;color:var(--text2)">取得エラー：${e.message}</div>`;
+  }finally{ld.style.display='none';}
+}
+
+async function fetchAirports(){
+  if(!S.quake){showToast('先に地震情報を取得してください');return;}
+  const ld=document.getElementById('ld-ap');ld.style.display='flex';
+  document.getElementById('airport-area').innerHTML='';
+  try{
+    const raw=await callClaude(
+      `成田空港（NRT）と羽田空港（HND）の地震による発着影響情報をJSONのみ返してください。前置き不要。
+{"items":[{"category":"airport","summary":"成田/羽田の欠航・遅延・貨物還集の簡潔な内容","source":"発表元","time":"報道時刻"}]}
+情報なければitems空配列。`,
+      `震源：${S.quake.epicenter}、最大震度${S.quake.maxShindo}の地震による成田・羽田空港の発着便（旅客・貨物）への影響情報を検索してください。`
+    );
+    const nd=parseJSON(raw)||{items:[]};
+    S.airports=nd.items||[];
+    renderAirportNews(S.airports);
+  }catch(e){
+    document.getElementById('airport-area').innerHTML=`<div style="font-size:12px;color:var(--text2)">取得エラー：${e.message}</div>`;
+  }finally{ld.style.display='none';}
+}
+
+async function fetchRoads(){
+  if(!S.quake){showToast('先に「情報収集」タブで地震情報を取得してください');return;}
+  const ld=document.getElementById('ld-r');ld.style.display='flex';
+  try{
+    const raw=await callClaude(
+      `NEXCO・JARTICの情報をもとに地震による高速道路通行止め情報をJSONのみ返してください。前置き不要。
+{"hasClosure":true,"closures":[{"road":"路線名","section":"○○IC〜△△IC","direction":"上下線/上り/下り","status":"通行止め/速度規制"}],"updated":"確認時刻"}
+情報なければhasClosure:false、closures:[]。`,
+      `震源：${S.quake.epicenter}、最大震度${S.quake.maxShindo}の地震による高速道路通行止め情報を検索してください。`
+    );
+    const rd=parseJSON(raw)||{hasClosure:false,closures:[],updated:'－'};
+    S.roads=rd.closures||[];
+    const rr=document.getElementById('road-result');
+    if(!rd.hasClosure||S.roads.length===0){
+      rr.innerHTML=`<div style="display:flex;align-items:center;gap:6px;padding:8px 0;font-size:13px;color:#3b6d11"><span class="bdg bdg-grn">通行止めなし</span><span>現時点で通行止め情報は確認されていません</span></div>`;
+    }else{
+      rr.innerHTML=`<div style="overflow-x:auto"><table class="tbl tbl-fx"><thead><tr><th style="width:22%">路線</th><th style="width:38%">区間</th><th style="width:17%">方向</th><th style="width:23%">状況</th></tr></thead><tbody>${S.roads.map(r=>`<tr><td style="font-weight:500">${r.road||''}</td><td>${r.section||''}</td><td><span class="bdg bdg-gry" style="font-size:10px">${r.direction||''}</span></td><td><span class="bdg bdg-red" style="font-size:10px">${r.status||'通行止め'}</span></td></tr>`).join('')}</tbody></table></div><div style="font-size:11px;color:var(--text2);margin-top:6px">確認時刻：${rd.updated||'－'}</div>`;
     }
-    roadSec = roadSec.replace(/\n$/, '');
-  } else {
-    roadSec += '・通行止め情報なし（現時点）';
+  }catch(e){document.getElementById('road-result').innerHTML=`<div style="font-size:12px;color:var(--text2)">取得エラー：${e.message}</div>`;}
+  finally{ld.style.display='none';}
+}
+
+async function fetchDelivery(){
+  if(!S.quake){showToast('先に「情報収集」タブで地震情報を取得してください');return;}
+  function setDLoading(co){
+    document.getElementById(co+'-bdg').className='bdg bdg-gry';
+    document.getElementById(co+'-bdg').textContent='取得中...';
+    document.getElementById(co+'-det').textContent='情報を取得しています...';
+    document.getElementById(co+'-time').textContent='－';
   }
-  if (S.mapLinks) {
-    roadSec += '\n・地図（渋滞表示）：' + S.mapLinks.google + '\n・JARTIC：' + S.mapLinks.jartic;
+  function setDResult(co,info){
+    const sm={suspended:['bdg-red','制限あり'],partial:['bdg-amb','一部制限・遅延あり'],normal:['bdg-grn','制限なし']};
+    const [cls,lbl]=sm[info.status]||['bdg-grn','制限なし'];
+    document.getElementById(co+'-bdg').className='bdg '+cls;
+    document.getElementById(co+'-bdg').textContent=lbl;
+    document.getElementById(co+'-det').textContent=info.detail||'現時点で制限・遅延情報は確認されていません';
+    document.getElementById(co+'-time').textContent=info.updated||'－';
   }
-  function delLine(co) {
-    if (!co) return '確認中';
-    if (co.status === 'suspended') return '[制限あり]' + (co.detail ? ' ' + co.detail : '');
-    if (co.status === 'partial')   return '[一部制限・遅延あり]' + (co.detail ? ' ' + co.detail : '');
+  function setDError(co,msg){
+    document.getElementById(co+'-bdg').className='bdg bdg-gry';
+    document.getElementById(co+'-bdg').textContent='取得エラー';
+    document.getElementById(co+'-det').textContent=msg||'公式リンクをご確認ください。';
+    document.getElementById(co+'-time').textContent='－';
+  }
+  setDLoading('y');setDLoading('s');
+  try{
+    const raw=await callClaude(
+      `ヤマト運輸（https://www.kuronekoyamato.co.jp/ytc/chien/chien_hp.html）と佐川急便（https://www2.sagawa-exp.co.jp/information/list/）の公式ページから地震による集荷・配送制限・お届け遅延情報をJSONのみ返してください。前置き不要。
+{"yamato":{"status":"normal|partial|suspended","detail":"制限・遅延内容の要約。なければ必ず「現時点でWeb上に地震による遅延・制限情報の掲載なし」と記載","updated":"確認時刻"},"sagawa":{"status":"normal|partial|suspended","detail":"内容","updated":"確認時刻"}}
+statusはnormal/partial/suspendedのいずれか必須。detailは必ず文字列で返すこと。`,
+      `震源${S.quake.epicenter}、最大震度${S.quake.maxShindo}の地震に関するヤマト運輸と佐川急便の集荷・配送制限およびお届け遅延情報を各社公式から検索してください。`,
+      false
+    );
+    const d=parseJSON(raw);
+    if(!d||!d.yamato||!d.sagawa){
+      const fb={status:'normal',detail:'現時点でWeb上に地震による遅延・制限情報の掲載なし',updated:'－'};
+      S.yamato=d&&d.yamato?d.yamato:fb;
+      S.sagawa=d&&d.sagawa?d.sagawa:fb;
+    }else{
+      S.yamato=d.yamato;S.sagawa=d.sagawa;
+    }
+    setDResult('y',S.yamato);setDResult('s',S.sagawa);
+  }catch(e){setDError('y',e.message);setDError('s',e.message);}
+}
+
+async function fetchAll(){
+  if(!getApiKey()){showToast('設定タブでAPIキーを入力してください');sw('settings',document.querySelectorAll('.tab')[4]);return;}
+  resetProgress();setProgress(10);
+  await fetchQuake();
+  setProgress(40);
+  await Promise.all([fetchNews(),fetchRoads(),fetchDelivery()]);
+  setProgress(100);
+  showToast('✅ 情報取得完了');
+  setTimeout(resetProgress,800);
+}
+
+// ─── Build Teams text ────────────────────────────────────────────
+function buildText(){
+  const q=S.quake;
+  const title=makeTitle(q);
+  document.getElementById('t-title').textContent=title;
+  const isAlert=q&&q.alertLevel==='alert',isWatch=q&&q.alertLevel==='watch';
+  const urgency=isAlert?'🔴【要対応】震度5強以上 — 社内連携必須':isWatch?'🔵【参考共有】震度5弱':'🔵【参考共有】地震発生';
+  const callout='@LL 各位\n地震が発生しましたので、速報ベースで共有します。\n最大震度は震度'+(q&&q.maxShindo?q.maxShindo:'不明')+'です。\n各部門におかれましては、顧客・仕入先・自拠点における異常、または業務への影響を確認・検知した場合、本チャネルにて共有をお願いします。';
+  const qSec=q
+    ?`■ 地震概要（気象庁）\n・発生日時：${q.time||'確認中'}\n・震源地　：${q.epicenter||'確認中'}\n・最大震度：${q.maxShindo||'確認中'}\n・津波　　：${q.tsunami||'確認中'}`
+    :`■ 地震概要\n・情報取得中`;
+  const filtered=S.shindo.filter(r=>shindoNum(r.level)>=MIN_SHINDO);
+  let shindoSec='';
+  if(filtered.length>0){shindoSec=`\n\n■ 主要エリア震度（震度${shindoLabel(MIN_SHINDO)}以上）\n`+filtered.map(r=>`・震度${r.level}：${r.area}`).join('\n');}
+  let rcSec='\n\n■ 各RC（ネット情報による速報）\n';
+  RC_LIST.forEach((rc,i)=>{
+    const el=document.getElementById('rc-s-'+i);
+    const st=el?el.textContent.trim():'未確認';
+    rcSec+=`・${rc.name}（${rc.pref}${rc.city}）：${st}\n`;
+  });
+  rcSec+='※震源近傍のRCは別途現地報告をお待ちください。';
+  let officeSec='';
+  if(OFFICE_LIST.length>0){
+    officeSec='\n\n■ 各オフィス（ネット情報による速報）\n';
+    OFFICE_LIST.forEach((o,i)=>{
+      const el=document.getElementById('office-s-'+i);
+      const st=el?el.textContent.trim():'未確認';
+      const hit=S.shindo.filter(r=>r.area&&((o.pref&&r.area.includes(o.pref))||(o.city&&r.area.includes(o.city))));
+      let shindoPart='';
+      if(hit.length>0){const mx=hit.reduce((a,b)=>shindoNum(a.level)>shindoNum(b.level)?a:b);shindoPart=` / 震度${mx.level}`;}
+      else if(S.quake){shindoPart=' / 震度情報なし';}
+      officeSec+=`・${o.name}（${o.pref}${o.city}）：${st}${shindoPart}\n`;
+    });
+    officeSec+='※震源近傍のオフィスは別途現地報告をお待ちください。';
+  }
+  let roadSec='\n\n■ 高速道路\n';
+  roadSec+=S.roads.length>0
+    ?S.roads.map(r=>`・${r.road} ${r.section}（${r.direction}）：${r.status}`).join('\n')
+    :'・通行止め情報なし（現時点）';
+  if(S.mapLinks){roadSec+=`\n・地図（渋滞表示）：${S.mapLinks.google}\n・JARTIC：https://www.jartic.or.jp/`;}
+  function delLine(co){
+    if(!co)return '確認中';
+    if(co.status==='suspended')return '[制限あり]'+(co.detail?' '+co.detail:'');
+    if(co.status==='partial')return '[一部制限・遅延あり]'+(co.detail?' '+co.detail:'');
     return '現時点でWeb上に地震による遅延・制限情報の掲載なし';
   }
-  var delSec = '\n\n■ 配送会社\n・ヤマト運輸　：' + delLine(S.yamato) + '\n・佐川急便　：' + delLine(S.sagawa);
-  var newsSec = '';
-  if (S.news && S.news.length > 0) {
-    newsSec = '\n\n■ 参考情報（輸送・インフラ）\n';
-    for (var i = 0; i < S.news.length; i++) {
-      newsSec += '・' + S.news[i].summary + '（' + (S.news[i].source||'') + '）\n';
-    }
-    newsSec = newsSec.replace(/\n$/, '');
-  }
-  var airportSec = '';
-  if (S.airports && S.airports.length > 0) {
-    airportSec = '\n\n■ 空港便（成田・羽田）\n';
-    for (var i = 0; i < S.airports.length; i++) {
-      airportSec += '・' + S.airports[i].summary + '（' + (S.airports[i].source||'') + '）\n';
-    }
-    airportSec = airportSec.replace(/\n$/, '');
-  }
-  var footer = '\n\n物流関連情報に変化があり次第、改めて本チャネルにて報告します。\n\n---------------------\n「参考リンク」\n・気象庁 地震情報：https://www.jma.go.jp/jp/quake/\n・NHK 防災・気象情報：https://www3.nhk.or.jp/sokuho/jishin/\n・ヤマト運輸 集配遅延情報：https://www.kuronekoyamato.co.jp/ytc/chien/chien_hp.html\n・佐川急便 集配遅延情報：https://www2.sagawa-exp.co.jp/information/list/\n・成田空港 運航状況：https://www.narita-airport.jp/ja/flight/\n・羽田空港 運航状況：https://www.haneda-airport.jp/inter/flight/';
-  var body = urgency + '\n' + callout + '\n\n' + qSec + shindoSec + rcSec + officeSec + roadSec + delSec + newsSec + airportSec + footer;
-  document.getElementById('t-body').textContent = body;
-  S.title = title; S.body = body;
+  const delSec=`\n\n■ 配送会社\n・ヤマト運輸　：${delLine(S.yamato)}\n・佐川急便　　：${delLine(S.sagawa)}`;
+  let newsSec='';
+  if(S.news&&S.news.length>0){newsSec='\n\n■ 参考情報（輸送・インフラ）\n'+S.news.map(n=>`・${n.summary}（${n.source||''}）`).join('\n');}
+  let airportSec='';
+  if(S.airports&&S.airports.length>0){airportSec='\n\n■ 空港便（成田・羽田）\n'+S.airports.map(n=>`・${n.summary}（${n.source||''}）`).join('\n');}
+  const footer='\n\n物流関連情報に変化があり次第、改めて本チャネルにて報告します。\n\n---------------------\n「参考リンク」\n・気象庁 地震情報：https://www.jma.go.jp/jp/quake/\n・NHK 防災・気象情報：https://www3.nhk.or.jp/sokuho/jishin/\n・ヤマト運輸 集配遅延情報：https://www.kuronekoyamato.co.jp/ytc/chien/chien_hp.html\n・佐川急便 集配遅延情報：https://www2.sagawa-exp.co.jp/information/list/\n・成田空港 運航状況：https://www.narita-airport.jp/ja/flight/\n・羽田空港 運航状況：https://www.haneda-airport.jp/inter/flight/';
+  const body=`${urgency}\n\n${callout}\n\n${qSec}${shindoSec}${rcSec}${officeSec}${roadSec}${delSec}${newsSec}${airportSec}${footer}`;
+  document.getElementById('t-body').textContent=body;
+  return{title,body};
 }
 
-function setTimerMin(el) {
-  var btns = document.querySelectorAll('#timer-min-setting .seg-btn');
-  for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
-  el.classList.add('active');
-  TIMER_MIN = parseInt(el.getAttribute('data-val'), 10);
+// ─── Copy / Share / Post ─────────────────────────────────────────
+async function cpAll(){
+  const {title,body}=buildText();
+  const full=`【件名】${title}\n\n${body}`;
+  try{
+    await navigator.clipboard.writeText(full);
+    flashBtn('btn-cp','<i class="ti ti-check" style="color:#3b6d11"></i><span style="color:#3b6d11">コピーしました</span>','<i class="ti ti-copy" aria-hidden="true"></i> タイトル＋本文をコピー');
+    showToast('クリップボードにコピーしました');
+    document.getElementById('btn-open-teams').classList.add('show');
+  }catch(e){showToast('コピー失敗 — 手動でテキストを選択してください');}
+}
+function openTeams(){window.open('https://teams.microsoft.com/','_blank');}
+async function shareToTeams(){
+  const {title,body}=buildText();
+  if(!title||title.includes('取得してください')){showToast('先に情報を取得してください');return;}
+  if(navigator.share){
+    try{await navigator.share({title,text:`【件名】${title}\n\n${body}`});showToast('共有しました');}
+    catch(e){if(e.name!=='AbortError')showToast('共有エラー：'+e.message);}
+  }else{await cpAll();showToast('この端末では共有シートが使えないためコピーしました');}
+}
+async function postToTeams(){
+  const {title,body}=buildText();
+  const url=getWebhookUrl();
+  if(!url){showToast('設定タブでWebhook URLを入力してください');return;}
+  if(!body||body.includes('情報を取得してください')){showToast('先に情報を取得してください');return;}
+  const btn=document.getElementById('btn-webhook');
+  btn.innerHTML='<i class="ti ti-loader" style="animation:spin .8s linear infinite"></i> 投稿中...';
+  btn.disabled=true;
+  try{
+    const isAlert=S.quake&&S.quake.alertLevel==='alert';
+    const payload={type:'message',attachments:[{contentType:'application/vnd.microsoft.card.adaptive',content:{'$schema':'http://adaptivecards.io/schemas/adaptive-card.json',type:'AdaptiveCard',version:'1.4',body:[{type:'TextBlock',text:(isAlert?'🔴 ':'🔵 ')+title,weight:'bolder',size:'medium',wrap:true,color:isAlert?'attention':'accent'},{type:'TextBlock',text:body,wrap:true,size:'small',fontType:'monospace'}]}}]};
+    const res=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    if(res.ok||res.status===202){
+      showToast('✅ Teamsに投稿しました');
+      flashBtn('btn-webhook','<i class="ti ti-check"></i><span>投稿完了！</span>','<i class="ti ti-brand-teams"></i> Teamsに直接投稿する');
+    }else{throw new Error('HTTP '+res.status);}
+  }catch(e){
+    showToast('投稿エラー：'+e.message+' — コピーして手動投稿してください');
+    btn.innerHTML='<i class="ti ti-brand-teams"></i> Teamsに直接投稿する';
+  }finally{btn.disabled=false;}
 }
 
-function syncTimerSettingUI() {
-  var btns = document.querySelectorAll('#timer-min-setting .seg-btn');
-  for (var i = 0; i < btns.length; i++) {
-    btns[i].classList.toggle('active', parseInt(btns[i].getAttribute('data-val'), 10) === TIMER_MIN);
-  }
+// ─── UI helpers ──────────────────────────────────────────────────
+function flash(id){
+  const el=document.getElementById(id);if(!el)return;
+  el.style.opacity='1';setTimeout(()=>{el.style.opacity='0';},2000);
+}
+function flashBtn(id,onHtml,offHtml){
+  const b=document.getElementById(id);if(!b)return;
+  b.innerHTML=onHtml;setTimeout(()=>{b.innerHTML=offHtml;},2200);
+}
+let _toastTimer=null;
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.classList.add('show');
+  if(_toastTimer)clearTimeout(_toastTimer);
+  _toastTimer=setTimeout(()=>t.classList.remove('show'),2800);
 }
 
-function saveTimerSetting() {
-  lsSet('timer-min', TIMER_MIN);
-  flash('saved-timer-msg');
-}
-
-function startPostTimer() {
-  stopPostTimer();
-  postTimerEnd = Date.now() + TIMER_MIN * 60 * 1000;
-  var bar = document.getElementById('timer-bar');
-  bar.classList.add('active');
-  bar.classList.remove('warn');
-  tickTimer();
-  postTimerInterval = setInterval(tickTimer, 1000);
-}
-
-function tickTimer() {
-  var remaining = postTimerEnd - Date.now();
-  var bar = document.getElementById('timer-bar');
-  var cd = document.getElementById('timer-countdown');
-  if (remaining <= 0) {
-    cd.textContent = '00:00';
-    bar.classList.add('warn');
-    showToast('投稿時刻になりました。Teams文タブから投稿してください');
-    clearInterval(postTimerInterval);
-    postTimerInterval = null;
-    return;
-  }
-  var warnMs = 5 * 60 * 1000;
-  if (remaining <= warnMs) bar.classList.add('warn');
-  var m = Math.floor(remaining / 60000);
-  var s = Math.floor((remaining % 60000) / 1000);
-  cd.textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
-}
-
-function stopPostTimer() {
-  if (postTimerInterval) { clearInterval(postTimerInterval); postTimerInterval = null; }
-  postTimerEnd = null;
-  var bar = document.getElementById('timer-bar');
-  bar.classList.remove('active', 'warn');
-}
-
-function openTeams() {
-  var url = 'https://teams.microsoft.com/';
-  window.open(url, '_blank');
-}
-
-function cpAll() {
-  buildText();
-  var full = '【件名】' + S.title + '\n\n' + S.body;
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(full).then(function() {
-      flashBtn('btn-cp', '<i class="ti ti-check" style="color:#3b6d11"></i><span style="color:#3b6d11">コピーしました</span>', '<i class="ti ti-copy" aria-hidden="true"></i> タイトル＋本文をコピー');
-      showToast('クリップボードにコピーしました');
-      document.getElementById('btn-open-teams').classList.add('show');
-    }).catch(function() { showToast('コピーに失敗しました。手動でテキストを選択してください。'); });
-  } else {
-    showToast('コピーに失敗しました。手動でテキストを選択してください。');
-  }
-}
-
-function shareToTeams() {
-  buildText();
-  if (!S.title || S.title.indexOf('取得してください') !== -1) { showToast('先に情報を取得してください'); return; }
-  if (navigator.share) {
-    navigator.share({title: S.title, text: '【件名】' + S.title + '\n\n' + S.body}).then(function() {
-      showToast('共有しました');
-    }).catch(function(e) {
-      if (e.name !== 'AbortError') showToast('共有エラー：' + e.message);
-    });
-  } else {
-    cpAll();
-    showToast('この端末では共有シートが使えないためコピーしました');
-  }
-}
-
-function postToTeams() {
-  buildText();
-  var url = getWebhookUrl();
-  if (!url) { showToast('設定タブでWebhook URLを入力してください'); return; }
-  if (!S.body || S.body.indexOf('情報を取得してください') !== -1) { showToast('先に情報を取得してください'); return; }
-  var btn = document.getElementById('btn-webhook');
-  btn.innerHTML = '<i class="ti ti-loader" style="animation:spin .8s linear infinite" aria-hidden="true"></i> 投稿中...';
-  btn.disabled = true;
-  var isAlert = S.quake && S.quake.alertLevel === 'alert';
-  var payload = {
-    type: 'message',
-    attachments: [{
-      contentType: 'application/vnd.microsoft.card.adaptive',
-      content: {
-        '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json',
-        type: 'AdaptiveCard',
-        version: '1.4',
-        body: [
-          {type:'TextBlock', text:(isAlert?'[要対応] ':'[参考共有] ')+S.title, weight:'bolder', size:'medium', wrap:true, color:isAlert?'attention':'accent'},
-          {type:'TextBlock', text:S.body, wrap:true, size:'small', fontType:'monospace'}
-        ]
-      }
-    }]
-  };
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', url, true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.onload = function() {
-    btn.disabled = false;
-    if (xhr.status === 200 || xhr.status === 202) {
-      showToast('[完了] Teamsに投稿しました');
-      flashBtn('btn-webhook', '<i class="ti ti-check" aria-hidden="true"></i><span>投稿完了！</span>', '<i class="ti ti-brand-teams" aria-hidden="true"></i> Teamsに直接投稿する');
-    } else {
-      showToast('投稿エラー: HTTP ' + xhr.status);
-      btn.innerHTML = '<i class="ti ti-brand-teams" aria-hidden="true"></i> Teamsに直接投稿する';
-    }
-  };
-  xhr.onerror = function() {
-    btn.disabled = false;
-    showToast('投稿エラー。コピーして手動投稿してください。');
-    btn.innerHTML = '<i class="ti ti-brand-teams" aria-hidden="true"></i> Teamsに直接投稿する';
-  };
-  xhr.send(JSON.stringify(payload));
-}
-
+// ─── Boot ────────────────────────────────────────────────────────
 init();
 </script>
 </body>
