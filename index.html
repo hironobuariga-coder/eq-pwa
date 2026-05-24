@@ -37,6 +37,15 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
 #header{background:var(--bg);border-bottom:0.5px solid var(--border);padding:10px 16px 8px;flex-shrink:0}
 #header h1{font-size:16px;font-weight:500;display:flex;align-items:center;gap:8px}
 #header h1 i{font-size:20px;color:#E24B4A}
+#timer-bar{display:none;align-items:center;gap:8px;padding:5px 16px 6px;background:var(--bg2);border-bottom:0.5px solid var(--border);font-size:12px;color:var(--text2)}
+#timer-bar.active{display:flex}
+#timer-bar.warn{background:#fff3cd;color:#856404}
+@media(prefers-color-scheme:dark){#timer-bar.warn{background:#3d2c00;color:#f5c842}}
+#timer-countdown{font-size:14px;font-weight:500;color:var(--text);font-variant-numeric:tabular-nums;min-width:38px}
+#timer-bar.warn #timer-countdown{color:#856404}
+@media(prefers-color-scheme:dark){#timer-bar.warn #timer-countdown{color:#f5c842}}
+#btn-open-teams{display:none;width:100%;padding:12px;border-radius:var(--r-lg);background:#6264a7;color:#fff;font-size:14px;font-weight:500;border:none;cursor:pointer;margin-top:8px;align-items:center;justify-content:center;gap:8px}
+#btn-open-teams.show{display:flex}
 #content{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:12px 12px calc(60px + var(--safe-bottom))}
 #tab-bar{position:fixed;bottom:0;left:0;right:0;background:var(--bg);border-top:0.5px solid var(--border);display:flex;padding-bottom:var(--safe-bottom);z-index:100}
 .tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:8px 2px 6px;font-size:9px;font-weight:500;color:var(--text3);background:none;border:none;cursor:pointer}
@@ -187,6 +196,13 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
       <span id="api-dot" style="width:7px;height:7px;border-radius:50%;background:#888780;display:inline-block;margin-left:4px;flex-shrink:0"></span>
     </h1>
   </div>
+  <div id="timer-bar">
+    <i class="ti ti-clock" style="font-size:14px;flex-shrink:0" aria-hidden="true"></i>
+    <span>投稿まで</span>
+    <span id="timer-countdown">--:--</span>
+    <span style="flex:1"></span>
+    <button onclick="stopPostTimer()" style="font-size:11px;padding:3px 8px;border-radius:6px;border:0.5px solid var(--border2);background:var(--bg);color:var(--text2);cursor:pointer">停止</button>
+  </div>
 
   <div id="content">
 
@@ -261,8 +277,20 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
         <div id="road-result"><div style="font-size:13px;color:var(--text2);padding:6px 0">情報取得後に表示</div></div>
       </div>
       <div class="sec">
-        <h3 style="font-size:11px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">地図で確認する</h3>
+        <div class="sec-h">
+          <h3>地図で確認する <span class="bdg bdg-blu" style="font-size:9px">湋汚・通行止め</span></h3>
+          <div style="display:flex;gap:6px">
+            <button class="rb" id="map-zoom-out" onclick="adjustMapZoom(-1)" title="縮小"><i class="ti ti-minus" style="font-size:13px"></i></button>
+            <button class="rb" id="map-zoom-in" onclick="adjustMapZoom(1)" title="拡大"><i class="ti ti-plus" style="font-size:13px"></i></button>
+          </div>
+        </div>
         <div id="map-links"><div style="font-size:12px;color:var(--text2);padding:4px 0">情報収集タブで地震情報を取得するとリンクが生成されます</div></div>
+        <div id="map-frame-wrap" style="margin-top:10px;border-radius:10px;overflow:hidden;display:none">
+          <iframe id="map-frame" width="100%" height="340" style="border:0;display:block" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div id="map-note" style="display:none;font-size:11px;color:var(--text2);margin-top:6px;line-height:1.6">
+          <i class="ti ti-info-circle" style="font-size:12px;vertical-align:-1px;margin-right:3px"></i>湋汚レイヤー表示。地図をタップしてズームや移動できます。通行止めは上のテキスト情報もご確認ください。
+        </div>
       </div>
       <div class="sec">
         <h3 style="font-size:11px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">各社 交通情報</h3>
@@ -324,6 +352,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
         </div>
         <div id="t-body" class="to">情報収集タブで情報を取得してください。</div>
         <button class="bo" onclick="cpAll()" id="btn-cp"><i class="ti ti-copy" aria-hidden="true"></i> タイトル＋本文をコピー</button>
+        <button id="btn-open-teams" onclick="openTeams()"><i class="ti ti-brand-teams" aria-hidden="true"></i> Teamsを開く</button>
         <button class="share-btn" onclick="shareToTeams()" id="btn-share"><i class="ti ti-share" aria-hidden="true"></i> 共有してTeamsに送る</button>
         <button class="teams-post-btn" id="btn-webhook" onclick="postToTeams()" style="display:none"><i class="ti ti-brand-teams" aria-hidden="true"></i> Teamsに直接投稿する</button>
       </div>
@@ -392,6 +421,20 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
       </div>
 
       <div class="sec">
+        <div class="sec">
+          <div class="sec-h"><h3>投稿タイマー設定</h3></div>
+          <div style="font-size:12px;color:var(--text2);margin-bottom:8px">地震情報取得後、指定時間後に投稿を促すカウントダウンを表示します</div>
+          <div class="seg-wrap" id="timer-min-setting">
+            <button class="seg-btn" data-val="30" onclick="setTimerMin(this)">30分</button>
+            <button class="seg-btn active" data-val="45" onclick="setTimerMin(this)">45分</button>
+            <button class="seg-btn" data-val="60" onclick="setTimerMin(this)">60分</button>
+            <button class="seg-btn" data-val="90" onclick="setTimerMin(this)">90分</button>
+          </div>
+          <div style="margin-top:10px;display:flex;gap:8px;align-items:center">
+            <button class="sb sb-grn" onclick="saveTimerSetting()"><i class="ti ti-device-floppy" style="font-size:14px"></i> 保存する</button>
+            <span id="saved-timer-msg" style="font-size:12px;color:#3b6d11;opacity:0;transition:opacity .4s">保存しました</span>
+          </div>
+        </div>
         <div class="sec-h"><h3>震度表示フィルター</h3></div>
         <p style="font-size:12px;color:var(--text2);margin-bottom:10px">震度別エリアに表示する最小震度</p>
         <div class="seg-wrap" id="min-shindo-setting">
@@ -437,6 +480,9 @@ var DEFAULT_RC = [
 ];
 var DEFAULT_OFFICE = [];
 var S = {quake:null, shindo:[], roads:[], yamato:null, sagawa:null, news:[], airports:[], mapLinks:null, title:'', body:''};
+var TIMER_MIN = 45;
+var postTimerInterval = null;
+var postTimerEnd = null;
 var RC_LIST = [];
 var OFFICE_LIST = [];
 var MIN_SHINDO = 4;
@@ -453,6 +499,8 @@ function init() {
   RC_LIST = lsGet('rc-list', DEFAULT_RC);
   OFFICE_LIST = lsGet('office-list', DEFAULT_OFFICE);
   MIN_SHINDO = lsGet('min-shindo', 4);
+  TIMER_MIN = lsGet('timer-min', 45);
+  syncTimerSettingUI();
   loadApiKeyUI();
   loadWebhookUI();
   updateApiDot();
@@ -850,11 +898,11 @@ function buildMapLinks(epi) {
   var c = getCoords(epi);
   var nx = nexcoInfo(c.lng);
   var gUrl = gMapUrl(c.lat, c.lng, c.z);
-  S.mapLinks = {google: gUrl, jartic: 'https://www.jartic.or.jp/', nexcoName: nx.name, nexcoUrl: nx.url};
+  S.mapLinks = {google: gUrl, jartic: 'https://www.jartic.or.jp/', nexcoName: nx.name, nexcoUrl: nx.url, lat: c.lat, lng: c.lng, z: c.z};
   document.getElementById('map-links').innerHTML =
     '<a class="mc" href="' + gUrl + '" target="_blank">' +
-    '<div style="display:flex;align-items:center;gap:10px"><div class="mi"><i class="ti ti-map-pin" aria-hidden="true"></i></div>' +
-    '<div><div class="mt">Google マップ（渋滞表示）</div><div class="ms">' + (epi||'震源地') + '周辺</div></div></div>' +
+    '<div style="display:flex;align-items:center;gap:10px"><div class="mi"><i class="ti ti-external-link" aria-hidden="true"></i></div>' +
+    '<div><div class="mt">Google マップで開く</div><div class="ms">' + (epi||'震源地') + '周辺（湋汚レイヤー）</div></div></div>' +
     '<i class="ti ti-chevron-right" style="color:var(--text2);font-size:16px" aria-hidden="true"></i></a>' +
     '<a class="mc" href="https://www.jartic.or.jp/" target="_blank">' +
     '<div style="display:flex;align-items:center;gap:10px"><div class="mi"><i class="ti ti-car" aria-hidden="true"></i></div>' +
@@ -864,7 +912,27 @@ function buildMapLinks(epi) {
     '<div style="display:flex;align-items:center;gap:10px"><div class="mi"><i class="ti ti-road" aria-hidden="true"></i></div>' +
     '<div><div class="mt">' + nx.name + '</div><div class="ms">震源エリア担当</div></div></div>' +
     '<i class="ti ti-chevron-right" style="color:var(--text2);font-size:16px" aria-hidden="true"></i></a>';
+  renderMapFrame(c.lat, c.lng, c.z);
 }
+
+function renderMapFrame(lat, lng, z) {
+  var wrap = document.getElementById('map-frame-wrap');
+  var frame = document.getElementById('map-frame');
+  var note = document.getElementById('map-note');
+  if (!wrap || !frame) return;
+  var src = 'https://maps.google.com/maps?q=' + lat + ',' + lng + '&z=' + z + '&layer=t&output=embed';
+  frame.src = src;
+  wrap.style.display = 'block';
+  if (note) note.style.display = 'block';
+}
+
+function adjustMapZoom(delta) {
+  if (!S.mapLinks) return;
+  var z = Math.min(13, Math.max(6, S.mapLinks.z + delta));
+  S.mapLinks.z = z;
+  renderMapFrame(S.mapLinks.lat, S.mapLinks.lng, z);
+}
+
 
 function makeTitle(q) {
   if (!q || !q.time) return '(地震情報を取得してください)';
@@ -1006,6 +1074,7 @@ alertLevel:5強以上=alert、5弱=watch、4以下=normal。shindoAreasは震度
       updateLocationStatus(RC_LIST, 'rc-s-');
       updateLocationStatus(OFFICE_LIST, 'office-s-');
       buildMapLinks(q.epicenter);
+      startPostTimer();
       if (cb) cb();
     }
   );
@@ -1038,6 +1107,7 @@ function fetchQuake() {
       updateLocationStatus(RC_LIST, 'rc-s-');
       updateLocationStatus(OFFICE_LIST, 'office-s-');
       buildMapLinks(q.epicenter);
+      startPostTimer();
     }
   );
 }
@@ -1309,6 +1379,66 @@ function buildText() {
   S.title = title; S.body = body;
 }
 
+function setTimerMin(el) {
+  var btns = document.querySelectorAll('#timer-min-setting .seg-btn');
+  for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
+  el.classList.add('active');
+  TIMER_MIN = parseInt(el.getAttribute('data-val'), 10);
+}
+
+function syncTimerSettingUI() {
+  var btns = document.querySelectorAll('#timer-min-setting .seg-btn');
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].classList.toggle('active', parseInt(btns[i].getAttribute('data-val'), 10) === TIMER_MIN);
+  }
+}
+
+function saveTimerSetting() {
+  lsSet('timer-min', TIMER_MIN);
+  flash('saved-timer-msg');
+}
+
+function startPostTimer() {
+  stopPostTimer();
+  postTimerEnd = Date.now() + TIMER_MIN * 60 * 1000;
+  var bar = document.getElementById('timer-bar');
+  bar.classList.add('active');
+  bar.classList.remove('warn');
+  tickTimer();
+  postTimerInterval = setInterval(tickTimer, 1000);
+}
+
+function tickTimer() {
+  var remaining = postTimerEnd - Date.now();
+  var bar = document.getElementById('timer-bar');
+  var cd = document.getElementById('timer-countdown');
+  if (remaining <= 0) {
+    cd.textContent = '00:00';
+    bar.classList.add('warn');
+    showToast('投稿時刻になりました。Teams文タブから投稿してください');
+    clearInterval(postTimerInterval);
+    postTimerInterval = null;
+    return;
+  }
+  var warnMs = 5 * 60 * 1000;
+  if (remaining <= warnMs) bar.classList.add('warn');
+  var m = Math.floor(remaining / 60000);
+  var s = Math.floor((remaining % 60000) / 1000);
+  cd.textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+}
+
+function stopPostTimer() {
+  if (postTimerInterval) { clearInterval(postTimerInterval); postTimerInterval = null; }
+  postTimerEnd = null;
+  var bar = document.getElementById('timer-bar');
+  bar.classList.remove('active', 'warn');
+}
+
+function openTeams() {
+  var url = 'https://teams.microsoft.com/';
+  window.open(url, '_blank');
+}
+
 function cpAll() {
   buildText();
   var full = '【件名】' + S.title + '\n\n' + S.body;
@@ -1316,6 +1446,7 @@ function cpAll() {
     navigator.clipboard.writeText(full).then(function() {
       flashBtn('btn-cp', '<i class="ti ti-check" style="color:#3b6d11"></i><span style="color:#3b6d11">コピーしました</span>', '<i class="ti ti-copy" aria-hidden="true"></i> タイトル＋本文をコピー');
       showToast('クリップボードにコピーしました');
+      document.getElementById('btn-open-teams').classList.add('show');
     }).catch(function() { showToast('コピーに失敗しました。手動でテキストを選択してください。'); });
   } else {
     showToast('コピーに失敗しました。手動でテキストを選択してください。');

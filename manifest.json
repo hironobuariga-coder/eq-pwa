@@ -2,7 +2,8 @@
   "name": "地震 物流影響 速報ツール",
   "short_name": "地震速報",
   "description": "地震発生時の物流影響を収集しTeamsに速報投稿するツール",
-  "start_url": "/index.html",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#ffffff",
@@ -28,7 +29,7 @@
       "name": "情報を一括取得",
       "short_name": "一括取得",
       "description": "地震・道路・配送情報を一括取得",
-      "url": "/index.html#collect"
+      "url": "./index.html#collect"
     }
   ]
 }
