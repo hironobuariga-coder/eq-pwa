@@ -46,8 +46,8 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
 @media(prefers-color-scheme:dark){#timer-bar.warn #timer-countdown{color:#f5c842}}
 #btn-open-teams{display:none;width:100%;padding:12px;border-radius:var(--r-lg);background:#6264a7;color:#fff;font-size:14px;font-weight:500;border:none;cursor:pointer;margin-top:8px;align-items:center;justify-content:center;gap:8px}
 #btn-open-teams.show{display:flex}
-#content{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:12px 12px calc(60px + var(--safe-bottom))}
-#tab-bar{position:fixed;bottom:0;left:0;right:0;background:var(--bg);border-top:0.5px solid var(--border);display:flex;padding-bottom:var(--safe-bottom);z-index:100}
+#content{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:12px 12px 16px}
+#tab-bar{background:var(--bg);border-top:0.5px solid var(--border);display:flex;padding-bottom:var(--safe-bottom);flex-shrink:0;z-index:10}
 .tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:8px 2px 6px;font-size:9px;font-weight:500;color:var(--text3);background:none;border:none;cursor:pointer}
 .tab i{font-size:20px}
 .tab.active{color:#E24B4A}
@@ -171,7 +171,7 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
 #install-banner button{font-size:12px;font-weight:500;padding:5px 12px;border:none;border-radius:var(--r-md);cursor:pointer}
 .ib-install{background:var(--info);color:#fff}
 .ib-later{background:transparent;color:var(--info)}
-#toast{position:fixed;bottom:calc(70px + var(--safe-bottom));left:50%;transform:translateX(-50%) translateY(20px);background:#1a1a18ee;color:#fff;font-size:12px;padding:8px 16px;border-radius:20px;opacity:0;transition:all .25s;pointer-events:none;white-space:nowrap;z-index:9999}
+#toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:#1a1a18ee;color:#fff;font-size:12px;padding:8px 16px;border-radius:20px;opacity:0;transition:all .25s;pointer-events:none;white-space:nowrap;z-index:9999}
 #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 #progress{position:fixed;top:0;left:0;height:2px;background:#E24B4A;width:0%;transition:width .3s;z-index:9999;pointer-events:none}
 </style>
