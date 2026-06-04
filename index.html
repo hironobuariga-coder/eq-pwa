@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
 <meta name="theme-color" content="#E24B4A">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -27,8 +27,8 @@
   :root{--bg:#1c1c1a;--bg2:#252523;--bg3:#2e2e2b;--text:#f0ede6;--text2:#a8a69f;--text3:#6e6c66;--border:rgba(255,255,255,.1);--border2:rgba(255,255,255,.2);--info-bg:#0c2e52;--info:#7ab8f0;}
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans','Noto Sans JP',sans-serif;font-size:14px;color:var(--text);background:var(--bg3)}
-#app{display:flex;flex-direction:column;height:100%;padding-top:var(--safe-top)}
+html,body{height:100%;height:100dvh;overflow:hidden;font-family:-apple-system,'Hiragino Sans','Noto Sans JP',sans-serif;font-size:14px;color:var(--text);background:var(--bg3)}
+#app{display:flex;flex-direction:column;height:100%;height:100dvh;padding-top:var(--safe-top);overflow:hidden}
 #install-banner{display:none;background:var(--info-bg);color:var(--info);padding:10px 14px;font-size:12px;align-items:center;justify-content:space-between;gap:8px;flex-shrink:0}
 #install-banner button{font-size:12px;font-weight:500;padding:5px 12px;border:none;border-radius:var(--r-md);cursor:pointer}
 .ib-install{background:var(--info);color:#fff}
@@ -72,9 +72,9 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
 @media(prefers-color-scheme:dark){.pl-detour{background:#412402;color:#fac775}}
 #timer-bar.warn #timer-cd{color:#856404}
 @media(prefers-color-scheme:dark){#timer-bar.warn #timer-cd{color:#f5c842}}
-#content{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:12px 12px 16px}
-#tab-bar{background:var(--bg);border-top:0.5px solid var(--border);display:flex;padding-bottom:var(--safe-bottom);flex-shrink:0}
-.tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:8px 2px 6px;font-size:9px;font-weight:500;color:var(--text3);background:none;border:none;cursor:pointer;transition:color .15s;-webkit-tap-highlight-color:transparent}
+#content{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:12px 12px 16px}
+#tab-bar{background:var(--bg);border-top:0.5px solid var(--border);display:flex;padding-bottom:var(--safe-bottom);flex-shrink:0;touch-action:manipulation}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:8px 2px 6px;font-size:9px;font-weight:500;color:var(--text3);background:none;border:none;cursor:pointer;transition:color .15s;-webkit-tap-highlight-color:transparent;touch-action:manipulation;user-select:none}
 .tab i{font-size:20px}
 .tab.active{color:#E24B4A}
 .pane{display:none}.pane.active{display:block}
@@ -162,9 +162,9 @@ html,body{height:100%;overflow:hidden;font-family:-apple-system,'Hiragino Sans',
 .nt{font-size:11px;color:var(--text2);line-height:1.6;padding:8px 10px;background:var(--bg2);border-radius:var(--r-md)}
 .ld{display:none;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:20px;color:var(--text2);font-size:13px}
 /* 災害セレクター */
-#dtype-bar{display:flex;gap:6px;padding:8px 16px;background:var(--bg);border-bottom:0.5px solid var(--border);overflow-x:auto;flex-shrink:0;-webkit-overflow-scrolling:touch}
+#dtype-bar{display:flex;gap:6px;padding:8px 16px;background:var(--bg);border-bottom:0.5px solid var(--border);overflow-x:auto;flex-shrink:0;-webkit-overflow-scrolling:touch;touch-action:pan-x}
 #dtype-bar::-webkit-scrollbar{display:none}
-.dtype-btn{flex-shrink:0;padding:5px 12px;font-size:12px;font-weight:500;border:0.5px solid var(--border2);border-radius:20px;background:var(--bg2);color:var(--text2);cursor:pointer;display:flex;align-items:center;gap:5px}
+.dtype-btn{flex-shrink:0;padding:5px 12px;font-size:12px;font-weight:500;border:0.5px solid var(--border2);border-radius:20px;background:var(--bg2);color:var(--text2);cursor:pointer;display:flex;align-items:center;gap:5px;touch-action:manipulation;user-select:none}
 .dtype-btn.active{border-color:transparent;color:#fff}
 .dtype-btn[data-dtype="quake"].active{background:#E24B4A}
 .dtype-btn[data-dtype="typhoon"].active{background:#378ADD}
@@ -747,9 +747,11 @@ window.addEventListener('appinstalled',()=>{document.getElementById('install-ban
 function sw(id,el){
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
   document.querySelectorAll('.pane').forEach(p=>p.classList.remove('active'));
-  document.getElementById('pane-'+id).classList.add('active');
+  const pane=document.getElementById('pane-'+id);
+  if(pane) pane.classList.add('active');
   el.classList.add('active');
-  document.getElementById('content').scrollTop=0;
+  const content=document.getElementById('content');
+  if(content) content.scrollTop=0;
   if(id==='teams') buildText();
   if(id==='settings'){loadApiKeyUI();loadWebhookUI();}
 }
