@@ -1,0 +1,17 @@
+{
+  "name": "eq-pwa-road-collector",
+  "version": "1.0.0",
+  "description": "夜間高速道路通行止め情報の自動収集スクリプト",
+  "main": "collect.js",
+  "scripts": {
+    "collect": "node collect.js",
+    "test": "node collect.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "node-fetch": "^2.7.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
