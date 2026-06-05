@@ -294,8 +294,9 @@ body{
     <div class="sec">
       <div class="sec-h"><h3>③ 夜間通行止め推移 <span class="bdg bdg-blu" style="font-size:9px">パラパラ漫画</span></h3>
         <button class="rb" onclick="loadTL()"><i class="ti ti-refresh" style="font-size:14px"></i> 読込</button></div>
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><span class="bdg bdg-amb" style="font-size:10px">⚠ 試験運用中</span><span style="font-size:11px;color:var(--text2)">NEXCO公式Xから自動収集。投稿状況により取得できない場合があります。</span></div>
       <div id="ld-tl" class="ld"><div class="sp"></div><span>タイムラインを読み込み中...</span></div>
-      <div id="tl-area"><div style="font-size:12px;color:var(--text2);padding:6px 0">夜間（21:00〜6:00）に自動収集した通行止め推移を表示します</div></div>
+      <div id="tl-area"><div style="font-size:12px;color:var(--text2);padding:6px 0">NEXCO公式Xから1時間ごとに自動収集した通行止め推移を表示します</div></div>
     </div>
     <div class="sec">
       <div class="sec-h"><h3>地図で確認する</h3>
@@ -304,7 +305,7 @@ body{
           <button class="rb" onclick="adjZ(1)"><i class="ti ti-plus" style="font-size:13px"></i></button>
         </div>
       </div>
-      <div id="map-links"><div style="font-size:12px;color:var(--text2);padding:4px 0">地震情報を取得するとリンクが生成されます</div></div>
+      <div id="map-links"><div style="font-size:12px;color:var(--text2);padding:4px 0">情報収集タブで災害情報を取得するとリンクが生成されます</div></div>
       <div id="map-wrap" style="margin-top:10px;border-radius:10px;overflow:hidden;display:none">
         <iframe id="map-frame" width="100%" height="300" style="border:0;display:block" loading="lazy"></iframe>
       </div>
@@ -312,9 +313,9 @@ body{
     <div class="sec">
       <h3 style="font-size:11px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">各社 交通情報</h3>
       <div class="lr"><span>道路交通情報センター（JARTIC）</span><a href="https://www.jartic.or.jp/" target="_blank" style="color:var(--info);font-size:12px;display:flex;align-items:center;gap:3px"><i class="ti ti-external-link" style="font-size:14px"></i> 開く</a></div>
-      <div class="lr"><span>NEXCO東日本</span><a href="https://www.e-nexco.co.jp/traffic_info/" target="_blank" style="color:var(--info);font-size:12px;display:flex;align-items:center;gap:3px"><i class="ti ti-external-link" style="font-size:14px"></i> 開く</a></div>
-      <div class="lr"><span>NEXCO中日本</span><a href="https://www.c-nexco.co.jp/traffic/traffic_info.html" target="_blank" style="color:var(--info);font-size:12px;display:flex;align-items:center;gap:3px"><i class="ti ti-external-link" style="font-size:14px"></i> 開く</a></div>
-      <div class="lr"><span>NEXCO西日本</span><a href="https://www.w-nexco.co.jp/activity/traffic_info/" target="_blank" style="color:var(--info);font-size:12px;display:flex;align-items:center;gap:3px"><i class="ti ti-external-link" style="font-size:14px"></i> 開く</a></div>
+      <div class="lr"><span>NEXCO東日本</span><a href="https://www.driveplaza.com/traffic/" target="_blank" style="color:var(--info);font-size:12px;display:flex;align-items:center;gap:3px"><i class="ti ti-external-link" style="font-size:14px"></i> 開く</a></div>
+      <div class="lr"><span>NEXCO中日本</span><a href="https://www.c-nexco.co.jp/jam/" target="_blank" style="color:var(--info);font-size:12px;display:flex;align-items:center;gap:3px"><i class="ti ti-external-link" style="font-size:14px"></i> 開く</a></div>
+      <div class="lr"><span>NEXCO西日本</span><a href="https://www.w-nexco.co.jp/realtime/" target="_blank" style="color:var(--info);font-size:12px;display:flex;align-items:center;gap:3px"><i class="ti ti-external-link" style="font-size:14px"></i> 開く</a></div>
     </div>
     <button class="fb" onclick="fetchRoads()"><i class="ti ti-refresh"></i> ① 現在の通行止めを取得する</button>
   </div>
@@ -347,7 +348,7 @@ body{
       <div id="t-body" class="to">「情報収集」タブで情報を取得してください。</div>
       <button class="bo" onclick="cpAll()" id="btn-cp"><i class="ti ti-copy"></i> タイトル＋本文をコピー</button>
       <button id="btn-ot" onclick="openTeams()"><i class="ti ti-brand-teams"></i> Teamsを開く</button>
-      <button class="share-btn" onclick="shareT()"><i class="ti ti-share"></i> 共有してTeamsに送る</button>
+      <button class="share-btn" onclick="shareT()"><i class="ti ti-share"></i> 共有してTeamsに送る <span style="font-size:10px;opacity:.8;margin-left:4px">📱 スマホ向け</span></button>
       <button class="wh-btn" id="btn-wh" onclick="postT()" style="display:none"><i class="ti ti-brand-teams"></i> Teamsに直接投稿する</button>
     </div>
     <div class="sec">
@@ -399,7 +400,8 @@ body{
       <div class="sv-bar"><span class="sv-msg" id="sv-tmr"><i class="ti ti-check" style="font-size:13px"></i> 保存しました</span><button class="sb sb-g" onclick="saveTmr()"><i class="ti ti-device-floppy" style="font-size:14px"></i> 保存する</button></div>
     </div>
     <div class="sec">
-      <div class="sec-h"><h3>震度表示フィルター</h3></div>
+      <div class="sec-h"><h3>収集する最小震度</h3></div>
+      <p style="font-size:12px;color:var(--text2);margin-bottom:10px;line-height:1.6">この震度以上の地震だけを収集します。大きい値にすると大きな地震だけを拾います（例：震度5弱以上 → 大地震のみ追跡）。</p>
       <div class="seg-row" id="shindo-seg">
         <button class="seg" data-v="3" onclick="setShindo(this)">震度3以上</button>
         <button class="seg on" data-v="4" onclick="setShindo(this)">震度4以上</button>
@@ -425,9 +427,9 @@ body{
 // ── State ──────────────────────────────────────────────────────────
 var DEF_RC=[{name:'東RC',pref:'神奈川県',city:'川崎市'},{name:'中RC',pref:'愛知県',city:'稲沢市'},{name:'西RC',pref:'兵庫県',city:'三田市'},{name:'西第2RC',pref:'兵庫県',city:'川西市'}];
 var DEF_OFF=[];
-var S={dis:null,quake:null,shindo:[],roads:[],yamato:null,sagawa:null,news:[],mapLinks:null};
+var S={dis:null,quake:null,shindo:[],roads:[],yamato:null,sagawa:null,news:[],mapLinks:null,lockRegion:null,weather:null};
 var RC=[],OFF=[],MIN_SH=4,TMR_MIN=45,DTYPE='quake';
-var tmrIv=null,tmrEnd=null,mapZ=9;
+var tmrIv=null,tmrEnd=null,mapZ=5;
 var deferredInstall=null;
 
 // ── 災害定義（ES5互換で関数として定義） ────────────────────────────
@@ -442,7 +444,14 @@ var DD = {
     offTtl:'各オフィス（地震情報による速報）',
     showShindo:true,
     sys:'地震情報を気象庁等から検索しJSONのみ返してください。前置き不要。\n{"time":"2026/05/20 11:46","epicenter":"沖縄本島近海","maxShindo":"5強","tsunami":"なし","shindoAreas":[{"level":"5強","area":"鹿児島県与論町"}],"alertLevel":"normal|watch|alert","affectedPrefs":["鹿児島県"]}\nalertLevel:5強以上=alert、5弱=watch、4以下=normal。shindoAreasは震度3以上すべて。',
-    usr:function(){return '日本の最新地震情報（直近の震度5弱以上）を検索してJSON形式で返してください。';},
+    usr:function(){
+      var thr=snLbl(MIN_SH); // 設定された最小震度（足切り）
+      var base='日本の最新地震情報を検索してJSON形式で返してください。震度'+thr+'以上の地震のみを対象とし、それ未満の小さな地震は無視してください。';
+      if(S.lockRegion){
+        base+='特に「'+S.lockRegion+'」付近で発生した地震を優先的に追跡してください（余震・続報を含む）。該当地域に新しい地震がなければ、その地域の最新の状況を返してください。';
+      }
+      return base;
+    },
     render:function(d){
       var lv=d.alertLevel||'normal';
       var ah=lv==='alert'?'<div class="al al-red"><i class="ti ti-alert-triangle"></i>震度5強以上 — 必須社内連携対象です</div>':lv==='watch'?'<div class="al al-amb"><i class="ti ti-info-circle"></i>震度5弱 — 参考情報として共有してください</div>':'';
@@ -697,6 +706,86 @@ function updByPrefs(prefs,list,pfx){
     el.innerHTML=hit?'<span class="sd" style="background:#EF9F27"></span><span style="color:#854F0B;font-size:11px;font-weight:500">警報・影響あり</span>':'<span class="sd" style="background:#639922"></span><span style="color:#3B6D11;font-size:11px;font-weight:500">影響なし</span>';
   }
 }
+
+// ─── 天気アイコン（線画SVG・万人に伝わるシンプルな形） ───────────
+function wxIcon(type, size){
+  var s = size || 22;
+  var st = 'fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round';
+  var sun = '<circle cx="12" cy="12" r="4.2" style="'+st+'"/><g style="'+st+'"><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/><line x1="5.2" y1="5.2" x2="6.9" y2="6.9"/><line x1="17.1" y1="17.1" x2="18.8" y2="18.8"/><line x1="5.2" y1="18.8" x2="6.9" y2="17.1"/><line x1="17.1" y1="6.9" x2="18.8" y2="5.2"/></g>';
+  var cloud = '<path d="M7 18h10a4 4 0 0 0 .3-7.99A6 6 0 0 0 5.5 11 3.5 3.5 0 0 0 7 18z" style="'+st+'"/>';
+  var rain = cloud + '<g style="'+st+'"><line x1="8" y1="20" x2="7" y2="22.5"/><line x1="12" y1="20" x2="11" y2="22.5"/><line x1="16" y1="20" x2="15" y2="22.5"/></g>';
+  var snow = cloud + '<g style="fill:currentColor"><circle cx="8" cy="21" r="1"/><circle cx="12" cy="22" r="1"/><circle cx="16" cy="21" r="1"/></g>';
+  var partly = '<g style="'+st+'"><circle cx="8" cy="8" r="3"/><line x1="8" y1="2.5" x2="8" y2="4"/><line x1="2.5" y1="8" x2="4" y2="8"/><line x1="4.2" y1="4.2" x2="5.2" y2="5.2"/><line x1="11.8" y1="4.2" x2="10.8" y2="5.2"/></g><path d="M9 19h8a3.3 3.3 0 0 0 .2-6.6A5 5 0 0 0 8 13 3 3 0 0 0 9 19z" style="'+st+'"/>';
+  var icons = { sunny:sun, clear:sun, cloudy:cloud, rain:rain, heavyrain:rain, snow:snow, partly:partly };
+  var body = icons[type] || cloud;
+  return '<svg width="'+s+'" height="'+s+'" viewBox="0 0 24 24" style="display:block">'+body+'</svg>';
+}
+
+// 天気テキスト → アイコンタイプ判定
+function wxType(text){
+  if(!text) return 'cloudy';
+  if(/雪/.test(text)) return 'snow';
+  if(/雷|豪雨|大雨/.test(text)) return 'heavyrain';
+  if(/雨/.test(text)) return 'rain';
+  if(/晴れ?のち曇|曇のち晴|晴時々曇|曇時々晴|晴れ?一時|薄曇/.test(text)) return 'partly';
+  if(/晴/.test(text)) return 'sunny';
+  if(/曇|くもり/.test(text)) return 'cloudy';
+  return 'cloudy';
+}
+
+// 拠点に天気予報を表示（台風・大雨・大雪用）
+// forecastObj: { "神奈川県": {today:"雨", tomorrow:"曇"}, ... }
+function updWeather(forecast, list, pfx){
+  for(var i=0;i<list.length;i++){
+    var el=document.getElementById(pfx+i);if(!el)continue;
+    var loc=list[i];
+    var wx=null;
+    if(forecast){
+      for(var k in forecast){
+        if(loc.pref && (k.indexOf(loc.pref)>=0 || loc.pref.indexOf(k.replace(/[県府都道]/g,''))>=0)){ wx=forecast[k]; break; }
+      }
+    }
+    if(wx){
+      var todayT=wxType(wx.today), tomoT=wxType(wx.tomorrow);
+      el.innerHTML='<div style="display:flex;align-items:center;gap:10px;color:var(--text2)">'+
+        '<div style="display:flex;flex-direction:column;align-items:center;gap:1px"><span style="font-size:9px">今日</span><span style="color:var(--text)">'+wxIcon(todayT,20)+'</span><span style="font-size:9px">'+(wx.today||'')+'</span></div>'+
+        '<div style="display:flex;flex-direction:column;align-items:center;gap:1px"><span style="font-size:9px">明日</span><span style="color:var(--text)">'+wxIcon(tomoT,20)+'</span><span style="font-size:9px">'+(wx.tomorrow||'')+'</span></div>'+
+        '</div>';
+    }else{
+      el.innerHTML='<span style="font-size:11px;color:var(--text3)">天気情報なし</span>';
+    }
+  }
+}
+
+// 登録拠点・オフィスの都道府県の天気予報をまとめて取得（台風・大雨・大雪時）
+function fetchWeatherForLocations(){
+  // 重複を除いた都道府県リスト
+  var prefs={};
+  for(var i=0;i<RC.length;i++){ if(RC[i].pref) prefs[RC[i].pref]=true; }
+  for(var i=0;i<OFF.length;i++){ if(OFF[i].pref) prefs[OFF[i].pref]=true; }
+  var list=[];
+  for(var k in prefs) list.push(k);
+  if(!list.length) return;
+
+  // 各拠点に「取得中」を表示
+  for(var i=0;i<RC.length;i++){ var el=document.getElementById('rc-s-'+i); if(el) el.innerHTML='<span style="font-size:11px;color:var(--text3)">天気取得中...</span>'; }
+  for(var i=0;i<OFF.length;i++){ var el=document.getElementById('off-s-'+i); if(el) el.innerHTML='<span style="font-size:11px;color:var(--text3)">天気取得中...</span>'; }
+
+  var sys='次の都道府県について、今日と明日の天気予報をJSONのみで返してください。前置き不要。天気は「晴れ」「曇り」「雨」「大雨」「雪」「晴れのち曇り」などの簡潔な日本語で。\n{"forecast":{"東京都":{"today":"曇り","tomorrow":"雨"}}}';
+  var usr=list.join('、')+'の今日と明日の天気予報を気象庁等から取得してください。';
+  claude(sys,usr,true,function(err,raw){
+    if(err){ 
+      for(var i=0;i<RC.length;i++){ var el=document.getElementById('rc-s-'+i); if(el) el.innerHTML='<span style="font-size:11px;color:var(--text3)">天気取得失敗</span>'; }
+      for(var i=0;i<OFF.length;i++){ var el=document.getElementById('off-s-'+i); if(el) el.innerHTML='<span style="font-size:11px;color:var(--text3)">天気取得失敗</span>'; }
+      return;
+    }
+    var wd=pj(raw)||{};
+    var fc=wd.forecast||{};
+    S.weather=fc;
+    updWeather(fc, RC, 'rc-s-');
+    updWeather(fc, OFF, 'off-s-');
+  });
+}
 function renderOffEd(){
   var ed=document.getElementById('off-ed');if(!ed)return;ed.innerHTML='';
   for(var i=0;i<OFF.length;i++){
@@ -729,19 +818,76 @@ function updOffSt(shindo){
 // ── 地図 ─────────────────────────────────────────────────────────────
 var COORDS={'北海道':{lat:43.1,lng:141.4,z:8},'青森県':{lat:40.8,lng:140.7,z:9},'岩手県':{lat:39.7,lng:141.1,z:9},'宮城県':{lat:38.3,lng:140.9,z:9},'秋田県':{lat:39.7,lng:140.1,z:9},'山形県':{lat:38.2,lng:140.4,z:9},'福島県':{lat:37.7,lng:140.5,z:9},'茨城県':{lat:36.3,lng:140.4,z:9},'栃木県':{lat:36.6,lng:139.9,z:9},'群馬県':{lat:36.4,lng:139.1,z:9},'埼玉県':{lat:35.9,lng:139.6,z:10},'千葉県':{lat:35.6,lng:140.1,z:10},'東京都':{lat:35.7,lng:139.7,z:10},'神奈川県':{lat:35.5,lng:139.6,z:10},'新潟県':{lat:37.9,lng:139.0,z:9},'富山県':{lat:36.7,lng:137.2,z:9},'石川県':{lat:36.6,lng:136.6,z:9},'福井県':{lat:36.1,lng:136.2,z:9},'山梨県':{lat:35.7,lng:138.6,z:9},'長野県':{lat:36.7,lng:138.2,z:9},'岐阜県':{lat:35.4,lng:136.7,z:9},'静岡県':{lat:35.0,lng:138.4,z:9},'愛知県':{lat:35.2,lng:136.9,z:9},'三重県':{lat:34.7,lng:136.5,z:9},'滋賀県':{lat:35.0,lng:135.9,z:9},'京都府':{lat:35.0,lng:135.8,z:10},'大阪府':{lat:34.7,lng:135.5,z:10},'兵庫県':{lat:34.7,lng:135.2,z:9},'奈良県':{lat:34.7,lng:135.8,z:9},'和歌山県':{lat:34.2,lng:135.2,z:9},'鳥取県':{lat:35.5,lng:134.2,z:9},'島根県':{lat:35.5,lng:133.1,z:9},'岡山県':{lat:34.7,lng:133.9,z:9},'広島県':{lat:34.4,lng:132.5,z:9},'山口県':{lat:34.2,lng:131.5,z:9},'徳島県':{lat:34.1,lng:134.6,z:9},'香川県':{lat:34.3,lng:134.0,z:9},'愛媛県':{lat:33.8,lng:132.8,z:9},'高知県':{lat:33.6,lng:133.5,z:9},'福岡県':{lat:33.6,lng:130.4,z:9},'佐賀県':{lat:33.3,lng:130.3,z:9},'長崎県':{lat:32.7,lng:129.9,z:9},'熊本県':{lat:32.8,lng:130.7,z:9},'大分県':{lat:33.2,lng:131.6,z:9},'宮崎県':{lat:31.9,lng:131.4,z:9},'鹿児島県':{lat:31.6,lng:130.6,z:9},'沖縄県':{lat:26.2,lng:127.7,z:9}};
 function getC(epi){
-  if(!epi)return{lat:36.5,lng:138.0,z:7};
+  if(!epi)return{lat:37.5,lng:137.0,z:5};
   for(var k in COORDS){if(epi.indexOf(k)>=0)return COORDS[k];}
-  return{lat:36.5,lng:138.0,z:7};
+  return{lat:37.5,lng:137.0,z:5};
 }
-function buildMap(epi){
-  var c=getC(epi);mapZ=c.z;
+function buildMap(loc,label){
+  var c=getC(loc);mapZ=c.z;
   var g='https://www.google.com/maps/@'+c.lat+','+c.lng+','+c.z+'z/data=!5m1!1e1';
   S.mapLinks={google:g,lat:c.lat,lng:c.lng,z:c.z};
-  document.getElementById('map-links').innerHTML='<a class="mc" href="'+g+'" target="_blank"><div style="display:flex;align-items:center;gap:10px"><div class="mi"><i class="ti ti-external-link"></i></div><div><div class="mt">Google マップで開く</div><div class="ms">'+(epi||'震源地')+'周辺（渋滞レイヤー）</div></div></div><i class="ti ti-chevron-right" style="color:var(--text2);font-size:16px"></i></a><a class="mc" href="https://www.jartic.or.jp/" target="_blank"><div style="display:flex;align-items:center;gap:10px"><div class="mi"><i class="ti ti-car"></i></div><div><div class="mt">道路交通情報センター（JARTIC）</div><div class="ms">通行止め・規制をリアルタイム確認</div></div></div><i class="ti ti-chevron-right" style="color:var(--text2);font-size:16px"></i></a>';
+  var caption=(label||loc||'災害地域')+'周辺（渋滞レイヤー）';
+  document.getElementById('map-links').innerHTML='<a class="mc" href="'+g+'" target="_blank"><div style="display:flex;align-items:center;gap:10px"><div class="mi"><i class="ti ti-external-link"></i></div><div><div class="mt">Google マップで開く</div><div class="ms">'+caption+'</div></div></div><i class="ti ti-chevron-right" style="color:var(--text2);font-size:16px"></i></a><a class="mc" href="https://www.jartic.or.jp/" target="_blank"><div style="display:flex;align-items:center;gap:10px"><div class="mi"><i class="ti ti-car"></i></div><div><div class="mt">道路交通情報センター（JARTIC）</div><div class="ms">通行止め・規制をリアルタイム確認</div></div></div><i class="ti ti-chevron-right" style="color:var(--text2);font-size:16px"></i></a>';
   var fr=document.getElementById('map-frame');var mw=document.getElementById('map-wrap');
   if(fr){fr.src='https://maps.google.com/maps?q='+c.lat+','+c.lng+'&z='+c.z+'&layer=t&output=embed';mw.style.display='block';}
 }
-function adjZ(d){if(!S.mapLinks)return;mapZ=Math.min(13,Math.max(6,mapZ+d));S.mapLinks.z=mapZ;var fr=document.getElementById('map-frame');if(fr)fr.src='https://maps.google.com/maps?q='+S.mapLinks.lat+','+S.mapLinks.lng+'&z='+mapZ+'&layer=t&output=embed';}
+
+// 複数の都道府県から地図の中心・ズームを決める（台風・大雨・大雪用）
+function buildMapByPrefs(prefs,label){
+  if(!prefs||!prefs.length){return;}
+  var pts=[];
+  for(var i=0;i<prefs.length;i++){
+    // 「愛知県西部」等から都道府県名部分を取り出してCOORDSと照合
+    var p=prefs[i];
+    for(var k in COORDS){
+      if(p.indexOf(k)>=0){pts.push(COORDS[k]);break;}
+    }
+  }
+  if(!pts.length){return;}
+  // 中心を平均で算出
+  var latSum=0,lngSum=0;
+  for(var i=0;i<pts.length;i++){latSum+=pts[i].lat;lngSum+=pts[i].lng;}
+  var cLat=latSum/pts.length, cLng=lngSum/pts.length;
+  // 地域が広いほどズームを引く（1県なら8、複数県は範囲で調整）
+  var z=8;
+  if(pts.length>=2){
+    var lats=pts.map(function(p){return p.lat;}), lngs=pts.map(function(p){return p.lng;});
+    var span=Math.max(Math.max.apply(null,lats)-Math.min.apply(null,lats), Math.max.apply(null,lngs)-Math.min.apply(null,lngs));
+    if(span>6)z=5; else if(span>3)z=6; else if(span>1.5)z=7; else z=8;
+  }
+  mapZ=z;
+  var g='https://www.google.com/maps/@'+cLat+','+cLng+','+z+'z/data=!5m1!1e1';
+  S.mapLinks={google:g,lat:cLat,lng:cLng,z:z};
+  var caption=(label||'影響地域')+'周辺（渋滞レイヤー）';
+  document.getElementById('map-links').innerHTML='<a class="mc" href="'+g+'" target="_blank"><div style="display:flex;align-items:center;gap:10px"><div class="mi"><i class="ti ti-external-link"></i></div><div><div class="mt">Google マップで開く</div><div class="ms">'+caption+'</div></div></div><i class="ti ti-chevron-right" style="color:var(--text2);font-size:16px"></i></a><a class="mc" href="https://www.jartic.or.jp/" target="_blank"><div style="display:flex;align-items:center;gap:10px"><div class="mi"><i class="ti ti-car"></i></div><div><div class="mt">道路交通情報センター（JARTIC）</div><div class="ms">通行止め・規制をリアルタイム確認</div></div></div><i class="ti ti-chevron-right" style="color:var(--text2);font-size:16px"></i></a>';
+  var fr=document.getElementById('map-frame');var mw=document.getElementById('map-wrap');
+  if(fr){fr.src='https://maps.google.com/maps?q='+cLat+','+cLng+'&z='+z+'&layer=t&output=embed';mw.style.display='block';}
+}
+function adjZ(d){if(!S.mapLinks)return;mapZ=Math.min(13,Math.max(5,mapZ+d));S.mapLinks.z=mapZ;var fr=document.getElementById('map-frame');if(fr)fr.src='https://maps.google.com/maps?q='+S.mapLinks.lat+','+S.mapLinks.lng+'&z='+mapZ+'&layer=t&output=embed';}
+
+// 注目地震ロック（大地震をその地域に絞って追跡）
+function renderLockUI(epicenter){
+  var dc=document.getElementById('dis-content');
+  if(!dc)return;
+  var html='';
+  if(S.lockRegion){
+    html='<div style="display:flex;align-items:center;gap:8px;margin-top:10px;padding:8px 10px;background:#faeeda;border-radius:8px"><i class="ti ti-lock" style="font-size:15px;color:#854f0b;flex-shrink:0"></i><span style="font-size:12px;color:#854f0b;flex:1">「'+S.lockRegion+'」を追跡中。更新するとこの地域の地震を優先します。</span><button onclick="clearLock()" style="font-size:11px;padding:4px 10px;border-radius:6px;border:0.5px solid #854f0b;background:transparent;color:#854f0b;touch-action:manipulation">解除</button></div>';
+  }else if(epicenter){
+    html='<div style="margin-top:10px"><button onclick="setLock(\''+epicenter.replace(/'/g,"")+'\')" style="width:100%;font-size:12px;padding:9px;border-radius:8px;border:0.5px solid var(--border2);background:var(--bg2);color:var(--text);touch-action:manipulation;display:flex;align-items:center;justify-content:center;gap:6px"><i class="ti ti-lock" style="font-size:14px"></i>「'+epicenter+'」の地震を継続追跡する</button></div>';
+  }
+  // 既存内容の末尾に追記
+  dc.insertAdjacentHTML('beforeend', html);
+}
+function setLock(region){
+  S.lockRegion=region;
+  toast('「'+region+'」を追跡対象に設定しました');
+  if(S.quake) renderLockUI(S.quake.epicenter);
+}
+function clearLock(){
+  S.lockRegion=null;
+  toast('追跡を解除しました');
+  if(S.quake) renderLockUI(S.quake.epicenter);
+}
 
 // ── Claude API ───────────────────────────────────────────────────────
 function claude(sys,usr,search,cb){
@@ -780,10 +926,21 @@ function fetchDis(){
     S.dis=d;
     if(DTYPE==='quake'){S.quake=d;S.shindo=d.shindoAreas||[];renderSnTbl();renderShFilt();}
     ab.innerHTML='';dc.innerHTML=def.render(d);
+    if(DTYPE==='quake') renderLockUI(d.epicenter);
     var prefs=def.prefs(d);
     if(DTYPE==='quake'&&S.shindo.length){updRCst(S.shindo);updOffSt(S.shindo);}
-    else{updByPrefs(prefs,RC,'rc-s-');updByPrefs(prefs,OFF,'off-s-');}
-    if(DTYPE==='quake'&&d.epicenter)buildMap(d.epicenter);
+    else{
+      updByPrefs(prefs,RC,'rc-s-');updByPrefs(prefs,OFF,'off-s-');
+      fetchWeatherForLocations();
+    }
+    // 地図を災害地域に移動（全災害対応）
+    if(DTYPE==='quake'){
+      if(d.epicenter) buildMap(d.epicenter, d.epicenter);
+    } else {
+      var prefs=def.prefs(d);
+      var label=DTYPE==='typhoon'?(d.name||'台風'):(DTYPE==='rain'?'大雨警報地域':'大雪警報地域');
+      if(prefs&&prefs.length) buildMapByPrefs(prefs, label);
+    }
     startTmr();
   });
 }
@@ -856,8 +1013,8 @@ function renderTL(area,summary){
   var html='<div style="font-size:11px;color:var(--text2);margin-bottom:6px">データ生成：'+gen+'</div><div class="tl-wrap"><div class="tl-lb"><div style="min-width:160px;flex-shrink:0"></div>';
   for(var i=0;i<slots.length;i++)html+='<div class="tl-lbl">'+slots[i].label+'</div>';
   html+='</div><table class="tl-table"><thead><tr><th style="min-width:60px">路線</th><th style="min-width:100px">区間</th><th>時間帯</th></tr></thead><tbody>';
-  for(var road in byRoad){var ps=byRoad[road];for(var j=0;j<ps.length;j++){var p=ps[j];html+='<tr>'+(j===0?'<td class="tl-road" rowspan="'+ps.length+'">'+road+'</td>':'')+'<td class="tl-sec">'+abbr(p.section)+'</td><td class="tl-bc"><div class="tl-br">';for(var k=0;k<slots.length;k++){var st=inP(slots[k].ts,p.start,p.end);html+='<div class="tl-s '+(st==='c'?'tl-cl':st==='o'?'tl-op':'tl-uk')+'" title="'+slots[k].label+' '+(st==='c'?'通行止め':st==='o'?'通行可':'記録なし')+'">'+(st==='c'?'✕':'')+'</div>';}html+='</div></td></tr>';}}
-  html+='</tbody></table></div><div class="tl-leg"><div class="tl-li"><div class="tl-dc"></div>通行止め</div><div class="tl-li"><div class="tl-do"></div>通行可</div></div><div class="nt" style="margin-top:8px"><i class="ti ti-info-circle" style="font-size:12px;vertical-align:-2px;margin-right:4px"></i>GitHub Actionsが夜間1時間ごとに自動収集した記録です。速報・要確認。</div>';
+  for(var road in byRoad){var ps=byRoad[road];for(var j=0;j<ps.length;j++){var p=ps[j];html+='<tr>'+(j===0?'<td class="tl-road" rowspan="'+ps.length+'">'+road+'</td>':'')+'<td class="tl-sec">'+abbr(p.section)+(p.reason?'<br><span style="font-size:9px;color:var(--text3)">'+p.reason+'</span>':'')+'</td><td class="tl-bc"><div class="tl-br">';for(var k=0;k<slots.length;k++){var st=inP(slots[k].ts,p.start,p.end);html+='<div class="tl-s '+(st==='c'?'tl-cl':st==='o'?'tl-op':'tl-uk')+'" title="'+slots[k].label+' '+(st==='c'?'通行止め':st==='o'?'通行可':'記録なし')+'">'+(st==='c'?'✕':'')+'</div>';}html+='</div></td></tr>';}}
+  html+='</tbody></table></div><div class="tl-leg"><div class="tl-li"><div class="tl-dc"></div>通行止め</div><div class="tl-li"><div class="tl-do"></div>通行可</div></div><div class="nt" style="margin-top:8px"><i class="ti ti-info-circle" style="font-size:12px;vertical-align:-2px;margin-right:4px"></i>NEXCO公式Xから1時間ごとに自動収集した記録です。速報・要確認。投稿がない区間は記録されません。</div>';
   area.innerHTML=html;
 }
 function buildSlots(min,max){var sl=[];var c=new Date(min);c.setMinutes(0,0,0);var e=new Date(max);e.setHours(e.getHours()+1,0,0,0);while(c<=e&&sl.length<12){var j=new Date(c.getTime()+9*3600000);sl.push({ts:c.toISOString(),label:j.getUTCHours()+':00'});c=new Date(c.getTime()+3600000);}return sl;}
@@ -937,7 +1094,7 @@ function buildTxt(){
   var nw=S.news||[];
   if(nw.length){var nna=nw.filter(function(x){return x.category!=='airport';});var ap=nw.filter(function(x){return x.category==='airport';});if(nna.length)nwSec='\n\n■ 参考情報（輸送・インフラ）\n'+nna.map(function(n){return '・'+n.summary+'（'+(n.source||'')+'）';}).join('\n');if(ap.length)nwSec+='\n\n■ 空港便（成田・羽田）\n'+ap.map(function(n){return '・'+n.summary+'（'+(n.source||'')+'）';}).join('\n');}
   var ftLinks={quake:'・気象庁 地震情報：https://www.jma.go.jp/jp/quake/\n・NHK 防災・気象情報：https://www3.nhk.or.jp/sokuho/jishin/',typhoon:'・気象庁 台風情報：https://www.jma.go.jp/jp/typh/\n・NHK 防災・気象情報：https://www3.nhk.or.jp/weather/',rain:'・気象庁 大雨警報：https://www.jma.go.jp/jp/warn/\n・NHK 防災・気象情報：https://www3.nhk.or.jp/weather/',snow:'・気象庁 大雪情報：https://www.jma.go.jp/jp/warn/\n・NHK 防災・気象情報：https://www3.nhk.or.jp/weather/'};
-  var ft='\n\n物流関連情報に変化があり次第、改めて本チャネルにて報告します。\n\n---------------------\n「参考リンク」\n'+(ftLinks[DTYPE]||ftLinks.quake)+'\n・ヤマト運輸 集配遅延情報：https://www.kuronekoyamato.co.jp/ytc/chien/chien_hp.html\n・佐川急便 集配遅延情報：https://www2.sagawa-exp.co.jp/information/list/\n・成田空港 運航状況：https://www.narita-airport.co.jp/ja/flight/\n・羽田空港 運航状況：https://tokyo-haneda.com/flight/index.html\n・道路交通情報センター（JARTIC）：https://www.jartic.or.jp/';
+  var ft='\n\n物流関連情報に変化があり次第、改めて本チャネルにて報告します。\n\n---------------------\n「参考リンク」\n'+(ftLinks[DTYPE]||ftLinks.quake)+'\n・ヤマト運輸 集配遅延情報：https://www.kuronekoyamato.co.jp/ytc/chien/chien_hp.html\n・佐川急便 集配遅延情報：https://www2.sagawa-exp.co.jp/information/list/\n・成田空港 運航状況：https://www.narita-airport.jp/ja/flight/\n・羽田空港 運航状況：https://tokyo-haneda.com/flight/index.html\n・道路交通情報センター（JARTIC）：https://www.jartic.or.jp/';
   var body=(urg[DTYPE]||urg.quake)+'\n\n'+(co[DTYPE]||co.quake)+'\n\n'+disSec+shSec+rcSec+offSec+rdSec+delSec+nwSec+ft;
   document.getElementById('t-body').textContent=body;
   return{title:title,body:body};
