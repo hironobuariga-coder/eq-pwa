@@ -17,11 +17,18 @@ try { fetchFn = globalThis.fetch || require('node-fetch'); }
 catch (e) { fetchFn = require('node-fetch'); }
 
 // ─── 監視対象のNEXCO公式Xアカウント ─────────────────────────────
+// 地図に描画した全40路線をカバーするよう支社アカウントも追加
 const ACCOUNTS = [
-  'e_nexco_bousai',   // NEXCO東日本 道路防災情報（最重要）
-  'e_nexco_kanto',    // NEXCO東日本 関東支社
-  'c_nexco_official', // NEXCO中日本
-  'w_nexco_official'  // NEXCO西日本
+  // NEXCO東日本
+  'e_nexco_bousai',   // 道路防災情報（最重要・災害時随時発信）
+  'e_nexco_kanto',    // 関東支社（東名・中央・東北・関越・常磐・圏央）
+  'e_nexco_tohoku',   // 東北支社（東北道・磐越道・日本海東北道・山形道・秋田道）
+  'e_nexco_kita',     // 北海道支社（道央道・道東道・旭川道・函館江差道・深川留萌道）
+  'e_nexco_niigata',  // 新潟支社（関越道・北陸道の新潟側・上信越道）
+  // NEXCO中日本
+  'c_nexco_official', // 本社（東名・新東名・中央・名神・新名神・東名阪・伊勢湾岸・上信越・北陸）
+  // NEXCO西日本
+  'w_nexco_official'  // 本社（山陽・中国・阪和・山陰・舞鶴若狭・九州・長崎・大分・宮崎・東九州・高松・徳島・高知・松山・沖縄）
 ];
 
 // ─── 無料RSS変換サービス（順番に試す） ──────────────────────────
@@ -32,12 +39,33 @@ const RSS_PROVIDERS = [
   'https://rss-bridge.org/bridge01/?action=display&bridge=TwitterBridge&context=By+username&u={user}&format=Atom'
 ];
 
-// ─── 監視対象路線 ────────────────────────────────────────────────
+// ─── 監視対象路線（地図描画の40路線に対応） ─────────────────────
+// ★ 路線名は投稿文内のキーワードとして使用するため、
+//    実際の投稿で使われる略称・通称を優先する。
+//    長い名称ほど先に書くことで誤マッチを防ぐ（例: '東名阪' を '東名' より先に）
 const TARGET_ROADS = [
-  '東名', '名神', '新東名', '新名神', '伊勢湾岸',
-  '東名阪', '西名阪', '名二環', '中央', '関越',
-  '東北', '常磐', '山陽', '中国', '九州', '北陸',
-  'アクアライン', '圏央', '東関東', '上信越', '長野'
+  // 関東・中部（東名系）
+  '新東名', '東名阪', '東名',
+  // 関東・中部（名神系）
+  '新名神', '伊勢湾岸', '名神',
+  // 関東・中部（その他）
+  '西名阪', '名二環', '中央', '上信越', '長野',
+  // 関東
+  '関越', '東北', '常磐', '圏央', 'アクアライン', '東関東',
+  // 北陸・日本海
+  '北陸', '舞鶴若狭', '京都縦貫',
+  // 東北・日本海
+  '日本海東北', '磐越', '山形', '秋田',
+  // 近畿・中国
+  '山陽', '中国', '山陰', '阪和',
+  // 四国
+  '高松', '徳島', '高知', '松山',
+  // 九州
+  '東九州', '九州', '長崎', '大分', '宮崎',
+  // 北海道
+  '道央', '道東', '旭川紋別', '函館江差', '深川留萌',
+  // 沖縄
+  '沖縄'
 ];
 
 async function fetchAccountRSS(user) {
@@ -87,11 +115,39 @@ function stripHtml(s) {
           .replace(/&#39;/g, "'").replace(/\s+/g, ' ');
 }
 
+// E番号→路線名の対応表（NEXCO公式投稿では「E1 東名」「E1A 新東名」形式が多い）
+var E_NUM_MAP = {
+  'E1A':'新東名','E1':'東名','E2A':'中国','E2':'山陽',
+  'E3':'九州','E4A':'山形','E4':'東北','E5A':'道東','E5':'道央',
+  'E6':'常磐','E7':'日本海東北','E8':'北陸','E9':'山陰',
+  'E10':'東九州','E17':'関越','E18':'上信越','E19':'中央','E20':'中央',
+  'E23':'東名阪','E25':'西名阪','E26':'阪和','E27':'舞鶴若狭',
+  'E34':'大分','E35':'長崎','E38':'高松','E42':'阪和',
+  'E45':'秋田','E46':'秋田','E50':'東関東','E51':'東関東',
+  'E67':'磐越','E74':'浜田','E80':'京都縦貫','E86':'松山','E87':'高知',
+  'E88':'高知','E89':'京都縦貫'
+};
+
 function extractClosure(text, postDate) {
   if (!/通行止/.test(text)) return null;
   var road = '';
-  for (var i = 0; i < TARGET_ROADS.length; i++) {
-    if (text.indexOf(TARGET_ROADS[i]) >= 0) { road = TARGET_ROADS[i]; break; }
+  // ① E番号から路線名を特定（優先）
+  var eMatch = text.match(/\bE(\d+[A-Z]?)\b/);
+  if (eMatch && E_NUM_MAP['E' + eMatch[1]]) {
+    road = E_NUM_MAP['E' + eMatch[1]];
+  }
+  // ② キーワード照合（前後に漢字が続く場合は誤マッチとして除外）
+  if (!road) {
+    for (var i = 0; i < TARGET_ROADS.length; i++) {
+      var kw = TARGET_ROADS[i];
+      var idx = text.indexOf(kw);
+      if (idx < 0) continue;
+      // 直前文字が漢字の場合スキップ（例:「東九州」の「九州」を除外）
+      var prev = idx > 0 ? text.charCodeAt(idx - 1) : 0;
+      if (prev >= 0x4E00 && prev <= 0x9FFF) continue;
+      road = kw;
+      break;
+    }
   }
   if (!road) return null;
   var section = '';
