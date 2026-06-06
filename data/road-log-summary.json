@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-06T18:17:13.491Z",
+  "generated": "2026-06-06T20:18:29.018Z",
   "periods": [
     {
       "road": "関越",
@@ -111,7 +111,8 @@
       "source": "e_nexco_niigata",
       "snapshots": [
         "1:16",
-        "3:17"
+        "3:17",
+        "5:18"
       ]
     },
     {
@@ -126,7 +127,8 @@
       "source": "e_nexco_niigata",
       "snapshots": [
         "1:16",
-        "3:17"
+        "3:17",
+        "5:18"
       ]
     },
     {
@@ -141,7 +143,8 @@
       "source": "e_nexco_niigata",
       "snapshots": [
         "1:16",
-        "3:17"
+        "3:17",
+        "5:18"
       ]
     },
     {
@@ -156,7 +159,8 @@
       "source": "e_nexco_niigata",
       "snapshots": [
         "1:16",
-        "3:17"
+        "3:17",
+        "5:18"
       ]
     },
     {
@@ -171,7 +175,8 @@
       "source": "e_nexco_niigata",
       "snapshots": [
         "1:16",
-        "3:17"
+        "3:17",
+        "5:18"
       ]
     },
     {
@@ -186,7 +191,8 @@
       "source": "e_nexco_niigata",
       "snapshots": [
         "1:16",
-        "3:17"
+        "3:17",
+        "5:18"
       ]
     },
     {
@@ -201,7 +207,8 @@
       "source": "e_nexco_niigata",
       "snapshots": [
         "1:16",
-        "3:17"
+        "3:17",
+        "5:18"
       ]
     }
   ]
