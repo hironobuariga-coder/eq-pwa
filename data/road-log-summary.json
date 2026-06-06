@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-06T14:50:53.411Z",
+  "generated": "2026-06-06T16:16:17.365Z",
   "periods": [
     {
       "road": "関越",
@@ -8,7 +8,7 @@
       "reason": "",
       "status": "通行止め",
       "start": "2026-06-06T23:50:45+09:00",
-      "end": null,
+      "end": "2026-06-06T23:50:45+09:00",
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
@@ -22,7 +22,7 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-06-06T23:50:45+09:00",
-      "end": null,
+      "end": "2026-06-06T23:50:45+09:00",
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
@@ -36,7 +36,7 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-06-06T23:50:45+09:00",
-      "end": null,
+      "end": "2026-06-06T23:50:45+09:00",
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
@@ -50,7 +50,7 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-06-06T23:50:45+09:00",
-      "end": null,
+      "end": "2026-06-06T23:50:45+09:00",
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
@@ -64,7 +64,7 @@
       "reason": "",
       "status": "通行止め",
       "start": "2026-06-06T23:50:45+09:00",
-      "end": null,
+      "end": "2026-06-06T23:50:45+09:00",
       "startTimeJST": "20:15",
       "source": "e_nexco_kanto",
       "snapshots": [
@@ -78,7 +78,7 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-06-06T23:50:45+09:00",
-      "end": null,
+      "end": "2026-06-06T23:50:45+09:00",
       "startTimeJST": "09:40",
       "source": "e_nexco_kanto",
       "snapshots": [
@@ -92,11 +92,109 @@
       "reason": "事故",
       "status": "通行止め",
       "start": "2026-06-06T23:50:45+09:00",
-      "end": null,
+      "end": "2026-06-06T23:50:45+09:00",
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
         "23:50"
+      ]
+    },
+    {
+      "road": "中央",
+      "section": "",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-06-07T01:16:10+09:00",
+      "end": null,
+      "startTimeJST": "",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "1:16"
+      ]
+    },
+    {
+      "road": "上信越",
+      "section": "",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-06-07T01:16:10+09:00",
+      "end": null,
+      "startTimeJST": "",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "1:16"
+      ]
+    },
+    {
+      "road": "北陸",
+      "section": "",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-06-07T01:16:10+09:00",
+      "end": null,
+      "startTimeJST": "",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "1:16"
+      ]
+    },
+    {
+      "road": "長野",
+      "section": "",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-06-07T01:16:10+09:00",
+      "end": null,
+      "startTimeJST": "21:00",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "1:16"
+      ]
+    },
+    {
+      "road": "北陸",
+      "section": "E8北陸（上下線）朝日IC〜新潟中央JCT",
+      "direction": "上下線",
+      "reason": "地震",
+      "status": "通行止め",
+      "start": "2026-06-07T01:16:10+09:00",
+      "end": null,
+      "startTimeJST": "",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "1:16"
+      ]
+    },
+    {
+      "road": "関越",
+      "section": "の湯沢IC〜長岡IC",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-06-07T01:16:10+09:00",
+      "end": null,
+      "startTimeJST": "",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "1:16"
+      ]
+    },
+    {
+      "road": "関越",
+      "section": "関越道上り線小出IC〜塩沢石打IC",
+      "direction": "上り",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-06-07T01:16:10+09:00",
+      "end": null,
+      "startTimeJST": "22:15",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "1:16"
       ]
     }
   ]
