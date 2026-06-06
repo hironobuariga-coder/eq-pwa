@@ -292,27 +292,25 @@ body{
       <div class="nt" style="margin-top:8px"><i class="ti ti-target" style="font-size:13px;vertical-align:-2px;margin-right:4px"></i>監視対象：東名・名神・新東名・新名神・伊勢湾岸</div>
     </div>
     <div class="sec">
-      <div class="sec-h"><h3>③ 夜間通行止め推移 <span class="bdg bdg-blu" style="font-size:9px">パラパラ漫画</span></h3>
-        <div style="display:flex;gap:5px;align-items:center">
-          <button class="rb" onclick="loadTL()"><i class="ti ti-refresh" style="font-size:14px"></i> 読込</button>
-          <button class="rb" id="btn-play" onclick="togglePlay()" style="display:none"><i class="ti ti-player-play" style="font-size:14px" id="play-icon"></i> <span id="play-label">再生</span></button>
-        </div></div>
-      <div id="pp-ctrl" style="display:none;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap">
-        <button class="rb" onclick="ppStep(-1)" style="padding:3px 8px"><i class="ti ti-chevron-left" style="font-size:13px"></i></button>
-        <div style="font-size:13px;font-weight:600;color:var(--text);min-width:60px;text-align:center" id="pp-time">--:--</div>
-        <button class="rb" onclick="ppStep(1)" style="padding:3px 8px"><i class="ti ti-chevron-right" style="font-size:13px"></i></button>
-        <div style="font-size:11px;color:var(--text2)" id="pp-status"></div>
-      </div>
+      <div class="sec-h"><h3>③ 夜間通行止め推移 <span class="bdg bdg-blu" style="font-size:9px">時系列</span></h3>
+        <button class="rb" onclick="loadTL()"><i class="ti ti-refresh" style="font-size:14px"></i> 読込</button></div>
       <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><span class="bdg bdg-amb" style="font-size:10px">⚠ 試験運用中</span><span style="font-size:11px;color:var(--text2)">NEXCO公式Xから自動収集。投稿状況により取得できない場合があります。</span></div>
       <div id="ld-tl" class="ld"><div class="sp"></div><span>タイムラインを読み込み中...</span></div>
       <div id="tl-area"><div style="font-size:12px;color:var(--text2);padding:6px 0">NEXCO公式Xから1時間ごとに自動収集した通行止め推移を表示します</div></div>
     </div>
     <div class="sec">
       <div class="sec-h"><h3>④ 高速道路・拠点マップ</h3>
-        <div style="display:flex;gap:4px">
+        <div style="display:flex;gap:4px;align-items:center">
           <button class="rb" id="btn-ic" onclick="toggleMapLayer('ic',this)" style="font-size:10px;padding:3px 7px">IC</button>
           <button class="rb on" id="btn-loc" onclick="toggleMapLayer('loc',this)" style="font-size:10px;padding:3px 7px">拠点</button>
+          <button class="rb" id="btn-play" onclick="togglePlay()" style="display:none;font-size:10px;padding:3px 8px"><i class="ti ti-player-play" style="font-size:13px" id="play-icon"></i> <span id="play-label">再生</span></button>
         </div>
+      </div>
+      <div id="pp-ctrl" style="display:none;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap">
+        <button class="rb" onclick="ppStep(-1)" style="padding:3px 8px"><i class="ti ti-chevron-left" style="font-size:13px"></i></button>
+        <div style="font-size:14px;font-weight:700;color:var(--text);min-width:60px;text-align:center" id="pp-time">--:--</div>
+        <button class="rb" onclick="ppStep(1)" style="padding:3px 8px"><i class="ti ti-chevron-right" style="font-size:13px"></i></button>
+        <div style="font-size:11px;color:var(--text2)" id="pp-status"></div>
       </div>
       <div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px" id="map-area-btns">
         <button class="seg on" onclick="setMapView('all',this)">全国</button>
@@ -1250,7 +1248,12 @@ function loadTL(){
     ld.style.display='none';renderTL(area,summary);
     // 再生ボタンを表示（periodが1件以上あるとき）
     var playBtn=document.getElementById('btn-play');
-    if(playBtn)playBtn.style.display=(summary.periods&&summary.periods.length)?'':'none';
+    if(playBtn){
+      playBtn.style.display=(summary.periods&&summary.periods.length)?'':'none';
+      if(summary.periods&&summary.periods.length){
+        toast('④地図の「▶ 再生」ボタンで通行止めをアニメーション表示できます');
+      }
+    }
   }).catch(function(e){
     ld.style.display='none';
     area.innerHTML='<div style="font-size:12px;color:var(--text2);line-height:1.8"><b>データ未収集</b><br>'+e.message+'<br><br><b>セットアップ手順：</b><br>1. GitHubリポジトリに collect-road.yml と collect.js を追加<br>2. 夜間（21:00〜6:00）に自動実行されます<br>3. 翌朝にこのボタンでタイムラインが確認できます</div>';
@@ -1263,11 +1266,11 @@ var PP={
   cur:0,          // 現在のスロットインデックス
   timer:null,     // 自動再生タイマー
   playing:false,  // 再生中フラグ
-  speed:1500      // コマ間隔ms
+  speed:2000      // コマ間隔ms（2秒）
 };
 
 function renderTL(area,summary){
-  PP.summary=summary;PP.slots=buildSlots();PP.cur=PP.slots.length-1;
+  PP.summary=summary;PP.slots=buildSlots();PP.cur=0; // 0=最新コマ
   var periods=summary.periods||[];
   var gen=summary.generated?new Date(summary.generated).toLocaleString('ja-JP',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}):'不明';
   if(!periods.length){area.innerHTML='<div style="font-size:12px;color:var(--text2);padding:6px 0"><span class="bdg bdg-grn">通行止めなし</span>&ensp;データ生成：'+gen+'</div>';return;}
@@ -1280,24 +1283,20 @@ function renderTL(area,summary){
   for(var road in byRoad){var ps=byRoad[road];for(var j=0;j<ps.length;j++){var p=ps[j];html+='<tr>'+(j===0?'<td class="tl-road" rowspan="'+ps.length+'">'+road+'</td>':'')+'<td class="tl-sec">'+abbr(p.section)+(p.reason?'<br><span style="font-size:9px;color:var(--text3)">'+p.reason+'</span>':'')+'</td><td class="tl-bc"><div class="tl-br">';for(var k=0;k<slots.length;k++){var st=inP(slots[k].ts,p.start,p.end);var cls=st==='c'?'tl-cl':st==='o'?'tl-op':st==='f'?'tl-ft':'tl-uk';var ttl=slots[k].label.replace('<br>',' ')+' '+(st==='c'?'通行止め':st==='o'?'通行可':st==='f'?'－':'記録なし');html+='<div class="tl-s '+cls+'" title="'+ttl+'">'+(st==='c'?'✕':'')+'</div>';}html+='</div></td></tr>';}}
   html+='</tbody></table></div><div class="tl-leg"><div class="tl-li"><div class="tl-dc"></div>通行止め</div><div class="tl-li"><div class="tl-do"></div>通行可</div></div><div class="nt" style="margin-top:8px"><i class="ti ti-info-circle" style="font-size:12px;vertical-align:-2px;margin-right:4px"></i>NEXCO公式Xから1時間ごとに自動収集した記録です。速報・要確認。投稿がない区間は記録されません。</div>';
   area.innerHTML=html;
-  ppHighlight();
 }
 function buildSlots(){
-  // 現在時刻から遡る過去24時間・1時間刻み・24コマ固定
-  // スロット = 「その時刻の正時」を表す（例: 14:00 → 14:00〜14:59 の記録を表示）
+  // 直近12時間・1時間刻み・古い順（index 0=12時間前、index 11=現在）
   var now=new Date();
-  // 現在の正時（分・秒切捨て）をスロット末尾にする
   var end=new Date(now); end.setMinutes(0,0,0);
   var sl=[];
-  for(var i=23;i>=0;i--){
+  for(var i=11;i>=0;i--){
     var c=new Date(end.getTime()-i*3600000);
     var jst=new Date(c.getTime()+9*3600000);
     var h=jst.getUTCHours();
-    // 日付ラベル: 0時コマだけ「6/5 0:00」形式、それ以外は「H:00」
     var label;
     if(h===0){
-      var m=jst.getUTCMonth()+1; var d=jst.getUTCDate();
-      label=m+'/'+d+'<br>0:00';
+      var mo=jst.getUTCMonth()+1; var d=jst.getUTCDate();
+      label=mo+'/'+d+'<br>0:00';
     } else {
       label=h+':00';
     }
@@ -1328,11 +1327,18 @@ function togglePlay(){
   if(PP.playing) ppPause(); else ppPlay();
 }
 function ppPlay(){
-  if(!PP.summary||!PP.slots.length)return;
+  if(!PP.summary||!PP.slots.length){
+    // ③が未読込の場合は誘導
+    toast('先に③「夜間通行止め推移」の読込ボタンを押してください');
+    return;
+  }
   PP.playing=true;
   document.getElementById('play-icon').className='ti ti-player-pause';
   document.getElementById('play-label').textContent='停止';
   document.getElementById('pp-ctrl').style.display='flex';
+  // ④地図セクションまでスクロール
+  var svgWrap=document.getElementById('svgmap-wrap');
+  if(svgWrap)svgWrap.scrollIntoView({behavior:'smooth',block:'start'});
   // 先頭コマから再生
   PP.cur=0;
   ppTick();
@@ -1371,29 +1377,10 @@ function ppFrame(idx){
   var closed=periods.filter(function(p){return inP(slot.ts,p.start,p.end)==='c';});
   var sEl=document.getElementById('pp-status');
   if(sEl)sEl.textContent=closed.length?'通行止め '+closed.length+'路線':'通行止めなし';
-  // 表のコマをハイライト
-  ppHighlight();
-  // SVG地図に通行止め区間を赤線で描画
+  // SVG地図に通行止め区間を赤線で描画（地図再生のメイン処理）
   ppDrawClosure(slot,closed);
 }
-function ppHighlight(){
-  if(!PP.slots.length)return;
-  // tl-s セルを現在コマだけ枠付きハイライト
-  var rows=document.querySelectorAll('.tl-br');
-  rows.forEach(function(row){
-    var cells=row.querySelectorAll('.tl-s');
-    cells.forEach(function(cell,k){
-      if(k===PP.cur){
-        cell.style.outline='2px solid #fff';
-        cell.style.outlineOffset='-1px';
-        cell.style.zIndex='1';
-      } else {
-        cell.style.outline='';
-        cell.style.zIndex='';
-      }
-    });
-  });
-}
+function ppHighlight(){/* 地図再生に一本化したため表ハイライトは廃止 */}
 
 // ─── SVG地図への通行止め描画 ─────────────────────────────────────
 // IC名（「海老名IC」→「海老名」）を正規化
@@ -1412,10 +1399,38 @@ function ppDrawClosure(slot,closedPeriods){
   // 既存の通行止めオーバーレイを削除
   var old=document.getElementById('g-smap-closure');
   if(old)old.parentNode&&old.parentNode.removeChild(old);
-  if(!closedPeriods.length)return;
   var svg=document.getElementById('svgmap');
   if(!svg)return;
   var gc=makeSVGEl('g','g-smap-closure');
+
+  // ── 現在コマの時刻を地図左上に大きく表示 ──────────────────
+  var vb=svg.getAttribute('viewBox')||'8 8 944 860';
+  var vbParts=vb.split(' ').map(Number);
+  var vx=vbParts[0]||8, vy=vbParts[1]||8, vw=vbParts[2]||944;
+  // viewBox幅に比例してフォントサイズを決める（全国=944→24px、関東=133→小さく）
+  var fs=Math.round(vw*0.036); // 幅の3.6%
+  var pw=fs*4.5, ph=fs*1.6;
+  // 背景rect
+  var tbg=makeSVGEl('rect');
+  tbg.setAttribute('x',vx+4);tbg.setAttribute('y',vy+4);
+  tbg.setAttribute('width',pw);tbg.setAttribute('height',ph);
+  tbg.setAttribute('fill','#0f1420');tbg.setAttribute('opacity','0.82');tbg.setAttribute('rx','3');
+  gc.appendChild(tbg);
+  // 時刻テキスト
+  var tt=makeSVGEl('text');
+  tt.setAttribute('x',vx+pw/2);tt.setAttribute('y',vy+ph*0.78);
+  tt.setAttribute('font-size',fs);tt.setAttribute('font-weight','700');
+  tt.setAttribute('fill','#ffffff');tt.setAttribute('text-anchor','middle');
+  tt.setAttribute('font-family','monospace,sans-serif');
+  tt.textContent=slot.label.replace('<br>',' ');
+  gc.appendChild(tt);
+
+  if(!closedPeriods.length){
+    // 通行止めなしでも時刻だけ表示して終了
+    var locLayer2=document.getElementById('g-smap-locs');
+    if(locLayer2)svg.insertBefore(gc,locLayer2);else svg.appendChild(gc);
+    return;
+  }
   closedPeriods.forEach(function(p){
     var keys=ROAD_NAME_TO_KEY[p.road]||[];
     // section から始点・終点IC名を抽出
