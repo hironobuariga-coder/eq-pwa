@@ -1,0 +1,38 @@
+name: 災害トリガー自動検知（気象庁XML・10分間隔）
+
+on:
+  # 10分間隔で実行
+  # GitHub ActionsはUTCなので注意（JST = UTC+9）
+  # :00, :10, :20, :30, :40, :50 に実行
+  schedule:
+    - cron: '0,10,20,30,40,50 * * * *'
+  # 手動実行も可能
+  workflow_dispatch:
+
+jobs:
+  detect:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: チェックアウト
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 依存パッケージ不要（fetch組込み・外部ライブラリなし）
+      - name: 災害情報をチェック
+        run: node collect-disaster.js
+
+      - name: 変更をコミット・プッシュ
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/disaster-trigger.json data/disaster-config.json || true
+          git diff --staged --quiet && echo "変更なし" || \
+            (git commit -m "disaster-trigger update" && git push)
