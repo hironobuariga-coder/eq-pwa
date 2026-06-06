@@ -16,13 +16,11 @@ jobs:
     steps:
       - name: チェックアウト
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Node.js 20
+      - name: Node.js 24
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       # 依存パッケージ不要（fetch組込み・外部ライブラリなし）
       - name: 通行止め情報を収集
