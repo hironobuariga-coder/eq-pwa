@@ -202,7 +202,8 @@ async function main() {
   if (fs.existsSync(logPath)) {
     try { log = JSON.parse(fs.readFileSync(logPath, 'utf-8')); } catch (e) { log = []; }
   }
-  var cutoff = new Date(now.getTime() - 7 * 24 * 3600 * 1000);
+  // 24時間以内のスナップショットのみ保持
+  var cutoff = new Date(now.getTime() - 24 * 3600 * 1000);
   log = log.filter(function(e){ return new Date(e.ts) > cutoff; });
 
   var active = computeActive(allClosures);

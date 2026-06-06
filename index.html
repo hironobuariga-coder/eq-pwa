@@ -198,7 +198,7 @@ body{
 .tl-bc{padding:2px 4px}
 .tl-br{display:flex;gap:1px;align-items:center;height:18px}
 .tl-s{width:28px;height:16px;border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600}
-.tl-cl{background:#E24B4A;color:#fff}.tl-op{background:var(--bg3)}.tl-uk{background:var(--border)}
+.tl-cl{background:#E24B4A;color:#fff}.tl-op{background:var(--bg3)}.tl-uk{background:var(--border)}.tl-ft{background:transparent;border:1px dashed var(--border)}
 .tl-lb{display:flex;gap:1px;padding:0 4px;margin-top:2px}
 .tl-lbl{width:28px;text-align:center;font-size:8px;color:var(--text3);flex-shrink:0;white-space:nowrap}
 .tl-leg{display:flex;gap:10px;margin-top:8px;font-size:11px;color:var(--text2);align-items:center}
@@ -889,20 +889,54 @@ function renderTL(area,summary){
   var periods=summary.periods||[];
   var gen=summary.generated?new Date(summary.generated).toLocaleString('ja-JP',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}):'不明';
   if(!periods.length){area.innerHTML='<div style="font-size:12px;color:var(--text2);padding:6px 0"><span class="bdg bdg-grn">通行止めなし</span>&ensp;データ生成：'+gen+'</div>';return;}
-  var allTs=[];for(var i=0;i<periods.length;i++){allTs.push(periods[i].start);if(periods[i].end)allTs.push(periods[i].end);}
-  var minTs=allTs.reduce(function(a,b){return a<b?a:b;},allTs[0]);
-  var maxTs=allTs.reduce(function(a,b){return a>b?a:b;},allTs[0]);
-  var slots=buildSlots(minTs,maxTs);
+  // 現在時刻基準の固定24コマ（同一時刻スロットが重複しない）
+  var slots=buildSlots();
   var byRoad={};for(var i=0;i<periods.length;i++){var p=periods[i];if(!byRoad[p.road])byRoad[p.road]=[];byRoad[p.road].push(p);}
   var html='<div style="font-size:11px;color:var(--text2);margin-bottom:6px">データ生成：'+gen+'</div><div class="tl-wrap"><div class="tl-lb"><div style="min-width:160px;flex-shrink:0"></div>';
   for(var i=0;i<slots.length;i++)html+='<div class="tl-lbl">'+slots[i].label+'</div>';
   html+='</div><table class="tl-table"><thead><tr><th style="min-width:60px">路線</th><th style="min-width:100px">区間</th><th>時間帯</th></tr></thead><tbody>';
-  for(var road in byRoad){var ps=byRoad[road];for(var j=0;j<ps.length;j++){var p=ps[j];html+='<tr>'+(j===0?'<td class="tl-road" rowspan="'+ps.length+'">'+road+'</td>':'')+'<td class="tl-sec">'+abbr(p.section)+(p.reason?'<br><span style="font-size:9px;color:var(--text3)">'+p.reason+'</span>':'')+'</td><td class="tl-bc"><div class="tl-br">';for(var k=0;k<slots.length;k++){var st=inP(slots[k].ts,p.start,p.end);html+='<div class="tl-s '+(st==='c'?'tl-cl':st==='o'?'tl-op':'tl-uk')+'" title="'+slots[k].label+' '+(st==='c'?'通行止め':st==='o'?'通行可':'記録なし')+'">'+(st==='c'?'✕':'')+'</div>';}html+='</div></td></tr>';}}
+  for(var road in byRoad){var ps=byRoad[road];for(var j=0;j<ps.length;j++){var p=ps[j];html+='<tr>'+(j===0?'<td class="tl-road" rowspan="'+ps.length+'">'+road+'</td>':'')+'<td class="tl-sec">'+abbr(p.section)+(p.reason?'<br><span style="font-size:9px;color:var(--text3)">'+p.reason+'</span>':'')+'</td><td class="tl-bc"><div class="tl-br">';for(var k=0;k<slots.length;k++){var st=inP(slots[k].ts,p.start,p.end);var cls=st==='c'?'tl-cl':st==='o'?'tl-op':st==='f'?'tl-ft':'tl-uk';var ttl=slots[k].label.replace('<br>',' ')+' '+(st==='c'?'通行止め':st==='o'?'通行可':st==='f'?'－':'記録なし');html+='<div class="tl-s '+cls+'" title="'+ttl+'">'+(st==='c'?'✕':'')+'</div>';}html+='</div></td></tr>';}}
   html+='</tbody></table></div><div class="tl-leg"><div class="tl-li"><div class="tl-dc"></div>通行止め</div><div class="tl-li"><div class="tl-do"></div>通行可</div></div><div class="nt" style="margin-top:8px"><i class="ti ti-info-circle" style="font-size:12px;vertical-align:-2px;margin-right:4px"></i>NEXCO公式Xから1時間ごとに自動収集した記録です。速報・要確認。投稿がない区間は記録されません。</div>';
   area.innerHTML=html;
 }
-function buildSlots(min,max){var sl=[];var c=new Date(min);c.setMinutes(0,0,0);var e=new Date(max);e.setHours(e.getHours()+1,0,0,0);while(c<=e&&sl.length<12){var j=new Date(c.getTime()+9*3600000);sl.push({ts:c.toISOString(),label:j.getUTCHours()+':00'});c=new Date(c.getTime()+3600000);}return sl;}
-function inP(ts,start,end){var t=new Date(ts).getTime(),s=new Date(start).getTime(),e=end?new Date(end).getTime():Date.now();if(t>=s&&t<=e)return 'c';if(t>e)return 'o';return 'u';}
+function buildSlots(){
+  // 現在時刻から遡る過去24時間・1時間刻み・24コマ固定
+  // スロット = 「その時刻の正時」を表す（例: 14:00 → 14:00〜14:59 の記録を表示）
+  var now=new Date();
+  // 現在の正時（分・秒切捨て）をスロット末尾にする
+  var end=new Date(now); end.setMinutes(0,0,0);
+  var sl=[];
+  for(var i=23;i>=0;i--){
+    var c=new Date(end.getTime()-i*3600000);
+    var jst=new Date(c.getTime()+9*3600000);
+    var h=jst.getUTCHours();
+    // 日付ラベル: 0時コマだけ「6/5 0:00」形式、それ以外は「H:00」
+    var label;
+    if(h===0){
+      var m=jst.getUTCMonth()+1; var d=jst.getUTCDate();
+      label=m+'/'+d+'<br>0:00';
+    } else {
+      label=h+':00';
+    }
+    sl.push({ts:c.toISOString(),label:label});
+  }
+  return sl;
+}
+function inP(slotTs,start,end){
+  var t=new Date(slotTs).getTime();
+  var now=Date.now();
+  // スロットがまだ来ていない（未来）→ 表示しない
+  if(t>now) return 'f';
+  var s=new Date(start).getTime();
+  // endがnullは「継続中」→ 現在時刻まで通行止め扱い
+  var e=end?new Date(end).getTime():now;
+  // スロット時刻がperiod範囲内（start以上、end+1時間以内）
+  if(t>=s&&t<=e) return 'c';
+  // スロットがperiod終了後 → 通行可
+  if(t>e) return 'o';
+  // スロットがperiod開始前 → 記録なし
+  return 'u';
+}
 function abbr(s){if(!s||s.length<=16)return s||'';var m=s.match(/([^\s〜～]+IC)[^〜～]*[〜～]([^\s〜～]+IC)/);return m?m[1]+'〜'+m[2]:s.slice(0,14)+'…';}
 
 function fetchDel(){
