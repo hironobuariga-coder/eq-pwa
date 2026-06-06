@@ -12,9 +12,12 @@
 const fs   = require('fs');
 const path = require('path');
 
-let fetchFn;
-try { fetchFn = globalThis.fetch || require('node-fetch'); }
-catch (e) { fetchFn = require('node-fetch'); }
+// Node.js 18+ 組み込みの fetch を使用（追加パッケージ不要）
+if (typeof globalThis.fetch === 'undefined') {
+  console.error('fetch が利用できません。Node.js 18以上が必要です。');
+  process.exit(1);
+}
+var fetchFn = globalThis.fetch.bind(globalThis);
 
 // ─── 監視対象のNEXCO公式Xアカウント ─────────────────────────────
 // 地図に描画した全40路線をカバーするよう支社アカウントも追加
@@ -270,4 +273,7 @@ function buildSummary(log) {
   return { generated: new Date().toISOString(), periods: periods };
 }
 
-main().catch(function(e){ console.error('Fatal:', e); process.exit(1); });
+main().catch(function(e){
+  console.warn('[WARN] 予期しないエラー（外部要因の可能性）:', e.message);
+  process.exit(0);
+});

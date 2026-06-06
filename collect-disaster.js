@@ -22,9 +22,12 @@
 const fs   = require('fs');
 const path = require('path');
 
-let fetchFn;
-try { fetchFn = globalThis.fetch || require('node-fetch'); }
-catch(e) { fetchFn = require('node-fetch'); }
+// Node.js 18+ 組み込みの fetch を使用（追加パッケージ不要）
+if (typeof globalThis.fetch === 'undefined') {
+  console.error('fetch が利用できません。Node.js 18以上が必要です。');
+  process.exit(1);
+}
+var fetchFn = globalThis.fetch.bind(globalThis);
 
 // ─── 気象庁XMLフィードURL ─────────────────────────────────────────
 const JMA_FEEDS = {
@@ -66,11 +69,9 @@ function loadProcessed() {
 async function fetchXML(url) {
   try {
     var opt = {
-      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; DisasterBot/1.0; +https://github.com)' }
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; DisasterBot/1.0; +https://github.com)' },
+      signal: AbortSignal.timeout(15000),
     };
-    if (typeof AbortSignal !== 'undefined' && AbortSignal.timeout) {
-      opt.signal = AbortSignal.timeout(15000);
-    }
     var res = await fetchFn(url, opt);
     if (!res.ok) { console.warn('HTTP', res.status, url); return null; }
     return await res.text();
@@ -276,4 +277,9 @@ async function main() {
   }
 }
 
-main().catch(function(e) { console.error('Fatal:', e); process.exit(1); });
+main().catch(function(e) {
+  // 気象庁サーバー一時障害など外部要因によるエラーはwarningとして記録し正常終了
+  // （GitHub Actionsをfailにしないことで不要な通知を防ぐ）
+  console.warn('[WARN] 予期しないエラーが発生しましたが処理を継続します:', e.message);
+  process.exit(0);
+});

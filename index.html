@@ -193,8 +193,10 @@ body{
 .tl-table{min-width:340px;width:100%;border-collapse:collapse;font-size:11px}
 .tl-table th{padding:3px 6px;font-weight:500;color:var(--text2);border-bottom:0.5px solid var(--border);text-align:left;white-space:nowrap}
 .tl-table td{padding:2px 0;border-bottom:0.5px solid var(--border)}
-.tl-road{padding:3px 6px;font-weight:600;font-size:11px;white-space:nowrap}
-.tl-sec{padding:3px 6px;font-size:10px;color:var(--text2)}
+.tl-road{padding:3px 6px;font-weight:600;font-size:11px;white-space:nowrap;position:sticky;left:0;background:var(--bg1);z-index:2}
+.tl-sec{padding:3px 6px;font-size:10px;color:var(--text2);position:sticky;left:60px;background:var(--bg1);z-index:2}
+.tl-table th:nth-child(1){position:sticky;left:0;background:var(--bg2);z-index:3}
+.tl-table th:nth-child(2){position:sticky;left:60px;background:var(--bg2);z-index:3}
 .tl-bc{padding:2px 4px}
 .tl-br{display:flex;gap:1px;align-items:center;height:18px}
 .tl-s{width:28px;height:16px;border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600}
@@ -303,14 +305,7 @@ body{
         <div style="display:flex;gap:4px;align-items:center">
           <button class="rb" id="btn-ic" onclick="toggleMapLayer('ic',this)" style="font-size:10px;padding:3px 7px">IC</button>
           <button class="rb on" id="btn-loc" onclick="toggleMapLayer('loc',this)" style="font-size:10px;padding:3px 7px">拠点</button>
-          <button class="rb" id="btn-play" onclick="togglePlay()" style="display:none;font-size:10px;padding:3px 8px"><i class="ti ti-player-play" style="font-size:13px" id="play-icon"></i> <span id="play-label">再生</span></button>
         </div>
-      </div>
-      <div id="pp-ctrl" style="display:none;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap">
-        <button class="rb" onclick="ppStep(-1)" style="padding:3px 8px"><i class="ti ti-chevron-left" style="font-size:13px"></i></button>
-        <div style="font-size:14px;font-weight:700;color:var(--text);min-width:60px;text-align:center" id="pp-time">--:--</div>
-        <button class="rb" onclick="ppStep(1)" style="padding:3px 8px"><i class="ti ti-chevron-right" style="font-size:13px"></i></button>
-        <div style="font-size:11px;color:var(--text2)" id="pp-status"></div>
       </div>
       <div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px" id="map-area-btns">
         <button class="seg on" onclick="setMapView('all',this)">全国</button>
@@ -326,6 +321,18 @@ body{
       <div style="position:relative;width:100%" id="svgmap-wrap">
         <svg id="svgmap" viewBox="8 8 944 860" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;background:#0f1420;border-radius:8px"></svg>
         <div id="svgmap-tip" style="position:absolute;background:var(--bg1);border:0.5px solid var(--border);border-radius:5px;padding:3px 8px;font-size:11px;color:var(--text);pointer-events:none;display:none;z-index:10;white-space:nowrap"></div>
+      </div>
+      <!-- 再生コントロール：地図の直下 -->
+      <div id="pp-ctrl" style="display:none;align-items:center;gap:10px;margin-top:8px;padding:8px 10px;background:var(--bg2);border-radius:8px;flex-wrap:wrap">
+        <button class="rb" id="btn-play" onclick="togglePlay()" style="display:none;padding:4px 12px;font-size:12px"><i class="ti ti-player-play" style="font-size:14px" id="play-icon"></i> <span id="play-label">再生</span></button>
+        <button class="rb" onclick="ppStep(-1)" style="padding:4px 10px"><i class="ti ti-chevron-left" style="font-size:14px"></i></button>
+        <div style="font-size:16px;font-weight:700;color:var(--text);min-width:56px;text-align:center;font-family:monospace" id="pp-time">--:--</div>
+        <button class="rb" onclick="ppStep(1)" style="padding:4px 10px"><i class="ti ti-chevron-right" style="font-size:14px"></i></button>
+        <div style="font-size:12px;color:var(--text2)" id="pp-status"></div>
+      </div>
+      <!-- 読込後に再生ボタン単体を地図直下に表示（pp-ctrl展開前） -->
+      <div id="pp-play-btn" style="display:none;margin-top:8px">
+        <button class="rb" onclick="togglePlay()" style="padding:5px 16px;font-size:13px;width:100%;justify-content:center"><i class="ti ti-player-play" style="font-size:15px" id="play-icon2"></i>&ensp;<span id="play-label2">▶ 通行止め推移を地図で再生</span></button>
       </div>
     </div>
     <div class="sec">
@@ -1247,12 +1254,10 @@ function loadTL(){
   }).then(function(summary){
     ld.style.display='none';renderTL(area,summary);
     // 再生ボタンを表示（periodが1件以上あるとき）
-    var playBtn=document.getElementById('btn-play');
-    if(playBtn){
-      playBtn.style.display=(summary.periods&&summary.periods.length)?'':'none';
-      if(summary.periods&&summary.periods.length){
-        toast('④地図の「▶ 再生」ボタンで通行止めをアニメーション表示できます');
-      }
+    var ppPlayBtn=document.getElementById('pp-play-btn');
+    if(ppPlayBtn)ppPlayBtn.style.display=(summary.periods&&summary.periods.length)?'block':'none';
+    if(summary.periods&&summary.periods.length){
+      toast('地図の下の「▶ 再生」ボタンで通行止め推移を確認できます');
     }
   }).catch(function(e){
     ld.style.display='none';
@@ -1328,26 +1333,39 @@ function togglePlay(){
 }
 function ppPlay(){
   if(!PP.summary||!PP.slots.length){
-    // ③が未読込の場合は誘導
     toast('先に③「夜間通行止め推移」の読込ボタンを押してください');
     return;
   }
   PP.playing=true;
-  document.getElementById('play-icon').className='ti ti-player-pause';
-  document.getElementById('play-label').textContent='停止';
-  document.getElementById('pp-ctrl').style.display='flex';
-  // ④地図セクションまでスクロール
-  var svgWrap=document.getElementById('svgmap-wrap');
-  if(svgWrap)svgWrap.scrollIntoView({behavior:'smooth',block:'start'});
-  // 先頭コマから再生
+  // 大ボタンを隠し、pp-ctrl（コントロールバー）を表示
+  var ppPlayBtn=document.getElementById('pp-play-btn');
+  if(ppPlayBtn)ppPlayBtn.style.display='none';
+  var ctrl=document.getElementById('pp-ctrl');
+  if(ctrl)ctrl.style.display='flex';
+  var btnPlay=document.getElementById('btn-play');
+  if(btnPlay)btnPlay.style.display='';
+  syncPlayIcons('pause');
+  // ④地図＋コントロールまでスクロール
+  var ctrl2=document.getElementById('pp-ctrl');
+  if(ctrl2)ctrl2.scrollIntoView({behavior:'smooth',block:'nearest'});
   PP.cur=0;
   ppTick();
 }
 function ppPause(){
   PP.playing=false;
   if(PP.timer){clearTimeout(PP.timer);PP.timer=null;}
-  document.getElementById('play-icon').className='ti ti-player-play';
-  document.getElementById('play-label').textContent='再生';
+  syncPlayIcons('play');
+}
+function syncPlayIcons(state){
+  var isPause=state==='pause';
+  var icon=document.getElementById('play-icon');
+  var label=document.getElementById('play-label');
+  var icon2=document.getElementById('play-icon2');
+  var label2=document.getElementById('play-label2');
+  if(icon)icon.className=isPause?'ti ti-player-pause':'ti ti-player-play';
+  if(label)label.textContent=isPause?'停止':'再生';
+  if(icon2)icon2.className=isPause?'ti ti-player-pause':'ti ti-player-play';
+  if(label2)label2.textContent=isPause?'■ 停止':'▶ 通行止め推移を地図で再生';
 }
 function ppTick(){
   if(!PP.playing)return;
@@ -1364,7 +1382,12 @@ function ppStep(dir){
   ppPause();
   PP.cur=Math.max(0,Math.min(PP.slots.length-1,PP.cur+dir));
   ppFrame(PP.cur);
-  document.getElementById('pp-ctrl').style.display='flex';
+  var ctrl=document.getElementById('pp-ctrl');
+  if(ctrl)ctrl.style.display='flex';
+  var btnPlay=document.getElementById('btn-play');
+  if(btnPlay)btnPlay.style.display='';
+  var ppPlayBtn=document.getElementById('pp-play-btn');
+  if(ppPlayBtn)ppPlayBtn.style.display='none';
 }
 function ppFrame(idx){
   if(!PP.summary||!PP.slots.length)return;
