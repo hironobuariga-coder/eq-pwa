@@ -432,6 +432,38 @@ body{
       <div class="sv-bar"><span class="sv-msg" id="sv-tmr"><i class="ti ti-check" style="font-size:13px"></i> 保存しました</span><button class="sb sb-g" onclick="saveTmr()"><i class="ti ti-device-floppy" style="font-size:14px"></i> 保存する</button></div>
     </div>
     <div class="sec">
+      <div class="sec-h"><h3>自動収集トリガー <span class="bdg bdg-blu" style="font-size:9px">10分間隔で監視</span></h3>
+        <span id="auto-pill" class="pill pill-na" style="font-size:10px"><i class="ti ti-circle" style="font-size:10px"></i> 待機中</span>
+      </div>
+      <p style="font-size:12px;color:var(--text2);margin-bottom:10px;line-height:1.6">気象庁防災情報XMLを自動監視し、条件合致時に情報収集を自動起動します。</p>
+      <div style="margin-bottom:10px">
+        <div style="font-size:12px;font-weight:500;margin-bottom:6px">地震：発動する最低震度</div>
+        <div class="seg-row" id="auto-shindo-seg">
+          <button class="seg" data-v="3" onclick="setAutoShindo(this)">震度3以上</button>
+          <button class="seg on" data-v="4" onclick="setAutoShindo(this)">震度4以上</button>
+          <button class="seg" data-v="4.5" onclick="setAutoShindo(this)">震度5弱以上</button>
+          <button class="seg" data-v="5" onclick="setAutoShindo(this)">震度5強以上</button>
+          <button class="seg" data-v="99" onclick="setAutoShindo(this)">地震は無効</button>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:10px">
+        <label style="display:flex;align-items:center;gap:8px;font-size:12px;cursor:pointer">
+          <input type="checkbox" id="auto-typhoon-ck" onchange="setAutoWeather('typhoon',this)" checked>
+          <span>台風：日本近海で発生・接近時に自動収集</span>
+        </label>
+        <label style="display:flex;align-items:center;gap:8px;font-size:12px;cursor:pointer">
+          <input type="checkbox" id="auto-rain-ck" onchange="setAutoWeather('rain',this)" checked>
+          <span>大雨：大雨警報・土砂災害警戒情報（警戒レベル3相当）発表時</span>
+        </label>
+        <label style="display:flex;align-items:center;gap:8px;font-size:12px;cursor:pointer">
+          <input type="checkbox" id="auto-snow-ck" onchange="setAutoWeather('snow',this)" checked>
+          <span>大雪：大雪警報（警戒レベル3相当）発表時</span>
+        </label>
+      </div>
+      <div class="nt" style="margin-bottom:8px"><i class="ti ti-info-circle" style="font-size:12px;vertical-align:-2px;margin-right:4px"></i>GitHub Actionsが10分ごとに気象庁XMLを確認。条件合致で情報収集タブを自動起動します。</div>
+      <div class="sv-bar"><span class="sv-msg" id="sv-auto"><i class="ti ti-check" style="font-size:13px"></i> 保存しました</span><button class="sb sb-g" onclick="saveAutoTrigger()"><i class="ti ti-device-floppy" style="font-size:14px"></i> 保存する</button></div>
+    </div>
+    <div class="sec">
       <div class="sec-h"><h3>震度表示フィルター</h3></div>
       <div class="seg-row" id="shindo-seg">
         <button class="seg" data-v="3" onclick="setShindo(this)">震度3以上</button>
@@ -494,6 +526,8 @@ function getLocXY(pref,city){
 }
 var S={dis:null,quake:null,shindo:[],roads:[],yamato:null,sagawa:null,news:[],mapLinks:null};
 var RC=[],OFF=[],MIN_SH=4,TMR_MIN=45,DTYPE='quake';
+var AUTO_SH=4,AUTO_TYPHOON=true,AUTO_RAIN=true,AUTO_SNOW=true;
+var autoTriggerIv=null,lastTriggerTs='';
 var tmrIv=null,tmrEnd=null,mapZ=5;
 var deferredInstall=null;
 
@@ -581,6 +615,8 @@ function lsSs(k,v){try{localStorage.setItem(k,v);}catch(e){}}
 function init(){
   try{
     RC=lsG('rc-list',DEF_RC);
+    AUTO_SH=lsG('auto-shindo',4);AUTO_TYPHOON=lsG('auto-typhoon',true);
+    AUTO_RAIN=lsG('auto-rain',true);AUTO_SNOW=lsG('auto-snow',true);
     OFF=lsG('off-list',DEF_OFF);
     MIN_SH=lsG('min-shindo',4);
     TMR_MIN=lsG('tmr-min',45);
@@ -590,6 +626,7 @@ function init(){
     renderOffEd();renderOffGrid();
     renderShFilt();syncShSeg();syncTmrSeg();
     applyD(DTYPE);
+    startAutoTrigger();
     if('serviceWorker' in navigator){
       navigator.serviceWorker.register('sw.js').catch(function(){});
     }
@@ -621,7 +658,7 @@ function goTab(id,el){
   var scr=document.getElementById('scr');
   if(scr)scr.scrollTop=0;
   if(id==='teams')buildTxt();
-  if(id==='settings'){loadKeyUI();loadWhUI();}
+  if(id==='settings'){loadKeyUI();loadWhUI();syncAutoUI();}
   if(id==='road'){initSVGMap();}
 }
 
@@ -703,6 +740,128 @@ function setFilt(el){MIN_SH=parseFloat(el.getAttribute('data-n'));var bs=documen
 function syncShSeg(){var bs=document.querySelectorAll('#shindo-seg .seg');for(var i=0;i<bs.length;i++)bs[i].classList.toggle('on',parseFloat(bs[i].getAttribute('data-v'))===MIN_SH);}
 function setShindo(el){MIN_SH=parseFloat(el.getAttribute('data-v'));var bs=document.querySelectorAll('#shindo-seg .seg');for(var i=0;i<bs.length;i++)bs[i].classList.remove('on');el.classList.add('on');renderShFilt();renderSnTbl();}
 function saveShindo(){lsS('min-shindo',MIN_SH);flash('sv-sh');}
+
+// ─── 自動収集トリガー設定 ─────────────────────────────────────────
+function setAutoShindo(btn){
+  AUTO_SH=parseFloat(btn.getAttribute('data-v'));
+  document.querySelectorAll('#auto-shindo-seg .seg').forEach(function(b){b.classList.remove('on');});
+  btn.classList.add('on');
+}
+function setAutoWeather(type,cb){
+  if(type==='typhoon') AUTO_TYPHOON=cb.checked;
+  else if(type==='rain') AUTO_RAIN=cb.checked;
+  else if(type==='snow') AUTO_SNOW=cb.checked;
+}
+function saveAutoTrigger(){
+  lsS('auto-shindo',AUTO_SH);
+  lsS('auto-typhoon',AUTO_TYPHOON);
+  lsS('auto-rain',AUTO_RAIN);
+  lsS('auto-snow',AUTO_SNOW);
+  // disaster-config.json を GitHub Actions が読む形式に書き出すのは不可（クライアントサイド）
+  // → PWA側は localStorage の設定と disaster-trigger.json の dtype を突合する
+  flash('sv-auto');
+  toast('自動収集トリガー設定を保存しました');
+}
+function syncAutoUI(){
+  // 設定UIをlocalStorageの値に同期
+  document.querySelectorAll('#auto-shindo-seg .seg').forEach(function(b){
+    b.classList.toggle('on', parseFloat(b.getAttribute('data-v'))===AUTO_SH);
+  });
+  var tc=document.getElementById('auto-typhoon-ck');
+  var rc=document.getElementById('auto-rain-ck');
+  var sc=document.getElementById('auto-snow-ck');
+  if(tc)tc.checked=AUTO_TYPHOON;
+  if(rc)rc.checked=AUTO_RAIN;
+  if(sc)sc.checked=AUTO_SNOW;
+}
+
+// ─── 自動トリガーポーリング（disaster-trigger.jsonを確認）──────────
+var AUTO_POLL_INTERVAL = 5 * 60 * 1000; // 5分ごとに確認（GitHub Actionsは15分なので十分）
+
+function startAutoTrigger(){
+  checkAutoTrigger(); // 起動時に即チェック
+  if(autoTriggerIv) clearInterval(autoTriggerIv);
+  autoTriggerIv = setInterval(checkAutoTrigger, AUTO_POLL_INTERVAL);
+}
+
+function checkAutoTrigger(){
+  var base = window.location.href.replace(/\/[^\/]*$/,'');
+  fetch(base+'/data/disaster-trigger.json?t='+Date.now())
+    .then(function(r){ return r.ok?r.json():null; })
+    .then(function(data){
+      if(!data||!data.triggers||!data.triggers.length) return;
+      var pill = document.getElementById('auto-pill');
+
+      // 最新のトリガーを確認
+      var triggers = data.triggers;
+      var latest = triggers[triggers.length-1];
+
+      // すでに処理済み（同じtsなら再処理しない）
+      if(latest.detected === lastTriggerTs) return;
+
+      // ユーザーの設定とdtypeを突合
+      var matched = null;
+      for(var i = triggers.length-1; i >= 0; i--){
+        var t = triggers[i];
+        if(t.detected === lastTriggerTs) break; // ここより新しいものだけ処理
+        if(t.dtype==='quake'   && AUTO_SH<99 && t.maxShindo>=AUTO_SH) { matched=t; break; }
+        if(t.dtype==='typhoon' && AUTO_TYPHOON) { matched=t; break; }
+        if(t.dtype==='rain'    && AUTO_RAIN)    { matched=t; break; }
+        if(t.dtype==='snow'    && AUTO_SNOW)    { matched=t; break; }
+      }
+
+      if(!matched) {
+        lastTriggerTs = latest.detected;
+        return;
+      }
+
+      lastTriggerTs = matched.detected;
+
+      // pill 更新
+      var typeLabel={quake:'地震',typhoon:'台風',rain:'大雨',snow:'大雪'}[matched.dtype]||matched.dtype;
+      if(pill){
+        pill.className='pill pill-ok';
+        pill.innerHTML='<i class="ti ti-check" style="font-size:10px"></i> '+typeLabel+'を検知';
+      }
+
+      // 情報収集を自動起動
+      console.log('[AutoTrigger]', matched.dtype, matched.title);
+      autoLaunchCollection(matched);
+    })
+    .catch(function(){
+      // エラーは無視（ファイル未生成時など）
+    });
+}
+
+function autoLaunchCollection(trigger){
+  // dtype を切り替えて情報収集タブを前面に出し、fetchAll()を呼ぶ
+  var dtypeMap = {quake:'quake', typhoon:'typhoon', rain:'rain', snow:'snow'};
+  var dtype = dtypeMap[trigger.dtype] || 'quake';
+
+  // 既に手動で情報収集済みの場合はスキップ（Sに既存データがある）
+  if(S.dis || S.quake) {
+    console.log('[AutoTrigger] 既に収集済みのためスキップ');
+    return;
+  }
+
+  // 災害種別を切り替え
+  applyD(dtype);
+
+  // タブを情報収集に切り替え
+  var collectBtn = document.querySelector('.tb[onclick*="collect"]');
+  if(collectBtn) goTab('collect', collectBtn);
+
+  // 少し遅らせてfetchAll（APIキーが必要）
+  if(!getKey()){
+    toast('⚠ 自動収集: APIキーが未設定です');
+    return;
+  }
+
+  toast('🔔 ' + ({quake:'地震',typhoon:'台風',rain:'大雨',snow:'大雪'}[dtype]||dtype) + 'を検知 — 自動収集を開始します');
+  setTimeout(function(){
+    fetchAll();
+  }, 1000);
+}
 function renderSnTbl(){
   var f=S.shindo.filter(function(r){return snNum(r.level)>=MIN_SH;});
   document.getElementById('shindo-body').innerHTML=f.length?f.map(function(r){return '<tr><td><span class="bdg '+snCls(r.level)+'">震度'+r.level+'</span></td><td style="font-size:12px">'+r.area+'</td></tr>';}).join(''):'<tr><td colspan="2" style="color:var(--text2);text-align:center;padding:12px 0;font-size:12px">該当する震度の情報なし</td></tr>';
