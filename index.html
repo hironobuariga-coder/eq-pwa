@@ -390,14 +390,6 @@ body{
       <button class="share-btn" onclick="shareT()"><i class="ti ti-share"></i> 共有してTeamsに送る <span style="font-size:10px;opacity:.8;margin-left:4px">📱 スマホ向け</span></button>
       <button class="wh-btn" id="btn-wh" onclick="postT()" style="display:none"><i class="ti ti-brand-teams"></i> Teamsに直接投稿する</button>
     </div>
-    <div class="sec">
-      <h3 style="font-size:11px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">社内フロー基準</h3>
-      <div class="ir"><span class="il" style="font-size:12px">地震：震度5強以上</span><span class="bdg bdg-red">必須社内連携</span></div>
-      <div class="ir"><span class="il" style="font-size:12px">地震：震度5弱以下</span><span class="bdg bdg-gry">参考共有</span></div>
-      <div class="ir"><span class="il" style="font-size:12px">台風：暴風警報地域に拠点あり</span><span class="bdg bdg-red">必須社内連携</span></div>
-      <div class="ir"><span class="il" style="font-size:12px">大雨：特別警報発令地域に拠点あり</span><span class="bdg bdg-red">必須社内連携</span></div>
-      <div class="ir"><span class="il" style="font-size:12px">大雪：警報発令地域に拠点あり</span><span class="bdg bdg-amb">参考共有</span></div>
-    </div>
   </div>
 
   <div id="pn-settings" class="pn">
@@ -1562,33 +1554,147 @@ function buildTxt(){
   var d=S.dis||S.quake;var def=DD[DTYPE];
   var title=mkTitle();
   document.getElementById('t-title').textContent=title;
-  var ia=d&&d.alertLevel==='alert',iw=d&&d.alertLevel==='watch';
-  var urg={quake:ia?'🔴【要対応】震度5強以上 — 社内連携必須':iw?'🔵【参考共有】震度5弱':'🔵【参考共有】地震発生',typhoon:ia?'🔴【要対応】台風接近 — 暴風警報発令・社内連携必須':iw?'🔵【参考共有】台風接近 — 警報地域注意':'🔵【参考共有】台風情報',rain:ia?'🔴【要対応】大雨特別警報 — 社内連携必須':iw?'🔵【参考共有】大雨警報発令':'🔵【参考共有】大雨情報',snow:ia?'🔴【要対応】大雪特別警報 — 社内連携必須':iw?'🔵【参考共有】大雪警報発令':'🔵【参考共有】大雪情報'};
-  var co={quake:'@LL 各位\n地震が発生しましたので、速報ベースで共有します。\n最大震度は震度'+(d&&d.maxShindo?d.maxShindo:'不明')+'です。\n各部門におかれましては、顧客・仕入先・自拠点における異常、または業務への影響を確認・検知した場合、本チャネルにて共有をお願いします。',typhoon:'@LL 各位\n'+(d&&d.name?d.name:'台風')+'が接近していますので、速報ベースで共有します。\n各部門におかれましては、顧客・仕入先・自拠点における影響を確認・検知した場合、本チャネルにて共有をお願いします。',rain:'@LL 各位\n大雨警報が発令されましたので、速報ベースで共有します。\n各部門におかれましては、顧客・仕入先・自拠点における影響を確認・検知した場合、本チャネルにて共有をお願いします。',snow:'@LL 各位\n大雪警報が発令されましたので、速報ベースで共有します。\n各部門におかれましては、顧客・仕入先・自拠点における影響（特に路面状況・高速通行止め）を確認・検知した場合、本チャネルにて共有をお願いします。'};
+
+  // ── 冒頭（件名行） ──
+  var head={
+    quake:'@LL 各位\n\n地震発生（速報）',
+    typhoon:'@LL 各位\n\n台風接近情報（速報）',
+    rain:'@LL 各位\n\n大雨警報発令（速報）',
+    snow:'@LL 各位\n\n大雪警報発令（速報）'
+  };
+
+  // ── 災害概況 ──
   var disSec='';
-  if(!d){disSec='■ 災害概況\n・情報を取得してください';}
-  else if(DTYPE==='quake'){disSec='■ 地震概要（気象庁）\n・発生日時：'+(d.time||'確認中')+'\n・震源地　：'+(d.epicenter||'確認中')+'\n・最大震度：'+(d.maxShindo||'確認中')+'\n・津波の恐れ：'+(d.tsunami||'確認中');}
-  else if(DTYPE==='typhoon'){disSec='■ 台風概況（気象庁）\n・台風名　：'+(d.name||'確認中')+'\n・現在位置：'+(d.position||'確認中')+'\n・進路・速度：'+(d.direction||'')+' '+(d.speed||'')+'\n・最大風速：'+(d.maxWind||'確認中')+'\n・暴風警報：'+((d.stormWarningAreas||[]).join('、')||'なし')+'\n・大雨警報：'+((d.heavyRainAreas||[]).join('、')||'なし')+'\n・接近見込み：'+(d.approach||'確認中');}
-  else if(DTYPE==='rain'){disSec='■ 大雨概況（気象庁）\n・大雨警報地域：'+((d.warningAreas||[]).join('、')||'確認中')+'\n・特別警報地域：'+((d.specialWarningAreas||[]).join('、')||'なし')+'\n・氾濫懸念河川：'+((d.rivers||[]).join('、')||'なし')+'\n・対象期間　：'+(d.period||'確認中')+'\n・予想雨量　：'+(d.totalRain||'確認中');}
-  else{var sl=[];for(var k in (d.forecastSnow||{}))sl.push(k+'：'+d.forecastSnow[k]);disSec='■ 大雪概況（気象庁）\n・大雪警報地域：'+((d.warningAreas||[]).join('、')||'確認中')+'\n・予想積雪量　：'+(sl.join('、')||'確認中')+'\n・道路への影響：'+(d.roadImpact||'確認中')+'\n・対象期間　：'+(d.period||'確認中');}
+  if(!d){
+    disSec='■ 概要\n・情報を取得してください';
+  } else if(DTYPE==='quake'){
+    disSec='■ 地震概要\n'
+      +'・発生：'+(d.time||'確認中')+'\n'
+      +'・震源：'+(d.epicenter||'確認中')+'\n'
+      +'・最大震度：'+(d.maxShindo||'確認中')+'\n'
+      +'・津波：'+(d.tsunami||'確認中');
+  } else if(DTYPE==='typhoon'){
+    disSec='■ 台風概要\n'
+      +'・台風名：'+(d.name||'確認中')+'\n'
+      +'・現在位置：'+(d.position||'確認中')+'\n'
+      +'・接近見込み：'+(d.approach||'確認中')+'\n'
+      +'・暴風警報地域：'+((d.stormWarningAreas||[]).join('、')||'なし')+'\n'
+      +'・大雨警報地域：'+((d.heavyRainAreas||[]).join('、')||'なし');
+  } else if(DTYPE==='rain'){
+    disSec='■ 大雨概要\n'
+      +'・警報地域：'+((d.warningAreas||[]).join('、')||'確認中')+'\n'
+      +'・特別警報：'+((d.specialWarningAreas||[]).join('、')||'なし')+'\n'
+      +'・対象期間：'+(d.period||'確認中');
+  } else {
+    var sl=[];for(var k in (d.forecastSnow||{}))sl.push(k+'：'+d.forecastSnow[k]);
+    disSec='■ 大雪概要\n'
+      +'・警報地域：'+((d.warningAreas||[]).join('、')||'確認中')+'\n'
+      +'・予想積雪：'+(sl.join('、')||'確認中')+'\n'
+      +'・対象期間：'+(d.period||'確認中');
+  }
+
+  // ── 震度エリア（地震のみ） ──
   var shSec='';
-  if(DTYPE==='quake'){var f=S.shindo.filter(function(r){return snNum(r.level)>=MIN_SH;});if(f.length)shSec='\n\n■ 主要エリア震度（震度'+snLbl(MIN_SH)+'以上）\n'+f.map(function(r){return '・震度'+r.level+'：'+r.area;}).join('\n');}
-  var rcSec='\n\n■ 各RC（'+def.label+'情報による速報）\n';
-  for(var i=0;i<RC.length;i++){var r=RC[i];var el=document.getElementById('rc-s-'+i);var st=el?el.textContent.trim():'未確認';var ex='';if(DTYPE==='quake'){var hit=S.shindo.filter(function(x){return x.area&&((r.pref&&x.area.indexOf(r.pref)>=0)||(r.city&&x.area.indexOf(r.city)>=0));});if(hit.length){var mx=hit.reduce(function(a,b){return snNum(a.level)>snNum(b.level)?a:b;});ex=' / 震度'+mx.level;}else if(d){ex=' / 震度情報なし';}}rcSec+='・'+r.name+'（'+r.pref+r.city+'）：'+st+ex+'\n';}
-  rcSec+='※'+def.rcNote;
-  var offSec='';
-  if(OFF.length){offSec='\n\n■ 各オフィス（'+def.label+'情報による速報）\n';for(var i=0;i<OFF.length;i++){var o=OFF[i];var el=document.getElementById('off-s-'+i);var st=el?el.textContent.trim():'未確認';var ex='';if(DTYPE==='quake'){var hit=S.shindo.filter(function(x){return x.area&&((o.pref&&x.area.indexOf(o.pref)>=0)||(o.city&&x.area.indexOf(o.city)>=0));});if(hit.length){var mx=hit.reduce(function(a,b){return snNum(a.level)>snNum(b.level)?a:b;});ex=' / 震度'+mx.level;}else if(d){ex=' / 震度情報なし';}}offSec+='・'+o.name+'（'+o.pref+o.city+'）：'+st+ex+'\n';}offSec+='※'+def.offNote;}
+  if(DTYPE==='quake'){
+    var f=S.shindo.filter(function(r){return snNum(r.level)>=MIN_SH;});
+    if(f.length)shSec='\n\n■ 震度'+(snLbl(MIN_SH))+'以上エリア\n'+f.map(function(r){return '・震度'+r.level+'：'+r.area;}).join('\n');
+  }
+
+  // ── RC・オフィス状況 ──
+  var rcLines=[];
+  for(var i=0;i<RC.length;i++){
+    var r=RC[i];
+    var el=document.getElementById('rc-s-'+i);
+    var st=el?el.textContent.trim():'確認中';
+    var ex='';
+    if(DTYPE==='quake'){
+      var hit=S.shindo.filter(function(x){return x.area&&((r.pref&&x.area.indexOf(r.pref)>=0)||(r.city&&x.area.indexOf(r.city)>=0));});
+      if(hit.length){var mx=hit.reduce(function(a,b){return snNum(a.level)>snNum(b.level)?a:b;});ex=' / 震度'+mx.level;}
+    }
+    rcLines.push('・'+r.name+'：'+st+ex);
+  }
+  if(OFF.length){
+    for(var i=0;i<OFF.length;i++){
+      var o=OFF[i];
+      var el=document.getElementById('off-s-'+i);
+      var st=el?el.textContent.trim():'確認中';
+      var ex='';
+      if(DTYPE==='quake'){
+        var hit=S.shindo.filter(function(x){return x.area&&((o.pref&&x.area.indexOf(o.pref)>=0)||(o.city&&x.area.indexOf(o.city)>=0));});
+        if(hit.length){var mx=hit.reduce(function(a,b){return snNum(a.level)>snNum(b.level)?a:b;});ex=' / 震度'+mx.level;}
+      }
+      rcLines.push('・'+o.name+'：'+st+ex);
+    }
+  }
+  var rcSec=rcLines.length?'\n\n■ 拠点・オフィス状況\n'+rcLines.join('\n')+'\n※速報。異常確認の場合は本チャネルにて報告をお願いします。':'';
+
+  // ── 高速道路 ──
   var rdSec='\n\n■ 高速道路\n';
-  rdSec+=S.roads.length?S.roads.map(function(r){return '・'+r.road+' '+r.section+'（'+r.direction+'）：'+r.status;}).join('\n'):'・通行止め情報なし（現時点）';
-  if(S.mapLinks)rdSec+='\n・地図（渋滞表示）：'+S.mapLinks.google+'\n・道路交通情報センター（JARTIC）：https://www.jartic.or.jp/';
-  function dlLine(co){if(!co)return '確認中';if(co.status==='suspended')return '[制限あり]'+(co.detail?' '+co.detail:'');if(co.status==='partial')return '[一部制限・遅延あり]'+(co.detail?' '+co.detail:'');return '現時点でWeb上に'+def.label+'による遅延・制限情報の掲載なし';}
-  var delSec='\n\n■ 配送会社\n・ヤマト運輸　：'+dlLine(S.yamato)+'\n・佐川急便　　：'+dlLine(S.sagawa);
+  rdSec+=S.roads.length
+    ?S.roads.map(function(r){return '・'+r.road+' '+r.section+'（'+r.direction+'）：通行止め';}).join('\n')
+    :'・現時点で通行止め情報なし';
+
+  // ── 配送会社 ──
+  function dlLine(info){
+    if(!info)return '確認中';
+    if(info.status==='suspended')return (info.detail||'集配停止');
+    if(info.status==='partial')return (info.detail||'一部制限・遅延あり');
+    return '現時点で情報なし';
+  }
+  var delSec='\n\n■ 配送会社\n'
+    +'・ヤマト運輸：'+dlLine(S.yamato)+'\n'
+    +'・佐川急便　：'+dlLine(S.sagawa);
+  if(DTYPE==='quake'){
+    delSec+='\n※発生直後は各社の公式掲載まで1〜3時間程度かかる場合があります。';
+  }
+
+  // ── 物流影響サマリー ──
+  var hasImpact=S.roads.length||(S.yamato&&S.yamato.status!=='normal')||(S.sagawa&&S.sagawa.status!=='normal');
+  var impactLead;
+  if(!d){
+    impactLead='';
+  } else if(hasImpact){
+    impactLead='\n\n■ 物流影響（速報）\n以下の通り影響が確認されています。';
+  } else if(DTYPE==='quake'){
+    impactLead='\n\n■ 物流影響（速報）\n現時点で物流業務への影響は確認されていません。\n※発生直後は情報収集に1〜3時間程度かかる場合があります。情報が入り次第、追ってご報告します。';
+  } else {
+    impactLead='\n\n■ 物流影響（速報）\n現時点で物流業務への影響は確認されていません。\n情報が入り次第、追ってご報告します。';
+  }
+
+  // ── 参考情報（ニュース） ──
   var nwSec='';
   var nw=S.news||[];
-  if(nw.length){var nna=nw.filter(function(x){return x.category!=='airport';});var ap=nw.filter(function(x){return x.category==='airport';});if(nna.length)nwSec='\n\n■ 参考情報（輸送・インフラ）\n'+nna.map(function(n){return '・'+n.summary+'（'+(n.source||'')+'）';}).join('\n');if(ap.length)nwSec+='\n\n■ 空港便（成田・羽田）\n'+ap.map(function(n){return '・'+n.summary+'（'+(n.source||'')+'）';}).join('\n');}
-  var ftLinks={quake:'・気象庁 地震情報：https://www.jma.go.jp/jp/quake/\n・NHK 防災・気象情報：https://www3.nhk.or.jp/sokuho/jishin/',typhoon:'・気象庁 台風情報：https://www.jma.go.jp/jp/typh/\n・NHK 防災・気象情報：https://www3.nhk.or.jp/weather/',rain:'・気象庁 大雨警報：https://www.jma.go.jp/jp/warn/\n・NHK 防災・気象情報：https://www3.nhk.or.jp/weather/',snow:'・気象庁 大雪情報：https://www.jma.go.jp/jp/warn/\n・NHK 防災・気象情報：https://www3.nhk.or.jp/weather/'};
-  var ft='\n\n物流関連情報に変化があり次第、改めて本チャネルにて報告します。\n\n---------------------\n「参考リンク」\n'+(ftLinks[DTYPE]||ftLinks.quake)+'\n・ヤマト運輸 集配遅延情報：'+(S.yamato&&S.yamato.url?S.yamato.url:'https://www.kuronekoyamato.co.jp/ytc/chien/chien_hp.html')+'\n・佐川急便 集配遅延情報：'+(S.sagawa&&S.sagawa.url?S.sagawa.url:'https://www2.sagawa-exp.co.jp/information/list/')+'\n・成田空港 運航状況：https://www.narita-airport.jp/ja/flight/\n・羽田空港 運航状況：https://tokyo-haneda.com/flight/index.html\n・道路交通情報センター（JARTIC）：https://www.jartic.or.jp/';
-  var body=(urg[DTYPE]||urg.quake)+'\n\n'+(co[DTYPE]||co.quake)+'\n\n'+disSec+shSec+rcSec+offSec+rdSec+delSec+nwSec+ft;
+  if(nw.length){
+    var nna=nw.filter(function(x){return x.category!=='airport';});
+    var ap=nw.filter(function(x){return x.category==='airport';});
+    if(nna.length)nwSec='\n\n■ 参考情報（輸送・インフラ）\n'+nna.map(function(n){return '・'+n.summary;}).join('\n');
+    if(ap.length)nwSec+='\n\n■ 空港便（成田・羽田）\n'+ap.map(function(n){return '・'+n.summary;}).join('\n');
+  }
+
+  // ── フッター ──
+  var ftLinks={
+    quake:'・気象庁 地震情報：https://www.jma.go.jp/jp/quake/',
+    typhoon:'・気象庁 台風情報：https://www.jma.go.jp/jp/typh/',
+    rain:'・気象庁 警報・注意報：https://www.jma.go.jp/jp/warn/',
+    snow:'・気象庁 警報・注意報：https://www.jma.go.jp/jp/warn/'
+  };
+  var ft='\n\n物流関連情報に変化があり次第、追ってご報告します。'
+    +'\n\n-----'
+    +'\n【参考リンク】\n'
+    +(ftLinks[DTYPE]||ftLinks.quake)+'\n'
+    +'・JARTIC 道路交通情報：https://www.jartic.or.jp/\n'
+    +'・ヤマト運輸：'+(S.yamato&&S.yamato.url?S.yamato.url:'https://www.kuronekoyamato.co.jp/ytc/chien/chien_hp.html')+'\n'
+    +'・佐川急便：'+(S.sagawa&&S.sagawa.url?S.sagawa.url:'https://www2.sagawa-exp.co.jp/information/list/');
+
+  var body=(head[DTYPE]||head.quake)
+    +'\n\n'+disSec
+    +shSec
+    +impactLead
+    +rcSec
+    +rdSec
+    +delSec
+    +nwSec
+    +ft;
   document.getElementById('t-body').textContent=body;
   return{title:title,body:body};
 }
