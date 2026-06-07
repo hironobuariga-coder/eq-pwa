@@ -1,13 +1,16 @@
 {
-  "generated": "2026-06-08 07:47:37+09:00",
+  "generated": "2026-06-08 08:52:13+09:00",
   "triggers": [
     {
-      "id": "https://www.data.jma.go.jp/developer/xml/data/20260606043049_0_VXWW50_460100.xml",
-      "type": "rain",
-      "dtype": "rain",
-      "title": "土砂災害警戒情報",
-      "detected": "2026-06-06 23:16:07+09:00",
-      "url": "https://www.data.jma.go.jp/developer/xml/data/20260606043049_0_VXWW50_460100.xml"
+      "id": "nerv:https://unnerv.jp/@UN_NERV/116711488483968151",
+      "type": "quake",
+      "dtype": "quake",
+      "level": 4,
+      "maxShindo": 4,
+      "title": "UN_NERV: “【緊急地震速報 最終報 2026年6月8日】…”",
+      "detected": "2026-06-08 08:52:13+09:00",
+      "url": "https://unnerv.jp/@UN_NERV/116711488483968151",
+      "source": "NERV"
     }
   ],
   "processed_ids": [
@@ -1809,6 +1812,22 @@
     "https://www.data.jma.go.jp/developer/xml/data/20260607214751_0_VPFJ51_015000.xml",
     "https://www.data.jma.go.jp/developer/xml/data/20260607214751_0_VPFJ50_015000.xml",
     "nerv:https://unnerv.jp/@UN_NERV/116711250060919909",
-    "nerv:https://unnerv.jp/@UN_NERV/116711131846450699"
+    "nerv:https://unnerv.jp/@UN_NERV/116711131846450699",
+    "https://www.data.jma.go.jp/developer/xml/data/20260607231358_0_VPWW54_471000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260607231358_0_VPWW53_471000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260607231347_0_VPWW56_471000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260607230322_0_VPWW54_200000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260607230322_0_VPWW53_200000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260607230319_0_VPWW61_200000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260607230235_0_VPWW54_130000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260607230235_0_VPWW53_130000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260607230219_0_VPWW56_130000.xml",
+    "nerv:https://unnerv.jp/@UN_NERV/116711488483968151",
+    "nerv:https://unnerv.jp/@UN_NERV/116711485372649849",
+    "nerv:https://unnerv.jp/@UN_NERV/116711483889949062",
+    "nerv:https://unnerv.jp/@UN_NERV/116711483765440272",
+    "nerv:https://unnerv.jp/@UN_NERV/116711361410048319",
+    "nerv:https://unnerv.jp/@UN_NERV/116711320298518470",
+    "nerv:https://unnerv.jp/@UN_NERV/116711316552344633"
   ]
 }
