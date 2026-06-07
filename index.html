@@ -202,7 +202,7 @@ body{
 .tl-s{width:28px;height:16px;border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600}
 .tl-cl{background:#E24B4A;color:#fff}.tl-op{background:var(--bg3)}.tl-uk{background:var(--border)}.tl-ft{background:transparent;border:1px dashed var(--border)}
 .tl-lb{display:flex;gap:1px;padding:0 4px;margin-top:2px}
-.tl-lbl{width:28px;text-align:center;font-size:8px;color:var(--text3);flex-shrink:0;white-space:nowrap}
+.tl-lbl{width:36px;text-align:center;font-size:8px;color:var(--text3);flex-shrink:0;line-height:1.3}
 .tl-leg{display:flex;gap:10px;margin-top:8px;font-size:11px;color:var(--text2);align-items:center}
 .tl-li{display:flex;align-items:center;gap:4px}
 .tl-dc{width:10px;height:10px;border-radius:2px;background:#E24B4A;flex-shrink:0}
@@ -1289,17 +1289,13 @@ function buildSlots(){
   var end=new Date(now); end.setMinutes(0,0,0);
   var sl=[];
   for(var i=23;i>=0;i--){
-    var c=new Date(end.getTime()-i*3600000);
-    var jst=new Date(c.getTime()+9*3600000);
-    var h=jst.getUTCHours();
-    var label;
-    if(h===0){
-      var mo=jst.getUTCMonth()+1; var d=jst.getUTCDate();
-      label=mo+'/'+d+'<br>0:00';
-    } else {
-      label=h+':00';
-    }
-    sl.push({ts:c.toISOString(),label:label});
+    var u=new Date(end.getTime()-i*3600000);
+    var jst=new Date(u.getTime()+9*3600000);
+    var mo=jst.getUTCMonth()+1;
+    var d=jst.getUTCDate();
+    var h=String(jst.getUTCHours()).padStart(2,'0');
+    var label=mo+'/'+d+'<br>'+h+':00';   // 例: 6/7<br>22:00
+    sl.push({ts:u.toISOString(),label:label});
   }
   return sl;
 }
@@ -1388,7 +1384,7 @@ function ppFrame(idx){
   var slot=PP.slots[idx];
   // 時刻ラベル更新
   var tEl=document.getElementById('pp-time');
-  if(tEl)tEl.textContent=slot.label.replace('<br>',' ');
+  if(tEl)tEl.textContent=slot.label.replace('<br>',' ').replace('/','/').trim();
   // 通行止め件数カウント
   var periods=PP.summary.periods||[];
   var closed=periods.filter(function(p){return inP(slot.ts,p.start,p.end)==='c';});
@@ -1439,7 +1435,23 @@ function ppDrawClosure(slot,closedPeriods){
   tt.setAttribute('font-size',fs);tt.setAttribute('font-weight','700');
   tt.setAttribute('fill','#ffffff');tt.setAttribute('text-anchor','middle');
   tt.setAttribute('font-family','monospace,sans-serif');
-  tt.textContent=slot.label.replace('<br>',' ');
+  // label は「6/7\n22:00」形式で2行表示
+  var parts=slot.label.split('<br>');
+  if(parts.length>1){
+    tt.textContent='';
+    var tspan1=makeSVGEl('tspan');
+    tspan1.setAttribute('x',vx+pw/2);tspan1.setAttribute('dy','0');
+    tspan1.textContent=parts[0];
+    var tspan2=makeSVGEl('tspan');
+    tspan2.setAttribute('x',vx+pw/2);tspan2.setAttribute('dy',fs*1.1);
+    tspan2.textContent=parts[1];
+    tt.appendChild(tspan1);tt.appendChild(tspan2);
+    // 2行分の高さに背景を拡張
+    tbg.setAttribute('height',ph*1.8);
+    tt.setAttribute('y',vy+ph*0.55);
+  } else {
+    tt.textContent=slot.label;
+  }
   gc.appendChild(tt);
 
   if(!closedPeriods.length){

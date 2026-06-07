@@ -12,6 +12,17 @@
 const fs   = require('fs');
 const path = require('path');
 
+// ─── JST日付+時刻フォーマット ────────────────────────────────────
+// UTC DateオブジェクトをJSTの「M/D HH:MM」文字列に変換
+function fmtJST(d) {
+  var j = new Date(d.getTime() + 9 * 3600 * 1000);
+  var mo = j.getUTCMonth() + 1;
+  var dd = j.getUTCDate();
+  var hh = String(j.getUTCHours()).padStart(2, '0');
+  var mm = String(j.getUTCMinutes()).padStart(2, '0');
+  return mo + '/' + dd + ' ' + hh + ':' + mm;
+}
+
 // Node.js 18+ 組み込みの fetch を使用（追加パッケージ不要）
 if (typeof globalThis.fetch === 'undefined') {
   console.error('fetch が利用できません。Node.js 18以上が必要です。');
@@ -262,11 +273,10 @@ function buildSummary(log) {
     periods.push({
       road: road, section: section, direction: fc.direction || '', reason: fc.reason || '',
       status: '通行止め', start: first.ts, end: ongoing ? null : last.ts,
+      startJST: fmtJST(new Date(first.ts)),
+      endJST:   ongoing ? null : fmtJST(new Date(last.ts)),
       startTimeJST: fc.startTime || '', source: fc.source || '',
-      snapshots: appears.map(function(s){
-        var d = new Date(s.ts); var j = new Date(d.getTime() + 9 * 3600 * 1000);
-        return j.getUTCHours() + ':' + String(j.getUTCMinutes()).padStart(2, '0');
-      })
+      snapshots: appears.map(function(s){ return fmtJST(new Date(s.ts)); })
     });
   }
   periods.sort(function(a, b){ return a.start.localeCompare(b.start); });
