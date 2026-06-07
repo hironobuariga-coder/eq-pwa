@@ -1,143 +1,5 @@
 [
   {
-    "ts": "2026-06-07T03:17:05+09:00",
-    "closures": [
-      {
-        "road": "中央",
-        "section": "",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "",
-        "source": "e_nexco_niigata"
-      },
-      {
-        "road": "上信越",
-        "section": "",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "",
-        "source": "e_nexco_niigata"
-      },
-      {
-        "road": "北陸",
-        "section": "",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "",
-        "source": "e_nexco_niigata"
-      },
-      {
-        "road": "長野",
-        "section": "",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "21:00",
-        "source": "e_nexco_niigata"
-      },
-      {
-        "road": "北陸",
-        "section": "E8北陸（上下線）朝日IC〜新潟中央JCT",
-        "direction": "上下線",
-        "status": "通行止め",
-        "reason": "地震",
-        "startTime": "",
-        "source": "e_nexco_niigata"
-      },
-      {
-        "road": "関越",
-        "section": "の湯沢IC〜長岡IC",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "",
-        "source": "e_nexco_niigata"
-      },
-      {
-        "road": "関越",
-        "section": "関越道上り線小出IC〜塩沢石打IC",
-        "direction": "上り",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "22:15",
-        "source": "e_nexco_niigata"
-      }
-    ],
-    "rawCount": 28
-  },
-  {
-    "ts": "2026-06-07T05:18:23+09:00",
-    "closures": [
-      {
-        "road": "中央",
-        "section": "",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "",
-        "source": "e_nexco_niigata"
-      },
-      {
-        "road": "上信越",
-        "section": "",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "",
-        "source": "e_nexco_niigata"
-      },
-      {
-        "road": "北陸",
-        "section": "",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "",
-        "source": "e_nexco_niigata"
-      },
-      {
-        "road": "長野",
-        "section": "",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "21:00",
-        "source": "e_nexco_niigata"
-      },
-      {
-        "road": "北陸",
-        "section": "E8北陸（上下線）朝日IC〜新潟中央JCT",
-        "direction": "上下線",
-        "status": "通行止め",
-        "reason": "地震",
-        "startTime": "",
-        "source": "e_nexco_niigata"
-      },
-      {
-        "road": "関越",
-        "section": "の湯沢IC〜長岡IC",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "",
-        "source": "e_nexco_niigata"
-      },
-      {
-        "road": "関越",
-        "section": "関越道上り線小出IC〜塩沢石打IC",
-        "direction": "上り",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "22:15",
-        "source": "e_nexco_niigata"
-      }
-    ],
-    "rawCount": 28
-  },
-  {
     "ts": "2026-06-07T07:13:14+09:00",
     "closures": [
       {
@@ -330,6 +192,39 @@
   },
   {
     "ts": "2026-06-08T03:14:29+09:00",
+    "closures": [
+      {
+        "road": "上信越",
+        "section": "",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "",
+        "source": "e_nexco_bousai"
+      },
+      {
+        "road": "東北",
+        "section": "",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "台風",
+        "startTime": "15:00",
+        "source": "e_nexco_bousai"
+      },
+      {
+        "road": "長野",
+        "section": "",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "",
+        "source": "e_nexco_bousai"
+      }
+    ],
+    "rawCount": 9
+  },
+  {
+    "ts": "2026-06-08T05:21:49+09:00",
     "closures": [
       {
         "road": "上信越",
