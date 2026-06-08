@@ -1184,7 +1184,7 @@ function renderSVGLocations(){
 
   // ─── 全マーカーを混合して近接ラベルずらしを計算 ───────────────────
   // RC・オフィス混合で近接チェックすることで、RC↔オフィスが隣接しても対応
-  var NEAR=20;  // この距離(SVGpx)以内を「近接」と判定
+  var NEAR=24;  // この距離(SVGpx)以内を「近接」と判定（ラベル9px対応）
 
   // 全アイテムリスト（RC + OFF 混合）を作成
   var rcItems=RC.map(function(r){
@@ -1217,7 +1217,7 @@ function renderSVGLocations(){
     var nx=-ax/len, ny=-ay/len; // 正規化した逃げ方向
     // y方向は上方向を優先（下にはみ出すと見えにくい）
     if(ny>0) ny=-ny;
-    var dist=14; // ずらし距離(SVGpx)
+    var dist=16; // ずらし距離(SVGpx) ラベル9px対応
     var ox=nx*dist, oy=ny*dist-2;
     return{lx:ox,ly:oy,anchor:ox<-3?'end':ox>3?'start':'middle'};
   }
@@ -1235,17 +1235,17 @@ function renderSVGLocations(){
     // ラベル
     var label=loc.short||(loc.name||'');
     var lx=loc.x+off.lx,ly=loc.y+off.ly;
-    var lw=label.length*5.6+4;
+    var lw=label.length*6.5+6;
     var bx=off.anchor==='end'?lx-lw:off.anchor==='start'?lx:lx-lw/2;
     // ラベル背景
     var bg=makeSVGEl('rect');
-    bg.setAttribute('x',bx-1);bg.setAttribute('y',ly-7);
-    bg.setAttribute('width',lw+2);bg.setAttribute('height','9');
-    bg.setAttribute('fill','#0f1420');bg.setAttribute('opacity','0.75');bg.setAttribute('rx','2');
+    bg.setAttribute('x',bx-2);bg.setAttribute('y',ly-8);
+    bg.setAttribute('width',lw+4);bg.setAttribute('height','11');
+    bg.setAttribute('fill','#0a0f1c');bg.setAttribute('opacity','0.85');bg.setAttribute('rx','3');
     gr2.appendChild(bg);
-    // ラベルテキスト
+    // ラベルテキスト（9px・太字）
     var tx=makeSVGEl('text');
-    tx.setAttribute('x',lx);tx.setAttribute('y',ly);tx.setAttribute('font-size','7.5');
+    tx.setAttribute('x',lx);tx.setAttribute('y',ly);tx.setAttribute('font-size','9');
     tx.setAttribute('fill',loc.color);tx.setAttribute('font-weight','700');
     tx.setAttribute('font-family','sans-serif');tx.setAttribute('text-anchor',off.anchor);
     tx.textContent=label;
