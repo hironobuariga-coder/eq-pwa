@@ -1178,58 +1178,84 @@ function renderSVGLocations(){
   if(!SVGMAP_LAYERS.loc){svg.appendChild(g);return;}
   var tip=document.getElementById('svgmap-tip');
   var wrap=document.getElementById('svgmap-wrap');
-  var NEAR=18;
-  function labelOffset(items,i){
-    var ix=items[i].x,iy=items[i].y,ax=0,ay=0,cnt=0;
-    for(var j=0;j<items.length;j++){
-      if(j===i)continue;
-      var dx=items[j].x-ix,dy=items[j].y-iy,d=Math.sqrt(dx*dx+dy*dy);
-      if(d<NEAR){ax+=dx/d;ay+=dy/d;cnt++;}
-    }
-    if(!cnt)return{lx:0,ly:-10,anchor:'middle'};
-    var len=Math.sqrt(ax*ax+ay*ay)||1;
-    var ox=-ax/len*13,oy=-ay/len*13;
-    return{lx:ox,ly:oy-2,anchor:ox<-3?'end':ox>3?'start':'middle'};
-  }
-  function plotMarkers(items,color){
-    items.forEach(function(loc,i){
-      if(!loc.x||!loc.y)return;
-      var off=labelOffset(items,i);
-      var gr2=makeSVGEl('g');gr2.style.cursor='pointer';
-      var ci=makeSVGEl('circle');
-      ci.setAttribute('cx',loc.x);ci.setAttribute('cy',loc.y);ci.setAttribute('r','5');
-      ci.setAttribute('fill',color);ci.setAttribute('stroke','#0f1420');ci.setAttribute('stroke-width','1');
-      gr2.appendChild(ci);
-      var label=loc.short||(loc.name||'');
-      var lx=loc.x+off.lx,ly=loc.y+off.ly;
-      var lw=label.length*5.6+4;
-      var bx=off.anchor==='end'?lx-lw:off.anchor==='start'?lx:lx-lw/2;
-      var bg=makeSVGEl('rect');
-      bg.setAttribute('x',bx-1);bg.setAttribute('y',ly-7);bg.setAttribute('width',lw+2);bg.setAttribute('height','9');
-      bg.setAttribute('fill','#0f1420');bg.setAttribute('opacity','0.7');bg.setAttribute('rx','2');
-      gr2.appendChild(bg);
-      var tx=makeSVGEl('text');
-      tx.setAttribute('x',lx);tx.setAttribute('y',ly);tx.setAttribute('font-size','7.5');
-      tx.setAttribute('fill',color);tx.setAttribute('font-weight','700');tx.setAttribute('font-family','sans-serif');
-      tx.setAttribute('text-anchor',off.anchor);tx.textContent=label;
-      gr2.appendChild(tx);
-      gr2.addEventListener('mouseenter',function(e){tip.style.display='block';tip.textContent=loc.name||label;});
-      gr2.addEventListener('mousemove',function(e){var r=wrap.getBoundingClientRect();tip.style.left=(e.clientX-r.left+10)+'px';tip.style.top=(e.clientY-r.top-24)+'px';});
-      gr2.addEventListener('mouseleave',function(){tip.style.display='none';});
-      g.appendChild(gr2);
-    });
-  }
-  // RC/OFFをlocalStorageから読んで座標を付ける
+  // ─── オフィス色：緑（暗背景でも視認性が高く、RC(オレンジ)と区別しやすい）
+  var OFF_COLOR='#4CAF50'; // 緑
+  var RC_COLOR ='#F5A623'; // オレンジ（従来通り）
+
+  // ─── 全マーカーを混合して近接ラベルずらしを計算 ───────────────────
+  // RC・オフィス混合で近接チェックすることで、RC↔オフィスが隣接しても対応
+  var NEAR=20;  // この距離(SVGpx)以内を「近接」と判定
+
+  // 全アイテムリスト（RC + OFF 混合）を作成
   var rcItems=RC.map(function(r){
     var xy=getLocXY(r.pref,r.city)||[null,null];
-    return{name:r.name,short:r.short||r.name,x:xy[0],y:xy[1]};
+    return{name:r.name,short:r.short||r.name,x:xy[0],y:xy[1],color:RC_COLOR};
   }).filter(function(r){return r.x&&r.y;});
   var offItems=OFF.map(function(o){
     var xy=getLocXY(o.pref,o.city)||[null,null];
-    return{name:o.name,short:o.short||o.name,x:xy[0],y:xy[1]};
+    return{name:o.name,short:o.short||o.name,x:xy[0],y:xy[1],color:OFF_COLOR};
   }).filter(function(o){return o.x&&o.y;});
-  plotMarkers(rcItems,'#F5A623');
-  plotMarkers(offItems,'#185FA5');
+  var allItems=rcItems.concat(offItems);
+
+  // 近接ラベルオフセット計算（全マーカー混合で計算）
+  function labelOffset(allItms,i){
+    var ix=allItms[i].x,iy=allItms[i].y;
+    // 近接マーカーの重心方向を求め、そこから離れる方向にラベルをずらす
+    var ax=0,ay=0,cnt=0;
+    for(var j=0;j<allItms.length;j++){
+      if(j===i)continue;
+      var dx=allItms[j].x-ix,dy=allItms[j].y-iy;
+      var d=Math.sqrt(dx*dx+dy*dy);
+      if(d<NEAR&&d>0){ax+=dx/d;ay+=dy/d;cnt++;}
+    }
+    if(!cnt){
+      // 近接なし → マーカー上方中央に配置
+      return{lx:0,ly:-10,anchor:'middle'};
+    }
+    // 近接あり → 重心の反対方向に15px、上方向に優先的に逃がす
+    var len=Math.sqrt(ax*ax+ay*ay)||1;
+    var nx=-ax/len, ny=-ay/len; // 正規化した逃げ方向
+    // y方向は上方向を優先（下にはみ出すと見えにくい）
+    if(ny>0) ny=-ny;
+    var dist=14; // ずらし距離(SVGpx)
+    var ox=nx*dist, oy=ny*dist-2;
+    return{lx:ox,ly:oy,anchor:ox<-3?'end':ox>3?'start':'middle'};
+  }
+
+  // マーカーと略称ラベルを描画
+  allItems.forEach(function(loc,i){
+    var off=labelOffset(allItems,i);
+    var gr2=makeSVGEl('g');gr2.style.cursor='pointer';
+    // マーカー円
+    var ci=makeSVGEl('circle');
+    ci.setAttribute('cx',loc.x);ci.setAttribute('cy',loc.y);ci.setAttribute('r','5');
+    ci.setAttribute('fill',loc.color);
+    ci.setAttribute('stroke','#0f1420');ci.setAttribute('stroke-width','1.2');
+    gr2.appendChild(ci);
+    // ラベル
+    var label=loc.short||(loc.name||'');
+    var lx=loc.x+off.lx,ly=loc.y+off.ly;
+    var lw=label.length*5.6+4;
+    var bx=off.anchor==='end'?lx-lw:off.anchor==='start'?lx:lx-lw/2;
+    // ラベル背景
+    var bg=makeSVGEl('rect');
+    bg.setAttribute('x',bx-1);bg.setAttribute('y',ly-7);
+    bg.setAttribute('width',lw+2);bg.setAttribute('height','9');
+    bg.setAttribute('fill','#0f1420');bg.setAttribute('opacity','0.75');bg.setAttribute('rx','2');
+    gr2.appendChild(bg);
+    // ラベルテキスト
+    var tx=makeSVGEl('text');
+    tx.setAttribute('x',lx);tx.setAttribute('y',ly);tx.setAttribute('font-size','7.5');
+    tx.setAttribute('fill',loc.color);tx.setAttribute('font-weight','700');
+    tx.setAttribute('font-family','sans-serif');tx.setAttribute('text-anchor',off.anchor);
+    tx.textContent=label;
+    gr2.appendChild(tx);
+    // ツールチップ
+    gr2.addEventListener('mouseenter',function(e){tip.style.display='block';tip.textContent=loc.name||label;});
+    gr2.addEventListener('mousemove',function(e){var r=wrap.getBoundingClientRect();tip.style.left=(e.clientX-r.left+10)+'px';tip.style.top=(e.clientY-r.top-24)+'px';});
+    gr2.addEventListener('mouseleave',function(){tip.style.display='none';});
+    g.appendChild(gr2);
+  });
   svg.appendChild(g);
 }
 
