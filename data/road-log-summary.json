@@ -1,65 +1,17 @@
 {
-  "generated": "2026-06-08T11:17:46.424Z",
+  "generated": "2026-06-08T10:00:00+09:00",
   "periods": [
     {
-      "road": "上信越",
-      "section": "",
-      "direction": "",
-      "reason": "大雪",
+      "road": "東名",
+      "section": "海老名IC〜厚木IC",
+      "direction": "上下線",
+      "reason": "地震",
       "status": "通行止め",
-      "start": "2026-06-08T01:40:38+09:00",
-      "end": "2026-06-08T09:19:26+09:00",
-      "startJST": "6/8 01:40",
-      "endJST": "6/8 09:19",
-      "startTimeJST": "",
-      "source": "e_nexco_bousai",
-      "snapshots": [
-        "6/8 01:40",
-        "6/8 03:14",
-        "6/8 05:21",
-        "6/8 07:14",
-        "6/8 09:19"
-      ]
-    },
-    {
-      "road": "東北",
-      "section": "",
-      "direction": "",
-      "reason": "台風",
-      "status": "通行止め",
-      "start": "2026-06-08T01:40:38+09:00",
-      "end": "2026-06-08T09:19:26+09:00",
-      "startJST": "6/8 01:40",
-      "endJST": "6/8 09:19",
-      "startTimeJST": "15:00",
-      "source": "e_nexco_bousai",
-      "snapshots": [
-        "6/8 01:40",
-        "6/8 03:14",
-        "6/8 05:21",
-        "6/8 07:14",
-        "6/8 09:19"
-      ]
-    },
-    {
-      "road": "長野",
-      "section": "",
-      "direction": "",
-      "reason": "大雪",
-      "status": "通行止め",
-      "start": "2026-06-08T01:40:38+09:00",
-      "end": "2026-06-08T09:19:26+09:00",
-      "startJST": "6/8 01:40",
-      "endJST": "6/8 09:19",
-      "startTimeJST": "",
-      "source": "e_nexco_bousai",
-      "snapshots": [
-        "6/8 01:40",
-        "6/8 03:14",
-        "6/8 05:21",
-        "6/8 07:14",
-        "6/8 09:19"
-      ]
+      "start": "2026-06-08T00:00:00Z",
+      "end": null,
+      "startJST": "6/8 09:00",
+      "endJST": null,
+      "snapshots": ["6/8 09:00","6/8 10:00","6/8 11:00"]
     }
   ]
 }
