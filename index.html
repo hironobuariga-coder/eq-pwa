@@ -1511,15 +1511,16 @@ function ppHighlight(){/* 地図再生に一本化したため表ハイライト
 function normIC(s){return (s||'').replace(/IC$|PA$|SA$/,'').trim();}
 
 // 路線名 → 対応する MD_ROADS キーのリスト
-var ROAD_NAME_TO_KEY=(function(){
-  var m={};
-  var rn=window.MD_ROAD_NAMES||{};
-  Object.keys(rn).forEach(function(k){m[rn[k]]=m[rn[k]]||[];m[rn[k]].push(k);});
-  return m;
-})();
+var ROAD_NAME_TO_KEY=null; // MD_ROAD_NAMES定義後に初期化（ppDrawClosure内）
 
 function ppDrawClosure(slot,closedPeriods){
   if(!window.MD_ROADS)return;
+  // ROAD_NAME_TO_KEY を遅延初期化（MD_ROAD_NAMESが確実に定義された後に構築）
+  if(!ROAD_NAME_TO_KEY){
+    ROAD_NAME_TO_KEY={};
+    var rn=window.MD_ROAD_NAMES||{};
+    Object.keys(rn).forEach(function(k){ROAD_NAME_TO_KEY[rn[k]]=ROAD_NAME_TO_KEY[rn[k]]||[];ROAD_NAME_TO_KEY[rn[k]].push(k);});
+  }
   // 既存の通行止めオーバーレイを削除
   var old=document.getElementById('g-smap-closure');
   if(old)old.parentNode&&old.parentNode.removeChild(old);
