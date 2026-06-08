@@ -190,23 +190,27 @@ body{
 .pl-dt{font-size:11px;color:#854f0b;background:#faeeda;border-radius:6px;padding:5px 8px;margin-top:6px;display:flex;align-items:flex-start;gap:5px}
 @media(prefers-color-scheme:dark){.pl-dt{background:#412402;color:#fac775}}
 .tl-wrap{overflow-x:auto;padding-bottom:4px}
-.tl-table{min-width:340px;width:100%;border-collapse:collapse;font-size:11px}
-.tl-table th{padding:3px 6px;font-weight:500;color:var(--text2);border-bottom:0.5px solid var(--border);text-align:left;white-space:nowrap}
-.tl-table td{padding:2px 0;border-bottom:0.5px solid var(--border)}
-.tl-road{padding:3px 6px;font-weight:600;font-size:11px;white-space:nowrap;position:sticky;left:0;background:var(--bg1);z-index:2}
-.tl-sec{padding:3px 6px;font-size:10px;color:var(--text2);position:sticky;left:60px;background:var(--bg1);z-index:2}
+.tl-table{min-width:340px;width:100%;border-collapse:collapse;font-size:13px}
+.tl-table th{padding:5px 8px;font-weight:600;color:var(--text2);border-bottom:0.5px solid var(--border);text-align:left;white-space:nowrap;font-size:11px}
+.tl-table td{padding:3px 0;border-bottom:0.5px solid var(--border)}
+.tl-road{padding:5px 8px;font-weight:700;font-size:13px;white-space:nowrap;position:sticky;left:0;background:var(--bg1);z-index:2;min-width:52px}
+.tl-sec{padding:4px 8px;font-size:12px;color:var(--text2);position:sticky;left:52px;background:var(--bg1);z-index:2;min-width:100px;line-height:1.5}
 .tl-table th:nth-child(1){position:sticky;left:0;background:var(--bg2);z-index:3}
-.tl-table th:nth-child(2){position:sticky;left:60px;background:var(--bg2);z-index:3}
-.tl-bc{padding:2px 4px}
-.tl-br{display:flex;gap:1px;align-items:center;height:18px}
-.tl-s{width:28px;height:16px;border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600}
+.tl-table th:nth-child(2){position:sticky;left:52px;background:var(--bg2);z-index:3}
+.tl-bc{padding:3px 4px}
+.tl-br{display:flex;gap:2px;align-items:center;height:22px}
+.tl-s{width:32px;height:20px;border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700}
 .tl-cl{background:#E24B4A;color:#fff}.tl-op{background:var(--bg3)}.tl-uk{background:var(--border)}.tl-ft{background:transparent;border:1px dashed var(--border)}
-.tl-lb{display:flex;gap:1px;padding:0 4px;margin-top:2px}
-.tl-lbl{width:36px;text-align:center;font-size:8px;color:var(--text3);flex-shrink:0;line-height:1.3}
-.tl-leg{display:flex;gap:10px;margin-top:8px;font-size:11px;color:var(--text2);align-items:center}
+.tl-lb{display:flex;gap:2px;padding:0 4px;margin-top:2px}
+.tl-lbl{width:32px;text-align:center;font-size:9px;color:var(--text3);flex-shrink:0;line-height:1.4}
+.tl-rsn{display:inline-block;font-size:11px;margin-top:2px;padding:1px 5px;border-radius:10px;font-weight:600}
+.tl-rsn-eq{background:#3a1a1a;color:#ff8a80}.tl-rsn-rn{background:#1a2a1a;color:#80e880}
+.tl-rsn-sn{background:#1a1a2a;color:#80c8ff}.tl-rsn-ac{background:#2a2a1a;color:#ffd080}
+.tl-rsn-wk{background:#2a2a2a;color:#a0a0a0}
+.tl-leg{display:flex;gap:10px;margin-top:8px;font-size:12px;color:var(--text2);align-items:center}
 .tl-li{display:flex;align-items:center;gap:4px}
-.tl-dc{width:10px;height:10px;border-radius:2px;background:#E24B4A;flex-shrink:0}
-.tl-do{width:10px;height:10px;border-radius:2px;background:var(--bg3);border:0.5px solid var(--border2);flex-shrink:0}
+.tl-dc{width:12px;height:12px;border-radius:2px;background:#E24B4A;flex-shrink:0}
+.tl-do{width:12px;height:12px;border-radius:2px;background:var(--bg3);border:0.5px solid var(--border2);flex-shrink:0}
 #toast{position:fixed;bottom:72px;left:50%;transform:translateX(-50%) translateY(20px);background:#1a1a18ee;color:#fff;font-size:12px;padding:8px 16px;border-radius:20px;opacity:0;transition:all .25s;pointer-events:none;white-space:nowrap;z-index:9999}
 #toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
 #prog{position:fixed;top:0;left:0;height:2px;background:#E24B4A;width:0%;transition:width .3s;z-index:9999;pointer-events:none}
@@ -536,7 +540,13 @@ var LOC_COORD={
 // 登録済みRC/OFFからSVG座標を取得（pref+cityで引く。なければnull）
 function getLocXY(pref,city){
   var key=(pref||'')+'_'+(city||'');
-  return LOC_COORD[key]||null;
+  if(LOC_COORD[key]) return LOC_COORD[key];
+  var pv=[pref,pref+'都',pref+'道',pref+'府',pref+'県'];
+  var cv=[city,city+'市',city+'区',city+'町',city+'村'];
+  for(var pi=0;pi<pv.length;pi++){for(var ci=0;ci<cv.length;ci++){var k=pv[pi]+'_'+cv[ci];if(LOC_COORD[k])return LOC_COORD[k];}}
+  var ks=Object.keys(LOC_COORD);
+  for(var i=0;i<ks.length;i++){var pts=ks[i].split('_');if((pref||'').length>0&&pts[0].indexOf(pref)>=0&&(city||'').length>0&&pts[1].indexOf(city)>=0)return LOC_COORD[ks[i]];}
+  return null;
 }
 var S={dis:null,quake:null,shindo:[],roads:[],yamato:null,sagawa:null,news:[],mapLinks:null};
 var RC=[],OFF=[],MIN_SH=4,TMR_MIN=45,DTYPE='quake';
@@ -990,7 +1000,7 @@ function renderRCed(){
   var ed=document.getElementById('rc-ed');ed.innerHTML='';
   for(var i=0;i<RC.length;i++){
     var r=RC[i];var row=document.createElement('div');row.className='rc-row';
-    row.innerHTML='<span class="rc-num">'+(i+1)+'</span><div class="rc-inp"><input type="text" placeholder="拠点名（例：東RC）" value="'+(r.name||'')+'" data-i="'+i+'" data-f="name" oninput="onRCin(this)" class="fi"><input type="text" placeholder="地図略称（例：東RC）※省略時は拠点名を使用" value="'+(r.short||'')+'" data-i="'+i+'" data-f="short" oninput="onRCin(this)" class="fi" style="font-size:11px"><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px"><input type="text" placeholder="都道府県" value="'+(r.pref||'')+'" data-i="'+i+'" data-f="pref" oninput="onRCin(this)" class="fi"><input type="text" placeholder="市区町村" value="'+(r.city||'')+'" data-i="'+i+'" data-f="city" oninput="onRCin(this)" class="fi"></div></div><button class="rc-del" onclick="delRC('+i+')"><i class="ti ti-trash" style="font-size:15px"></i></button>';
+    row.innerHTML='<span class="rc-num">'+(i+1)+'</span><div class="rc-inp"><input type="text" placeholder="拠点名（例：東RC）" value="'+(r.name||'')+'" data-i="'+i+'" data-f="name" oninput="onRCin(this)" class="fi"><input type="text" placeholder="地図略称（例：東RC）※省略時は拠点名を使用" value="'+(r.short||'')+'" data-i="'+i+'" data-f="short" oninput="onRCin(this)" class="fi" style="font-size:11px"><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px"><input type="text" placeholder="都道府県（例：神奈川県）" value="'+(r.pref||'')+'" data-i="'+i+'" data-f="pref" oninput="onRCin(this)" class="fi"><input type="text" placeholder="市区町村（例：川崎市）" value="'+(r.city||'')+'" data-i="'+i+'" data-f="city" oninput="onRCin(this)" class="fi"></div></div><button class="rc-del" onclick="delRC('+i+')"><i class="ti ti-trash" style="font-size:15px"></i></button>';
     ed.appendChild(row);
   }
   document.getElementById('add-rc').style.display=RC.length>=6?'none':'flex';
@@ -1028,7 +1038,7 @@ function renderOffEd(){
   var ed=document.getElementById('off-ed');if(!ed)return;ed.innerHTML='';
   for(var i=0;i<OFF.length;i++){
     var o=OFF[i];var row=document.createElement('div');row.className='rc-row';
-    row.innerHTML='<span class="rc-num">'+(i+1)+'</span><div class="rc-inp"><input type="text" placeholder="オフィス名（例：大阪オフィス）" value="'+(o.name||'')+'" data-i="'+i+'" data-f="name" oninput="onOffIn(this)" class="fi"><input type="text" placeholder="地図略称（例：大阪）※省略時はオフィス名を使用" value="'+(o.short||'')+'" data-i="'+i+'" data-f="short" oninput="onOffIn(this)" class="fi" style="font-size:11px"><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px"><input type="text" placeholder="都道府県" value="'+(o.pref||'')+'" data-i="'+i+'" data-f="pref" oninput="onOffIn(this)" class="fi"><input type="text" placeholder="市区町村" value="'+(o.city||'')+'" data-i="'+i+'" data-f="city" oninput="onOffIn(this)" class="fi"></div></div><button class="rc-del" onclick="delOff('+i+')"><i class="ti ti-trash" style="font-size:15px"></i></button>';
+    row.innerHTML='<span class="rc-num">'+(i+1)+'</span><div class="rc-inp"><input type="text" placeholder="オフィス名（例：大阪オフィス）" value="'+(o.name||'')+'" data-i="'+i+'" data-f="name" oninput="onOffIn(this)" class="fi"><input type="text" placeholder="地図略称（例：大阪）※省略時はオフィス名を使用" value="'+(o.short||'')+'" data-i="'+i+'" data-f="short" oninput="onOffIn(this)" class="fi" style="font-size:11px"><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px"><input type="text" placeholder="都道府県（例：東京都）" value="'+(o.pref||'')+'" data-i="'+i+'" data-f="pref" oninput="onOffIn(this)" class="fi"><input type="text" placeholder="市区町村（例：千代田区）" value="'+(o.city||'')+'" data-i="'+i+'" data-f="city" oninput="onOffIn(this)" class="fi"></div></div><button class="rc-del" onclick="delOff('+i+')"><i class="ti ti-trash" style="font-size:15px"></i></button>';
     ed.appendChild(row);
   }
   var ab=document.getElementById('add-off');if(ab)ab.style.display=OFF.length>=5?'none':'flex';
@@ -1389,7 +1399,7 @@ function renderTL(area,summary){
   var html='<div style="font-size:11px;color:var(--text2);margin-bottom:6px">データ生成：'+gen+'</div><div class="tl-wrap"><div class="tl-lb"><div style="min-width:160px;flex-shrink:0"></div>';
   for(var i=0;i<slots.length;i++)html+='<div class="tl-lbl">'+slots[i].label+'</div>';
   html+='</div><table class="tl-table"><thead><tr><th style="min-width:60px">路線</th><th style="min-width:100px">区間</th><th>時間帯</th></tr></thead><tbody>';
-  for(var road in byRoad){var ps=byRoad[road];for(var j=0;j<ps.length;j++){var p=ps[j];html+='<tr>'+(j===0?'<td class="tl-road" rowspan="'+ps.length+'">'+road+'</td>':'')+'<td class="tl-sec">'+abbr(p.section)+(p.reason?'<br><span style="font-size:9px;color:var(--text3)">'+p.reason+'</span>':'')+'</td><td class="tl-bc"><div class="tl-br">';for(var k=0;k<slots.length;k++){var st=inP(slots[k].ts,p.start,p.end);var cls=st==='c'?'tl-cl':st==='o'?'tl-op':st==='f'?'tl-ft':'tl-uk';var ttl=slots[k].label.replace('<br>',' ')+' '+(st==='c'?'通行止め':st==='o'?'通行可':st==='f'?'－':'記録なし');html+='<div class="tl-s '+cls+'" title="'+ttl+'">'+(st==='c'?'✕':'')+'</div>';}html+='</div></td></tr>';}}
+  for(var road in byRoad){var ps=byRoad[road];for(var j=0;j<ps.length;j++){var p=ps[j];var rsnHtml='';if(p.reason){var r=p.reason;var rc='tl-rsn-wk',rl=r;if(/地震|津波/.test(r)){rc='tl-rsn-eq';rl='🔴地震';}else if(/大雨|土砂|洪水|浸水|増水/.test(r)){rc='tl-rsn-rn';rl='🟡大雨';}else if(/大雪|積雪|凍結/.test(r)){rc='tl-rsn-sn';rl='❄大雪';}else if(/台風/.test(r)){rc='tl-rsn-rn';rl='🌀台風';}else if(/事故/.test(r)){rc='tl-rsn-ac';rl='⚠事故';}else if(/工事|点検|清掃/.test(r)){rc='tl-rsn-wk';rl='🔧工事';}else{rl=r.slice(0,4);}rsnHtml='<br><span class="tl-rsn '+rc+'">'+rl+'</span>';}html+='<tr>'+(j===0?'<td class="tl-road" rowspan="'+ps.length+'">'+road+'</td>':'')+'<td class="tl-sec">'+abbr(p.section)+rsnHtml+'</td><td class="tl-bc"><div class="tl-br">';for(var k=0;k<slots.length;k++){var st=inP(slots[k].ts,p.start,p.end);var cls=st==='c'?'tl-cl':st==='o'?'tl-op':st==='f'?'tl-ft':'tl-uk';var ttl=slots[k].label.replace('<br>',' ')+' '+(st==='c'?'通行止め':st==='o'?'通行可':st==='f'?'－':'記録なし');html+='<div class="tl-s '+cls+'" title="'+ttl+'">'+(st==='c'?'✕':'')+'</div>';}html+='</div></td></tr>';}}
   html+='</tbody></table></div><div class="tl-leg"><div class="tl-li"><div class="tl-dc"></div>通行止め</div><div class="tl-li"><div class="tl-do"></div>通行可</div></div><div class="nt" style="margin-top:8px"><i class="ti ti-info-circle" style="font-size:12px;vertical-align:-2px;margin-right:4px"></i>NEXCO公式Xから1時間ごとに自動収集した記録です。速報・要確認。投稿がない区間は記録されません。</div>';
   area.innerHTML=html;
 }
