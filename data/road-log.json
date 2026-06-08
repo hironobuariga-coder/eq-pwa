@@ -99,5 +99,101 @@
       }
     ],
     "rawCount": 38
+  },
+  {
+    "ts": "2026-06-09T06:58:29+09:00",
+    "closures": [
+      {
+        "road": "常磐",
+        "section": "",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "台風",
+        "startTime": "",
+        "source": "e_nexco_tohoku"
+      },
+      {
+        "road": "東北",
+        "section": "磐梯熱海IC〜会津若松IC",
+        "direction": "上下線",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "13:30",
+        "source": "e_nexco_tohoku"
+      },
+      {
+        "road": "山形",
+        "section": "",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "10:05",
+        "source": "e_nexco_tohoku"
+      },
+      {
+        "road": "東北",
+        "section": "いわき三和IC〜郡山東IC",
+        "direction": "上下線",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "",
+        "source": "e_nexco_tohoku"
+      },
+      {
+        "road": "東北",
+        "section": "福島JCT料金所～福島JCT間、桑折JCT〜桑折JCT",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "00:20",
+        "source": "e_nexco_tohoku"
+      },
+      {
+        "road": "東北",
+        "section": "路線区間：E4東北道（上下線）白石IC～平泉前沢IC、郡山IC～本宮IC、E49磐越道（上下線）郡山東IC～磐梯熱海IC、E48山形道（上下線）村田JCT～笹谷IC、E48仙台南部道路（上下線）仙台若林JCT～仙台南IC、E6仙台北部道路（上下線）利府JCT〜富谷IC",
+        "direction": "上下線",
+        "status": "通行止め",
+        "reason": "地震",
+        "startTime": "18:09",
+        "source": "e_nexco_tohoku"
+      },
+      {
+        "road": "東北",
+        "section": "路線区間：E13東北中央道（上下線）米沢北IC～東根IC、E48仙台南部道路（上下線）仙台若林JCT～仙台南IC、仙台北部道路（上下線）利府JCT〜富谷IC",
+        "direction": "上下線",
+        "status": "通行止め",
+        "reason": "地震",
+        "startTime": "23:08",
+        "source": "e_nexco_tohoku"
+      },
+      {
+        "road": "東北",
+        "section": "路線区間：E4東北道（上下線）白河IC～平泉前沢IC、E6常磐道・仙台東部道路・三陸道（上下線）いわき勿来IC～利府中IC、E49磐越道（上下線）いわきJCT～会津若松IC、E48山形道（上下線）村田JCT〜寒河江IC",
+        "direction": "上下線",
+        "status": "通行止め",
+        "reason": "地震",
+        "startTime": "23:08",
+        "source": "e_nexco_tohoku"
+      },
+      {
+        "road": "東北",
+        "section": "本宮IC〜福島飯坂IC",
+        "direction": "上下線",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "",
+        "source": "e_nexco_tohoku"
+      },
+      {
+        "road": "東北",
+        "section": "大和IC〜築館IC",
+        "direction": "上下線",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "13:20",
+        "source": "e_nexco_tohoku"
+      }
+    ],
+    "rawCount": 38
   }
 ]

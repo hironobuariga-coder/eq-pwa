@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-08T19:31:39.190Z",
+  "generated": "2026-06-08T21:58:36.337Z",
   "periods": [
     {
       "road": "常磐",
@@ -14,7 +14,8 @@
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "6/9 04:31"
+        "6/9 04:31",
+        "6/9 06:58"
       ]
     },
     {
@@ -30,7 +31,8 @@
       "startTimeJST": "13:30",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "6/9 04:31"
+        "6/9 04:31",
+        "6/9 06:58"
       ]
     },
     {
@@ -46,7 +48,8 @@
       "startTimeJST": "10:05",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "6/9 04:31"
+        "6/9 04:31",
+        "6/9 06:58"
       ]
     },
     {
@@ -62,7 +65,8 @@
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "6/9 04:31"
+        "6/9 04:31",
+        "6/9 06:58"
       ]
     },
     {
@@ -78,7 +82,8 @@
       "startTimeJST": "00:20",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "6/9 04:31"
+        "6/9 04:31",
+        "6/9 06:58"
       ]
     },
     {
@@ -94,7 +99,8 @@
       "startTimeJST": "18:09",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "6/9 04:31"
+        "6/9 04:31",
+        "6/9 06:58"
       ]
     },
     {
@@ -110,7 +116,8 @@
       "startTimeJST": "23:08",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "6/9 04:31"
+        "6/9 04:31",
+        "6/9 06:58"
       ]
     },
     {
@@ -126,7 +133,8 @@
       "startTimeJST": "23:08",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "6/9 04:31"
+        "6/9 04:31",
+        "6/9 06:58"
       ]
     },
     {
@@ -142,7 +150,8 @@
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "6/9 04:31"
+        "6/9 04:31",
+        "6/9 06:58"
       ]
     },
     {
@@ -158,7 +167,8 @@
       "startTimeJST": "13:20",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "6/9 04:31"
+        "6/9 04:31",
+        "6/9 06:58"
       ]
     }
   ]
