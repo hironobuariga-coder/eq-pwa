@@ -1371,14 +1371,16 @@ var PP={
 };
 
 function renderTL(area,summary){
-  PP.summary=summary;PP.slots=buildSlots();PP.cur=0; // 0=最新コマ
-  // 2時間以上継続している通行止めのみ表示（短時間の工事・誤検知を除外）
-  var MIN_DURATION = 2 * 3600 * 1000; // 2時間
+  PP.slots=buildSlots();PP.cur=0;
+  // 2時間以上継続している通行止めのみ（線表・地図で共通フィルタ）
+  var MIN_DURATION = 2 * 3600 * 1000;
   var periods=(summary.periods||[]).filter(function(p){
     var s=new Date(p.start).getTime();
     var e=p.end?new Date(p.end).getTime():Date.now();
     return (e-s)>=MIN_DURATION;
   });
+  // フィルタ済みデータを PP.summary に保存（地図再生でも同じ periods を使う）
+  PP.summary=Object.assign({},summary,{periods:periods});
   var gen=summary.generated?new Date(summary.generated).toLocaleString('ja-JP',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}):'不明';
   if(!periods.length){area.innerHTML='<div style="font-size:12px;color:var(--text2);padding:6px 0"><span class="bdg bdg-grn">通行止めなし</span>&ensp;データ生成：'+gen+'</div>';return;}
   // 現在時刻基準の固定24コマ（同一時刻スロットが重複しない）
@@ -1494,12 +1496,8 @@ function ppFrame(idx){
   var tEl=document.getElementById('pp-time');
   if(tEl)tEl.textContent=slot.label.replace('<br>',' ').replace('/','/').trim();
   // 通行止め件数カウント
-  var MIN_DURATION=2*3600*1000;
-  var periods=(PP.summary.periods||[]).filter(function(p){
-    var s=new Date(p.start).getTime();
-    var e=p.end?new Date(p.end).getTime():Date.now();
-    return (e-s)>=MIN_DURATION;
-  });
+  // PP.summary.periods はrenderTL時に2時間フィルタ済み（線表と同一データ）
+  var periods=PP.summary.periods||[];
   var closed=periods.filter(function(p){return inP(slot.ts,p.start,p.end)==='c';});
   var sEl=document.getElementById('pp-status');
   if(sEl)sEl.textContent=closed.length?'通行止め '+closed.length+'路線':'通行止めなし';
