@@ -165,7 +165,9 @@ function extractClosure(text, postDate) {
   }
   if (!road) return null;
   var section = '';
-  var secMatch = text.match(/([^\s　]+(?:IC|JCT|PA|SA|入口|出口))\s*[〜～\-]\s*([^\s　]+(?:IC|JCT|PA|SA))/);
+  // IC/JCT名の前後のゴミ文字を除いた区間を抽出
+  // 「白石IC〜平泉前沢IC」のような形式に限定（各IC名は15文字以内）
+  var secMatch = text.match(/([^\s　（）()、。\uff0c]{1,15}(?:IC|JCT|PA|SA|入口|出口))\s*[〜～\-]\s*([^\s　（）()、。\uff0c]{1,15}(?:IC|JCT|PA|SA))/);
   if (secMatch) section = secMatch[1] + '〜' + secMatch[2];
   var direction = '';
   if (text.indexOf('上下線') >= 0) direction = '上下線';
