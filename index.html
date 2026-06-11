@@ -256,6 +256,12 @@ body{
 <div id="scr">
 
   <div id="pn-collect" class="pn on">
+    <!-- デモモードボタン -->
+    <div style="background:#1a1a2e;border-bottom:1px solid #3a3a5e;padding:6px 12px;display:flex;align-items:center;gap:8px">
+      <span style="font-size:11px;color:#8888aa">🎭 デモ</span>
+      <button class="rb" onclick="loadDemo()" style="font-size:11px;padding:3px 10px;background:#2a2a4e;border-color:#5a5a8e">地震デモを読込（宮城県沖 M6.1 震度5強）</button>
+      <button class="rb" onclick="clearDemo()" style="font-size:11px;padding:3px 10px;color:var(--text3)">クリア</button>
+    </div>
     <!-- ロックオンバー -->
     <div id="lockon-bar">
       <i class="ti ti-lock" style="font-size:15px;color:var(--text3)" id="lockon-icon"></i>
@@ -573,8 +579,8 @@ var DD = {
     rcTtl:'各RC拠点（地震情報による速報）',
     offTtl:'各オフィス（地震情報による速報）',
     showShindo:true,
-    sys:'地震情報を気象庁等から検索しJSONのみ返してください。前置き不要。\n{"time":"2026/05/20 11:46","epicenter":"沖縄本島近海","maxShindo":"5強","tsunami":"なし","shindoAreas":[{"level":"5強","area":"鹿児島県与論町"}],"alertLevel":"normal|watch|alert","affectedPrefs":["鹿児島県"]}\nalertLevel:5強以上=alert、5弱=watch、4以下=normal。shindoAreasは震度3以上すべて。',
-    usr:function(){return '日本の最新地震情報（直近の震度5弱以上）を検索してJSON形式で返してください。';},
+    sys:'最新地震情報をJSONのみ返してください。\n{"time":"","epicenter":"","maxShindo":"","tsunami":"","shindoAreas":[{"level":"","area":""}],"alertLevel":"normal|watch|alert","affectedPrefs":[]}\nalertLevel:5強以上=alert、5弱=watch、4以下=normal。shindoAreasは震度3以上。',
+    usr:function(){var t=new Date();var y=new Date(t-86400000);var d=(t.getMonth()+1)+'/'+t.getDate();var dy=(y.getMonth()+1)+'/'+y.getDate();return '直近24時間（'+dy+'20:00〜'+d+'現在）に発生した日本の地震情報（震度4以上）を検索してJSON形式で返してください。最も規模の大きい地震を返してください。';},
     render:function(d){
       var lv=d.alertLevel||'normal';
       var ah=lv==='alert'?'<div class="al al-red"><i class="ti ti-alert-triangle"></i>震度5強以上 — 必須社内連携対象です</div>':lv==='watch'?'<div class="al al-amb"><i class="ti ti-info-circle"></i>震度5弱 — 参考情報として共有してください</div>':'';
@@ -590,8 +596,8 @@ var DD = {
     ldTxt:'台風情報を取得中...',rcNote:'台風経路上のRCは別途現地報告をお待ちください。',
     offNote:'台風経路上のオフィスは別途現地報告をお待ちください。',
     rcTtl:'各RC拠点（台風情報による速報）',offTtl:'各オフィス（台風情報による速報）',showShindo:false,
-    sys:'台風情報を気象庁等から検索しJSONのみ返してください。前置き不要。\n{"name":"台風○号","position":"九州南方","direction":"北北東","speed":"15kt","maxWind":"40m/s","stormWarningAreas":["鹿児島県"],"heavyRainAreas":["熊本県"],"approach":"6月5日夜に九州上陸の見込み","alertLevel":"watch|alert","affectedPrefs":["鹿児島県","熊本県"]}\nalertLevel:暴風警報域に拠点が入る場合alert、大雨警報域はwatch。台風なし={"name":"なし","alertLevel":"normal"}',
-    usr:function(){return '現在日本に接近・上陸中または接近予報がある台風の最新情報を気象庁等から検索してJSON形式で返してください。';},
+    sys:'現在の台風情報をJSONのみ返してください。\n{"name":"","position":"","direction":"","speed":"","maxWind":"","stormWarningAreas":[],"heavyRainAreas":[],"approach":"","alertLevel":"normal|watch|alert","affectedPrefs":[]}\nalertLevel:暴風警報域=alert、大雨警報域=watch、台風なし=normal。台風なし時はname:"なし"。',
+    usr:function(){var t=new Date();var y=new Date(t-86400000);var d=(t.getMonth()+1)+'/'+t.getDate();var dy=(y.getMonth()+1)+'/'+y.getDate();return '直近24時間（'+dy+'〜'+d+'）の台風・熱帯低気圧の最新情報を気象庁から検索してJSON形式で返してください。日本に影響がない場合はalertLevel:normalで返してください。';},
     render:function(d){
       if(!d||d.name==='なし'||d.alertLevel==='normal')return '<div style="color:#3b6d11;font-size:13px;padding:8px 0">現在、日本への接近が見込まれる台風はありません。</div>';
       var ah=d.alertLevel==='alert'?'<div class="al al-red"><i class="ti ti-alert-triangle"></i>暴風警報発令地域あり — 必須社内連携対象です</div>':d.alertLevel==='watch'?'<div class="al al-amb"><i class="ti ti-info-circle"></i>大雨・強風警報地域あり — 注意して監視してください</div>':'';
@@ -607,8 +613,8 @@ var DD = {
     ldTxt:'大雨情報を取得中...',rcNote:'警報発令地域のRCは別途現地報告をお待ちください。',
     offNote:'警報発令地域のオフィスは別途現地報告をお待ちください。',
     rcTtl:'各RC拠点（大雨情報による速報）',offTtl:'各オフィス（大雨情報による速報）',showShindo:false,
-    sys:'大雨・洪水情報を気象庁等から検索しJSONのみ返してください。前置き不要。\n{"warningAreas":["愛知県","岐阜県"],"specialWarningAreas":["愛知県西部"],"rivers":["庄内川"],"landslideAreas":["岐阜県山間部"],"period":"6月5日夜〜6日朝","totalRain":"300mm予想","alertLevel":"watch|alert","affectedPrefs":["愛知県","岐阜県"]}\nalertLevel:大雨特別警報=alert、大雨警報=watch。',
-    usr:function(){return '現在発令中または今後発令が見込まれる大雨・洪水・土砂災害警戒情報を気象庁等から検索してJSON形式で返してください。';},
+    sys:'現在の大雨・洪水情報をJSONのみ返してください。\n{"warningAreas":[],"specialWarningAreas":[],"rivers":[],"landslideAreas":[],"period":"","totalRain":"","alertLevel":"watch|alert","affectedPrefs":[]}\nalertLevel:特別警報=alert、警報=watch。',
+    usr:function(){var t=new Date();var y=new Date(t-86400000);var d=(t.getMonth()+1)+'/'+t.getDate();var dy=(y.getMonth()+1)+'/'+y.getDate();return '直近24時間（'+dy+'〜'+d+'）に発令中または発令された大雨・洪水・土砂災害警戒情報を気象庁から検索してJSON形式で返してください。';},
     render:function(d){
       var ah=d.alertLevel==='alert'?'<div class="al al-red"><i class="ti ti-alert-triangle"></i>大雨特別警報発令 — 必須社内連携対象です</div>':d.alertLevel==='watch'?'<div class="al al-amb"><i class="ti ti-info-circle"></i>大雨警報発令地域あり — 注意して監視してください</div>':'';
       return ah+'<div class="ir"><span class="il">大雨警報地域</span><span class="iv">'+((d.warningAreas||[]).join('、')||'なし')+'</span></div><div class="ir"><span class="il">特別警報地域</span><span class="iv">'+((d.specialWarningAreas||[]).join('、')||'なし')+'</span></div><div class="ir"><span class="il">氾濫懸念河川</span><span class="iv">'+((d.rivers||[]).join('、')||'なし')+'</span></div><div class="ir"><span class="il">土砂災害警戒</span><span class="iv">'+((d.landslideAreas||[]).join('、')||'なし')+'</span></div><div class="ir"><span class="il">対象期間</span><span class="iv">'+(d.period||'確認中')+'</span></div><div class="ir"><span class="il">予想雨量</span><span class="iv">'+(d.totalRain||'確認中')+'</span></div>';
@@ -623,8 +629,8 @@ var DD = {
     ldTxt:'大雪情報を取得中...',rcNote:'大雪警報地域のRCは別途現地報告をお待ちください。',
     offNote:'大雪警報地域のオフィスは別途現地報告をお待ちください。',
     rcTtl:'各RC拠点（大雪情報による速報）',offTtl:'各オフィス（大雪情報による速報）',showShindo:false,
-    sys:'大雪情報を気象庁等から検索しJSONのみ返してください。前置き不要。\n{"warningAreas":["新潟県","長野県"],"forecastSnow":{"新潟県":"80cm","長野県":"60cm"},"roadImpact":"関越道・上信越道で通行止めの可能性","period":"6月5日夜〜6日朝","alertLevel":"watch|alert","affectedPrefs":["新潟県","長野県"]}\nalertLevel:大雪特別警報=alert、大雪警報=watch。',
-    usr:function(){return '現在発令中または今後発令が見込まれる大雪警報・特別警報と路面・高速道路への影響情報を気象庁等から検索してJSON形式で返してください。';},
+    sys:'現在の大雪情報をJSONのみ返してください。\n{"warningAreas":[],"forecastSnow":{},"roadImpact":"","period":"","alertLevel":"watch|alert","affectedPrefs":[]}\nalertLevel:特別警報=alert、警報=watch。',
+    usr:function(){var t=new Date();var y=new Date(t-86400000);var d=(t.getMonth()+1)+'/'+t.getDate();var dy=(y.getMonth()+1)+'/'+y.getDate();return '直近24時間（'+dy+'〜'+d+'）に発令中または発令された大雪・暴風雪警報情報を気象庁から検索してJSON形式で返してください。';},
     render:function(d){
       var ah=d.alertLevel==='alert'?'<div class="al al-red"><i class="ti ti-alert-triangle"></i>大雪特別警報発令 — 必須社内連携対象です</div>':d.alertLevel==='watch'?'<div class="al al-amb"><i class="ti ti-info-circle"></i>大雪警報発令地域あり — 路面状況に注意してください</div>':'';
       var sl=[];for(var k in (d.forecastSnow||{}))sl.push(k+'：'+d.forecastSnow[k]);
@@ -785,6 +791,75 @@ function setAutoWeather(type,cb){
   else if(type==='rain') AUTO_RAIN=cb.checked;
   else if(type==='snow') AUTO_SNOW=cb.checked;
 }
+// ─── デモモード ──────────────────────────────────────────────────────
+function loadDemo(){
+  // 昨日20時の宮城県沖地震（M6.1 震度5強）想定のデモデータ
+  var now=new Date();
+  var eqD=new Date(now); eqD.setDate(eqD.getDate()-1); eqD.setHours(20,0,0,0);
+  var em=(eqD.getMonth()+1)+'/'+eqD.getDate()+' 20:00';
+  DTYPE='quake'; applyD('quake');
+  S.quake=S.dis={
+    time:em, epicenter:'宮城県沖', depth:'約60km', magnitude:'M6.1',
+    maxShindo:'5強', tsunami:'なし（若干の海面変動の可能性あり）',
+    shindoAreas:[
+      {level:'5強',area:'宮城県南部（仙台市・石巻市）'},
+      {level:'5弱',area:'宮城県北部・岩手県南部（一関市）'},
+      {level:'4',  area:'福島県・山形県・岩手県北部'},
+      {level:'3',  area:'茨城県・栃木県・秋田県・青森県南部'}
+    ],
+    alertLevel:'alert',
+    affectedPrefs:['宮城県','岩手県','福島県','山形県']
+  };
+  S.shindo=S.quake.shindoAreas;
+  S.roads=[
+    {road:'東北',section:'古川IC〜一関IC',direction:'上下線',status:'通行止め'},
+    {road:'常磐',section:'相馬IC〜山元IC',direction:'上下線',status:'通行止め（一部解除）'},
+    {road:'東北中央',section:'米沢北IC〜東根IC',direction:'上下線',status:'通行止め'}
+  ];
+  S.yamato={status:'partial',detail:'宮城県・岩手県南部：集荷・配達を一時停止中（翌日以降順次再開予定）',url:'https://www.kuronekoyamato.co.jp/ytc/chien/chien_hp.html'};
+  S.sagawa={status:'partial',detail:'宮城県全域：配達を翌日以降に順延。集荷は受付停止中',url:'https://www2.sagawa-exp.co.jp/information/list/'};
+  S.news=[
+    {category:'rail',summary:'東北新幹線：古川〜一ノ関間で点検のため運転見合わせ（復旧見込み未定）',source:'JR東日本',time:em},
+    {category:'port',summary:'仙台塩釜港：岸壁点検のため一部バース閉鎖',source:'仙台塩釜港湾局',time:em},
+    {category:'airport',summary:'仙台空港：滑走路点検により一時閉鎖後、現在は通常運航再開',source:'仙台空港',time:em}
+  ];
+  // 画面を更新
+  var def=DD[DTYPE];
+  document.getElementById('dis-title').innerHTML=def.secTitle;
+  var dc=document.getElementById('dis-content');
+  var ab=document.getElementById('alert-box');
+  ab.innerHTML='';
+  dc.innerHTML=def.render(S.quake);
+  renderSnTbl(); renderShFilt();
+  updRCst(S.shindo); updOffSt(S.shindo);
+  // RC状態をダミーに上書き
+  var rcLabels=['異常なし','異常なし','異常なし','異常なし'];
+  rcLabels.forEach(function(st,i){var el=document.getElementById('rc-s-'+i);if(el){el.textContent=st;el.className='st-dot st-ok';}});
+  var offLabels=['異常なし','異常なし'];
+  offLabels.forEach(function(st,i){var el=document.getElementById('off-s-'+i);if(el){el.textContent=st;el.className='st-dot st-ok';}});
+  // 道路結果表示
+  var rr=document.getElementById('road-result');
+  if(rr){rr.innerHTML='<div style="overflow-x:auto"><table class="tbl" style="table-layout:fixed"><thead><tr><th style="width:22%">路線</th><th style="width:38%">区間</th><th style="width:17%">方向</th><th style="width:23%">状況</th></tr></thead><tbody>'+S.roads.map(function(r){return '<tr><td style="font-weight:500">'+(r.road||'')+'</td><td>'+(r.section||'')+'</td><td><span class="bdg bdg-gry" style="font-size:10px">'+(r.direction||'')+'</span></td><td><span class="bdg bdg-red" style="font-size:10px">'+(r.status||'通行止め')+'</span></td></tr>';}).join('')+'</tbody></table></div><div style="font-size:11px;color:var(--text2);margin-top:6px">※ デモデータ</div>';}
+  // 配送会社表示
+  var yr=document.getElementById('yamato-result');if(yr)yr.innerHTML='<div class="dl-card"><span class="bdg bdg-amb" style="font-size:11px">一部制限</span><span style="font-size:12px;margin-left:8px">'+S.yamato.detail+'</span></div>';
+  var sr=document.getElementById('sagawa-result');if(sr)sr.innerHTML='<div class="dl-card"><span class="bdg bdg-amb" style="font-size:11px">一部制限</span><span style="font-size:12px;margin-left:8px">'+S.sagawa.detail+'</span></div>';
+  // ニュース表示
+  renderNews(S.news);
+  readyLockonBtn();
+  toast('🎭 デモモード：宮城県沖 M6.1 震度5強（'+em+'）を読込みました');
+}
+function clearDemo(){
+  S.dis=null;S.quake=null;S.shindo=[];S.roads=[];S.yamato=null;S.sagawa=null;S.news=[];
+  document.getElementById('dis-content').innerHTML='<div style="font-size:13px;color:var(--text2);padding:12px 0">更新ボタンを押して情報を取得してください</div>';
+  document.getElementById('alert-box').innerHTML='';
+  var rr=document.getElementById('road-result');if(rr)rr.innerHTML='';
+  var yr=document.getElementById('yamato-result');if(yr)yr.innerHTML='';
+  var sr=document.getElementById('sagawa-result');if(sr)sr.innerHTML='';
+  document.getElementById('news-area').innerHTML='';
+  renderSnTbl();
+  toast('デモをクリアしました');
+}
+
 function saveAutoTrigger(){
   lsS('auto-shindo',AUTO_SH);
   lsS('auto-typhoon',AUTO_TYPHOON);
@@ -1286,7 +1361,7 @@ function claude(sys,usr,search,cb){
   if(search===undefined)search=true;
   var k=getKey();
   if(!k){cb(new Error('APIキーが未設定です。設定タブで入力してください。'),null);return;}
-  var body={model:'claude-sonnet-4-6',max_tokens:1000,system:sys,messages:[{role:'user',content:usr}]};
+  var body={model:'claude-sonnet-4-6',max_tokens:800,system:sys,messages:[{role:'user',content:usr}]};
   if(search)body.tools=[{type:'web_search_20250305',name:'web_search'}];
   fetch('https://api.anthropic.com/v1/messages',{
     method:'POST',
@@ -1408,9 +1483,10 @@ var PP={
 
 function renderTL(area,summary){
   PP.slots=buildSlots();PP.cur=0;
-  // 2時間以上継続している通行止めのみ（線表・地図で共通フィルタ）
+  // 表示条件：①2時間以上継続 ②区間（section）が特定されている
   var MIN_DURATION = 2 * 3600 * 1000;
   var periods=(summary.periods||[]).filter(function(p){
+    if(!p.section||p.section.trim()==='') return false; // 区間不明は除外
     var s=new Date(p.start).getTime();
     var e=p.end?new Date(p.end).getTime():Date.now();
     return (e-s)>=MIN_DURATION;
@@ -1460,7 +1536,12 @@ function inP(slotTs,start,end){
   // スロットがperiod開始前 → 記録なし
   return 'u';
 }
-function abbr(s){if(!s||s.length<=16)return s||'';var m=s.match(/([^\s〜～]+IC)[^〜～]*[〜～]([^\s〜～]+IC)/);return m?m[1]+'〜'+m[2]:s.slice(0,14)+'…';}
+function abbr(s){
+  if(!s||s.trim()==='') return '';
+  if(s.length<=16) return s;
+  var m=s.match(/([^\s〜～]+IC)[^〜～]*[〜～]([^\s〜～]+IC)/);
+  return m?m[1]+'〜'+m[2]:s.slice(0,14)+'…';
+}
 
 
 
