@@ -1,4 +1,101 @@
 {
-  "generated": "2026-06-12T09:08:37.515Z",
-  "periods": []
+  "generated": "2026-06-12T12:28:39.792Z",
+  "periods": [
+    {
+      "road": "東北",
+      "section": "矢板IC〜白河IC",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-06-12T21:28:29+09:00",
+      "end": null,
+      "startJST": "6/12 21:28",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_kanto",
+      "snapshots": [
+        "6/12 21:28"
+      ]
+    },
+    {
+      "road": "上信越",
+      "section": "藤岡IC〜上田菅平IC",
+      "direction": "上下線",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-06-12T21:28:29+09:00",
+      "end": null,
+      "startJST": "6/12 21:28",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_kanto",
+      "snapshots": [
+        "6/12 21:28"
+      ]
+    },
+    {
+      "road": "道央",
+      "section": "",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-06-12T21:28:29+09:00",
+      "end": null,
+      "startJST": "6/12 21:28",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_kanto",
+      "snapshots": [
+        "6/12 21:28"
+      ]
+    },
+    {
+      "road": "東北",
+      "section": "栃木IC〜岩舟JCT",
+      "direction": "上り",
+      "reason": "",
+      "status": "通行止め",
+      "start": "2026-06-12T21:28:29+09:00",
+      "end": null,
+      "startJST": "6/12 21:28",
+      "endJST": null,
+      "startTimeJST": "20:15",
+      "source": "e_nexco_kanto",
+      "snapshots": [
+        "6/12 21:28"
+      ]
+    },
+    {
+      "road": "関越",
+      "section": "渋川伊香保IC〜湯沢IC",
+      "direction": "上下線",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-06-12T21:28:29+09:00",
+      "end": null,
+      "startJST": "6/12 21:28",
+      "endJST": null,
+      "startTimeJST": "09:40",
+      "source": "e_nexco_kanto",
+      "snapshots": [
+        "6/12 21:28"
+      ]
+    },
+    {
+      "road": "圏央",
+      "section": "#久喜白岡JCT〜#幸手IC",
+      "direction": "",
+      "reason": "事故",
+      "status": "通行止め",
+      "start": "2026-06-12T21:28:29+09:00",
+      "end": null,
+      "startJST": "6/12 21:28",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_kanto",
+      "snapshots": [
+        "6/12 21:28"
+      ]
+    }
+  ]
 }
