@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-12T12:28:39.792Z",
+  "generated": "2026-06-12T16:26:25.297Z",
   "periods": [
     {
       "road": "東北",
@@ -14,7 +14,8 @@
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
-        "6/12 21:28"
+        "6/12 21:28",
+        "6/13 01:26"
       ]
     },
     {
@@ -30,7 +31,8 @@
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
-        "6/12 21:28"
+        "6/12 21:28",
+        "6/13 01:26"
       ]
     },
     {
@@ -46,7 +48,8 @@
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
-        "6/12 21:28"
+        "6/12 21:28",
+        "6/13 01:26"
       ]
     },
     {
@@ -62,7 +65,8 @@
       "startTimeJST": "20:15",
       "source": "e_nexco_kanto",
       "snapshots": [
-        "6/12 21:28"
+        "6/12 21:28",
+        "6/13 01:26"
       ]
     },
     {
@@ -78,7 +82,8 @@
       "startTimeJST": "09:40",
       "source": "e_nexco_kanto",
       "snapshots": [
-        "6/12 21:28"
+        "6/12 21:28",
+        "6/13 01:26"
       ]
     },
     {
@@ -94,7 +99,8 @@
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
-        "6/12 21:28"
+        "6/12 21:28",
+        "6/13 01:26"
       ]
     }
   ]
