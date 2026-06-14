@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-13T22:15:13.266Z",
+  "generated": "2026-06-14T00:18:31.979Z",
   "periods": [
     {
       "road": "東北",
@@ -7,16 +7,16 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-06-13T08:41:39+09:00",
+      "start": "2026-06-14T05:23:37+09:00",
       "end": null,
-      "startJST": "6/13 08:41",
+      "startJST": "6/14 05:23",
       "endJST": null,
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
-        "6/13 08:41",
         "6/14 05:23",
-        "6/14 07:15"
+        "6/14 07:15",
+        "6/14 09:18"
       ]
     },
     {
@@ -25,16 +25,16 @@
       "direction": "上下線",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-06-13T08:41:39+09:00",
+      "start": "2026-06-14T05:23:37+09:00",
       "end": null,
-      "startJST": "6/13 08:41",
+      "startJST": "6/14 05:23",
       "endJST": null,
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
-        "6/13 08:41",
         "6/14 05:23",
-        "6/14 07:15"
+        "6/14 07:15",
+        "6/14 09:18"
       ]
     },
     {
@@ -43,16 +43,16 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-06-13T08:41:39+09:00",
+      "start": "2026-06-14T05:23:37+09:00",
       "end": null,
-      "startJST": "6/13 08:41",
+      "startJST": "6/14 05:23",
       "endJST": null,
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
-        "6/13 08:41",
         "6/14 05:23",
-        "6/14 07:15"
+        "6/14 07:15",
+        "6/14 09:18"
       ]
     },
     {
@@ -61,16 +61,16 @@
       "direction": "上り",
       "reason": "",
       "status": "通行止め",
-      "start": "2026-06-13T08:41:39+09:00",
+      "start": "2026-06-14T05:23:37+09:00",
       "end": null,
-      "startJST": "6/13 08:41",
+      "startJST": "6/14 05:23",
       "endJST": null,
       "startTimeJST": "20:15",
       "source": "e_nexco_kanto",
       "snapshots": [
-        "6/13 08:41",
         "6/14 05:23",
-        "6/14 07:15"
+        "6/14 07:15",
+        "6/14 09:18"
       ]
     },
     {
@@ -79,16 +79,16 @@
       "direction": "上下線",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-06-13T08:41:39+09:00",
+      "start": "2026-06-14T05:23:37+09:00",
       "end": null,
-      "startJST": "6/13 08:41",
+      "startJST": "6/14 05:23",
       "endJST": null,
       "startTimeJST": "09:40",
       "source": "e_nexco_kanto",
       "snapshots": [
-        "6/13 08:41",
         "6/14 05:23",
-        "6/14 07:15"
+        "6/14 07:15",
+        "6/14 09:18"
       ]
     },
     {
@@ -97,16 +97,160 @@
       "direction": "",
       "reason": "事故",
       "status": "通行止め",
-      "start": "2026-06-13T08:41:39+09:00",
+      "start": "2026-06-14T05:23:37+09:00",
       "end": null,
-      "startJST": "6/13 08:41",
+      "startJST": "6/14 05:23",
       "endJST": null,
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
-        "6/13 08:41",
         "6/14 05:23",
-        "6/14 07:15"
+        "6/14 07:15",
+        "6/14 09:18"
+      ]
+    },
+    {
+      "road": "東北",
+      "section": "磐梯熱海IC〜会津若松IC",
+      "direction": "上下線",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-06-14T09:18:24+09:00",
+      "end": null,
+      "startJST": "6/14 09:18",
+      "endJST": null,
+      "startTimeJST": "13:30",
+      "source": "e_nexco_tohoku",
+      "snapshots": [
+        "6/14 09:18"
+      ]
+    },
+    {
+      "road": "山形",
+      "section": "",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-06-14T09:18:24+09:00",
+      "end": null,
+      "startJST": "6/14 09:18",
+      "endJST": null,
+      "startTimeJST": "10:05",
+      "source": "e_nexco_tohoku",
+      "snapshots": [
+        "6/14 09:18"
+      ]
+    },
+    {
+      "road": "東北",
+      "section": "いわき三和IC〜郡山東IC",
+      "direction": "上下線",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-06-14T09:18:24+09:00",
+      "end": null,
+      "startJST": "6/14 09:18",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_tohoku",
+      "snapshots": [
+        "6/14 09:18"
+      ]
+    },
+    {
+      "road": "東北",
+      "section": "桑折JCT〜桑折JCT",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-06-14T09:18:24+09:00",
+      "end": null,
+      "startJST": "6/14 09:18",
+      "endJST": null,
+      "startTimeJST": "00:20",
+      "source": "e_nexco_tohoku",
+      "snapshots": [
+        "6/14 09:18"
+      ]
+    },
+    {
+      "road": "東北",
+      "section": "白石IC〜平泉前沢IC",
+      "direction": "上下線",
+      "reason": "地震",
+      "status": "通行止め",
+      "start": "2026-06-14T09:18:24+09:00",
+      "end": null,
+      "startJST": "6/14 09:18",
+      "endJST": null,
+      "startTimeJST": "18:09",
+      "source": "e_nexco_tohoku",
+      "snapshots": [
+        "6/14 09:18"
+      ]
+    },
+    {
+      "road": "東北",
+      "section": "米沢北IC〜東根IC",
+      "direction": "上下線",
+      "reason": "地震",
+      "status": "通行止め",
+      "start": "2026-06-14T09:18:24+09:00",
+      "end": null,
+      "startJST": "6/14 09:18",
+      "endJST": null,
+      "startTimeJST": "23:08",
+      "source": "e_nexco_tohoku",
+      "snapshots": [
+        "6/14 09:18"
+      ]
+    },
+    {
+      "road": "東北",
+      "section": "白河IC〜平泉前沢IC",
+      "direction": "上下線",
+      "reason": "地震",
+      "status": "通行止め",
+      "start": "2026-06-14T09:18:24+09:00",
+      "end": null,
+      "startJST": "6/14 09:18",
+      "endJST": null,
+      "startTimeJST": "23:08",
+      "source": "e_nexco_tohoku",
+      "snapshots": [
+        "6/14 09:18"
+      ]
+    },
+    {
+      "road": "東北",
+      "section": "本宮IC〜福島飯坂IC",
+      "direction": "上下線",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-06-14T09:18:24+09:00",
+      "end": null,
+      "startJST": "6/14 09:18",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_tohoku",
+      "snapshots": [
+        "6/14 09:18"
+      ]
+    },
+    {
+      "road": "東北",
+      "section": "大和IC〜築館IC",
+      "direction": "上下線",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-06-14T09:18:24+09:00",
+      "end": null,
+      "startJST": "6/14 09:18",
+      "endJST": null,
+      "startTimeJST": "13:20",
+      "source": "e_nexco_tohoku",
+      "snapshots": [
+        "6/14 09:18"
       ]
     }
   ]
