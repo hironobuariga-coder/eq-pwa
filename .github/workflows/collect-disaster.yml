@@ -31,6 +31,6 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/disaster-trigger.json data/disaster-config.json || true
+          git add data/disaster-trigger.json data/disaster-config.json data/earthquake-info.json || true
           git diff --staged --quiet && echo "変更なし" || \
             (git commit -m "disaster-trigger update" && git push)

@@ -1,0 +1,32 @@
+name: 配送会社情報収集（毎時・無料）
+
+on:
+  # 毎時 :15 に実行（collect-road.yml の :10 と被らないよう）
+  schedule:
+    - cron: '15 * * * *'
+  workflow_dispatch:
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: チェックアウト
+        uses: actions/checkout@v4
+
+      - name: Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: 配送会社情報を収集
+        run: node collect-delivery.js
+
+      - name: 変更をコミット・プッシュ
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/delivery-status.json || true
+          git diff --staged --quiet && echo "変更なし" || \
+            (git commit -m "delivery-status update" && git push)
