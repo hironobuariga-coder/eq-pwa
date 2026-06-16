@@ -579,8 +579,8 @@ var DD = {
     rcTtl:'各RC拠点（地震情報による速報）',
     offTtl:'各オフィス（地震情報による速報）',
     showShindo:true,
-    sys:'最新地震情報をJSONのみ返してください。\n{"time":"","epicenter":"","maxShindo":"","tsunami":"","shindoAreas":[{"level":"","area":""}],"alertLevel":"normal|watch|alert","affectedPrefs":[]}\nalertLevel:5強以上=alert、5弱=watch、4以下=normal。shindoAreasは震度3以上。',
-    usr:function(){var t=new Date();var y=new Date(t-86400000);var d=(t.getMonth()+1)+'/'+t.getDate();var dy=(y.getMonth()+1)+'/'+y.getDate();return '直近24時間（'+dy+'20:00〜'+d+'現在）に発生した日本の地震情報（震度4以上）を検索してJSON形式で返してください。最も規模の大きい地震を返してください。';},
+    sys:'必ずJSONのみ返してください。前置き・説明文は一切不要。\n{"time":"","epicenter":"","maxShindo":"","tsunami":"","shindoAreas":[{"level":"","area":""}],"alertLevel":"normal|watch|alert","affectedPrefs":[]}\nalertLevel:5強以上=alert、5弱=watch、4以下=normal。shindoAreasは震度3以上。',
+    usr:function(){var t=new Date();var y=new Date(t-86400000);var d=(t.getMonth()+1)+'/'+t.getDate();var dy=(y.getMonth()+1)+'/'+y.getDate();return '直近24時間（'+dy+' 20:00 〜 '+d+' 現在）に発生した日本の地震情報（震度4以上）を気象庁・tenki.jp・ウェザーニュース等で検索してJSON形式で返してください。最も規模の大きい地震を1件返してください。';},
     render:function(d){
       var lv=d.alertLevel||'normal';
       var ah=lv==='alert'?'<div class="al al-red"><i class="ti ti-alert-triangle"></i>震度5強以上 — 必須社内連携対象です</div>':lv==='watch'?'<div class="al al-amb"><i class="ti ti-info-circle"></i>震度5弱 — 参考情報として共有してください</div>':'';
@@ -1361,21 +1361,45 @@ function claude(sys,usr,search,cb){
   if(search===undefined)search=true;
   var k=getKey();
   if(!k){cb(new Error('APIキーが未設定です。設定タブで入力してください。'),null);return;}
-  var body={model:'claude-sonnet-4-6',max_tokens:800,system:sys,messages:[{role:'user',content:usr}]};
-  if(search)body.tools=[{type:'web_search_20250305',name:'web_search'}];
-  fetch('https://api.anthropic.com/v1/messages',{
-    method:'POST',
-    headers:{'Content-Type':'application/json','x-api-key':k,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-    body:JSON.stringify(body)
-  }).then(function(r){
-    if(!r.ok)return r.json().then(function(e){throw new Error((e.error&&e.error.message)||'APIエラー('+r.status+')');});
-    return r.json();
-  }).then(function(d){
-    var txt=d.content.filter(function(b){return b.type==='text';}).map(function(b){return b.text;}).join('');
-    cb(null,txt);
-  }).catch(function(e){cb(e,null);});
+  var messages=[{role:'user',content:usr}];
+  function doRequest(){
+    var body={model:'claude-sonnet-4-6',max_tokens:1500,system:sys,messages:messages};
+    if(search)body.tools=[{type:'web_search_20250305',name:'web_search'}];
+    fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','x-api-key':k,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      body:JSON.stringify(body)
+    }).then(function(r){
+      if(!r.ok)return r.json().then(function(e){throw new Error((e.error&&e.error.message)||'APIエラー('+r.status+')');});
+      return r.json();
+    }).then(function(d){
+      // web_search使用時: tool_useブロックがある場合はtool_resultを返して再リクエスト
+      var toolUses=d.content.filter(function(b){return b.type==='tool_use';});
+      if(toolUses.length>0 && d.stop_reason==='tool_use'){
+        messages.push({role:'assistant',content:d.content});
+        var toolResults=toolUses.map(function(tu){
+          return {type:'tool_result',tool_use_id:tu.id,content:'検索完了'};
+        });
+        messages.push({role:'user',content:toolResults});
+        doRequest();
+        return;
+      }
+      var txt=d.content.filter(function(b){return b.type==='text';}).map(function(b){return b.text;}).join('');
+      cb(null,txt);
+    }).catch(function(e){cb(e,null);});
+  }
+  doRequest();
 }
-function pj(raw){try{return JSON.parse(raw.replace(/```json|```/g,'').trim());}catch(e){return null;}}
+function pj(raw){
+  if(!raw) return null;
+  // バッククォートブロック内を優先
+  var m=raw.match(/```json\s*([\s\S]*?)```/);
+  if(m){try{return JSON.parse(m[1].trim());}catch(e){}}
+  // {...} 部分だけ抽出（先頭・末尾のテキストを除去）
+  var m2=raw.match(/\{[\s\S]*\}/);
+  if(m2){try{return JSON.parse(m2[0]);}catch(e){}}
+  return null;
+}
 function setProg(p){document.getElementById('prog').style.width=p+'%';}
 function resetProg(){document.getElementById('prog').style.width='0%';}
 
