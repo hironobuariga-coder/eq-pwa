@@ -1059,7 +1059,20 @@ function autoLaunchCollection(trigger){
 }
 function renderSnTbl(){
   var f=S.shindo.filter(function(r){return snNum(r.level)>=MIN_SH;});
-  document.getElementById('shindo-body').innerHTML=f.length?f.map(function(r){return '<tr><td><span class="bdg '+snCls(r.level)+'">震度'+r.level+'</span></td><td style="font-size:12px">'+r.area+'</td></tr>';}).join(''):'<tr><td colspan="2" style="color:var(--text2);text-align:center;padding:12px 0;font-size:12px">該当する震度の情報なし</td></tr>';
+  if(!f.length){
+    document.getElementById('shindo-body').innerHTML='<tr><td colspan="2" style="color:var(--text2);text-align:center;padding:12px 0;font-size:12px">該当する震度の情報なし</td></tr>';
+    return;
+  }
+  // 同じ震度のエリアを1行に集約
+  var grouped={},order=[];
+  f.forEach(function(r){
+    if(!grouped[r.level]){grouped[r.level]=[];order.push(r.level);}
+    grouped[r.level].push(r.area);
+  });
+  document.getElementById('shindo-body').innerHTML=order.map(function(lv){
+    return '<tr><td style="vertical-align:top;padding:3px 0"><span class="bdg '+snCls(lv)+'">震度'+lv+'</span></td>'
+      +'<td style="font-size:12px;padding:3px 0">'+grouped[lv].join('、')+'</td></tr>';
+  }).join('');
 }
 
 // ── タイマー ─────────────────────────────────────────────────────────
@@ -1968,7 +1981,9 @@ function buildTxt(){
     var ex='';
     if(DTYPE==='quake'){
       var hit=S.shindo.filter(function(x){return x.area&&((r.pref&&x.area.indexOf(r.pref)>=0)||(r.city&&x.area.indexOf(r.city)>=0));});
-      if(hit.length){var mx=hit.reduce(function(a,b){return snNum(a.level)>snNum(b.level)?a:b;});ex=' / 震度'+mx.level;}
+      if(hit.length){var mx=hit.reduce(function(a,b){return snNum(a.level)>snNum(b.level)?a:b;});
+        if(st.indexOf('震度')<0) ex=' / 震度'+mx.level;
+      }
     }
     rcLines.push('・'+r.name+'：'+st+ex);
   }
@@ -1980,7 +1995,9 @@ function buildTxt(){
       var ex='';
       if(DTYPE==='quake'){
         var hit=S.shindo.filter(function(x){return x.area&&((o.pref&&x.area.indexOf(o.pref)>=0)||(o.city&&x.area.indexOf(o.city)>=0));});
-        if(hit.length){var mx=hit.reduce(function(a,b){return snNum(a.level)>snNum(b.level)?a:b;});ex=' / 震度'+mx.level;}
+        if(hit.length){var mx=hit.reduce(function(a,b){return snNum(a.level)>snNum(b.level)?a:b;});
+          if(st.indexOf('震度')<0) ex=' / 震度'+mx.level;
+        }
       }
       rcLines.push('・'+o.name+'：'+st+ex);
     }
