@@ -33,4 +33,4 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/disaster-trigger.json data/disaster-config.json data/earthquake-info.json || true
           git diff --staged --quiet && echo "変更なし" || \
-            (git commit -m "disaster-trigger update" && git push)
+            (git commit -m "disaster-trigger update" && git pull --rebase && git push)
