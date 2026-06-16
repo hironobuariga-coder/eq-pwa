@@ -271,7 +271,7 @@ body{
     </div>
     <div class="sec">
       <div class="sec-h">
-        <h3 id="dis-title">地震情報 <span class="bdg bdg-grn" style="font-size:9px">気象庁</span></h3>
+        <h3 id="dis-title">地震情報 <span class="bdg bdg-grn" style="font-size:9px">気象庁XML 自動</span></h3>
         <button class="rb" onclick="fetchDis()"><i class="ti ti-refresh" style="font-size:14px"></i> 更新</button>
       </div>
       <div id="ld-q" class="ld"><div class="sp"></div><span id="ld-q-txt">取得中...</span></div>
@@ -294,12 +294,12 @@ body{
       <div class="nt" id="off-note"><i class="ti ti-info-circle" style="font-size:13px;vertical-align:-2px;margin-right:4px"></i>震源近傍のオフィスは別途現地報告をお待ちください。</div>
     </div>
     <div class="sec">
-      <div class="sec-h">
-        <h3>参考情報 <span class="bdg bdg-pur" style="font-size:9px">鉄道・港湾・空港・インフラ</span></h3>
-        <button class="rb" onclick="fetchNews()"><i class="ti ti-refresh" style="font-size:14px"></i> 更新</button>
-      </div>
-      <div id="ld-n" class="ld"><div class="sp"></div><span>情報を収集中...</span></div>
-      <div id="news-area"><div style="font-size:12px;color:var(--text2);padding:6px 0">取得後にピックアップします</div></div>
+      <h3 style="font-size:11px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">参考リンク <span class="bdg bdg-pur" style="font-size:9px">鉄道・港湾・空港・インフラ</span></h3>
+      <div class="lr"><span>NHK 災害・気象ニュース</span><a href="https://www3.nhk.or.jp/news/catnew.html?cat=disaster" target="_blank" style="color:var(--info);font-size:12px;display:flex;align-items:center;gap:3px"><i class="ti ti-external-link" style="font-size:14px"></i> 開く</a></div>
+      <div class="lr"><span>気象庁 防災情報</span><a href="https://www.jma.go.jp/jma/index.html" target="_blank" style="color:var(--info);font-size:12px;display:flex;align-items:center;gap:3px"><i class="ti ti-external-link" style="font-size:14px"></i> 開く</a></div>
+      <div class="lr"><span>JR各社 運行情報</span><a href="https://traininfo.jreast.co.jp/train_info/index.aspx" target="_blank" style="color:var(--info);font-size:12px;display:flex;align-items:center;gap:3px"><i class="ti ti-external-link" style="font-size:14px"></i> 開く</a></div>
+      <div class="lr"><span>国土交通省 川の防災情報</span><a href="https://www.river.go.jp/" target="_blank" style="color:var(--info);font-size:12px;display:flex;align-items:center;gap:3px"><i class="ti ti-external-link" style="font-size:14px"></i> 開く</a></div>
+      <div class="lr"><span>特務機関NERV 速報</span><a href="https://nerv.app/" target="_blank" style="color:var(--info);font-size:12px;display:flex;align-items:center;gap:3px"><i class="ti ti-external-link" style="font-size:14px"></i> 開く</a></div>
     </div>
     <button class="fb" onclick="fetchAll()"><i class="ti ti-refresh"></i> すべての情報を一括取得する</button>
   </div>
@@ -572,7 +572,7 @@ var deferredInstall=null;
 var DD = {
   quake:{
     icon:'ti-ripple',col:'#E24B4A',label:'地震',
-    secTitle:'地震情報 <span class="bdg bdg-grn" style="font-size:9px">気象庁</span>',
+    secTitle:'地震情報 <span class="bdg bdg-grn" style="font-size:9px">気象庁XML 自動</span>',
     ldTxt:'地震情報を取得中...',
     rcNote:'震源近傍のRCは別途現地報告をお待ちください。',
     offNote:'震源近傍のオフィスは別途現地報告をお待ちください。',
@@ -843,8 +843,8 @@ function loadDemo(){
   // 配送会社表示
   var yr=document.getElementById('yamato-result');if(yr)yr.innerHTML='<div class="dl-card"><span class="bdg bdg-amb" style="font-size:11px">一部制限</span><span style="font-size:12px;margin-left:8px">'+S.yamato.detail+'</span></div>';
   var sr=document.getElementById('sagawa-result');if(sr)sr.innerHTML='<div class="dl-card"><span class="bdg bdg-amb" style="font-size:11px">一部制限</span><span style="font-size:12px;margin-left:8px">'+S.sagawa.detail+'</span></div>';
-  // ニュース表示
-  renderNews(S.news);
+  // ニュース表示（news-areaがあれば表示、廃止済みの場合はスキップ）
+  if(document.getElementById('news-area')) renderNews(S.news);
   readyLockonBtn();
   toast('🎭 デモモード：宮城県沖 M6.1 震度5強（'+em+'）を読込みました');
 }
@@ -855,7 +855,7 @@ function clearDemo(){
   var rr=document.getElementById('road-result');if(rr)rr.innerHTML='';
   var yr=document.getElementById('yamato-result');if(yr)yr.innerHTML='';
   var sr=document.getElementById('sagawa-result');if(sr)sr.innerHTML='';
-  document.getElementById('news-area').innerHTML='';
+  var na=document.getElementById('news-area');if(na)na.innerHTML='';
   renderSnTbl();
   toast('デモをクリアしました');
 }
@@ -1404,32 +1404,95 @@ function setProg(p){document.getElementById('prog').style.width=p+'%';}
 function resetProg(){document.getElementById('prog').style.width='0%';}
 
 // ── 情報取得 ─────────────────────────────────────────────────────────
+// ─── 取得後の共通処理（API/JSON共用）────────────────────────────
+function applyDisData(d){
+  var def=DD[DTYPE];
+  var dc=document.getElementById('dis-content');
+  var ab=document.getElementById('alert-box');
+  S.dis=d;
+  if(DTYPE==='quake'){S.quake=d;S.shindo=d.shindoAreas||[];renderSnTbl();renderShFilt();}
+  readyLockonBtn();
+  ab.innerHTML='';dc.innerHTML=def.render(d);
+  if(DTYPE==='quake'&&S.shindo.length){updRCst(S.shindo);updOffSt(S.shindo);}
+  else{var prefs=def.prefs(d);updByPrefs(prefs,RC,'rc-s-');updByPrefs(prefs,OFF,'off-s-');}
+  if(DTYPE==='quake'){
+    if(d.epicenter)buildMap(d.epicenter,d.epicenter);
+  } else {
+    var prefs2=def.prefs(d);
+    var label=DTYPE==='typhoon'?(d.name||'台風'):(DTYPE==='rain'?'大雨警報地域':'大雪警報地域');
+    if(prefs2&&prefs2.length)buildMapByPrefs(prefs2,label);
+  }
+  startTmr();
+}
+
 function fetchDis(){
-  if(!getKey()){toast('設定タブでAPIキーを入力してください');goTab('settings',document.querySelectorAll('.tb')[4]);return;}
   var def=DD[DTYPE];
   var ld=document.getElementById('ld-q');ld.style.display='flex';
   var dc=document.getElementById('dis-content');
   var ab=document.getElementById('alert-box');
+
+  // ─── 地震：earthquake-info.json から自動取得（API不使用）
+  if(DTYPE==='quake'){
+    var base=window.location.href.replace(/\/[^\/]*$/,'');
+    fetch(base+'/data/earthquake-info.json?t='+Date.now())
+      .then(function(r){return r.ok?r.json():Promise.reject(new Error('HTTP '+r.status));})
+      .then(function(data){
+        ld.style.display='none';
+        // データが空（初回未実行）の場合
+        if(!data.time && !data.epicenter){
+          ab.innerHTML='';
+          dc.innerHTML='<div class="al al-amb"><i class="ti ti-info-circle"></i>'
+            +'GitHub Actionsが初回実行されると自動表示されます（約10分以内）。'
+            +'それまでは「APIで取得」ボタンをお使いください。</div>'
+            +'<button class="bo" onclick="fetchDisByAPI()" style="margin-top:8px">'
+            +'<i class="ti ti-refresh"></i> APIで今すぐ取得（9円）</button>';
+          return;
+        }
+        // generated が24時間以上前の場合は鮮度警告を表示
+        var generated=data.generated||'';
+        var age='';
+        if(generated){
+          var gd=new Date(generated.replace('+09:00','Z').replace(' ','T'));
+          var ageH=Math.round((Date.now()-gd.getTime())/3600000);
+          if(ageH>24)age='<div class="al al-amb" style="margin-bottom:8px"><i class="ti ti-clock"></i> データが'+ageH+'時間前のものです。地震発生直後はActionsの次回実行（最大10分）をお待ちください。<button class="rb" onclick="fetchDisByAPI()" style="font-size:11px;padding:3px 8px;margin-left:8px">APIで最新取得</button></div>';
+        }
+        ab.innerHTML=age;
+        applyDisData(data);
+        if(generated)toast('地震情報 更新: '+generated);
+      })
+      .catch(function(e){
+        ld.style.display='none';
+        ab.innerHTML='';
+        dc.innerHTML='<div style="font-size:12px;color:var(--text2)">自動データ未取得。「APIで取得」をお試しください。</div>'
+          +'<button class="bo" onclick="fetchDisByAPI()" style="margin-top:8px">'
+          +'<i class="ti ti-refresh"></i> APIで今すぐ取得（9円）</button>';
+      });
+    return;
+  }
+
+  // ─── 台風・大雨・大雪：APIで取得（従来通り）
+  if(!getKey()){toast('設定タブでAPIキーを入力してください');goTab('settings',document.querySelectorAll('.tb')[4]);ld.style.display='none';return;}
   claude(def.sys,def.usr(),true,function(err,raw){
     ld.style.display='none';
     if(err){ab.innerHTML='';dc.innerHTML='<div style="font-size:12px;color:var(--text2)">取得エラー：'+err.message+'</div>';toast('⚠️ '+err.message);return;}
     var d=pj(raw)||{alertLevel:'normal'};
-    S.dis=d;
-    if(DTYPE==='quake'){S.quake=d;S.shindo=d.shindoAreas||[];renderSnTbl();renderShFilt();}
-    readyLockonBtn();
-    ab.innerHTML='';dc.innerHTML=def.render(d);
-    var prefs=def.prefs(d);
-    if(DTYPE==='quake'&&S.shindo.length){updRCst(S.shindo);updOffSt(S.shindo);}
-    else{updByPrefs(prefs,RC,'rc-s-');updByPrefs(prefs,OFF,'off-s-');}
-    // 地図を災害地域に移動（全災害対応）
-    if(DTYPE==='quake'){
-      if(d.epicenter) buildMap(d.epicenter, d.epicenter);
-    } else {
-      var prefs=def.prefs(d);
-      var label=DTYPE==='typhoon'?(d.name||'台風'):(DTYPE==='rain'?'大雨警報地域':'大雪警報地域');
-      if(prefs&&prefs.length) buildMapByPrefs(prefs, label);
-    }
-    startTmr();
+    applyDisData(d);
+  });
+}
+
+// ─── 地震情報をAPIで強制取得（フォールバック用）─────────────────
+function fetchDisByAPI(){
+  if(!getKey()){toast('設定タブでAPIキーを入力してください');goTab('settings',document.querySelectorAll('.tb')[4]);return;}
+  var def=DD['quake'];
+  var ld=document.getElementById('ld-q');ld.style.display='flex';
+  var dc=document.getElementById('dis-content');
+  var ab=document.getElementById('alert-box');
+  toast('APIで地震情報を取得中...');
+  claude(def.sys,def.usr(),true,function(err,raw){
+    ld.style.display='none';
+    if(err){ab.innerHTML='';dc.innerHTML='<div style="font-size:12px;color:var(--text2)">取得エラー：'+err.message+'</div>';toast('⚠️ '+err.message);return;}
+    var d=pj(raw)||{alertLevel:'normal'};
+    applyDisData(d);
   });
 }
 
@@ -1758,41 +1821,62 @@ function ppDrawClosure(slot,closedPeriods){
 }
 
 
+// ── 配送会社情報（JSONポーリング版・API不使用）──────────────────
 function fetchDel(){
-  if(!S.dis&&!S.quake){toast('先に「情報収集」タブで災害情報を取得してください');return;}
-  function setLD(co){document.getElementById(co+'-bdg').className='bdg bdg-gry';document.getElementById(co+'-bdg').textContent='取得中...';document.getElementById(co+'-det').textContent='情報を取得しています...';}
-  function setR(co,info){
-  var sm={suspended:['bdg-red','制限あり'],partial:['bdg-amb','一部制限・遅延あり'],normal:['bdg-grn','制限なし']};
-  var cls=(sm[info.status]||['bdg-grn','制限なし'])[0];
-  var lbl=(sm[info.status]||['bdg-grn','制限なし'])[1];
-  document.getElementById(co+'-bdg').className='bdg '+cls;
-  document.getElementById(co+'-bdg').textContent=lbl;
-  document.getElementById(co+'-det').textContent=info.detail||'現時点で制限・遅延情報は確認されていません';
-  document.getElementById(co+'-time').textContent=info.updated||'－';
-  // Claudeが返したURLでリンクを動的更新
-  if(info.url){
-    var link=document.getElementById(co+'-link');
-    if(link)link.href=info.url;
+  function setLD(co){document.getElementById(co+'-bdg').className='bdg bdg-gry';document.getElementById(co+'-bdg').textContent='取得中...';document.getElementById(co+'-det').textContent='情報を読み込み中...';}
+  function setR(co,info){\
+    var sm={suspended:['bdg-red','制限あり'],partial:['bdg-amb','一部制限・遅延あり'],normal:['bdg-grn','制限なし']};
+    var cls=(sm[info.status]||['bdg-grn','制限なし'])[0];
+    var lbl=(sm[info.status]||['bdg-grn','制限なし'])[1];
+    document.getElementById(co+'-bdg').className='bdg '+cls;
+    document.getElementById(co+'-bdg').textContent=lbl;
+    document.getElementById(co+'-det').textContent=info.detail||'現時点で制限・遅延情報は確認されていません';
+    document.getElementById(co+'-time').textContent=info.updated||'－';
+    if(info.url){var link=document.getElementById(co+'-link');if(link)link.href=info.url;}
   }
-}
-  function setE(co,msg){document.getElementById(co+'-bdg').className='bdg bdg-gry';document.getElementById(co+'-bdg').textContent='取得エラー';document.getElementById(co+'-det').textContent=msg||'公式リンクをご確認ください';}
+  function setE(co,msg){document.getElementById(co+'-bdg').className='bdg bdg-gry';document.getElementById(co+'-bdg').textContent='データなし';document.getElementById(co+'-det').textContent=msg||'公式リンクをご確認ください';}
   setLD('y');setLD('s');
-  var def=DD[DTYPE];var d=S.dis||S.quake||{};var lbl=def.label;
-  var desc=DTYPE==='quake'?'震源'+(d.epicenter||'')+'、最大震度'+(d.maxShindo||'')+'の地震':DTYPE==='typhoon'?(d.name||'台風')+'接近':DTYPE==='rain'?'大雨（警報地域：'+((d.warningAreas||[]).join('・'))+'）':'大雪（警報地域：'+((d.warningAreas||[]).join('・'))+'）';
-  claude('以下の手順で検索しJSONのみ返してください。前置き不要。\n【ヤマト運輸】①まず https://www.kuronekoyamato.co.jp/ytc/chien/chien_hp.html を確認。②取得できない・ページが存在しない場合は https://www.kuronekoyamato.co.jp/ のトップから「遅延」「制限」のリンクを探す。③それでも見つからない場合はWeb検索で「ヤマト運輸 '+lbl+' 遅延 集荷制限」を検索。\n【佐川急便】①まず https://www2.sagawa-exp.co.jp/information/list/ を確認。②取得できない場合は https://www.sagawa-exp.co.jp/ のトップから探す。③それでも見つからない場合はWeb検索で「佐川急便 '+lbl+' 遅延 集荷制限」を検索。\n返却形式：{"yamato":{"status":"normal|partial|suspended","detail":"情報内容。なければ現時点でWeb上に'+lbl+'による遅延・制限情報の掲載なし","updated":"確認時刻","url":"参照したURL"},"sagawa":{"status":"normal|partial|suspended","detail":"情報内容","updated":"確認時刻","url":"参照したURL"}}\nstatusとdetailは必須。',desc+'に関するヤマト運輸と佐川急便の集荷・配送制限・お届け遅延情報を各社公式ページから調べてください。URLが変わっていても必ずトップページから辿って情報を探してください。',false,function(err,raw){
-    if(err){setE('y',err.message);setE('s',err.message);return;}
-    var d2=pj(raw);var fb={status:'normal',detail:'現時点でWeb上に'+lbl+'による遅延・制限情報の掲載なし',updated:'－'};
-    S.yamato=(d2&&d2.yamato)||fb;S.sagawa=(d2&&d2.sagawa)||fb;
-    setR('y',S.yamato);setR('s',S.sagawa);
-  });
+  var base=window.location.href.replace(/\/[^\/]*$/,'');
+  fetch(base+'/data/delivery-status.json?t='+Date.now())
+    .then(function(r){return r.ok?r.json():Promise.reject(new Error('HTTP '+r.status));})
+    .then(function(data){
+      S.yamato=data.yamato||{status:'normal',detail:'自動収集データ未取得',updated:'－',url:'https://www.kuronekoyamato.co.jp/ytc/chien/chien_hp.html'};
+      S.sagawa=data.sagawa||{status:'normal',detail:'自動収集データ未取得',updated:'－',url:'https://www2.sagawa-exp.co.jp/information/list/'};
+      setR('y',S.yamato);setR('s',S.sagawa);
+      if(data.generated)toast('配送情報更新: '+data.generated);
+    })
+    .catch(function(e){
+      // JSONが未生成の場合はActions未実行として案内
+      var msg='自動収集ファイル未生成。GitHub Actionsのセットアップ後に自動更新されます。';
+      setE('y',msg);setE('s',msg);
+      // 未実行時は公式リンクを案内
+      document.getElementById('y-det').innerHTML='<span style="font-size:11px">GitHub Actionsが初回実行されると自動表示されます。<br>それまでは下のリンクから公式サイトをご確認ください。</span>';
+      document.getElementById('s-det').innerHTML='<span style="font-size:11px">GitHub Actionsが初回実行されると自動表示されます。<br>それまでは下のリンクから公式サイトをご確認ください。</span>';
+    });
 }
 
 function fetchAll(){
-  if(!getKey()){toast('設定タブでAPIキーを入力してください');goTab('settings',document.querySelectorAll('.tb')[4]);return;}
   var def=DD[DTYPE];resetProg();setProg(10);
+  // ── APIキャッシュ: ロックオン中の同一災害IDは再取得しない ──
+  if(LOCKON.active && S.dis){
+    toast('ロックオン中 — 既取得データを使用します（重複API呼出しを抑制）');
+    setProg(100);setTimeout(resetProg,800);
+    return;
+  }
+  // 地震 → JSONポーリング（API不使用）
+  // 台風・大雨・大雪 → APIで取得（APIキー必要）
+  if(DTYPE!=='quake'&&!getKey()){
+    toast('設定タブでAPIキーを入力してください');
+    goTab('settings',document.querySelectorAll('.tb')[4]);
+    return;
+  }
+  // 災害情報取得（地震はJSON、他はAPI）
   fetchDis();
-  setTimeout(function(){setProg(35);fetchNews();},500);
-  setTimeout(function(){setProg(60);fetchRoads();fetchDel();},1000);
+  // 配送情報はJSONから自動読込（API不使用）
+  setTimeout(function(){setProg(50);fetchDel();},500);
+  // 道路情報はAPI取得（地震・台風・大雨・大雪 共通）
+  setTimeout(function(){setProg(75);if(S.dis||S.quake)fetchRoads();},1500);
+  setTimeout(function(){setProg(100);toast('✅ '+def.label+'情報の取得完了');setTimeout(resetProg,800);},3000);
   setTimeout(function(){setProg(100);toast('✅ '+def.label+'情報の取得完了');setTimeout(resetProg,800);},3000);
 }
 
