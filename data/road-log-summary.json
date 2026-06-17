@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-17T20:27:25.348Z",
+  "generated": "2026-06-17T22:50:22.553Z",
   "periods": [
     {
       "road": "上信越",
@@ -19,7 +19,8 @@
         "6/17 18:58",
         "6/17 22:52",
         "6/18 02:16",
-        "6/18 05:27"
+        "6/18 05:27",
+        "6/18 07:50"
       ]
     },
     {
@@ -38,7 +39,8 @@
         "6/17 08:43",
         "6/17 14:05",
         "6/17 18:58",
-        "6/18 05:27"
+        "6/18 05:27",
+        "6/18 07:50"
       ]
     },
     {
@@ -59,7 +61,8 @@
         "6/17 18:58",
         "6/17 22:52",
         "6/18 02:16",
-        "6/18 05:27"
+        "6/18 05:27",
+        "6/18 07:50"
       ]
     },
     {
@@ -69,9 +72,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-06-17T18:58:55+09:00",
-      "end": null,
+      "end": "2026-06-18T05:27:13+09:00",
       "startJST": "6/17 18:58",
-      "endJST": null,
+      "endJST": "6/18 05:27",
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
@@ -88,9 +91,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-06-17T18:58:55+09:00",
-      "end": null,
+      "end": "2026-06-18T05:27:13+09:00",
       "startJST": "6/17 18:58",
-      "endJST": null,
+      "endJST": "6/18 05:27",
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
@@ -107,9 +110,9 @@
       "reason": "地震",
       "status": "通行止め",
       "start": "2026-06-17T18:58:55+09:00",
-      "end": null,
+      "end": "2026-06-18T05:27:13+09:00",
       "startJST": "6/17 18:58",
-      "endJST": null,
+      "endJST": "6/18 05:27",
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
@@ -126,9 +129,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-06-17T18:58:55+09:00",
-      "end": null,
+      "end": "2026-06-18T05:27:13+09:00",
       "startJST": "6/17 18:58",
-      "endJST": null,
+      "endJST": "6/18 05:27",
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
@@ -145,9 +148,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-06-17T18:58:55+09:00",
-      "end": null,
+      "end": "2026-06-18T05:27:13+09:00",
       "startJST": "6/17 18:58",
-      "endJST": null,
+      "endJST": "6/18 05:27",
       "startTimeJST": "22:15",
       "source": "e_nexco_niigata",
       "snapshots": [
@@ -155,6 +158,38 @@
         "6/17 22:52",
         "6/18 02:16",
         "6/18 05:27"
+      ]
+    },
+    {
+      "road": "道東",
+      "section": "トマムIC〜十勝清水IC",
+      "direction": "",
+      "reason": "工事",
+      "status": "通行止め",
+      "start": "2026-06-18T07:50:15+09:00",
+      "end": null,
+      "startJST": "6/18 07:50",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_kita",
+      "snapshots": [
+        "6/18 07:50"
+      ]
+    },
+    {
+      "road": "道央",
+      "section": "滝川IC〜深川IC",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-06-18T07:50:15+09:00",
+      "end": null,
+      "startJST": "6/18 07:50",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_kita",
+      "snapshots": [
+        "6/18 07:50"
       ]
     }
   ]
