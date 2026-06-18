@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-18T06:05:54.771Z",
+  "generated": "2026-06-18T10:44:20.102Z",
   "periods": [
     {
       "road": "上信越",
@@ -8,9 +8,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-06-18T15:05:49+09:00",
-      "end": null,
+      "end": "2026-06-18T15:05:49+09:00",
       "startJST": "6/18 15:05",
-      "endJST": null,
+      "endJST": "6/18 15:05",
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
@@ -24,9 +24,9 @@
       "reason": "台風",
       "status": "通行止め",
       "start": "2026-06-18T15:05:49+09:00",
-      "end": null,
+      "end": "2026-06-18T15:05:49+09:00",
       "startJST": "6/18 15:05",
-      "endJST": null,
+      "endJST": "6/18 15:05",
       "startTimeJST": "15:00",
       "source": "e_nexco_bousai",
       "snapshots": [
@@ -40,9 +40,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-06-18T15:05:49+09:00",
-      "end": null,
+      "end": "2026-06-18T15:05:49+09:00",
       "startJST": "6/18 15:05",
-      "endJST": null,
+      "endJST": "6/18 15:05",
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
@@ -62,7 +62,8 @@
       "startTimeJST": "",
       "source": "e_nexco_kita",
       "snapshots": [
-        "6/18 15:05"
+        "6/18 15:05",
+        "6/18 19:44"
       ]
     },
     {
@@ -78,7 +79,8 @@
       "startTimeJST": "",
       "source": "e_nexco_kita",
       "snapshots": [
-        "6/18 15:05"
+        "6/18 15:05",
+        "6/18 19:44"
       ]
     }
   ]
