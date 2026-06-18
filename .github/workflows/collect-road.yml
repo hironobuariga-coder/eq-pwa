@@ -31,5 +31,13 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/road-log.json data/road-log-summary.json
-          git diff --staged --quiet && echo "変更なし" || \
-            (git commit -m "road-log update" && git pull --rebase && git push)
+          if git diff --staged --quiet; then
+            echo "変更なし"
+          else
+            git commit -m "road-log update"
+            for i in 1 2 3; do
+              git pull --rebase && git push && break
+              echo "リトライ $i"
+              sleep 5
+            done
+          fi
