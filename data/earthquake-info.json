@@ -1,52 +1,13 @@
 {
-  "generated": "2026-06-17 02:34:24+09:00",
+  "generated": "",
   "source": "jma_xml",
-  "time": "6/16 19:46頃",
-  "epicenter": "茨城県南部",
-  "depth": "約50km",
-  "magnitude": "M5.5",
-  "maxShindo": "5-",
-  "tsunami": "この地震による津波の心配はありません。この地震について、緊急地震速報を発表して",
-  "shindoAreas": [
-    {
-      "level": "5強",
-      "area": "群馬県・埼玉県"
-    },
-    {
-      "level": "4",
-      "area": "茨城県・栃木県・神奈川県"
-    },
-    {
-      "level": "3",
-      "area": "福島県・千葉県・東京都・新潟県・山梨県・長野県・静岡県"
-    },
-    {
-      "level": "2",
-      "area": "宮城県・岐阜県・愛知県"
-    },
-    {
-      "level": "1",
-      "area": "山形県・滋賀県"
-    }
-  ],
-  "alertLevel": "alert",
-  "affectedPrefs": [
-    "群馬県",
-    "埼玉県",
-    "茨城県",
-    "栃木県",
-    "神奈川県",
-    "福島県",
-    "千葉県",
-    "東京都",
-    "新潟県",
-    "山梨県",
-    "長野県",
-    "静岡県",
-    "宮城県",
-    "岐阜県",
-    "愛知県",
-    "山形県",
-    "滋賀県"
-  ]
+  "time": "",
+  "epicenter": "",
+  "depth": "",
+  "magnitude": "",
+  "maxShindo": "",
+  "tsunami": "情報なし",
+  "shindoAreas": [],
+  "alertLevel": "normal",
+  "affectedPrefs": []
 }
