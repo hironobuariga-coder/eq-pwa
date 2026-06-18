@@ -1,16 +1,16 @@
 {
-  "generated": "",
+  "generated": "2026/06/18 14:02 JST",
   "yamato": {
     "status": "normal",
-    "detail": "GitHub Actionsによる自動収集待ち（毎時更新）",
-    "updated": "",
+    "detail": "ヤマト運輸：現時点でWeb上に遅延・制限情報の掲載なし",
+    "updated": "2026/06/18 14:02 JST",
     "url": "https://www.kuronekoyamato.co.jp/ytc/chien/chien_hp.html",
     "notices": []
   },
   "sagawa": {
     "status": "normal",
-    "detail": "GitHub Actionsによる自動収集待ち（毎時更新）",
-    "updated": "",
+    "detail": "佐川急便：現時点でWeb上に遅延・制限情報の掲載なし",
+    "updated": "2026/06/18 14:02 JST",
     "url": "https://www2.sagawa-exp.co.jp/information/list/",
     "notices": []
   }
