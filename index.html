@@ -1436,12 +1436,51 @@ function pj(raw){
 function setProg(p){document.getElementById('prog').style.width=p+'%';}
 function resetProg(){document.getElementById('prog').style.width='0%';}
 
+// ─── 時刻をJST（YYYY/M/D HH:MM JST）に正規化 ──────────────────
+// API返却・JSON両方の time フィールドに適用
+function normalizeJST(timeStr){
+  if(!timeStr) return timeStr;
+  // すでに "(JST)" が付いていればそのまま返す
+  if(timeStr.indexOf('JST') >= 0) return timeStr;
+  // ISO8601形式（例: "2026-06-18T13:45:00+09:00" / "2026-06-18T04:45:00Z"）
+  var iso = timeStr.match(/^(\d{4})[-\/](\d{1,2})[-\/](\d{1,2})[T ](\d{1,2}):(\d{1,2})/);
+  if(iso){
+    try{
+      var d = new Date(timeStr);
+      if(!isNaN(d.getTime())){
+        var jst = new Date(d.getTime() + 9*3600000);
+        // UTC+9に変換済みの場合（+09:00付き）は二重加算を避ける
+        var offset = 0;
+        var offM = timeStr.match(/([+-])(\d{2}):(\d{2})$/);
+        if(offM){
+          var sign = offM[1]==='+' ? 1 : -1;
+          offset = sign * (parseInt(offM[2])*60 + parseInt(offM[3]));
+        }
+        // 常に UTC+9 に変換してUTCメソッドで表示
+        var jst9 = new Date(d.getTime() + 9*3600000);
+        return jst9.getUTCFullYear() + '/'
+             + (jst9.getUTCMonth()+1) + '/'
+             + jst9.getUTCDate() + ' '
+             + String(jst9.getUTCHours()).padStart(2,'0') + ':'
+             + String(jst9.getUTCMinutes()).padStart(2,'0')
+             + ' (JST)';
+      }
+    }catch(e){}
+  }
+  // "M/D HH:MM頃" 等すでにJST表記の場合はそのまま + (JST)を付加
+  var already = timeStr.match(/^(\d{1,4}[\/-]\d{1,2}[\/-]?\d{0,2}\s+\d{1,2}:\d{2})/);
+  if(already) return timeStr.replace(/頃$/,'') + ' (JST)';
+  return timeStr;
+}
+
 // ── 情報取得 ─────────────────────────────────────────────────────────
 // ─── 取得後の共通処理（API/JSON共用）────────────────────────────
 function applyDisData(d){
   var def=DD[DTYPE];
   var dc=document.getElementById('dis-content');
   var ab=document.getElementById('alert-box');
+  // 時刻をJST表記に正規化（API・JSON両方対応）
+  if(d && d.time) d.time = normalizeJST(d.time);
   S.dis=d;
   if(DTYPE==='quake'){S.quake=d;S.shindo=d.shindoAreas||[];renderSnTbl();renderShFilt();}
   readyLockonBtn();

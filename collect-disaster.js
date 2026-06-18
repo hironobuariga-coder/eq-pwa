@@ -165,11 +165,14 @@ function parseEqXML(xml) {
     // ISO8601 → "M/D HH:MM頃" に変換
     try {
       var d = new Date(timeM[1].trim());
-      // JST変換
+      // JST変換（YYYY/M/D HH:MM 形式）
       var jst = new Date(d.getTime() + 9 * 3600000);
-      time = (jst.getUTCMonth()+1) + '/' + jst.getUTCDate() + ' '
+      time = jst.getUTCFullYear() + '/'
+           + (jst.getUTCMonth()+1) + '/'
+           + jst.getUTCDate() + ' '
            + String(jst.getUTCHours()).padStart(2,'0') + ':'
-           + String(jst.getUTCMinutes()).padStart(2,'0') + '頃';
+           + String(jst.getUTCMinutes()).padStart(2,'0')
+           + ' (JST)';
     } catch(e) { time = timeM[1].trim(); }
   }
 
