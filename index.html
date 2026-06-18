@@ -560,7 +560,7 @@ function getLocXY(pref,city){
 var S={dis:null,quake:null,shindo:[],roads:[],yamato:null,sagawa:null,news:[],mapLinks:null};
 var RC=[],OFF=[],MIN_SH=4,TMR_MIN=45,DTYPE='quake';
 var AUTO_SH=4,AUTO_TYPHOON=true,AUTO_RAIN=true,AUTO_SNOW=true;
-var autoTriggerIv=null,lastTriggerTs='';
+var autoTriggerIv=null,lastTriggerTs=lsGs('lastTriggerTs','');
 // ─── ロックオン ──────────────────────────────────────────────────────
 var LOCKON={
   active: false,    // ロックオン中かどうか
@@ -713,7 +713,7 @@ function goTab(id,el){
 
 // ── 災害切替 ────────────────────────────────────────────────────────
 function setD(d,el){
-  DTYPE=d;lsSs('dtype',d);
+  DTYPE=d;lsSs('dtype',d);lsS('dtypeManual',true);
   var btns=document.querySelectorAll('.dt');
   for(var i=0;i<btns.length;i++)btns[i].classList.remove('on');
   el.classList.add('on');
@@ -1007,10 +1007,12 @@ function checkAutoTrigger(){
 
       if(!matched) {
         lastTriggerTs = latest.detected;
+        lsSs('lastTriggerTs', lastTriggerTs);
         return;
       }
 
       lastTriggerTs = matched.detected;
+      lsSs('lastTriggerTs', lastTriggerTs);
 
       // pill 更新
       var typeLabel={quake:'地震',typhoon:'台風',rain:'大雨',snow:'大雪'}[matched.dtype]||matched.dtype;
@@ -1029,13 +1031,21 @@ function checkAutoTrigger(){
 }
 
 function autoLaunchCollection(trigger){
-  // dtype を切り替えて情報収集タブを前面に出し、fetchAll()を呼ぶ
   var dtypeMap = {quake:'quake', typhoon:'typhoon', rain:'rain', snow:'snow'};
   var dtype = dtypeMap[trigger.dtype] || 'quake';
 
   // 既に手動で情報収集済みの場合はスキップ（Sに既存データがある）
   if(S.dis || S.quake) {
     console.log('[AutoTrigger] 既に収集済みのためスキップ');
+    return;
+  }
+
+  // ユーザーが手動でdtypeを変更していた場合はdtype上書きをスキップ
+  // （localStorageのdtypeがトリガーと異なる = ユーザー意図）
+  var savedDtype = lsGs('dtype', 'quake');
+  var manualChanged = lsG('dtypeManual', false);
+  if(manualChanged && savedDtype !== dtype){
+    console.log('[AutoTrigger] ユーザー手動変更済みのためdtype上書きスキップ:', savedDtype, '→', dtype);
     return;
   }
 
