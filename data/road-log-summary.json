@@ -1,166 +1,6 @@
 {
-  "generated": "2026-06-24T20:00:43.594Z",
+  "generated": "2026-06-24T21:43:49.799Z",
   "periods": [
-    {
-      "road": "常磐",
-      "section": "",
-      "direction": "",
-      "reason": "台風",
-      "status": "通行止め",
-      "start": "2026-06-24T05:20:12+09:00",
-      "end": "2026-06-24T05:20:12+09:00",
-      "startJST": "6/24 05:20",
-      "endJST": "6/24 05:20",
-      "startTimeJST": "",
-      "source": "e_nexco_tohoku",
-      "snapshots": [
-        "6/24 05:20"
-      ]
-    },
-    {
-      "road": "東北",
-      "section": "磐梯熱海IC〜会津若松IC",
-      "direction": "上下線",
-      "reason": "大雪",
-      "status": "通行止め",
-      "start": "2026-06-24T05:20:12+09:00",
-      "end": "2026-06-24T05:20:12+09:00",
-      "startJST": "6/24 05:20",
-      "endJST": "6/24 05:20",
-      "startTimeJST": "13:30",
-      "source": "e_nexco_tohoku",
-      "snapshots": [
-        "6/24 05:20"
-      ]
-    },
-    {
-      "road": "山形",
-      "section": "",
-      "direction": "",
-      "reason": "大雪",
-      "status": "通行止め",
-      "start": "2026-06-24T05:20:12+09:00",
-      "end": "2026-06-24T05:20:12+09:00",
-      "startJST": "6/24 05:20",
-      "endJST": "6/24 05:20",
-      "startTimeJST": "10:05",
-      "source": "e_nexco_tohoku",
-      "snapshots": [
-        "6/24 05:20"
-      ]
-    },
-    {
-      "road": "東北",
-      "section": "いわき三和IC〜郡山東IC",
-      "direction": "上下線",
-      "reason": "大雪",
-      "status": "通行止め",
-      "start": "2026-06-24T05:20:12+09:00",
-      "end": "2026-06-24T05:20:12+09:00",
-      "startJST": "6/24 05:20",
-      "endJST": "6/24 05:20",
-      "startTimeJST": "",
-      "source": "e_nexco_tohoku",
-      "snapshots": [
-        "6/24 05:20"
-      ]
-    },
-    {
-      "road": "東北",
-      "section": "桑折JCT〜桑折JCT",
-      "direction": "",
-      "reason": "大雪",
-      "status": "通行止め",
-      "start": "2026-06-24T05:20:12+09:00",
-      "end": "2026-06-24T05:20:12+09:00",
-      "startJST": "6/24 05:20",
-      "endJST": "6/24 05:20",
-      "startTimeJST": "00:20",
-      "source": "e_nexco_tohoku",
-      "snapshots": [
-        "6/24 05:20"
-      ]
-    },
-    {
-      "road": "東北",
-      "section": "白石IC〜平泉前沢IC",
-      "direction": "上下線",
-      "reason": "地震",
-      "status": "通行止め",
-      "start": "2026-06-24T05:20:12+09:00",
-      "end": "2026-06-24T05:20:12+09:00",
-      "startJST": "6/24 05:20",
-      "endJST": "6/24 05:20",
-      "startTimeJST": "18:09",
-      "source": "e_nexco_tohoku",
-      "snapshots": [
-        "6/24 05:20"
-      ]
-    },
-    {
-      "road": "東北",
-      "section": "米沢北IC〜東根IC",
-      "direction": "上下線",
-      "reason": "地震",
-      "status": "通行止め",
-      "start": "2026-06-24T05:20:12+09:00",
-      "end": "2026-06-24T05:20:12+09:00",
-      "startJST": "6/24 05:20",
-      "endJST": "6/24 05:20",
-      "startTimeJST": "23:08",
-      "source": "e_nexco_tohoku",
-      "snapshots": [
-        "6/24 05:20"
-      ]
-    },
-    {
-      "road": "東北",
-      "section": "白河IC〜平泉前沢IC",
-      "direction": "上下線",
-      "reason": "地震",
-      "status": "通行止め",
-      "start": "2026-06-24T05:20:12+09:00",
-      "end": "2026-06-24T05:20:12+09:00",
-      "startJST": "6/24 05:20",
-      "endJST": "6/24 05:20",
-      "startTimeJST": "23:08",
-      "source": "e_nexco_tohoku",
-      "snapshots": [
-        "6/24 05:20"
-      ]
-    },
-    {
-      "road": "東北",
-      "section": "本宮IC〜福島飯坂IC",
-      "direction": "上下線",
-      "reason": "大雪",
-      "status": "通行止め",
-      "start": "2026-06-24T05:20:12+09:00",
-      "end": "2026-06-24T05:20:12+09:00",
-      "startJST": "6/24 05:20",
-      "endJST": "6/24 05:20",
-      "startTimeJST": "",
-      "source": "e_nexco_tohoku",
-      "snapshots": [
-        "6/24 05:20"
-      ]
-    },
-    {
-      "road": "東北",
-      "section": "大和IC〜築館IC",
-      "direction": "上下線",
-      "reason": "大雪",
-      "status": "通行止め",
-      "start": "2026-06-24T05:20:12+09:00",
-      "end": "2026-06-24T05:20:12+09:00",
-      "startJST": "6/24 05:20",
-      "endJST": "6/24 05:20",
-      "startTimeJST": "13:20",
-      "source": "e_nexco_tohoku",
-      "snapshots": [
-        "6/24 05:20"
-      ]
-    },
     {
       "road": "上信越",
       "section": "",
@@ -168,9 +8,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-06-24T17:30:37+09:00",
-      "end": null,
+      "end": "2026-06-25T05:00:38+09:00",
       "startJST": "6/24 17:30",
-      "endJST": null,
+      "endJST": "6/25 05:00",
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
@@ -188,9 +28,9 @@
       "reason": "台風",
       "status": "通行止め",
       "start": "2026-06-24T17:30:37+09:00",
-      "end": null,
+      "end": "2026-06-25T05:00:38+09:00",
       "startJST": "6/24 17:30",
-      "endJST": null,
+      "endJST": "6/25 05:00",
       "startTimeJST": "15:00",
       "source": "e_nexco_bousai",
       "snapshots": [
@@ -208,9 +48,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-06-24T17:30:37+09:00",
-      "end": null,
+      "end": "2026-06-25T05:00:38+09:00",
       "startJST": "6/24 17:30",
-      "endJST": null,
+      "endJST": "6/25 05:00",
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
@@ -235,7 +75,8 @@
       "source": "e_nexco_kanto",
       "snapshots": [
         "6/25 02:13",
-        "6/25 05:00"
+        "6/25 05:00",
+        "6/25 06:43"
       ]
     },
     {
@@ -252,7 +93,8 @@
       "source": "e_nexco_kanto",
       "snapshots": [
         "6/25 02:13",
-        "6/25 05:00"
+        "6/25 05:00",
+        "6/25 06:43"
       ]
     },
     {
@@ -269,7 +111,8 @@
       "source": "e_nexco_kanto",
       "snapshots": [
         "6/25 02:13",
-        "6/25 05:00"
+        "6/25 05:00",
+        "6/25 06:43"
       ]
     },
     {
@@ -286,7 +129,8 @@
       "source": "e_nexco_kanto",
       "snapshots": [
         "6/25 02:13",
-        "6/25 05:00"
+        "6/25 05:00",
+        "6/25 06:43"
       ]
     },
     {
@@ -303,7 +147,8 @@
       "source": "e_nexco_kanto",
       "snapshots": [
         "6/25 02:13",
-        "6/25 05:00"
+        "6/25 05:00",
+        "6/25 06:43"
       ]
     },
     {
@@ -320,7 +165,8 @@
       "source": "e_nexco_kanto",
       "snapshots": [
         "6/25 02:13",
-        "6/25 05:00"
+        "6/25 05:00",
+        "6/25 06:43"
       ]
     }
   ]
