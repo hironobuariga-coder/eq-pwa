@@ -1,13 +1,27 @@
 {
-  "generated": "",
+  "generated": "2026-06-24 13:40:01+09:00",
   "source": "jma_xml",
-  "time": "",
-  "epicenter": "",
-  "depth": "",
-  "magnitude": "",
-  "maxShindo": "",
-  "tsunami": "情報なし",
-  "shindoAreas": [],
+  "time": "2026/6/24 13:31 (JST)",
+  "epicenter": "福島県会津",
+  "depth": "約10km",
+  "magnitude": "M3.7",
+  "maxShindo": "3",
+  "tsunami": "この地震による津波の心配はありません。",
+  "shindoAreas": [
+    {
+      "level": "3",
+      "area": "福島県"
+    },
+    {
+      "level": "1",
+      "area": "栃木県・群馬県・新潟県"
+    }
+  ],
   "alertLevel": "normal",
-  "affectedPrefs": []
+  "affectedPrefs": [
+    "福島県",
+    "栃木県",
+    "群馬県",
+    "新潟県"
+  ]
 }
