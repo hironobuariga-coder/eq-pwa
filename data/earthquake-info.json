@@ -1,36 +1,27 @@
 {
-  "generated": "2026-06-25 21:33:50+09:00",
+  "generated": "2026-06-26 02:37:17+09:00",
   "source": "jma_xml",
-  "time": "2026/6/25 20:58 (JST)",
+  "time": "2026/6/26 01:11 (JST)",
   "epicenter": "岩手県沖",
   "depth": "約50km",
-  "magnitude": "M4.7",
-  "maxShindo": "4",
+  "magnitude": "M4.6",
+  "maxShindo": "3",
   "tsunami": "この地震による津波の心配はありません。",
   "shindoAreas": [
     {
-      "level": "4",
-      "area": "青森県"
-    },
-    {
       "level": "3",
-      "area": "岩手県"
-    },
-    {
-      "level": "2",
-      "area": "宮城県"
+      "area": "青森県・岩手県"
     },
     {
       "level": "1",
-      "area": "北海道・秋田県"
+      "area": "北海道・宮城県"
     }
   ],
   "alertLevel": "normal",
   "affectedPrefs": [
     "青森県",
     "岩手県",
-    "宮城県",
     "北海道",
-    "秋田県"
+    "宮城県"
   ]
 }
