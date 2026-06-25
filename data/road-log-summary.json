@@ -1,73 +1,25 @@
 {
-  "generated": "2026-06-25T17:20:59.037Z",
+  "generated": "2026-06-25T20:18:58.848Z",
   "periods": [
-    {
-      "road": "上信越",
-      "section": "",
-      "direction": "",
-      "reason": "大雪",
-      "status": "通行止め",
-      "start": "2026-06-25T05:00:38+09:00",
-      "end": "2026-06-25T05:00:38+09:00",
-      "startJST": "6/25 05:00",
-      "endJST": "6/25 05:00",
-      "startTimeJST": "",
-      "source": "e_nexco_bousai",
-      "snapshots": [
-        "6/25 05:00"
-      ]
-    },
-    {
-      "road": "東北",
-      "section": "",
-      "direction": "",
-      "reason": "台風",
-      "status": "通行止め",
-      "start": "2026-06-25T05:00:38+09:00",
-      "end": "2026-06-25T05:00:38+09:00",
-      "startJST": "6/25 05:00",
-      "endJST": "6/25 05:00",
-      "startTimeJST": "15:00",
-      "source": "e_nexco_bousai",
-      "snapshots": [
-        "6/25 05:00"
-      ]
-    },
-    {
-      "road": "長野",
-      "section": "",
-      "direction": "",
-      "reason": "大雪",
-      "status": "通行止め",
-      "start": "2026-06-25T05:00:38+09:00",
-      "end": "2026-06-25T05:00:38+09:00",
-      "startJST": "6/25 05:00",
-      "endJST": "6/25 05:00",
-      "startTimeJST": "",
-      "source": "e_nexco_bousai",
-      "snapshots": [
-        "6/25 05:00"
-      ]
-    },
     {
       "road": "東北",
       "section": "矢板IC〜白河IC",
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-06-25T05:00:38+09:00",
+      "start": "2026-06-25T06:43:41+09:00",
       "end": null,
-      "startJST": "6/25 05:00",
+      "startJST": "6/25 06:43",
       "endJST": null,
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
-        "6/25 05:00",
         "6/25 06:43",
         "6/25 08:16",
         "6/25 13:19",
         "6/25 23:50",
-        "6/26 02:20"
+        "6/26 02:20",
+        "6/26 05:18"
       ]
     },
     {
@@ -76,19 +28,19 @@
       "direction": "上下線",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-06-25T05:00:38+09:00",
+      "start": "2026-06-25T06:43:41+09:00",
       "end": null,
-      "startJST": "6/25 05:00",
+      "startJST": "6/25 06:43",
       "endJST": null,
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
-        "6/25 05:00",
         "6/25 06:43",
         "6/25 08:16",
         "6/25 13:19",
         "6/25 23:50",
-        "6/26 02:20"
+        "6/26 02:20",
+        "6/26 05:18"
       ]
     },
     {
@@ -97,19 +49,19 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-06-25T05:00:38+09:00",
+      "start": "2026-06-25T06:43:41+09:00",
       "end": null,
-      "startJST": "6/25 05:00",
+      "startJST": "6/25 06:43",
       "endJST": null,
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
-        "6/25 05:00",
         "6/25 06:43",
         "6/25 08:16",
         "6/25 13:19",
         "6/25 23:50",
-        "6/26 02:20"
+        "6/26 02:20",
+        "6/26 05:18"
       ]
     },
     {
@@ -118,19 +70,19 @@
       "direction": "上り",
       "reason": "",
       "status": "通行止め",
-      "start": "2026-06-25T05:00:38+09:00",
+      "start": "2026-06-25T06:43:41+09:00",
       "end": null,
-      "startJST": "6/25 05:00",
+      "startJST": "6/25 06:43",
       "endJST": null,
       "startTimeJST": "20:15",
       "source": "e_nexco_kanto",
       "snapshots": [
-        "6/25 05:00",
         "6/25 06:43",
         "6/25 08:16",
         "6/25 13:19",
         "6/25 23:50",
-        "6/26 02:20"
+        "6/26 02:20",
+        "6/26 05:18"
       ]
     },
     {
@@ -139,19 +91,19 @@
       "direction": "上下線",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-06-25T05:00:38+09:00",
+      "start": "2026-06-25T06:43:41+09:00",
       "end": null,
-      "startJST": "6/25 05:00",
+      "startJST": "6/25 06:43",
       "endJST": null,
       "startTimeJST": "09:40",
       "source": "e_nexco_kanto",
       "snapshots": [
-        "6/25 05:00",
         "6/25 06:43",
         "6/25 08:16",
         "6/25 13:19",
         "6/25 23:50",
-        "6/26 02:20"
+        "6/26 02:20",
+        "6/26 05:18"
       ]
     },
     {
@@ -160,19 +112,19 @@
       "direction": "",
       "reason": "事故",
       "status": "通行止め",
-      "start": "2026-06-25T05:00:38+09:00",
+      "start": "2026-06-25T06:43:41+09:00",
       "end": null,
-      "startJST": "6/25 05:00",
+      "startJST": "6/25 06:43",
       "endJST": null,
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
-        "6/25 05:00",
         "6/25 06:43",
         "6/25 08:16",
         "6/25 13:19",
         "6/25 23:50",
-        "6/26 02:20"
+        "6/26 02:20",
+        "6/26 05:18"
       ]
     }
   ]
