@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-25T04:19:22.017Z",
+  "generated": "2026-06-25T08:29:45.816Z",
   "periods": [
     {
       "road": "上信越",
@@ -68,9 +68,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-06-25T02:13:18+09:00",
-      "end": null,
+      "end": "2026-06-25T13:19:13+09:00",
       "startJST": "6/25 02:13",
-      "endJST": null,
+      "endJST": "6/25 13:19",
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
@@ -88,9 +88,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-06-25T02:13:18+09:00",
-      "end": null,
+      "end": "2026-06-25T13:19:13+09:00",
       "startJST": "6/25 02:13",
-      "endJST": null,
+      "endJST": "6/25 13:19",
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
@@ -108,9 +108,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-06-25T02:13:18+09:00",
-      "end": null,
+      "end": "2026-06-25T13:19:13+09:00",
       "startJST": "6/25 02:13",
-      "endJST": null,
+      "endJST": "6/25 13:19",
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
@@ -128,9 +128,9 @@
       "reason": "",
       "status": "通行止め",
       "start": "2026-06-25T02:13:18+09:00",
-      "end": null,
+      "end": "2026-06-25T13:19:13+09:00",
       "startJST": "6/25 02:13",
-      "endJST": null,
+      "endJST": "6/25 13:19",
       "startTimeJST": "20:15",
       "source": "e_nexco_kanto",
       "snapshots": [
@@ -148,9 +148,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-06-25T02:13:18+09:00",
-      "end": null,
+      "end": "2026-06-25T13:19:13+09:00",
       "startJST": "6/25 02:13",
-      "endJST": null,
+      "endJST": "6/25 13:19",
       "startTimeJST": "09:40",
       "source": "e_nexco_kanto",
       "snapshots": [
@@ -168,9 +168,9 @@
       "reason": "事故",
       "status": "通行止め",
       "start": "2026-06-25T02:13:18+09:00",
-      "end": null,
+      "end": "2026-06-25T13:19:13+09:00",
       "startJST": "6/25 02:13",
-      "endJST": null,
+      "endJST": "6/25 13:19",
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
