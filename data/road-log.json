@@ -1,65 +1,5 @@
 [
   {
-    "ts": "2026-06-26T02:20:50+09:00",
-    "closures": [
-      {
-        "road": "東北",
-        "section": "矢板IC〜白河IC",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "",
-        "source": "e_nexco_kanto"
-      },
-      {
-        "road": "上信越",
-        "section": "藤岡IC〜上田菅平IC",
-        "direction": "上下線",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "",
-        "source": "e_nexco_kanto"
-      },
-      {
-        "road": "道央",
-        "section": "",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "",
-        "source": "e_nexco_kanto"
-      },
-      {
-        "road": "東北",
-        "section": "栃木IC〜岩舟JCT",
-        "direction": "上り",
-        "status": "通行止め",
-        "reason": "",
-        "startTime": "20:15",
-        "source": "e_nexco_kanto"
-      },
-      {
-        "road": "関越",
-        "section": "渋川伊香保IC〜湯沢IC",
-        "direction": "上下線",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "09:40",
-        "source": "e_nexco_kanto"
-      },
-      {
-        "road": "圏央",
-        "section": "#久喜白岡JCT〜#幸手IC",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "事故",
-        "startTime": "",
-        "source": "e_nexco_kanto"
-      }
-    ],
-    "rawCount": 20
-  },
-  {
     "ts": "2026-06-26T05:18:53+09:00",
     "closures": [
       {
@@ -366,6 +306,93 @@
   },
   {
     "ts": "2026-06-27T00:29:26+09:00",
+    "closures": [
+      {
+        "road": "上信越",
+        "section": "",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "",
+        "source": "e_nexco_bousai"
+      },
+      {
+        "road": "東北",
+        "section": "",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "台風",
+        "startTime": "15:00",
+        "source": "e_nexco_bousai"
+      },
+      {
+        "road": "長野",
+        "section": "",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "",
+        "source": "e_nexco_bousai"
+      },
+      {
+        "road": "東北",
+        "section": "矢板IC〜白河IC",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "",
+        "source": "e_nexco_kanto"
+      },
+      {
+        "road": "上信越",
+        "section": "藤岡IC〜上田菅平IC",
+        "direction": "上下線",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "",
+        "source": "e_nexco_kanto"
+      },
+      {
+        "road": "道央",
+        "section": "",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "",
+        "source": "e_nexco_kanto"
+      },
+      {
+        "road": "東北",
+        "section": "栃木IC〜岩舟JCT",
+        "direction": "上り",
+        "status": "通行止め",
+        "reason": "",
+        "startTime": "20:15",
+        "source": "e_nexco_kanto"
+      },
+      {
+        "road": "関越",
+        "section": "渋川伊香保IC〜湯沢IC",
+        "direction": "上下線",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "09:40",
+        "source": "e_nexco_kanto"
+      },
+      {
+        "road": "圏央",
+        "section": "#久喜白岡JCT〜#幸手IC",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "事故",
+        "startTime": "",
+        "source": "e_nexco_kanto"
+      }
+    ],
+    "rawCount": 29
+  },
+  {
+    "ts": "2026-06-27T03:00:28+09:00",
     "closures": [
       {
         "road": "上信越",
