@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-26T18:00:35.608Z",
+  "generated": "2026-06-26T20:03:53.038Z",
   "periods": [
     {
       "road": "東北",
@@ -8,9 +8,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-06-26T05:18:53+09:00",
-      "end": null,
+      "end": "2026-06-27T03:00:28+09:00",
       "startJST": "6/26 05:18",
-      "endJST": null,
+      "endJST": "6/27 03:00",
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
@@ -30,9 +30,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-06-26T05:18:53+09:00",
-      "end": null,
+      "end": "2026-06-27T03:00:28+09:00",
       "startJST": "6/26 05:18",
-      "endJST": null,
+      "endJST": "6/27 03:00",
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
@@ -52,9 +52,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-06-26T05:18:53+09:00",
-      "end": null,
+      "end": "2026-06-27T03:00:28+09:00",
       "startJST": "6/26 05:18",
-      "endJST": null,
+      "endJST": "6/27 03:00",
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
@@ -74,9 +74,9 @@
       "reason": "",
       "status": "通行止め",
       "start": "2026-06-26T05:18:53+09:00",
-      "end": null,
+      "end": "2026-06-27T03:00:28+09:00",
       "startJST": "6/26 05:18",
-      "endJST": null,
+      "endJST": "6/27 03:00",
       "startTimeJST": "20:15",
       "source": "e_nexco_kanto",
       "snapshots": [
@@ -96,9 +96,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-06-26T05:18:53+09:00",
-      "end": null,
+      "end": "2026-06-27T03:00:28+09:00",
       "startJST": "6/26 05:18",
-      "endJST": null,
+      "endJST": "6/27 03:00",
       "startTimeJST": "09:40",
       "source": "e_nexco_kanto",
       "snapshots": [
@@ -118,9 +118,9 @@
       "reason": "事故",
       "status": "通行止め",
       "start": "2026-06-26T05:18:53+09:00",
-      "end": null,
+      "end": "2026-06-27T03:00:28+09:00",
       "startJST": "6/26 05:18",
-      "endJST": null,
+      "endJST": "6/27 03:00",
       "startTimeJST": "",
       "source": "e_nexco_kanto",
       "snapshots": [
@@ -147,7 +147,8 @@
       "source": "e_nexco_bousai",
       "snapshots": [
         "6/27 00:29",
-        "6/27 03:00"
+        "6/27 03:00",
+        "6/27 05:03"
       ]
     },
     {
@@ -164,7 +165,8 @@
       "source": "e_nexco_bousai",
       "snapshots": [
         "6/27 00:29",
-        "6/27 03:00"
+        "6/27 03:00",
+        "6/27 05:03"
       ]
     },
     {
@@ -181,7 +183,8 @@
       "source": "e_nexco_bousai",
       "snapshots": [
         "6/27 00:29",
-        "6/27 03:00"
+        "6/27 03:00",
+        "6/27 05:03"
       ]
     }
   ]
