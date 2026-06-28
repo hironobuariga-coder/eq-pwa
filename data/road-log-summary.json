@@ -1,48 +1,6 @@
 {
-  "generated": "2026-06-28T00:12:02.855Z",
+  "generated": "2026-06-28T05:25:50.886Z",
   "periods": [
-    {
-      "road": "道東",
-      "section": "トマムIC〜十勝清水IC",
-      "direction": "",
-      "reason": "工事",
-      "status": "通行止め",
-      "start": "2026-06-27T13:11:59+09:00",
-      "end": null,
-      "startJST": "6/27 13:11",
-      "endJST": null,
-      "startTimeJST": "",
-      "source": "e_nexco_kita",
-      "snapshots": [
-        "6/27 13:11",
-        "6/27 16:55",
-        "6/27 19:19",
-        "6/27 21:14",
-        "6/27 23:51",
-        "6/28 09:11"
-      ]
-    },
-    {
-      "road": "道央",
-      "section": "滝川IC〜深川IC",
-      "direction": "",
-      "reason": "大雪",
-      "status": "通行止め",
-      "start": "2026-06-27T13:11:59+09:00",
-      "end": null,
-      "startJST": "6/27 13:11",
-      "endJST": null,
-      "startTimeJST": "",
-      "source": "e_nexco_kita",
-      "snapshots": [
-        "6/27 13:11",
-        "6/27 16:55",
-        "6/27 19:19",
-        "6/27 21:14",
-        "6/27 23:51",
-        "6/28 09:11"
-      ]
-    },
     {
       "road": "東北",
       "section": "矢板IC〜白河IC",
@@ -146,6 +104,48 @@
         "6/27 23:51",
         "6/28 01:16",
         "6/28 03:14"
+      ]
+    },
+    {
+      "road": "道東",
+      "section": "トマムIC〜十勝清水IC",
+      "direction": "",
+      "reason": "工事",
+      "status": "通行止め",
+      "start": "2026-06-27T16:55:42+09:00",
+      "end": null,
+      "startJST": "6/27 16:55",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_kita",
+      "snapshots": [
+        "6/27 16:55",
+        "6/27 19:19",
+        "6/27 21:14",
+        "6/27 23:51",
+        "6/28 09:11",
+        "6/28 14:25"
+      ]
+    },
+    {
+      "road": "道央",
+      "section": "滝川IC〜深川IC",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-06-27T16:55:42+09:00",
+      "end": null,
+      "startJST": "6/27 16:55",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_kita",
+      "snapshots": [
+        "6/27 16:55",
+        "6/27 19:19",
+        "6/27 21:14",
+        "6/27 23:51",
+        "6/28 09:11",
+        "6/28 14:25"
       ]
     },
     {

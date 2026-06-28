@@ -1,29 +1,5 @@
 [
   {
-    "ts": "2026-06-27T13:11:59+09:00",
-    "closures": [
-      {
-        "road": "道東",
-        "section": "トマムIC〜十勝清水IC",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "工事",
-        "startTime": "",
-        "source": "e_nexco_kita"
-      },
-      {
-        "road": "道央",
-        "section": "滝川IC〜深川IC",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "",
-        "source": "e_nexco_kita"
-      }
-    ],
-    "rawCount": 26
-  },
-  {
     "ts": "2026-06-27T16:55:42+09:00",
     "closures": [
       {
@@ -431,6 +407,30 @@
   },
   {
     "ts": "2026-06-28T09:11:55+09:00",
+    "closures": [
+      {
+        "road": "道東",
+        "section": "トマムIC〜十勝清水IC",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "工事",
+        "startTime": "",
+        "source": "e_nexco_kita"
+      },
+      {
+        "road": "道央",
+        "section": "滝川IC〜深川IC",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "",
+        "source": "e_nexco_kita"
+      }
+    ],
+    "rawCount": 26
+  },
+  {
+    "ts": "2026-06-28T14:25:43+09:00",
     "closures": [
       {
         "road": "道東",
