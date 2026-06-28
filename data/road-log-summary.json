@@ -1,102 +1,6 @@
 {
-  "generated": "2026-06-28T17:22:55.897Z",
+  "generated": "2026-06-28T19:41:54.985Z",
   "periods": [
-    {
-      "road": "東北",
-      "section": "矢板IC〜白河IC",
-      "direction": "",
-      "reason": "大雪",
-      "status": "通行止め",
-      "start": "2026-06-28T03:14:15+09:00",
-      "end": "2026-06-28T03:14:15+09:00",
-      "startJST": "6/28 03:14",
-      "endJST": "6/28 03:14",
-      "startTimeJST": "",
-      "source": "e_nexco_kanto",
-      "snapshots": [
-        "6/28 03:14"
-      ]
-    },
-    {
-      "road": "上信越",
-      "section": "藤岡IC〜上田菅平IC",
-      "direction": "上下線",
-      "reason": "大雪",
-      "status": "通行止め",
-      "start": "2026-06-28T03:14:15+09:00",
-      "end": "2026-06-28T03:14:15+09:00",
-      "startJST": "6/28 03:14",
-      "endJST": "6/28 03:14",
-      "startTimeJST": "",
-      "source": "e_nexco_kanto",
-      "snapshots": [
-        "6/28 03:14"
-      ]
-    },
-    {
-      "road": "道央",
-      "section": "",
-      "direction": "",
-      "reason": "大雪",
-      "status": "通行止め",
-      "start": "2026-06-28T03:14:15+09:00",
-      "end": "2026-06-28T03:14:15+09:00",
-      "startJST": "6/28 03:14",
-      "endJST": "6/28 03:14",
-      "startTimeJST": "",
-      "source": "e_nexco_kanto",
-      "snapshots": [
-        "6/28 03:14"
-      ]
-    },
-    {
-      "road": "東北",
-      "section": "栃木IC〜岩舟JCT",
-      "direction": "上り",
-      "reason": "",
-      "status": "通行止め",
-      "start": "2026-06-28T03:14:15+09:00",
-      "end": "2026-06-28T03:14:15+09:00",
-      "startJST": "6/28 03:14",
-      "endJST": "6/28 03:14",
-      "startTimeJST": "20:15",
-      "source": "e_nexco_kanto",
-      "snapshots": [
-        "6/28 03:14"
-      ]
-    },
-    {
-      "road": "関越",
-      "section": "渋川伊香保IC〜湯沢IC",
-      "direction": "上下線",
-      "reason": "大雪",
-      "status": "通行止め",
-      "start": "2026-06-28T03:14:15+09:00",
-      "end": "2026-06-28T03:14:15+09:00",
-      "startJST": "6/28 03:14",
-      "endJST": "6/28 03:14",
-      "startTimeJST": "09:40",
-      "source": "e_nexco_kanto",
-      "snapshots": [
-        "6/28 03:14"
-      ]
-    },
-    {
-      "road": "圏央",
-      "section": "#久喜白岡JCT〜#幸手IC",
-      "direction": "",
-      "reason": "事故",
-      "status": "通行止め",
-      "start": "2026-06-28T03:14:15+09:00",
-      "end": "2026-06-28T03:14:15+09:00",
-      "startJST": "6/28 03:14",
-      "endJST": "6/28 03:14",
-      "startTimeJST": "",
-      "source": "e_nexco_kanto",
-      "snapshots": [
-        "6/28 03:14"
-      ]
-    },
     {
       "road": "道東",
       "section": "トマムIC〜十勝清水IC",
@@ -115,7 +19,8 @@
         "6/28 18:27",
         "6/28 20:55",
         "6/29 00:37",
-        "6/29 02:22"
+        "6/29 02:22",
+        "6/29 04:41"
       ]
     },
     {
@@ -136,7 +41,8 @@
         "6/28 18:27",
         "6/28 20:55",
         "6/29 00:37",
-        "6/29 02:22"
+        "6/29 02:22",
+        "6/29 04:41"
       ]
     },
     {
@@ -152,7 +58,8 @@
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "6/29 02:22"
+        "6/29 02:22",
+        "6/29 04:41"
       ]
     },
     {
@@ -168,7 +75,8 @@
       "startTimeJST": "13:30",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "6/29 02:22"
+        "6/29 02:22",
+        "6/29 04:41"
       ]
     },
     {
@@ -184,7 +92,8 @@
       "startTimeJST": "10:05",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "6/29 02:22"
+        "6/29 02:22",
+        "6/29 04:41"
       ]
     },
     {
@@ -200,7 +109,8 @@
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "6/29 02:22"
+        "6/29 02:22",
+        "6/29 04:41"
       ]
     },
     {
@@ -216,7 +126,8 @@
       "startTimeJST": "00:20",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "6/29 02:22"
+        "6/29 02:22",
+        "6/29 04:41"
       ]
     },
     {
@@ -232,7 +143,8 @@
       "startTimeJST": "18:09",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "6/29 02:22"
+        "6/29 02:22",
+        "6/29 04:41"
       ]
     },
     {
@@ -248,7 +160,8 @@
       "startTimeJST": "23:08",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "6/29 02:22"
+        "6/29 02:22",
+        "6/29 04:41"
       ]
     },
     {
@@ -264,7 +177,8 @@
       "startTimeJST": "23:08",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "6/29 02:22"
+        "6/29 02:22",
+        "6/29 04:41"
       ]
     },
     {
@@ -280,7 +194,8 @@
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "6/29 02:22"
+        "6/29 02:22",
+        "6/29 04:41"
       ]
     },
     {
@@ -296,7 +211,8 @@
       "startTimeJST": "13:20",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "6/29 02:22"
+        "6/29 02:22",
+        "6/29 04:41"
       ]
     }
   ]
