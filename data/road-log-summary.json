@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-30T08:35:49.532Z",
+  "generated": "2026-06-30T11:49:22.819Z",
   "periods": [
     {
       "road": "道東",
@@ -14,7 +14,8 @@
       "startTimeJST": "",
       "source": "e_nexco_kita",
       "snapshots": [
-        "6/30 17:35"
+        "6/30 17:35",
+        "6/30 20:49"
       ]
     },
     {
@@ -30,7 +31,8 @@
       "startTimeJST": "",
       "source": "e_nexco_kita",
       "snapshots": [
-        "6/30 17:35"
+        "6/30 17:35",
+        "6/30 20:49"
       ]
     }
   ]
