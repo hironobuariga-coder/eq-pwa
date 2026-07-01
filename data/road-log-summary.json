@@ -1,38 +1,6 @@
 {
-  "generated": "2026-07-01T15:48:22.921Z",
+  "generated": "2026-07-01T18:07:13.535Z",
   "periods": [
-    {
-      "road": "道東",
-      "section": "トマムIC〜十勝清水IC",
-      "direction": "",
-      "reason": "工事",
-      "status": "通行止め",
-      "start": "2026-07-01T02:10:40+09:00",
-      "end": "2026-07-01T02:10:40+09:00",
-      "startJST": "7/1 02:10",
-      "endJST": "7/1 02:10",
-      "startTimeJST": "",
-      "source": "e_nexco_kita",
-      "snapshots": [
-        "7/1 02:10"
-      ]
-    },
-    {
-      "road": "道央",
-      "section": "滝川IC〜深川IC",
-      "direction": "",
-      "reason": "大雪",
-      "status": "通行止め",
-      "start": "2026-07-01T02:10:40+09:00",
-      "end": "2026-07-01T02:10:40+09:00",
-      "startJST": "7/1 02:10",
-      "endJST": "7/1 02:10",
-      "startTimeJST": "",
-      "source": "e_nexco_kita",
-      "snapshots": [
-        "7/1 02:10"
-      ]
-    },
     {
       "road": "上信越",
       "section": "",
@@ -47,7 +15,8 @@
       "source": "e_nexco_bousai",
       "snapshots": [
         "7/1 21:44",
-        "7/2 00:48"
+        "7/2 00:48",
+        "7/2 03:07"
       ]
     },
     {
@@ -64,7 +33,8 @@
       "source": "e_nexco_bousai",
       "snapshots": [
         "7/1 21:44",
-        "7/2 00:48"
+        "7/2 00:48",
+        "7/2 03:07"
       ]
     },
     {
@@ -81,7 +51,8 @@
       "source": "e_nexco_bousai",
       "snapshots": [
         "7/1 21:44",
-        "7/2 00:48"
+        "7/2 00:48",
+        "7/2 03:07"
       ]
     }
   ]
