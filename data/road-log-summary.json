@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-01T12:44:36.862Z",
+  "generated": "2026-07-01T15:48:22.921Z",
   "periods": [
     {
       "road": "道東",
@@ -7,14 +7,13 @@
       "direction": "",
       "reason": "工事",
       "status": "通行止め",
-      "start": "2026-06-30T23:38:50+09:00",
+      "start": "2026-07-01T02:10:40+09:00",
       "end": "2026-07-01T02:10:40+09:00",
-      "startJST": "6/30 23:38",
+      "startJST": "7/1 02:10",
       "endJST": "7/1 02:10",
       "startTimeJST": "",
       "source": "e_nexco_kita",
       "snapshots": [
-        "6/30 23:38",
         "7/1 02:10"
       ]
     },
@@ -24,14 +23,13 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-06-30T23:38:50+09:00",
+      "start": "2026-07-01T02:10:40+09:00",
       "end": "2026-07-01T02:10:40+09:00",
-      "startJST": "6/30 23:38",
+      "startJST": "7/1 02:10",
       "endJST": "7/1 02:10",
       "startTimeJST": "",
       "source": "e_nexco_kita",
       "snapshots": [
-        "6/30 23:38",
         "7/1 02:10"
       ]
     },
@@ -48,7 +46,8 @@
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
-        "7/1 21:44"
+        "7/1 21:44",
+        "7/2 00:48"
       ]
     },
     {
@@ -64,7 +63,8 @@
       "startTimeJST": "15:00",
       "source": "e_nexco_bousai",
       "snapshots": [
-        "7/1 21:44"
+        "7/1 21:44",
+        "7/2 00:48"
       ]
     },
     {
@@ -80,7 +80,8 @@
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
-        "7/1 21:44"
+        "7/1 21:44",
+        "7/2 00:48"
       ]
     }
   ]
