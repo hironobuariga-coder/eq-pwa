@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-01T18:07:13.535Z",
+  "generated": "2026-07-01T20:07:34.733Z",
   "periods": [
     {
       "road": "上信越",
@@ -16,7 +16,8 @@
       "snapshots": [
         "7/1 21:44",
         "7/2 00:48",
-        "7/2 03:07"
+        "7/2 03:07",
+        "7/2 05:07"
       ]
     },
     {
@@ -34,7 +35,8 @@
       "snapshots": [
         "7/1 21:44",
         "7/2 00:48",
-        "7/2 03:07"
+        "7/2 03:07",
+        "7/2 05:07"
       ]
     },
     {
@@ -52,7 +54,88 @@
       "snapshots": [
         "7/1 21:44",
         "7/2 00:48",
-        "7/2 03:07"
+        "7/2 03:07",
+        "7/2 05:07"
+      ]
+    },
+    {
+      "road": "中央",
+      "section": "",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-02T05:07:24+09:00",
+      "end": null,
+      "startJST": "7/2 05:07",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "7/2 05:07"
+      ]
+    },
+    {
+      "road": "北陸",
+      "section": "",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-02T05:07:24+09:00",
+      "end": null,
+      "startJST": "7/2 05:07",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "7/2 05:07"
+      ]
+    },
+    {
+      "road": "北陸",
+      "section": "朝日IC〜新潟中央JCT",
+      "direction": "上下線",
+      "reason": "地震",
+      "status": "通行止め",
+      "start": "2026-07-02T05:07:24+09:00",
+      "end": null,
+      "startJST": "7/2 05:07",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "7/2 05:07"
+      ]
+    },
+    {
+      "road": "関越",
+      "section": "の湯沢IC〜長岡IC",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-02T05:07:24+09:00",
+      "end": null,
+      "startJST": "7/2 05:07",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "7/2 05:07"
+      ]
+    },
+    {
+      "road": "関越",
+      "section": "関越道上り線小出IC〜塩沢石打IC",
+      "direction": "上り",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-02T05:07:24+09:00",
+      "end": null,
+      "startJST": "7/2 05:07",
+      "endJST": null,
+      "startTimeJST": "22:15",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "7/2 05:07"
       ]
     }
   ]
