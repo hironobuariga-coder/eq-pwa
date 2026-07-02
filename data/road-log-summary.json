@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-02T04:16:17.138Z",
+  "generated": "2026-07-02T08:20:15.260Z",
   "periods": [
     {
       "road": "上信越",
@@ -8,9 +8,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-01T21:44:30+09:00",
-      "end": null,
+      "end": "2026-07-02T13:16:09+09:00",
       "startJST": "7/1 21:44",
-      "endJST": null,
+      "endJST": "7/2 13:16",
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
@@ -51,9 +51,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-01T21:44:30+09:00",
-      "end": null,
+      "end": "2026-07-02T13:16:09+09:00",
       "startJST": "7/1 21:44",
-      "endJST": null,
+      "endJST": "7/2 13:16",
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
@@ -73,9 +73,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-02T05:07:24+09:00",
-      "end": null,
+      "end": "2026-07-02T13:16:09+09:00",
       "startJST": "7/2 05:07",
-      "endJST": null,
+      "endJST": "7/2 13:16",
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
@@ -92,9 +92,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-02T05:07:24+09:00",
-      "end": null,
+      "end": "2026-07-02T13:16:09+09:00",
       "startJST": "7/2 05:07",
-      "endJST": null,
+      "endJST": "7/2 13:16",
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
@@ -111,9 +111,9 @@
       "reason": "地震",
       "status": "通行止め",
       "start": "2026-07-02T05:07:24+09:00",
-      "end": null,
+      "end": "2026-07-02T13:16:09+09:00",
       "startJST": "7/2 05:07",
-      "endJST": null,
+      "endJST": "7/2 13:16",
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
@@ -130,9 +130,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-02T05:07:24+09:00",
-      "end": null,
+      "end": "2026-07-02T13:16:09+09:00",
       "startJST": "7/2 05:07",
-      "endJST": null,
+      "endJST": "7/2 13:16",
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
@@ -149,9 +149,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-02T05:07:24+09:00",
-      "end": null,
+      "end": "2026-07-02T13:16:09+09:00",
       "startJST": "7/2 05:07",
-      "endJST": null,
+      "endJST": "7/2 13:16",
       "startTimeJST": "22:15",
       "source": "e_nexco_niigata",
       "snapshots": [
