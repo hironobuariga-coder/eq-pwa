@@ -1,70 +1,35 @@
 {
-  "generated": "2026-07-02T22:15:38.548Z",
+  "generated": "2026-07-03T00:16:20.019Z",
   "periods": [
-    {
-      "road": "上信越",
-      "section": "",
-      "direction": "",
-      "reason": "大雪",
-      "status": "通行止め",
-      "start": "2026-07-02T08:25:22+09:00",
-      "end": "2026-07-02T13:16:09+09:00",
-      "startJST": "7/2 08:25",
-      "endJST": "7/2 13:16",
-      "startTimeJST": "",
-      "source": "e_nexco_bousai",
-      "snapshots": [
-        "7/2 08:25",
-        "7/2 13:16"
-      ]
-    },
-    {
-      "road": "東北",
-      "section": "",
-      "direction": "",
-      "reason": "台風",
-      "status": "通行止め",
-      "start": "2026-07-02T08:25:22+09:00",
-      "end": "2026-07-02T08:25:22+09:00",
-      "startJST": "7/2 08:25",
-      "endJST": "7/2 08:25",
-      "startTimeJST": "15:00",
-      "source": "e_nexco_bousai",
-      "snapshots": [
-        "7/2 08:25"
-      ]
-    },
-    {
-      "road": "長野",
-      "section": "",
-      "direction": "",
-      "reason": "大雪",
-      "status": "通行止め",
-      "start": "2026-07-02T08:25:22+09:00",
-      "end": "2026-07-02T13:16:09+09:00",
-      "startJST": "7/2 08:25",
-      "endJST": "7/2 13:16",
-      "startTimeJST": "",
-      "source": "e_nexco_bousai",
-      "snapshots": [
-        "7/2 08:25",
-        "7/2 13:16"
-      ]
-    },
     {
       "road": "中央",
       "section": "",
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-07-02T08:25:22+09:00",
+      "start": "2026-07-02T13:16:09+09:00",
       "end": "2026-07-02T13:16:09+09:00",
-      "startJST": "7/2 08:25",
+      "startJST": "7/2 13:16",
       "endJST": "7/2 13:16",
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
-        "7/2 08:25",
+        "7/2 13:16"
+      ]
+    },
+    {
+      "road": "上信越",
+      "section": "",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-02T13:16:09+09:00",
+      "end": "2026-07-02T13:16:09+09:00",
+      "startJST": "7/2 13:16",
+      "endJST": "7/2 13:16",
+      "startTimeJST": "",
+      "source": "e_nexco_niigata",
+      "snapshots": [
         "7/2 13:16"
       ]
     },
@@ -74,14 +39,29 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-07-02T08:25:22+09:00",
+      "start": "2026-07-02T13:16:09+09:00",
       "end": "2026-07-02T13:16:09+09:00",
-      "startJST": "7/2 08:25",
+      "startJST": "7/2 13:16",
       "endJST": "7/2 13:16",
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
-        "7/2 08:25",
+        "7/2 13:16"
+      ]
+    },
+    {
+      "road": "長野",
+      "section": "",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-02T13:16:09+09:00",
+      "end": "2026-07-02T13:16:09+09:00",
+      "startJST": "7/2 13:16",
+      "endJST": "7/2 13:16",
+      "startTimeJST": "21:00",
+      "source": "e_nexco_niigata",
+      "snapshots": [
         "7/2 13:16"
       ]
     },
@@ -91,14 +71,13 @@
       "direction": "上下線",
       "reason": "地震",
       "status": "通行止め",
-      "start": "2026-07-02T08:25:22+09:00",
+      "start": "2026-07-02T13:16:09+09:00",
       "end": "2026-07-02T13:16:09+09:00",
-      "startJST": "7/2 08:25",
+      "startJST": "7/2 13:16",
       "endJST": "7/2 13:16",
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
-        "7/2 08:25",
         "7/2 13:16"
       ]
     },
@@ -108,14 +87,13 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-07-02T08:25:22+09:00",
+      "start": "2026-07-02T13:16:09+09:00",
       "end": "2026-07-02T13:16:09+09:00",
-      "startJST": "7/2 08:25",
+      "startJST": "7/2 13:16",
       "endJST": "7/2 13:16",
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
-        "7/2 08:25",
         "7/2 13:16"
       ]
     },
@@ -125,14 +103,13 @@
       "direction": "上り",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-07-02T08:25:22+09:00",
+      "start": "2026-07-02T13:16:09+09:00",
       "end": "2026-07-02T13:16:09+09:00",
-      "startJST": "7/2 08:25",
+      "startJST": "7/2 13:16",
       "endJST": "7/2 13:16",
       "startTimeJST": "22:15",
       "source": "e_nexco_niigata",
       "snapshots": [
-        "7/2 08:25",
         "7/2 13:16"
       ]
     },
@@ -149,7 +126,8 @@
       "startTimeJST": "",
       "source": "e_nexco_kita",
       "snapshots": [
-        "7/3 07:15"
+        "7/3 07:15",
+        "7/3 09:16"
       ]
     },
     {
@@ -165,7 +143,8 @@
       "startTimeJST": "",
       "source": "e_nexco_kita",
       "snapshots": [
-        "7/3 07:15"
+        "7/3 07:15",
+        "7/3 09:16"
       ]
     }
   ]
