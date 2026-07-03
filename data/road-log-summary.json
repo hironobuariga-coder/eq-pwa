@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-03T08:20:01.488Z",
+  "generated": "2026-07-03T11:39:27.066Z",
   "periods": [
     {
       "road": "道東",
@@ -8,9 +8,9 @@
       "reason": "工事",
       "status": "通行止め",
       "start": "2026-07-03T07:15:32+09:00",
-      "end": null,
+      "end": "2026-07-03T17:19:55+09:00",
       "startJST": "7/3 07:15",
-      "endJST": null,
+      "endJST": "7/3 17:19",
       "startTimeJST": "",
       "source": "e_nexco_kita",
       "snapshots": [
@@ -27,9 +27,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-03T07:15:32+09:00",
-      "end": null,
+      "end": "2026-07-03T17:19:55+09:00",
       "startJST": "7/3 07:15",
-      "endJST": null,
+      "endJST": "7/3 17:19",
       "startTimeJST": "",
       "source": "e_nexco_kita",
       "snapshots": [
