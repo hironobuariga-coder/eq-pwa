@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-03T22:12:57.879Z",
+  "generated": "2026-07-04T00:14:48.761Z",
   "periods": [
     {
       "road": "道東",
@@ -7,14 +7,13 @@
       "direction": "",
       "reason": "工事",
       "status": "通行止め",
-      "start": "2026-07-03T07:15:32+09:00",
+      "start": "2026-07-03T09:16:12+09:00",
       "end": "2026-07-03T17:19:55+09:00",
-      "startJST": "7/3 07:15",
+      "startJST": "7/3 09:16",
       "endJST": "7/3 17:19",
       "startTimeJST": "",
       "source": "e_nexco_kita",
       "snapshots": [
-        "7/3 07:15",
         "7/3 09:16",
         "7/3 13:51",
         "7/3 17:19"
@@ -26,14 +25,13 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-07-03T07:15:32+09:00",
+      "start": "2026-07-03T09:16:12+09:00",
       "end": "2026-07-03T17:19:55+09:00",
-      "startJST": "7/3 07:15",
+      "startJST": "7/3 09:16",
       "endJST": "7/3 17:19",
       "startTimeJST": "",
       "source": "e_nexco_kita",
       "snapshots": [
-        "7/3 07:15",
         "7/3 09:16",
         "7/3 13:51",
         "7/3 17:19"
@@ -52,7 +50,8 @@
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "7/4 07:12"
+        "7/4 07:12",
+        "7/4 09:14"
       ]
     },
     {
@@ -68,7 +67,8 @@
       "startTimeJST": "13:30",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "7/4 07:12"
+        "7/4 07:12",
+        "7/4 09:14"
       ]
     },
     {
@@ -84,7 +84,8 @@
       "startTimeJST": "10:05",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "7/4 07:12"
+        "7/4 07:12",
+        "7/4 09:14"
       ]
     },
     {
@@ -100,7 +101,8 @@
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "7/4 07:12"
+        "7/4 07:12",
+        "7/4 09:14"
       ]
     },
     {
@@ -116,7 +118,8 @@
       "startTimeJST": "00:20",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "7/4 07:12"
+        "7/4 07:12",
+        "7/4 09:14"
       ]
     },
     {
@@ -132,7 +135,8 @@
       "startTimeJST": "18:09",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "7/4 07:12"
+        "7/4 07:12",
+        "7/4 09:14"
       ]
     },
     {
@@ -148,7 +152,8 @@
       "startTimeJST": "23:08",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "7/4 07:12"
+        "7/4 07:12",
+        "7/4 09:14"
       ]
     },
     {
@@ -164,7 +169,8 @@
       "startTimeJST": "23:08",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "7/4 07:12"
+        "7/4 07:12",
+        "7/4 09:14"
       ]
     },
     {
@@ -180,7 +186,8 @@
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "7/4 07:12"
+        "7/4 07:12",
+        "7/4 09:14"
       ]
     },
     {
@@ -196,7 +203,8 @@
       "startTimeJST": "13:20",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "7/4 07:12"
+        "7/4 07:12",
+        "7/4 09:14"
       ]
     },
     {
@@ -212,7 +220,8 @@
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
-        "7/4 07:12"
+        "7/4 07:12",
+        "7/4 09:14"
       ]
     },
     {
@@ -228,7 +237,8 @@
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
-        "7/4 07:12"
+        "7/4 07:12",
+        "7/4 09:14"
       ]
     },
     {
@@ -244,7 +254,8 @@
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
-        "7/4 07:12"
+        "7/4 07:12",
+        "7/4 09:14"
       ]
     },
     {
@@ -260,7 +271,8 @@
       "startTimeJST": "21:00",
       "source": "e_nexco_niigata",
       "snapshots": [
-        "7/4 07:12"
+        "7/4 07:12",
+        "7/4 09:14"
       ]
     },
     {
@@ -276,7 +288,8 @@
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
-        "7/4 07:12"
+        "7/4 07:12",
+        "7/4 09:14"
       ]
     },
     {
@@ -292,7 +305,8 @@
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
-        "7/4 07:12"
+        "7/4 07:12",
+        "7/4 09:14"
       ]
     },
     {
@@ -308,7 +322,8 @@
       "startTimeJST": "22:15",
       "source": "e_nexco_niigata",
       "snapshots": [
-        "7/4 07:12"
+        "7/4 07:12",
+        "7/4 09:14"
       ]
     }
   ]
