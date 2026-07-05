@@ -1,4 +1,37 @@
 {
-  "generated": "2026-07-05T10:25:38.617Z",
-  "periods": []
+  "generated": "2026-07-05T12:22:47.355Z",
+  "periods": [
+    {
+      "road": "道東",
+      "section": "トマムIC〜十勝清水IC",
+      "direction": "",
+      "reason": "工事",
+      "status": "通行止め",
+      "start": "2026-07-05T21:22:42+09:00",
+      "end": null,
+      "startJST": "7/5 21:22",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_kita",
+      "snapshots": [
+        "7/5 21:22"
+      ]
+    },
+    {
+      "road": "道央",
+      "section": "滝川IC〜深川IC",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-05T21:22:42+09:00",
+      "end": null,
+      "startJST": "7/5 21:22",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_kita",
+      "snapshots": [
+        "7/5 21:22"
+      ]
+    }
+  ]
 }
