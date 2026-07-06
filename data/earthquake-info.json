@@ -1,20 +1,27 @@
 {
-  "generated": "2026-07-03 14:12:54+09:00",
+  "generated": "2026-07-06 23:31:05+09:00",
   "source": "jma_xml",
-  "time": "2026/7/3 13:04 (JST)",
-  "epicenter": "宮古島北西沖",
-  "depth": "",
-  "magnitude": "M6.4",
+  "time": "2026/7/6 20:29 (JST)",
+  "epicenter": "岩手県沖",
+  "depth": "約50km",
+  "magnitude": "M4.5",
   "maxShindo": "3",
-  "tsunami": "この地震により、日本の沿岸では若干の海面変動があるかもしれませんが、被害の心配は",
+  "tsunami": "この地震による津波の心配はありません。",
   "shindoAreas": [
     {
       "level": "3",
-      "area": "沖縄県"
+      "area": "青森県・岩手県"
+    },
+    {
+      "level": "1",
+      "area": "北海道・秋田県"
     }
   ],
   "alertLevel": "normal",
   "affectedPrefs": [
-    "沖縄県"
+    "青森県",
+    "岩手県",
+    "北海道",
+    "秋田県"
   ]
 }
