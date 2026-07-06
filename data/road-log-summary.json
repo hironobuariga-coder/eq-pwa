@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-06T16:26:56.780Z",
+  "generated": "2026-07-06T19:02:50.764Z",
   "periods": [
     {
       "road": "道東",
@@ -7,14 +7,13 @@
       "direction": "",
       "reason": "工事",
       "status": "通行止め",
-      "start": "2026-07-06T03:12:04+09:00",
+      "start": "2026-07-06T05:19:59+09:00",
       "end": "2026-07-06T08:15:42+09:00",
-      "startJST": "7/6 03:12",
+      "startJST": "7/6 05:19",
       "endJST": "7/6 08:15",
       "startTimeJST": "",
       "source": "e_nexco_kita",
       "snapshots": [
-        "7/6 03:12",
         "7/6 05:19",
         "7/6 07:09",
         "7/6 08:15"
@@ -26,17 +25,64 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-07-06T03:12:04+09:00",
+      "start": "2026-07-06T05:19:59+09:00",
       "end": "2026-07-06T08:15:42+09:00",
-      "startJST": "7/6 03:12",
+      "startJST": "7/6 05:19",
       "endJST": "7/6 08:15",
       "startTimeJST": "",
       "source": "e_nexco_kita",
       "snapshots": [
-        "7/6 03:12",
         "7/6 05:19",
         "7/6 07:09",
         "7/6 08:15"
+      ]
+    },
+    {
+      "road": "上信越",
+      "section": "",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-07T04:02:41+09:00",
+      "end": null,
+      "startJST": "7/7 04:02",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_bousai",
+      "snapshots": [
+        "7/7 04:02"
+      ]
+    },
+    {
+      "road": "東北",
+      "section": "",
+      "direction": "",
+      "reason": "台風",
+      "status": "通行止め",
+      "start": "2026-07-07T04:02:41+09:00",
+      "end": null,
+      "startJST": "7/7 04:02",
+      "endJST": null,
+      "startTimeJST": "15:00",
+      "source": "e_nexco_bousai",
+      "snapshots": [
+        "7/7 04:02"
+      ]
+    },
+    {
+      "road": "長野",
+      "section": "",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-07T04:02:41+09:00",
+      "end": null,
+      "startJST": "7/7 04:02",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_bousai",
+      "snapshots": [
+        "7/7 04:02"
       ]
     }
   ]
