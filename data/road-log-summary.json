@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-07T21:38:31.500Z",
+  "generated": "2026-07-07T23:10:49.508Z",
   "periods": [
     {
       "road": "上信越",
@@ -7,19 +7,19 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-07-07T07:22:26+09:00",
+      "start": "2026-07-07T09:16:47+09:00",
       "end": null,
-      "startJST": "7/7 07:22",
+      "startJST": "7/7 09:16",
       "endJST": null,
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
-        "7/7 07:22",
         "7/7 09:16",
         "7/7 14:02",
         "7/8 02:24",
         "7/8 05:08",
-        "7/8 06:38"
+        "7/8 06:38",
+        "7/8 08:10"
       ]
     },
     {
@@ -28,16 +28,16 @@
       "direction": "",
       "reason": "台風",
       "status": "通行止め",
-      "start": "2026-07-07T07:22:26+09:00",
-      "end": "2026-07-07T14:02:04+09:00",
-      "startJST": "7/7 07:22",
-      "endJST": "7/7 14:02",
+      "start": "2026-07-07T09:16:47+09:00",
+      "end": null,
+      "startJST": "7/7 09:16",
+      "endJST": null,
       "startTimeJST": "15:00",
       "source": "e_nexco_bousai",
       "snapshots": [
-        "7/7 07:22",
         "7/7 09:16",
-        "7/7 14:02"
+        "7/7 14:02",
+        "7/8 08:10"
       ]
     },
     {
@@ -46,19 +46,19 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-07-07T07:22:26+09:00",
+      "start": "2026-07-07T09:16:47+09:00",
       "end": null,
-      "startJST": "7/7 07:22",
+      "startJST": "7/7 09:16",
       "endJST": null,
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
-        "7/7 07:22",
         "7/7 09:16",
         "7/7 14:02",
         "7/8 02:24",
         "7/8 05:08",
-        "7/8 06:38"
+        "7/8 06:38",
+        "7/8 08:10"
       ]
     },
     {
@@ -68,9 +68,9 @@
       "reason": "台風",
       "status": "通行止め",
       "start": "2026-07-07T21:06:57+09:00",
-      "end": null,
+      "end": "2026-07-08T06:38:25+09:00",
       "startJST": "7/7 21:06",
-      "endJST": null,
+      "endJST": "7/8 06:38",
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -88,9 +88,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-07T21:06:57+09:00",
-      "end": null,
+      "end": "2026-07-08T06:38:25+09:00",
       "startJST": "7/7 21:06",
-      "endJST": null,
+      "endJST": "7/8 06:38",
       "startTimeJST": "13:30",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -108,9 +108,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-07T21:06:57+09:00",
-      "end": null,
+      "end": "2026-07-08T06:38:25+09:00",
       "startJST": "7/7 21:06",
-      "endJST": null,
+      "endJST": "7/8 06:38",
       "startTimeJST": "10:05",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -128,9 +128,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-07T21:06:57+09:00",
-      "end": null,
+      "end": "2026-07-08T06:38:25+09:00",
       "startJST": "7/7 21:06",
-      "endJST": null,
+      "endJST": "7/8 06:38",
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -148,9 +148,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-07T21:06:57+09:00",
-      "end": null,
+      "end": "2026-07-08T06:38:25+09:00",
       "startJST": "7/7 21:06",
-      "endJST": null,
+      "endJST": "7/8 06:38",
       "startTimeJST": "00:20",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -168,9 +168,9 @@
       "reason": "地震",
       "status": "通行止め",
       "start": "2026-07-07T21:06:57+09:00",
-      "end": null,
+      "end": "2026-07-08T06:38:25+09:00",
       "startJST": "7/7 21:06",
-      "endJST": null,
+      "endJST": "7/8 06:38",
       "startTimeJST": "18:09",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -188,9 +188,9 @@
       "reason": "地震",
       "status": "通行止め",
       "start": "2026-07-07T21:06:57+09:00",
-      "end": null,
+      "end": "2026-07-08T06:38:25+09:00",
       "startJST": "7/7 21:06",
-      "endJST": null,
+      "endJST": "7/8 06:38",
       "startTimeJST": "23:08",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -208,9 +208,9 @@
       "reason": "地震",
       "status": "通行止め",
       "start": "2026-07-07T21:06:57+09:00",
-      "end": null,
+      "end": "2026-07-08T06:38:25+09:00",
       "startJST": "7/7 21:06",
-      "endJST": null,
+      "endJST": "7/8 06:38",
       "startTimeJST": "23:08",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -228,9 +228,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-07T21:06:57+09:00",
-      "end": null,
+      "end": "2026-07-08T06:38:25+09:00",
       "startJST": "7/7 21:06",
-      "endJST": null,
+      "endJST": "7/8 06:38",
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -248,9 +248,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-07T21:06:57+09:00",
-      "end": null,
+      "end": "2026-07-08T06:38:25+09:00",
       "startJST": "7/7 21:06",
-      "endJST": null,
+      "endJST": "7/8 06:38",
       "startTimeJST": "13:20",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -259,6 +259,38 @@
         "7/8 02:24",
         "7/8 05:08",
         "7/8 06:38"
+      ]
+    },
+    {
+      "road": "道東",
+      "section": "トマムIC〜十勝清水IC",
+      "direction": "",
+      "reason": "工事",
+      "status": "通行止め",
+      "start": "2026-07-08T08:10:44+09:00",
+      "end": null,
+      "startJST": "7/8 08:10",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_kita",
+      "snapshots": [
+        "7/8 08:10"
+      ]
+    },
+    {
+      "road": "道央",
+      "section": "滝川IC〜深川IC",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-08T08:10:44+09:00",
+      "end": null,
+      "startJST": "7/8 08:10",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_kita",
+      "snapshots": [
+        "7/8 08:10"
       ]
     }
   ]
