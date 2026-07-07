@@ -1,10 +1,5 @@
 [
   {
-    "ts": "2026-07-06T13:23:06+09:00",
-    "closures": [],
-    "rawCount": 0
-  },
-  {
     "ts": "2026-07-06T18:07:38+09:00",
     "closures": [],
     "rawCount": 0
@@ -120,6 +115,39 @@
   },
   {
     "ts": "2026-07-07T09:16:47+09:00",
+    "closures": [
+      {
+        "road": "上信越",
+        "section": "",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "",
+        "source": "e_nexco_bousai"
+      },
+      {
+        "road": "東北",
+        "section": "",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "台風",
+        "startTime": "15:00",
+        "source": "e_nexco_bousai"
+      },
+      {
+        "road": "長野",
+        "section": "",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "",
+        "source": "e_nexco_bousai"
+      }
+    ],
+    "rawCount": 9
+  },
+  {
+    "ts": "2026-07-07T14:02:04+09:00",
     "closures": [
       {
         "road": "上信越",
