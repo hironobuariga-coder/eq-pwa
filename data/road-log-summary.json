@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-07T12:07:04.424Z",
+  "generated": "2026-07-07T15:09:39.063Z",
   "periods": [
     {
       "road": "上信越",
@@ -74,7 +74,8 @@
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "7/7 21:06"
+        "7/7 21:06",
+        "7/8 00:09"
       ]
     },
     {
@@ -90,7 +91,8 @@
       "startTimeJST": "13:30",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "7/7 21:06"
+        "7/7 21:06",
+        "7/8 00:09"
       ]
     },
     {
@@ -106,7 +108,8 @@
       "startTimeJST": "10:05",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "7/7 21:06"
+        "7/7 21:06",
+        "7/8 00:09"
       ]
     },
     {
@@ -122,7 +125,8 @@
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "7/7 21:06"
+        "7/7 21:06",
+        "7/8 00:09"
       ]
     },
     {
@@ -138,7 +142,8 @@
       "startTimeJST": "00:20",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "7/7 21:06"
+        "7/7 21:06",
+        "7/8 00:09"
       ]
     },
     {
@@ -154,7 +159,8 @@
       "startTimeJST": "18:09",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "7/7 21:06"
+        "7/7 21:06",
+        "7/8 00:09"
       ]
     },
     {
@@ -170,7 +176,8 @@
       "startTimeJST": "23:08",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "7/7 21:06"
+        "7/7 21:06",
+        "7/8 00:09"
       ]
     },
     {
@@ -186,7 +193,8 @@
       "startTimeJST": "23:08",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "7/7 21:06"
+        "7/7 21:06",
+        "7/8 00:09"
       ]
     },
     {
@@ -202,7 +210,8 @@
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "7/7 21:06"
+        "7/7 21:06",
+        "7/8 00:09"
       ]
     },
     {
@@ -218,7 +227,8 @@
       "startTimeJST": "13:20",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "7/7 21:06"
+        "7/7 21:06",
+        "7/8 00:09"
       ]
     }
   ]
