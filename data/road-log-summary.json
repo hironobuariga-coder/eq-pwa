@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-08T09:31:11.644Z",
+  "generated": "2026-07-08T11:53:45.526Z",
   "periods": [
     {
       "road": "常磐",
@@ -265,9 +265,9 @@
       "reason": "工事",
       "status": "通行止め",
       "start": "2026-07-08T08:10:44+09:00",
-      "end": null,
+      "end": "2026-07-08T18:31:06+09:00",
       "startJST": "7/8 08:10",
-      "endJST": null,
+      "endJST": "7/8 18:31",
       "startTimeJST": "",
       "source": "e_nexco_kita",
       "snapshots": [
@@ -284,9 +284,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-08T08:10:44+09:00",
-      "end": null,
+      "end": "2026-07-08T18:31:06+09:00",
       "startJST": "7/8 08:10",
-      "endJST": null,
+      "endJST": "7/8 18:31",
       "startTimeJST": "",
       "source": "e_nexco_kita",
       "snapshots": [
