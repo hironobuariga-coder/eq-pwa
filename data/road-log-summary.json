@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-07T23:10:49.508Z",
+  "generated": "2026-07-08T03:37:05.109Z",
   "periods": [
     {
       "road": "上信越",
@@ -7,19 +7,19 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-07-07T09:16:47+09:00",
+      "start": "2026-07-07T14:02:04+09:00",
       "end": null,
-      "startJST": "7/7 09:16",
+      "startJST": "7/7 14:02",
       "endJST": null,
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
-        "7/7 09:16",
         "7/7 14:02",
         "7/8 02:24",
         "7/8 05:08",
         "7/8 06:38",
-        "7/8 08:10"
+        "7/8 08:10",
+        "7/8 12:36"
       ]
     },
     {
@@ -28,16 +28,16 @@
       "direction": "",
       "reason": "台風",
       "status": "通行止め",
-      "start": "2026-07-07T09:16:47+09:00",
+      "start": "2026-07-07T14:02:04+09:00",
       "end": null,
-      "startJST": "7/7 09:16",
+      "startJST": "7/7 14:02",
       "endJST": null,
       "startTimeJST": "15:00",
       "source": "e_nexco_bousai",
       "snapshots": [
-        "7/7 09:16",
         "7/7 14:02",
-        "7/8 08:10"
+        "7/8 08:10",
+        "7/8 12:36"
       ]
     },
     {
@@ -46,19 +46,19 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-07-07T09:16:47+09:00",
+      "start": "2026-07-07T14:02:04+09:00",
       "end": null,
-      "startJST": "7/7 09:16",
+      "startJST": "7/7 14:02",
       "endJST": null,
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
-        "7/7 09:16",
         "7/7 14:02",
         "7/8 02:24",
         "7/8 05:08",
         "7/8 06:38",
-        "7/8 08:10"
+        "7/8 08:10",
+        "7/8 12:36"
       ]
     },
     {
@@ -274,7 +274,8 @@
       "startTimeJST": "",
       "source": "e_nexco_kita",
       "snapshots": [
-        "7/8 08:10"
+        "7/8 08:10",
+        "7/8 12:36"
       ]
     },
     {
@@ -290,7 +291,8 @@
       "startTimeJST": "",
       "source": "e_nexco_kita",
       "snapshots": [
-        "7/8 08:10"
+        "7/8 08:10",
+        "7/8 12:36"
       ]
     }
   ]
