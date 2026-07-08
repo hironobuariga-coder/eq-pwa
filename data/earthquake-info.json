@@ -1,10 +1,10 @@
 {
-  "generated": "2026-07-06 23:31:05+09:00",
+  "generated": "2026-07-08 17:46:36+09:00",
   "source": "jma_xml",
-  "time": "2026/7/6 20:29 (JST)",
+  "time": "2026/7/8 16:35 (JST)",
   "epicenter": "岩手県沖",
-  "depth": "約50km",
-  "magnitude": "M4.5",
+  "depth": "約40km",
+  "magnitude": "M4.4",
   "maxShindo": "3",
   "tsunami": "この地震による津波の心配はありません。",
   "shindoAreas": [
