@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-09T05:01:41.805Z",
+  "generated": "2026-07-09T08:36:15.861Z",
   "periods": [
     {
       "road": "道東",
@@ -7,14 +7,13 @@
       "direction": "",
       "reason": "工事",
       "status": "通行止め",
-      "start": "2026-07-08T15:35:49+09:00",
+      "start": "2026-07-08T18:31:06+09:00",
       "end": "2026-07-09T09:18:13+09:00",
-      "startJST": "7/8 15:35",
+      "startJST": "7/8 18:31",
       "endJST": "7/9 09:18",
       "startTimeJST": "",
       "source": "e_nexco_kita",
       "snapshots": [
-        "7/8 15:35",
         "7/8 18:31",
         "7/8 23:34",
         "7/9 01:46",
@@ -30,14 +29,13 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-07-08T15:35:49+09:00",
+      "start": "2026-07-08T18:31:06+09:00",
       "end": "2026-07-09T09:18:13+09:00",
-      "startJST": "7/8 15:35",
+      "startJST": "7/8 18:31",
       "endJST": "7/9 09:18",
       "startTimeJST": "",
       "source": "e_nexco_kita",
       "snapshots": [
-        "7/8 15:35",
         "7/8 18:31",
         "7/8 23:34",
         "7/9 01:46",
@@ -54,9 +52,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-08T23:34:27+09:00",
-      "end": "2026-07-09T09:18:13+09:00",
+      "end": null,
       "startJST": "7/8 23:34",
-      "endJST": "7/9 09:18",
+      "endJST": null,
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
@@ -65,7 +63,8 @@
         "7/9 03:25",
         "7/9 05:25",
         "7/9 07:14",
-        "7/9 09:18"
+        "7/9 09:18",
+        "7/9 17:36"
       ]
     },
     {
@@ -96,9 +95,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-08T23:34:27+09:00",
-      "end": "2026-07-09T09:18:13+09:00",
+      "end": null,
       "startJST": "7/8 23:34",
-      "endJST": "7/9 09:18",
+      "endJST": null,
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
@@ -107,7 +106,88 @@
         "7/9 03:25",
         "7/9 05:25",
         "7/9 07:14",
-        "7/9 09:18"
+        "7/9 09:18",
+        "7/9 17:36"
+      ]
+    },
+    {
+      "road": "中央",
+      "section": "",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-09T17:36:07+09:00",
+      "end": null,
+      "startJST": "7/9 17:36",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "7/9 17:36"
+      ]
+    },
+    {
+      "road": "北陸",
+      "section": "",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-09T17:36:07+09:00",
+      "end": null,
+      "startJST": "7/9 17:36",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "7/9 17:36"
+      ]
+    },
+    {
+      "road": "北陸",
+      "section": "朝日IC〜新潟中央JCT",
+      "direction": "上下線",
+      "reason": "地震",
+      "status": "通行止め",
+      "start": "2026-07-09T17:36:07+09:00",
+      "end": null,
+      "startJST": "7/9 17:36",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "7/9 17:36"
+      ]
+    },
+    {
+      "road": "関越",
+      "section": "の湯沢IC〜長岡IC",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-09T17:36:07+09:00",
+      "end": null,
+      "startJST": "7/9 17:36",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "7/9 17:36"
+      ]
+    },
+    {
+      "road": "関越",
+      "section": "関越道上り線小出IC〜塩沢石打IC",
+      "direction": "上り",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-09T17:36:07+09:00",
+      "end": null,
+      "startJST": "7/9 17:36",
+      "endJST": null,
+      "startTimeJST": "22:15",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "7/9 17:36"
       ]
     }
   ]
