@@ -1,40 +1,6 @@
 {
-  "generated": "2026-07-11T03:35:09.939Z",
+  "generated": "2026-07-11T06:23:02.964Z",
   "periods": [
-    {
-      "road": "道東",
-      "section": "トマムIC〜十勝清水IC",
-      "direction": "",
-      "reason": "工事",
-      "status": "通行止め",
-      "start": "2026-07-10T13:06:43+09:00",
-      "end": "2026-07-10T16:47:59+09:00",
-      "startJST": "7/10 13:06",
-      "endJST": "7/10 16:47",
-      "startTimeJST": "",
-      "source": "e_nexco_kita",
-      "snapshots": [
-        "7/10 13:06",
-        "7/10 16:47"
-      ]
-    },
-    {
-      "road": "道央",
-      "section": "滝川IC〜深川IC",
-      "direction": "",
-      "reason": "大雪",
-      "status": "通行止め",
-      "start": "2026-07-10T13:06:43+09:00",
-      "end": "2026-07-10T16:47:59+09:00",
-      "startJST": "7/10 13:06",
-      "endJST": "7/10 16:47",
-      "startTimeJST": "",
-      "source": "e_nexco_kita",
-      "snapshots": [
-        "7/10 13:06",
-        "7/10 16:47"
-      ]
-    },
     {
       "road": "常磐",
       "section": "",
@@ -223,6 +189,38 @@
         "7/10 20:14",
         "7/10 23:47",
         "7/11 02:03"
+      ]
+    },
+    {
+      "road": "道東",
+      "section": "トマムIC〜十勝清水IC",
+      "direction": "",
+      "reason": "工事",
+      "status": "通行止め",
+      "start": "2026-07-10T16:47:59+09:00",
+      "end": "2026-07-10T16:47:59+09:00",
+      "startJST": "7/10 16:47",
+      "endJST": "7/10 16:47",
+      "startTimeJST": "",
+      "source": "e_nexco_kita",
+      "snapshots": [
+        "7/10 16:47"
+      ]
+    },
+    {
+      "road": "道央",
+      "section": "滝川IC〜深川IC",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-10T16:47:59+09:00",
+      "end": "2026-07-10T16:47:59+09:00",
+      "startJST": "7/10 16:47",
+      "endJST": "7/10 16:47",
+      "startTimeJST": "",
+      "source": "e_nexco_kita",
+      "snapshots": [
+        "7/10 16:47"
       ]
     }
   ]
