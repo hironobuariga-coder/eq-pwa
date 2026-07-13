@@ -1,44 +1,17 @@
 {
-  "generated": "2026-07-14 01:04:33+09:00",
+  "generated": "2026-07-14 03:03:50+09:00",
   "triggers": [
     {
-      "id": "https://www.data.jma.go.jp/developer/xml/data/20260712072048_0_VXKO70_050000.xml",
-      "type": "rain",
-      "dtype": "rain",
-      "title": "指定河川洪水予報",
-      "detected": "2026-07-12 17:51:43+09:00",
-      "url": "https://www.data.jma.go.jp/developer/xml/data/20260712072048_0_VXKO70_050000.xml"
-    },
-    {
-      "id": "https://www.data.jma.go.jp/developer/xml/data/20260712071623_0_VXKO71_020000.xml",
-      "type": "rain",
-      "dtype": "rain",
-      "title": "指定河川洪水予報",
-      "detected": "2026-07-12 17:51:43+09:00",
-      "url": "https://www.data.jma.go.jp/developer/xml/data/20260712071623_0_VXKO71_020000.xml"
-    },
-    {
-      "id": "https://www.data.jma.go.jp/developer/xml/data/20260712064930_0_VPTA51_010000.xml",
+      "id": "nerv:https://unnerv.jp/@UN_NERV/116913518856927761",
       "type": "typhoon",
       "dtype": "typhoon",
-      "title": "台風の暴風域に入る確率",
-      "detected": "2026-07-12 17:51:43+09:00",
-      "url": "https://www.data.jma.go.jp/developer/xml/data/20260712064930_0_VPTA51_010000.xml"
+      "title": "UN_NERV: “【台風第11号実況・予報 2026年07月14日 01:05…”",
+      "detected": "2026-07-14 03:03:50+09:00",
+      "url": "https://unnerv.jp/@UN_NERV/116913518856927761",
+      "source": "NERV"
     }
   ],
   "processed_ids": [
-    "https://www.data.jma.go.jp/developer/xml/data/20260712030112_0_VPWW56_020000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260712025348_0_VPWW54_013000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260712025348_0_VPWW53_013000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260712025334_0_VPWW55_013000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260712025334_0_VPWW56_013000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260712024554_0_VPWW53_080000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260712024554_0_VPWW54_080000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260712024547_0_VPWW59_080000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260712023753_0_VPWW54_060000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260712023753_0_VPWW53_060000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260712023751_0_VPWW56_060000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260712023404_0_VPWW54_030000.xml",
     "https://www.data.jma.go.jp/developer/xml/data/20260712023404_0_VPWW53_030000.xml",
     "https://www.data.jma.go.jp/developer/xml/data/20260712023349_0_VPWW56_030000.xml",
     "https://www.data.jma.go.jp/developer/xml/data/20260712023348_0_VPWW55_030000.xml",
@@ -2026,6 +1999,18 @@
     "nerv:https://unnerv.jp/@UN_NERV/116912596755649020",
     "nerv:https://unnerv.jp/@UN_NERV/116912578632380776",
     "nerv:https://unnerv.jp/@UN_NERV/116912500786680078",
-    "nerv:https://unnerv.jp/@UN_NERV/116912489428424386"
+    "nerv:https://unnerv.jp/@UN_NERV/116912489428424386",
+    "https://www.data.jma.go.jp/developer/xml/data/20260713173310_0_VXSE53_270000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260713161712_0_VPWW54_080000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260713161712_0_VPWW53_080000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260713161702_0_VPWW61_080000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260713161614_0_VPWW54_090000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260713161614_0_VPWW53_090000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260713161601_0_VPWW61_090000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260713160516_0_VPTW60_010000.xml",
+    "nerv:https://unnerv.jp/@UN_NERV/116913864405120986",
+    "nerv:https://unnerv.jp/@UN_NERV/116913565962415921",
+    "nerv:https://unnerv.jp/@UN_NERV/116913562144239154",
+    "nerv:https://unnerv.jp/@UN_NERV/116913518856927761"
   ]
 }
