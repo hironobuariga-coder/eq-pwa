@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-13T23:06:04.544Z",
+  "generated": "2026-07-14T00:01:22.008Z",
   "periods": [
     {
       "road": "常磐",
@@ -28,9 +28,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-13T09:04:42+09:00",
-      "end": null,
+      "end": "2026-07-14T08:05:59+09:00",
       "startJST": "7/13 09:04",
-      "endJST": null,
+      "endJST": "7/14 08:05",
       "startTimeJST": "13:30",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -51,9 +51,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-13T09:04:42+09:00",
-      "end": null,
+      "end": "2026-07-14T08:05:59+09:00",
       "startJST": "7/13 09:04",
-      "endJST": null,
+      "endJST": "7/14 08:05",
       "startTimeJST": "10:05",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -74,9 +74,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-13T09:04:42+09:00",
-      "end": null,
+      "end": "2026-07-14T08:05:59+09:00",
       "startJST": "7/13 09:04",
-      "endJST": null,
+      "endJST": "7/14 08:05",
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -97,9 +97,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-13T09:04:42+09:00",
-      "end": null,
+      "end": "2026-07-14T08:05:59+09:00",
       "startJST": "7/13 09:04",
-      "endJST": null,
+      "endJST": "7/14 08:05",
       "startTimeJST": "00:20",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -120,9 +120,9 @@
       "reason": "地震",
       "status": "通行止め",
       "start": "2026-07-13T09:04:42+09:00",
-      "end": null,
+      "end": "2026-07-14T08:05:59+09:00",
       "startJST": "7/13 09:04",
-      "endJST": null,
+      "endJST": "7/14 08:05",
       "startTimeJST": "18:09",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -143,9 +143,9 @@
       "reason": "地震",
       "status": "通行止め",
       "start": "2026-07-13T09:04:42+09:00",
-      "end": null,
+      "end": "2026-07-14T08:05:59+09:00",
       "startJST": "7/13 09:04",
-      "endJST": null,
+      "endJST": "7/14 08:05",
       "startTimeJST": "23:08",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -166,9 +166,9 @@
       "reason": "地震",
       "status": "通行止め",
       "start": "2026-07-13T09:04:42+09:00",
-      "end": null,
+      "end": "2026-07-14T08:05:59+09:00",
       "startJST": "7/13 09:04",
-      "endJST": null,
+      "endJST": "7/14 08:05",
       "startTimeJST": "23:08",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -189,9 +189,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-13T09:04:42+09:00",
-      "end": null,
+      "end": "2026-07-14T08:05:59+09:00",
       "startJST": "7/13 09:04",
-      "endJST": null,
+      "endJST": "7/14 08:05",
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -212,9 +212,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-13T09:04:42+09:00",
-      "end": null,
+      "end": "2026-07-14T08:05:59+09:00",
       "startJST": "7/13 09:04",
-      "endJST": null,
+      "endJST": "7/14 08:05",
       "startTimeJST": "13:20",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -246,7 +246,8 @@
         "7/14 04:42",
         "7/14 06:08",
         "7/14 07:05",
-        "7/14 08:05"
+        "7/14 08:05",
+        "7/14 09:01"
       ]
     },
     {
@@ -267,7 +268,8 @@
         "7/14 04:42",
         "7/14 06:08",
         "7/14 07:05",
-        "7/14 08:05"
+        "7/14 08:05",
+        "7/14 09:01"
       ]
     },
     {
@@ -285,7 +287,8 @@
       "snapshots": [
         "7/14 06:08",
         "7/14 07:05",
-        "7/14 08:05"
+        "7/14 08:05",
+        "7/14 09:01"
       ]
     },
     {
@@ -303,7 +306,8 @@
       "snapshots": [
         "7/14 06:08",
         "7/14 07:05",
-        "7/14 08:05"
+        "7/14 08:05",
+        "7/14 09:01"
       ]
     },
     {
@@ -321,7 +325,8 @@
       "snapshots": [
         "7/14 06:08",
         "7/14 07:05",
-        "7/14 08:05"
+        "7/14 08:05",
+        "7/14 09:01"
       ]
     },
     {
@@ -339,7 +344,8 @@
       "snapshots": [
         "7/14 06:08",
         "7/14 07:05",
-        "7/14 08:05"
+        "7/14 08:05",
+        "7/14 09:01"
       ]
     },
     {
@@ -357,7 +363,56 @@
       "snapshots": [
         "7/14 06:08",
         "7/14 07:05",
-        "7/14 08:05"
+        "7/14 08:05",
+        "7/14 09:01"
+      ]
+    },
+    {
+      "road": "上信越",
+      "section": "",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-14T09:01:16+09:00",
+      "end": null,
+      "startJST": "7/14 09:01",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_bousai",
+      "snapshots": [
+        "7/14 09:01"
+      ]
+    },
+    {
+      "road": "東北",
+      "section": "",
+      "direction": "",
+      "reason": "台風",
+      "status": "通行止め",
+      "start": "2026-07-14T09:01:16+09:00",
+      "end": null,
+      "startJST": "7/14 09:01",
+      "endJST": null,
+      "startTimeJST": "15:00",
+      "source": "e_nexco_bousai",
+      "snapshots": [
+        "7/14 09:01"
+      ]
+    },
+    {
+      "road": "長野",
+      "section": "",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-14T09:01:16+09:00",
+      "end": null,
+      "startJST": "7/14 09:01",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_bousai",
+      "snapshots": [
+        "7/14 09:01"
       ]
     }
   ]
