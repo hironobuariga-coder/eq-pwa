@@ -795,5 +795,56 @@
       }
     ],
     "rawCount": 35
+  },
+  {
+    "ts": "2026-07-15T23:03:33+09:00",
+    "closures": [
+      {
+        "road": "上信越",
+        "section": "",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "",
+        "source": "e_nexco_bousai"
+      },
+      {
+        "road": "東北",
+        "section": "",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "台風",
+        "startTime": "15:00",
+        "source": "e_nexco_bousai"
+      },
+      {
+        "road": "長野",
+        "section": "",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "",
+        "source": "e_nexco_bousai"
+      },
+      {
+        "road": "道東",
+        "section": "トマムIC〜十勝清水IC",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "工事",
+        "startTime": "",
+        "source": "e_nexco_kita"
+      },
+      {
+        "road": "道央",
+        "section": "滝川IC〜深川IC",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "",
+        "source": "e_nexco_kita"
+      }
+    ],
+    "rawCount": 35
   }
 ]
