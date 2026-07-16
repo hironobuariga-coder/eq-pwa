@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-16T20:08:18.510Z",
+  "generated": "2026-07-16T21:13:04.197Z",
   "periods": [
     {
       "road": "上信越",
@@ -7,15 +7,15 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-07-16T06:10:41+09:00",
-      "end": "2026-07-16T08:07:39+09:00",
-      "startJST": "7/16 06:10",
-      "endJST": "7/16 08:07",
+      "start": "2026-07-16T08:07:39+09:00",
+      "end": null,
+      "startJST": "7/16 08:07",
+      "endJST": null,
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
-        "7/16 06:10",
-        "7/16 08:07"
+        "7/16 08:07",
+        "7/17 06:12"
       ]
     },
     {
@@ -24,14 +24,13 @@
       "direction": "",
       "reason": "台風",
       "status": "通行止め",
-      "start": "2026-07-16T06:10:41+09:00",
+      "start": "2026-07-16T08:07:39+09:00",
       "end": "2026-07-16T08:07:39+09:00",
-      "startJST": "7/16 06:10",
+      "startJST": "7/16 08:07",
       "endJST": "7/16 08:07",
       "startTimeJST": "15:00",
       "source": "e_nexco_bousai",
       "snapshots": [
-        "7/16 06:10",
         "7/16 08:07"
       ]
     },
@@ -41,15 +40,95 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-07-16T06:10:41+09:00",
-      "end": "2026-07-16T08:07:39+09:00",
-      "startJST": "7/16 06:10",
-      "endJST": "7/16 08:07",
+      "start": "2026-07-16T08:07:39+09:00",
+      "end": null,
+      "startJST": "7/16 08:07",
+      "endJST": null,
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
-        "7/16 06:10",
-        "7/16 08:07"
+        "7/16 08:07",
+        "7/17 06:12"
+      ]
+    },
+    {
+      "road": "中央",
+      "section": "",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-17T06:12:57+09:00",
+      "end": null,
+      "startJST": "7/17 06:12",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "7/17 06:12"
+      ]
+    },
+    {
+      "road": "北陸",
+      "section": "",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-17T06:12:57+09:00",
+      "end": null,
+      "startJST": "7/17 06:12",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "7/17 06:12"
+      ]
+    },
+    {
+      "road": "北陸",
+      "section": "朝日IC〜新潟中央JCT",
+      "direction": "上下線",
+      "reason": "地震",
+      "status": "通行止め",
+      "start": "2026-07-17T06:12:57+09:00",
+      "end": null,
+      "startJST": "7/17 06:12",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "7/17 06:12"
+      ]
+    },
+    {
+      "road": "関越",
+      "section": "の湯沢IC〜長岡IC",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-17T06:12:57+09:00",
+      "end": null,
+      "startJST": "7/17 06:12",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "7/17 06:12"
+      ]
+    },
+    {
+      "road": "関越",
+      "section": "関越道上り線小出IC〜塩沢石打IC",
+      "direction": "上り",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-17T06:12:57+09:00",
+      "end": null,
+      "startJST": "7/17 06:12",
+      "endJST": null,
+      "startTimeJST": "22:15",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "7/17 06:12"
       ]
     }
   ]
