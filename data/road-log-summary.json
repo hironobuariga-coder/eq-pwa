@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-16T21:13:04.197Z",
+  "generated": "2026-07-16T23:06:50.210Z",
   "periods": [
     {
       "road": "上信越",
@@ -15,7 +15,8 @@
       "source": "e_nexco_bousai",
       "snapshots": [
         "7/16 08:07",
-        "7/17 06:12"
+        "7/17 06:12",
+        "7/17 08:06"
       ]
     },
     {
@@ -25,13 +26,14 @@
       "reason": "台風",
       "status": "通行止め",
       "start": "2026-07-16T08:07:39+09:00",
-      "end": "2026-07-16T08:07:39+09:00",
+      "end": null,
       "startJST": "7/16 08:07",
-      "endJST": "7/16 08:07",
+      "endJST": null,
       "startTimeJST": "15:00",
       "source": "e_nexco_bousai",
       "snapshots": [
-        "7/16 08:07"
+        "7/16 08:07",
+        "7/17 08:06"
       ]
     },
     {
@@ -48,7 +50,8 @@
       "source": "e_nexco_bousai",
       "snapshots": [
         "7/16 08:07",
-        "7/17 06:12"
+        "7/17 06:12",
+        "7/17 08:06"
       ]
     },
     {
@@ -64,7 +67,8 @@
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
-        "7/17 06:12"
+        "7/17 06:12",
+        "7/17 08:06"
       ]
     },
     {
@@ -80,7 +84,8 @@
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
-        "7/17 06:12"
+        "7/17 06:12",
+        "7/17 08:06"
       ]
     },
     {
@@ -96,7 +101,8 @@
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
-        "7/17 06:12"
+        "7/17 06:12",
+        "7/17 08:06"
       ]
     },
     {
@@ -112,7 +118,8 @@
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
-        "7/17 06:12"
+        "7/17 06:12",
+        "7/17 08:06"
       ]
     },
     {
@@ -128,7 +135,8 @@
       "startTimeJST": "22:15",
       "source": "e_nexco_niigata",
       "snapshots": [
-        "7/17 06:12"
+        "7/17 06:12",
+        "7/17 08:06"
       ]
     }
   ]
