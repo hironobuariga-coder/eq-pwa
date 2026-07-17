@@ -1,59 +1,6 @@
 {
-  "generated": "2026-07-16T23:06:50.210Z",
+  "generated": "2026-07-17T00:09:11.761Z",
   "periods": [
-    {
-      "road": "上信越",
-      "section": "",
-      "direction": "",
-      "reason": "大雪",
-      "status": "通行止め",
-      "start": "2026-07-16T08:07:39+09:00",
-      "end": null,
-      "startJST": "7/16 08:07",
-      "endJST": null,
-      "startTimeJST": "",
-      "source": "e_nexco_bousai",
-      "snapshots": [
-        "7/16 08:07",
-        "7/17 06:12",
-        "7/17 08:06"
-      ]
-    },
-    {
-      "road": "東北",
-      "section": "",
-      "direction": "",
-      "reason": "台風",
-      "status": "通行止め",
-      "start": "2026-07-16T08:07:39+09:00",
-      "end": null,
-      "startJST": "7/16 08:07",
-      "endJST": null,
-      "startTimeJST": "15:00",
-      "source": "e_nexco_bousai",
-      "snapshots": [
-        "7/16 08:07",
-        "7/17 08:06"
-      ]
-    },
-    {
-      "road": "長野",
-      "section": "",
-      "direction": "",
-      "reason": "大雪",
-      "status": "通行止め",
-      "start": "2026-07-16T08:07:39+09:00",
-      "end": null,
-      "startJST": "7/16 08:07",
-      "endJST": null,
-      "startTimeJST": "",
-      "source": "e_nexco_bousai",
-      "snapshots": [
-        "7/16 08:07",
-        "7/17 06:12",
-        "7/17 08:06"
-      ]
-    },
     {
       "road": "中央",
       "section": "",
@@ -68,7 +15,26 @@
       "source": "e_nexco_niigata",
       "snapshots": [
         "7/17 06:12",
-        "7/17 08:06"
+        "7/17 08:06",
+        "7/17 09:09"
+      ]
+    },
+    {
+      "road": "上信越",
+      "section": "",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-17T06:12:57+09:00",
+      "end": null,
+      "startJST": "7/17 06:12",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "7/17 06:12",
+        "7/17 08:06",
+        "7/17 09:09"
       ]
     },
     {
@@ -85,7 +51,26 @@
       "source": "e_nexco_niigata",
       "snapshots": [
         "7/17 06:12",
-        "7/17 08:06"
+        "7/17 08:06",
+        "7/17 09:09"
+      ]
+    },
+    {
+      "road": "長野",
+      "section": "",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-17T06:12:57+09:00",
+      "end": null,
+      "startJST": "7/17 06:12",
+      "endJST": null,
+      "startTimeJST": "21:00",
+      "source": "e_nexco_niigata",
+      "snapshots": [
+        "7/17 06:12",
+        "7/17 08:06",
+        "7/17 09:09"
       ]
     },
     {
@@ -102,7 +87,8 @@
       "source": "e_nexco_niigata",
       "snapshots": [
         "7/17 06:12",
-        "7/17 08:06"
+        "7/17 08:06",
+        "7/17 09:09"
       ]
     },
     {
@@ -119,7 +105,8 @@
       "source": "e_nexco_niigata",
       "snapshots": [
         "7/17 06:12",
-        "7/17 08:06"
+        "7/17 08:06",
+        "7/17 09:09"
       ]
     },
     {
@@ -136,7 +123,25 @@
       "source": "e_nexco_niigata",
       "snapshots": [
         "7/17 06:12",
-        "7/17 08:06"
+        "7/17 08:06",
+        "7/17 09:09"
+      ]
+    },
+    {
+      "road": "東北",
+      "section": "",
+      "direction": "",
+      "reason": "台風",
+      "status": "通行止め",
+      "start": "2026-07-17T08:06:41+09:00",
+      "end": null,
+      "startJST": "7/17 08:06",
+      "endJST": null,
+      "startTimeJST": "15:00",
+      "source": "e_nexco_bousai",
+      "snapshots": [
+        "7/17 08:06",
+        "7/17 09:09"
       ]
     }
   ]
