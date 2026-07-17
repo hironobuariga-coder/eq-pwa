@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-17T06:24:24.398Z",
+  "generated": "2026-07-17T09:17:20.603Z",
   "periods": [
     {
       "road": "中央",
@@ -8,9 +8,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-17T06:12:57+09:00",
-      "end": null,
+      "end": "2026-07-17T15:24:16+09:00",
       "startJST": "7/17 06:12",
-      "endJST": null,
+      "endJST": "7/17 15:24",
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
@@ -38,7 +38,8 @@
         "7/17 08:06",
         "7/17 09:09",
         "7/17 12:32",
-        "7/17 15:24"
+        "7/17 15:24",
+        "7/17 18:17"
       ]
     },
     {
@@ -48,9 +49,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-17T06:12:57+09:00",
-      "end": null,
+      "end": "2026-07-17T15:24:16+09:00",
       "startJST": "7/17 06:12",
-      "endJST": null,
+      "endJST": "7/17 15:24",
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
@@ -78,7 +79,8 @@
         "7/17 08:06",
         "7/17 09:09",
         "7/17 12:32",
-        "7/17 15:24"
+        "7/17 15:24",
+        "7/17 18:17"
       ]
     },
     {
@@ -88,9 +90,9 @@
       "reason": "地震",
       "status": "通行止め",
       "start": "2026-07-17T06:12:57+09:00",
-      "end": null,
+      "end": "2026-07-17T15:24:16+09:00",
       "startJST": "7/17 06:12",
-      "endJST": null,
+      "endJST": "7/17 15:24",
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
@@ -108,9 +110,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-17T06:12:57+09:00",
-      "end": null,
+      "end": "2026-07-17T15:24:16+09:00",
       "startJST": "7/17 06:12",
-      "endJST": null,
+      "endJST": "7/17 15:24",
       "startTimeJST": "",
       "source": "e_nexco_niigata",
       "snapshots": [
@@ -128,9 +130,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-17T06:12:57+09:00",
-      "end": null,
+      "end": "2026-07-17T15:24:16+09:00",
       "startJST": "7/17 06:12",
-      "endJST": null,
+      "endJST": "7/17 15:24",
       "startTimeJST": "22:15",
       "source": "e_nexco_niigata",
       "snapshots": [
@@ -157,7 +159,8 @@
         "7/17 08:06",
         "7/17 09:09",
         "7/17 12:32",
-        "7/17 15:24"
+        "7/17 15:24",
+        "7/17 18:17"
       ]
     }
   ]
