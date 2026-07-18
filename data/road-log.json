@@ -1,182 +1,5 @@
 [
   {
-    "ts": "2026-07-18T02:20:02+09:00",
-    "closures": [
-      {
-        "road": "常磐",
-        "section": "",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "台風",
-        "startTime": "",
-        "source": "e_nexco_tohoku"
-      },
-      {
-        "road": "東北",
-        "section": "磐梯熱海IC〜会津若松IC",
-        "direction": "上下線",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "13:30",
-        "source": "e_nexco_tohoku"
-      },
-      {
-        "road": "山形",
-        "section": "",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "10:05",
-        "source": "e_nexco_tohoku"
-      },
-      {
-        "road": "東北",
-        "section": "いわき三和IC〜郡山東IC",
-        "direction": "上下線",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "",
-        "source": "e_nexco_tohoku"
-      },
-      {
-        "road": "東北",
-        "section": "桑折JCT〜桑折JCT",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "00:20",
-        "source": "e_nexco_tohoku"
-      },
-      {
-        "road": "東北",
-        "section": "白石IC〜平泉前沢IC",
-        "direction": "上下線",
-        "status": "通行止め",
-        "reason": "地震",
-        "startTime": "18:09",
-        "source": "e_nexco_tohoku"
-      },
-      {
-        "road": "東北",
-        "section": "米沢北IC〜東根IC",
-        "direction": "上下線",
-        "status": "通行止め",
-        "reason": "地震",
-        "startTime": "23:08",
-        "source": "e_nexco_tohoku"
-      },
-      {
-        "road": "東北",
-        "section": "白河IC〜平泉前沢IC",
-        "direction": "上下線",
-        "status": "通行止め",
-        "reason": "地震",
-        "startTime": "23:08",
-        "source": "e_nexco_tohoku"
-      },
-      {
-        "road": "東北",
-        "section": "本宮IC〜福島飯坂IC",
-        "direction": "上下線",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "",
-        "source": "e_nexco_tohoku"
-      },
-      {
-        "road": "東北",
-        "section": "大和IC〜築館IC",
-        "direction": "上下線",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "13:20",
-        "source": "e_nexco_tohoku"
-      },
-      {
-        "road": "道東",
-        "section": "トマムIC〜十勝清水IC",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "工事",
-        "startTime": "",
-        "source": "e_nexco_kita"
-      },
-      {
-        "road": "道央",
-        "section": "滝川IC〜深川IC",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "",
-        "source": "e_nexco_kita"
-      },
-      {
-        "road": "中央",
-        "section": "",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "",
-        "source": "e_nexco_niigata"
-      },
-      {
-        "road": "上信越",
-        "section": "",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "",
-        "source": "e_nexco_niigata"
-      },
-      {
-        "road": "北陸",
-        "section": "",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "",
-        "source": "e_nexco_niigata"
-      },
-      {
-        "road": "長野",
-        "section": "",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "21:00",
-        "source": "e_nexco_niigata"
-      },
-      {
-        "road": "北陸",
-        "section": "朝日IC〜新潟中央JCT",
-        "direction": "上下線",
-        "status": "通行止め",
-        "reason": "地震",
-        "startTime": "",
-        "source": "e_nexco_niigata"
-      },
-      {
-        "road": "関越",
-        "section": "の湯沢IC〜長岡IC",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "",
-        "source": "e_nexco_niigata"
-      },
-      {
-        "road": "関越",
-        "section": "関越道上り線小出IC〜塩沢石打IC",
-        "direction": "上り",
-        "status": "通行止め",
-        "reason": "大雪",
-        "startTime": "22:15",
-        "source": "e_nexco_niigata"
-      }
-    ],
-    "rawCount": 92
-  },
-  {
     "ts": "2026-07-18T04:22:48+09:00",
     "closures": [
       {
@@ -1154,6 +977,30 @@
   },
   {
     "ts": "2026-07-19T02:07:38+09:00",
+    "closures": [
+      {
+        "road": "道東",
+        "section": "トマムIC〜十勝清水IC",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "工事",
+        "startTime": "",
+        "source": "e_nexco_kita"
+      },
+      {
+        "road": "道央",
+        "section": "滝川IC〜深川IC",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "大雪",
+        "startTime": "",
+        "source": "e_nexco_kita"
+      }
+    ],
+    "rawCount": 26
+  },
+  {
+    "ts": "2026-07-19T03:03:14+09:00",
     "closures": [
       {
         "road": "道東",
