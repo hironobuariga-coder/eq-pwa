@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-24T06:35:17.870Z",
+  "generated": "2026-07-24T09:27:56.008Z",
   "periods": [
     {
       "road": "上信越",
@@ -8,9 +8,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-24T04:39:10+09:00",
-      "end": null,
+      "end": "2026-07-24T15:35:11+09:00",
       "startJST": "7/24 04:39",
-      "endJST": null,
+      "endJST": "7/24 15:35",
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
@@ -29,9 +29,9 @@
       "reason": "台風",
       "status": "通行止め",
       "start": "2026-07-24T04:39:10+09:00",
-      "end": null,
+      "end": "2026-07-24T15:35:11+09:00",
       "startJST": "7/24 04:39",
-      "endJST": null,
+      "endJST": "7/24 15:35",
       "startTimeJST": "15:00",
       "source": "e_nexco_bousai",
       "snapshots": [
@@ -50,9 +50,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-24T04:39:10+09:00",
-      "end": null,
+      "end": "2026-07-24T15:35:11+09:00",
       "startJST": "7/24 04:39",
-      "endJST": null,
+      "endJST": "7/24 15:35",
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
