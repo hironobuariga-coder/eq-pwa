@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-25T03:32:07.036Z",
+  "generated": "2026-07-25T06:26:16.761Z",
   "periods": [
     {
       "road": "上信越",
@@ -7,14 +7,13 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-07-24T12:37:06+09:00",
+      "start": "2026-07-24T15:35:11+09:00",
       "end": "2026-07-24T15:35:11+09:00",
-      "startJST": "7/24 12:37",
+      "startJST": "7/24 15:35",
       "endJST": "7/24 15:35",
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
-        "7/24 12:37",
         "7/24 15:35"
       ]
     },
@@ -24,14 +23,13 @@
       "direction": "",
       "reason": "台風",
       "status": "通行止め",
-      "start": "2026-07-24T12:37:06+09:00",
+      "start": "2026-07-24T15:35:11+09:00",
       "end": "2026-07-24T15:35:11+09:00",
-      "startJST": "7/24 12:37",
+      "startJST": "7/24 15:35",
       "endJST": "7/24 15:35",
       "startTimeJST": "15:00",
       "source": "e_nexco_bousai",
       "snapshots": [
-        "7/24 12:37",
         "7/24 15:35"
       ]
     },
@@ -41,15 +39,46 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-07-24T12:37:06+09:00",
+      "start": "2026-07-24T15:35:11+09:00",
       "end": "2026-07-24T15:35:11+09:00",
-      "startJST": "7/24 12:37",
+      "startJST": "7/24 15:35",
       "endJST": "7/24 15:35",
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
-        "7/24 12:37",
         "7/24 15:35"
+      ]
+    },
+    {
+      "road": "道東",
+      "section": "トマムIC〜十勝清水IC",
+      "direction": "",
+      "reason": "工事",
+      "status": "通行止め",
+      "start": "2026-07-25T15:26:06+09:00",
+      "end": null,
+      "startJST": "7/25 15:26",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_kita",
+      "snapshots": [
+        "7/25 15:26"
+      ]
+    },
+    {
+      "road": "道央",
+      "section": "滝川IC〜深川IC",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-25T15:26:06+09:00",
+      "end": null,
+      "startJST": "7/25 15:26",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_kita",
+      "snapshots": [
+        "7/25 15:26"
       ]
     }
   ]
