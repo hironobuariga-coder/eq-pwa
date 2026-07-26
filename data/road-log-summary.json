@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-26T15:14:19.220Z",
+  "generated": "2026-07-26T17:11:36.235Z",
   "periods": [
     {
       "road": "上信越",
@@ -7,14 +7,13 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-07-26T02:10:35+09:00",
+      "start": "2026-07-26T04:21:51+09:00",
       "end": "2026-07-26T09:07:58+09:00",
-      "startJST": "7/26 02:10",
+      "startJST": "7/26 04:21",
       "endJST": "7/26 09:07",
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
-        "7/26 02:10",
         "7/26 04:21",
         "7/26 06:04",
         "7/26 07:03",
@@ -28,14 +27,13 @@
       "direction": "",
       "reason": "台風",
       "status": "通行止め",
-      "start": "2026-07-26T02:10:35+09:00",
+      "start": "2026-07-26T04:21:51+09:00",
       "end": "2026-07-26T09:07:58+09:00",
-      "startJST": "7/26 02:10",
+      "startJST": "7/26 04:21",
       "endJST": "7/26 09:07",
       "startTimeJST": "15:00",
       "source": "e_nexco_bousai",
       "snapshots": [
-        "7/26 02:10",
         "7/26 04:21",
         "7/26 06:04",
         "7/26 07:03",
@@ -49,19 +47,50 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-07-26T02:10:35+09:00",
+      "start": "2026-07-26T04:21:51+09:00",
       "end": "2026-07-26T09:07:58+09:00",
-      "startJST": "7/26 02:10",
+      "startJST": "7/26 04:21",
       "endJST": "7/26 09:07",
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
-        "7/26 02:10",
         "7/26 04:21",
         "7/26 06:04",
         "7/26 07:03",
         "7/26 08:04",
         "7/26 09:07"
+      ]
+    },
+    {
+      "road": "道東",
+      "section": "トマムIC〜十勝清水IC",
+      "direction": "",
+      "reason": "工事",
+      "status": "通行止め",
+      "start": "2026-07-27T02:11:27+09:00",
+      "end": null,
+      "startJST": "7/27 02:11",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_kita",
+      "snapshots": [
+        "7/27 02:11"
+      ]
+    },
+    {
+      "road": "道央",
+      "section": "滝川IC〜深川IC",
+      "direction": "",
+      "reason": "大雪",
+      "status": "通行止め",
+      "start": "2026-07-27T02:11:27+09:00",
+      "end": null,
+      "startJST": "7/27 02:11",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_kita",
+      "snapshots": [
+        "7/27 02:11"
       ]
     }
   ]
