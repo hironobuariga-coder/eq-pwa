@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-26T00:08:05.279Z",
+  "generated": "2026-07-26T03:49:43.455Z",
   "periods": [
     {
       "road": "道東",
@@ -50,9 +50,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-26T00:14:03+09:00",
-      "end": null,
+      "end": "2026-07-26T09:07:58+09:00",
       "startJST": "7/26 00:14",
-      "endJST": null,
+      "endJST": "7/26 09:07",
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
@@ -72,9 +72,9 @@
       "reason": "台風",
       "status": "通行止め",
       "start": "2026-07-26T00:14:03+09:00",
-      "end": null,
+      "end": "2026-07-26T09:07:58+09:00",
       "startJST": "7/26 00:14",
-      "endJST": null,
+      "endJST": "7/26 09:07",
       "startTimeJST": "15:00",
       "source": "e_nexco_bousai",
       "snapshots": [
@@ -94,9 +94,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-07-26T00:14:03+09:00",
-      "end": null,
+      "end": "2026-07-26T09:07:58+09:00",
       "startJST": "7/26 00:14",
-      "endJST": null,
+      "endJST": "7/26 09:07",
       "startTimeJST": "",
       "source": "e_nexco_bousai",
       "snapshots": [
