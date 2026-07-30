@@ -1,35 +1,20 @@
 {
-  "generated": "2026-07-30 23:42:16+09:00",
+  "generated": "2026-07-31 08:03:21+09:00",
   "source": "jma_xml",
-  "time": "2026/7/30 22:47 (JST)",
+  "time": "2026/7/31 07:50 (JST)",
   "epicenter": "熊本県熊本地方",
-  "depth": "約20km",
-  "magnitude": "M4.8",
-  "maxShindo": "4",
+  "depth": "約10km",
+  "magnitude": "M3.3",
+  "maxShindo": "3",
   "tsunami": "この地震による津波の心配はありません。",
   "shindoAreas": [
     {
-      "level": "4",
-      "area": "長崎県"
-    },
-    {
       "level": "3",
-      "area": "福岡県・熊本県・鹿児島県"
-    },
-    {
-      "level": "2",
-      "area": "山口県・佐賀県・大分県・宮崎県"
+      "area": "熊本県"
     }
   ],
   "alertLevel": "normal",
   "affectedPrefs": [
-    "長崎県",
-    "福岡県",
-    "熊本県",
-    "鹿児島県",
-    "山口県",
-    "佐賀県",
-    "大分県",
-    "宮崎県"
+    "熊本県"
   ]
 }
