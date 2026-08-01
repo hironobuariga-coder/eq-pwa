@@ -1,29 +1,33 @@
 {
-  "generated": "2026-08-01 13:41:25+09:00",
+  "generated": "2026-08-01 19:57:30+09:00",
   "source": "jma_xml",
-  "time": "2026/8/1 11:48 (JST)",
-  "epicenter": "青森県東方沖",
-  "depth": "約80km",
-  "magnitude": "M5.8",
-  "maxShindo": "4",
+  "time": "2026/8/1 18:41 (JST)",
+  "epicenter": "熊本県天草・芦北地方",
+  "depth": "",
+  "magnitude": "M3.8",
+  "maxShindo": "3",
   "tsunami": "この地震による津波の心配はありません。",
   "shindoAreas": [
     {
-      "level": "4",
-      "area": "北海道・青森県・岩手県"
+      "level": "3",
+      "area": "熊本県"
     },
     {
       "level": "2",
-      "area": "宮城県・秋田県・山形県"
+      "area": "宮崎県"
+    },
+    {
+      "level": "1",
+      "area": "福岡県・佐賀県・長崎県・鹿児島県"
     }
   ],
   "alertLevel": "normal",
   "affectedPrefs": [
-    "北海道",
-    "青森県",
-    "岩手県",
-    "宮城県",
-    "秋田県",
-    "山形県"
+    "熊本県",
+    "宮崎県",
+    "福岡県",
+    "佐賀県",
+    "長崎県",
+    "鹿児島県"
   ]
 }
