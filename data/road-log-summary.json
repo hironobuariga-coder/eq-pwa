@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-02T13:47:18.983Z",
+  "generated": "2026-08-02T15:12:13.379Z",
   "periods": [
     {
       "road": "常磐",
@@ -14,7 +14,8 @@
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "8/2 22:47"
+        "8/2 22:47",
+        "8/3 00:12"
       ]
     },
     {
@@ -30,7 +31,8 @@
       "startTimeJST": "13:30",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "8/2 22:47"
+        "8/2 22:47",
+        "8/3 00:12"
       ]
     },
     {
@@ -46,7 +48,8 @@
       "startTimeJST": "10:05",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "8/2 22:47"
+        "8/2 22:47",
+        "8/3 00:12"
       ]
     },
     {
@@ -62,7 +65,8 @@
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "8/2 22:47"
+        "8/2 22:47",
+        "8/3 00:12"
       ]
     },
     {
@@ -78,7 +82,8 @@
       "startTimeJST": "00:20",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "8/2 22:47"
+        "8/2 22:47",
+        "8/3 00:12"
       ]
     },
     {
@@ -94,7 +99,8 @@
       "startTimeJST": "18:09",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "8/2 22:47"
+        "8/2 22:47",
+        "8/3 00:12"
       ]
     },
     {
@@ -110,7 +116,8 @@
       "startTimeJST": "23:08",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "8/2 22:47"
+        "8/2 22:47",
+        "8/3 00:12"
       ]
     },
     {
@@ -126,7 +133,8 @@
       "startTimeJST": "23:08",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "8/2 22:47"
+        "8/2 22:47",
+        "8/3 00:12"
       ]
     },
     {
@@ -142,7 +150,8 @@
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "8/2 22:47"
+        "8/2 22:47",
+        "8/3 00:12"
       ]
     },
     {
@@ -158,7 +167,8 @@
       "startTimeJST": "13:20",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "8/2 22:47"
+        "8/2 22:47",
+        "8/3 00:12"
       ]
     }
   ]
