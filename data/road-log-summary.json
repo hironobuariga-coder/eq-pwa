@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-02T06:41:23.798Z",
+  "generated": "2026-08-02T09:17:16.799Z",
   "periods": [
     {
       "road": "常磐",
@@ -7,14 +7,13 @@
       "direction": "",
       "reason": "台風",
       "status": "通行止め",
-      "start": "2026-08-01T18:14:20+09:00",
+      "start": "2026-08-01T20:25:35+09:00",
       "end": "2026-08-01T20:25:35+09:00",
-      "startJST": "8/1 18:14",
+      "startJST": "8/1 20:25",
       "endJST": "8/1 20:25",
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "8/1 18:14",
         "8/1 20:25"
       ]
     },
@@ -24,14 +23,13 @@
       "direction": "上下線",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-08-01T18:14:20+09:00",
+      "start": "2026-08-01T20:25:35+09:00",
       "end": "2026-08-01T20:25:35+09:00",
-      "startJST": "8/1 18:14",
+      "startJST": "8/1 20:25",
       "endJST": "8/1 20:25",
       "startTimeJST": "13:30",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "8/1 18:14",
         "8/1 20:25"
       ]
     },
@@ -41,14 +39,13 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-08-01T18:14:20+09:00",
+      "start": "2026-08-01T20:25:35+09:00",
       "end": "2026-08-01T20:25:35+09:00",
-      "startJST": "8/1 18:14",
+      "startJST": "8/1 20:25",
       "endJST": "8/1 20:25",
       "startTimeJST": "10:05",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "8/1 18:14",
         "8/1 20:25"
       ]
     },
@@ -58,14 +55,13 @@
       "direction": "上下線",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-08-01T18:14:20+09:00",
+      "start": "2026-08-01T20:25:35+09:00",
       "end": "2026-08-01T20:25:35+09:00",
-      "startJST": "8/1 18:14",
+      "startJST": "8/1 20:25",
       "endJST": "8/1 20:25",
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "8/1 18:14",
         "8/1 20:25"
       ]
     },
@@ -75,14 +71,13 @@
       "direction": "",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-08-01T18:14:20+09:00",
+      "start": "2026-08-01T20:25:35+09:00",
       "end": "2026-08-01T20:25:35+09:00",
-      "startJST": "8/1 18:14",
+      "startJST": "8/1 20:25",
       "endJST": "8/1 20:25",
       "startTimeJST": "00:20",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "8/1 18:14",
         "8/1 20:25"
       ]
     },
@@ -92,14 +87,13 @@
       "direction": "上下線",
       "reason": "地震",
       "status": "通行止め",
-      "start": "2026-08-01T18:14:20+09:00",
+      "start": "2026-08-01T20:25:35+09:00",
       "end": "2026-08-01T20:25:35+09:00",
-      "startJST": "8/1 18:14",
+      "startJST": "8/1 20:25",
       "endJST": "8/1 20:25",
       "startTimeJST": "18:09",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "8/1 18:14",
         "8/1 20:25"
       ]
     },
@@ -109,14 +103,13 @@
       "direction": "上下線",
       "reason": "地震",
       "status": "通行止め",
-      "start": "2026-08-01T18:14:20+09:00",
+      "start": "2026-08-01T20:25:35+09:00",
       "end": "2026-08-01T20:25:35+09:00",
-      "startJST": "8/1 18:14",
+      "startJST": "8/1 20:25",
       "endJST": "8/1 20:25",
       "startTimeJST": "23:08",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "8/1 18:14",
         "8/1 20:25"
       ]
     },
@@ -126,14 +119,13 @@
       "direction": "上下線",
       "reason": "地震",
       "status": "通行止め",
-      "start": "2026-08-01T18:14:20+09:00",
+      "start": "2026-08-01T20:25:35+09:00",
       "end": "2026-08-01T20:25:35+09:00",
-      "startJST": "8/1 18:14",
+      "startJST": "8/1 20:25",
       "endJST": "8/1 20:25",
       "startTimeJST": "23:08",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "8/1 18:14",
         "8/1 20:25"
       ]
     },
@@ -143,14 +135,13 @@
       "direction": "上下線",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-08-01T18:14:20+09:00",
+      "start": "2026-08-01T20:25:35+09:00",
       "end": "2026-08-01T20:25:35+09:00",
-      "startJST": "8/1 18:14",
+      "startJST": "8/1 20:25",
       "endJST": "8/1 20:25",
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "8/1 18:14",
         "8/1 20:25"
       ]
     },
@@ -160,14 +151,13 @@
       "direction": "上下線",
       "reason": "大雪",
       "status": "通行止め",
-      "start": "2026-08-01T18:14:20+09:00",
+      "start": "2026-08-01T20:25:35+09:00",
       "end": "2026-08-01T20:25:35+09:00",
-      "startJST": "8/1 18:14",
+      "startJST": "8/1 20:25",
       "endJST": "8/1 20:25",
       "startTimeJST": "13:20",
       "source": "e_nexco_tohoku",
       "snapshots": [
-        "8/1 18:14",
         "8/1 20:25"
       ]
     }
