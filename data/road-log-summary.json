@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-03T00:07:00.014Z",
+  "generated": "2026-08-03T03:48:25.062Z",
   "periods": [
     {
       "road": "常磐",
@@ -29,9 +29,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-08-02T22:47:11+09:00",
-      "end": null,
+      "end": "2026-08-03T09:06:55+09:00",
       "startJST": "8/2 22:47",
-      "endJST": null,
+      "endJST": "8/3 09:06",
       "startTimeJST": "13:30",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -52,9 +52,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-08-02T22:47:11+09:00",
-      "end": null,
+      "end": "2026-08-03T09:06:55+09:00",
       "startJST": "8/2 22:47",
-      "endJST": null,
+      "endJST": "8/3 09:06",
       "startTimeJST": "10:05",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -75,9 +75,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-08-02T22:47:11+09:00",
-      "end": null,
+      "end": "2026-08-03T09:06:55+09:00",
       "startJST": "8/2 22:47",
-      "endJST": null,
+      "endJST": "8/3 09:06",
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -98,9 +98,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-08-02T22:47:11+09:00",
-      "end": null,
+      "end": "2026-08-03T09:06:55+09:00",
       "startJST": "8/2 22:47",
-      "endJST": null,
+      "endJST": "8/3 09:06",
       "startTimeJST": "00:20",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -121,9 +121,9 @@
       "reason": "地震",
       "status": "通行止め",
       "start": "2026-08-02T22:47:11+09:00",
-      "end": null,
+      "end": "2026-08-03T09:06:55+09:00",
       "startJST": "8/2 22:47",
-      "endJST": null,
+      "endJST": "8/3 09:06",
       "startTimeJST": "18:09",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -144,9 +144,9 @@
       "reason": "地震",
       "status": "通行止め",
       "start": "2026-08-02T22:47:11+09:00",
-      "end": null,
+      "end": "2026-08-03T09:06:55+09:00",
       "startJST": "8/2 22:47",
-      "endJST": null,
+      "endJST": "8/3 09:06",
       "startTimeJST": "23:08",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -167,9 +167,9 @@
       "reason": "地震",
       "status": "通行止め",
       "start": "2026-08-02T22:47:11+09:00",
-      "end": null,
+      "end": "2026-08-03T09:06:55+09:00",
       "startJST": "8/2 22:47",
-      "endJST": null,
+      "endJST": "8/3 09:06",
       "startTimeJST": "23:08",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -190,9 +190,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-08-02T22:47:11+09:00",
-      "end": null,
+      "end": "2026-08-03T09:06:55+09:00",
       "startJST": "8/2 22:47",
-      "endJST": null,
+      "endJST": "8/3 09:06",
       "startTimeJST": "",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -213,9 +213,9 @@
       "reason": "大雪",
       "status": "通行止め",
       "start": "2026-08-02T22:47:11+09:00",
-      "end": null,
+      "end": "2026-08-03T09:06:55+09:00",
       "startJST": "8/2 22:47",
-      "endJST": null,
+      "endJST": "8/3 09:06",
       "startTimeJST": "13:20",
       "source": "e_nexco_tohoku",
       "snapshots": [
@@ -243,7 +243,8 @@
       "source": "e_nexco_kanto",
       "snapshots": [
         "8/3 08:03",
-        "8/3 09:06"
+        "8/3 09:06",
+        "8/3 12:48"
       ]
     },
     {
@@ -260,7 +261,8 @@
       "source": "e_nexco_kanto",
       "snapshots": [
         "8/3 08:03",
-        "8/3 09:06"
+        "8/3 09:06",
+        "8/3 12:48"
       ]
     },
     {
@@ -277,7 +279,8 @@
       "source": "e_nexco_kanto",
       "snapshots": [
         "8/3 08:03",
-        "8/3 09:06"
+        "8/3 09:06",
+        "8/3 12:48"
       ]
     },
     {
@@ -294,7 +297,8 @@
       "source": "e_nexco_kanto",
       "snapshots": [
         "8/3 08:03",
-        "8/3 09:06"
+        "8/3 09:06",
+        "8/3 12:48"
       ]
     },
     {
@@ -311,7 +315,8 @@
       "source": "e_nexco_kanto",
       "snapshots": [
         "8/3 08:03",
-        "8/3 09:06"
+        "8/3 09:06",
+        "8/3 12:48"
       ]
     },
     {
@@ -328,7 +333,8 @@
       "source": "e_nexco_kanto",
       "snapshots": [
         "8/3 08:03",
-        "8/3 09:06"
+        "8/3 09:06",
+        "8/3 12:48"
       ]
     }
   ]
