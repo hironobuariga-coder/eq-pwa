@@ -1,28 +1,6 @@
 {
-  "generated": "2026-08-05 12:37:29+09:00",
+  "generated": "2026-08-05 15:10:31+09:00",
   "triggers": [
-    {
-      "id": "https://www.data.jma.go.jp/developer/xml/data/20260803203549_0_VXSE53_270000.xml",
-      "type": "quake",
-      "dtype": "quake",
-      "level": 4,
-      "title": "震源・震度に関する情報",
-      "epicenter": "",
-      "maxShindo": 4,
-      "detected": "2026-08-04 05:43:28+09:00",
-      "url": "https://www.data.jma.go.jp/developer/xml/data/20260803203549_0_VXSE53_270000.xml"
-    },
-    {
-      "id": "https://www.data.jma.go.jp/developer/xml/data/20260803203343_0_VXSE51_010000.xml",
-      "type": "quake",
-      "dtype": "quake",
-      "level": 4,
-      "title": "震度速報",
-      "epicenter": "",
-      "maxShindo": 4,
-      "detected": "2026-08-04 05:43:28+09:00",
-      "url": "https://www.data.jma.go.jp/developer/xml/data/20260803203343_0_VXSE51_010000.xml"
-    },
     {
       "id": "nerv:https://unnerv.jp/@UN_NERV/117039490318572058",
       "type": "typhoon",
@@ -34,18 +12,6 @@
     }
   ],
   "processed_ids": [
-    "https://www.data.jma.go.jp/developer/xml/data/20260803075749_0_VPWW53_080000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260803075749_0_VPWW54_080000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260803075748_0_VPWW53_110000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260803075748_0_VPWW54_110000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260803075746_0_VPWW53_100000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260803075743_0_VPWW54_180000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260803075745_0_VPWW54_100000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260803075743_0_VPWW53_180000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260803075743_0_VPWW54_090000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260803075743_0_VPWW53_090000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260803075742_0_VPWW54_200000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260803075742_0_VPWW53_200000.xml",
     "https://www.data.jma.go.jp/developer/xml/data/20260803075740_0_VPWW53_160000.xml",
     "https://www.data.jma.go.jp/developer/xml/data/20260803075740_0_VPWW54_160000.xml",
     "https://www.data.jma.go.jp/developer/xml/data/20260803075739_0_VPWW53_170000.xml",
@@ -2033,6 +1999,18 @@
     "nerv:https://unnerv.jp/@UN_NERV/117040122988957125",
     "nerv:https://unnerv.jp/@UN_NERV/117040112360162602",
     "nerv:https://unnerv.jp/@UN_NERV/117040094257225065",
-    "nerv:https://unnerv.jp/@UN_NERV/117040053983195429"
+    "nerv:https://unnerv.jp/@UN_NERV/117040053983195429",
+    "https://www.data.jma.go.jp/developer/xml/data/20260805050631_0_VXSE53_270000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260805060112_0_VPCJ51_150000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260805060112_0_VPCJ50_150000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260805060010_0_VPZJ50_010000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260805060010_0_VPZJ51_010000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260805042446_0_VPTW62_010000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260805040420_0_VPTW61_010000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260805034041_0_VPTW60_010000.xml",
+    "nerv:https://unnerv.jp/@UN_NERV/117041372227741967",
+    "nerv:https://unnerv.jp/@UN_NERV/117041161702459686",
+    "nerv:https://unnerv.jp/@UN_NERV/117040917170815403",
+    "nerv:https://unnerv.jp/@UN_NERV/117040824174661963"
   ]
 }
