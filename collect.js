@@ -27,7 +27,11 @@ function fmtJST(d) {
 // 無料Nitterミラーは壊れていると「古いキャッシュ」をHTTP 200で返すことがあり、
 // 数ヶ月前の投稿（例：冬の大雪通行止め）を「今の情報」として誤収集してしまう。
 // これを防ぐため、投稿日時が新しいものだけを「今回の検知」として採用する。
-var FRESH_WINDOW_MS  = 24 * 3600 * 1000; // これより古い投稿は「新規の検知情報」として信用しない
+var FRESH_WINDOW_MS  = 48 * 3600 * 1000; // これより古い情報は「新規の検知情報」として信用しない
+// ↑ NEXCO公式お知らせページは日付単位（時刻精度なし）で日付をT12:00:00と
+//   仮定しているため、Nitter専用だった24時間より少し長めに確保している。
+//   公式サイトは「壊れたキャッシュが古い情報を返す」リスクがNitterより低いため、
+//   広げても安全側に倒れる。
 var CLOCK_SKEW_MS    = 15 * 60 * 1000;   // 未来日時の許容誤差（時刻ズレ対策）
 // 一定時間、鮮度のある投稿で再確認できない通行止めは「解除ツイートが出ないまま
 // 実際には解消された」とみなして自動的に一覧から外す（=ずっと通行止めのままに
@@ -61,19 +65,12 @@ if (typeof globalThis.fetch === 'undefined') {
 }
 var fetchFn = globalThis.fetch.bind(globalThis);
 
-// ─── 監視対象のNEXCO公式Xアカウント ─────────────────────────────
-// 地図に描画した全40路線をカバーするよう支社アカウントも追加
+// ─── 監視対象のNEXCO公式Xアカウント（NEXCO中日本のみ・ベストエフォート） ──
+// NEXCO西日本・東日本は公式サイトを直接取得する方式に切り替えたため対象外。
+// NEXCO中日本の公式サイト（c-nexco.co.jp）はrobots.txtで自動アクセスが
+// 禁止されているため、引き続きX/RSS経由のベストエフォート取得とする。
 const ACCOUNTS = [
-  // NEXCO東日本
-  'e_nexco_bousai',   // 道路防災情報（最重要・災害時随時発信）
-  'e_nexco_kanto',    // 関東支社（東名・中央・東北・関越・常磐・圏央）
-  'e_nexco_tohoku',   // 東北支社（東北道・磐越道・日本海東北道・山形道・秋田道）
-  'e_nexco_kita',     // 北海道支社（道央道・道東道・旭川道・函館江差道・深川留萌道）
-  'e_nexco_niigata',  // 新潟支社（関越道・北陸道の新潟側・上信越道）
-  // NEXCO中日本
-  'c_nexco_official', // 本社（東名・新東名・中央・名神・新名神・東名阪・伊勢湾岸・上信越・北陸）
-  // NEXCO西日本
-  'w_nexco_official'  // 本社（山陽・中国・阪和・山陰・舞鶴若狭・九州・長崎・大分・宮崎・東九州・高松・徳島・高知・松山・沖縄）
+  'c_nexco_official' // NEXCO中日本 本社（東名・新東名・中央・名神・新名神・東名阪・伊勢湾岸・上信越・北陸）
 ];
 
 // ─── 無料RSS変換サービス（順番に試す） ──────────────────────────
@@ -83,6 +80,82 @@ const RSS_PROVIDERS = [
   'https://nitter.net/{user}/rss',
   'https://rss-bridge.org/bridge01/?action=display&bridge=TwitterBridge&context=By+username&u={user}&format=Atom'
 ];
+
+// ─── NEXCO西日本・東日本の公式お知らせページ ────────────────────
+// robots.txtで許可されており、Nitterのような非公式ミラーより遥かに安定。
+const WEST_NOTICES_URL = 'https://corp.w-nexco.co.jp/newly/';
+const EAST_NOTICES_URL = 'https://www.e-nexco.co.jp/whatsnew/';
+
+async function fetchWestNotices() {
+  try {
+    var opt = { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; RoadInfoBot/3.0)' } };
+    if (typeof AbortSignal !== 'undefined' && AbortSignal.timeout) opt.signal = AbortSignal.timeout(15000);
+    var res = await fetchFn(WEST_NOTICES_URL, opt);
+    if (!res.ok) { console.warn('  NEXCO西日本(公式サイト): HTTP ' + res.status); return []; }
+    return parseWestNotices(await res.text());
+  } catch (e) {
+    console.warn('  NEXCO西日本(公式サイト): ' + e.message);
+    return [];
+  }
+}
+
+function parseWestNotices(html) {
+  var items = [];
+  // お知らせリンクを列挙。正確なHTML構造（クラス名等）に依存しないよう、
+  // 「直前に出現した日付見出し（YYYY年 MM月 DD日）」を逆探索して関連付ける。
+  var dateRe = /(\d{4})年\s*(\d{1,2})月\s*(\d{1,2})日/g;
+  var dates = [];
+  var dm;
+  while ((dm = dateRe.exec(html))) dates.push({ idx: dm.index, y: +dm[1], mo: +dm[2], d: +dm[3] });
+
+  var linkRe = /<a\s+href="(https:\/\/corp\.w-nexco\.co\.jp\/[^"]+)"[^>]*>([\s\S]{1,300}?)<\/a>/g;
+  var lm, di = 0;
+  while ((lm = linkRe.exec(html))) {
+    var href = lm[1];
+    if (!/\/(corporate\/release|newly)\//.test(href)) continue; // ナビ等の非お知らせリンクを除外
+    var title = stripHtml(lm[2]).trim();
+    if (!title) continue;
+    while (di + 1 < dates.length && dates[di + 1].idx <= lm.index) di++;
+    var nearest = (dates.length && dates[di].idx <= lm.index) ? dates[di] : null;
+    if (!nearest) continue;
+    var iso = nearest.y + '-' + String(nearest.mo).padStart(2, '0') + '-' + String(nearest.d).padStart(2, '0') + 'T12:00:00+09:00';
+    items.push({ text: title, date: iso });
+  }
+  return items;
+}
+
+async function fetchEastNotices() {
+  try {
+    var opt = { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; RoadInfoBot/3.0)' } };
+    if (typeof AbortSignal !== 'undefined' && AbortSignal.timeout) opt.signal = AbortSignal.timeout(15000);
+    var res = await fetchFn(EAST_NOTICES_URL, opt);
+    if (!res.ok) { console.warn('  NEXCO東日本(公式サイト): HTTP ' + res.status); return []; }
+    return parseEastNotices(await res.text());
+  } catch (e) {
+    console.warn('  NEXCO東日本(公式サイト): ' + e.message);
+    return [];
+  }
+}
+
+function parseEastNotices(html) {
+  var items = [];
+  // 1つの<a>タグの中に「YYYY年MM月DD日 カテゴリ カテゴリ タイトル」が
+  // まとめて入っている構造（新着情報一覧ページの実測に基づく）。
+  var re = /<a\s+href="(https:\/\/www\.e-nexco\.co\.jp\/[^"]+)"[^>]*>([\s\S]{1,400}?)<\/a>/g;
+  var m;
+  while ((m = re.exec(html))) {
+    var href = m[1];
+    if (!/\/(news|pressroom|cms_assets)\//.test(href)) continue;
+    var raw = stripHtml(m[2]).trim();
+    var dm = raw.match(/^(\d{4})年(\d{2})月(\d{2})日\s*(.*)$/);
+    if (!dm) continue;
+    var title = dm[4].trim();
+    if (!title) continue;
+    var iso = dm[1] + '-' + dm[2] + '-' + dm[3] + 'T12:00:00+09:00';
+    items.push({ text: title, date: iso });
+  }
+  return items;
+}
 
 // ─── 監視対象路線（地図描画の40路線に対応） ─────────────────────
 // ★ 路線名は投稿文内のキーワードとして使用するため、
@@ -96,7 +169,7 @@ const TARGET_ROADS = [
   // 関東・中部（その他）
   '西名阪', '名二環', '中央', '上信越', '長野',
   // 関東
-  '関越', '東北', '常磐', '圏央', 'アクアライン', '東関東',
+  '関越', '東北中央', '東北', '常磐', '圏央', 'アクアライン', '東関東',
   // 北陸・日本海
   '北陸', '舞鶴若狭', '京都縦貫',
   // 東北・日本海
@@ -106,7 +179,7 @@ const TARGET_ROADS = [
   // 四国
   '高松', '徳島', '高知', '松山',
   // 九州
-  '東九州', '九州', '長崎', '大分', '宮崎',
+  '東九州', '南九州', '九州', '長崎', '大分', '宮崎',
   // 北海道
   '道央', '道東', '旭川紋別', '函館江差', '深川留萌',
   // 沖縄
@@ -175,7 +248,7 @@ var E_NUM_MAP = {
   'E1A':'新東名','E1':'東名','E2A':'中国','E2':'山陽',
   'E3':'九州','E4A':'山形','E4':'東北','E5A':'道東','E5':'道央',
   'E6':'常磐','E7':'日本海東北','E8':'北陸','E9':'山陰',
-  'E10':'東九州','E17':'関越','E18':'上信越','E19':'中央','E20':'中央',
+  'E10':'東九州','E13':'東北中央','E17':'関越','E18':'上信越','E19':'中央','E20':'中央',
   'E23':'東名阪','E25':'西名阪','E26':'阪和','E27':'舞鶴若狭',
   'E34':'大分','E35':'長崎','E38':'高松','E42':'阪和',
   'E45':'秋田','E46':'秋田','E50':'東関東','E51':'東関東',
@@ -247,33 +320,51 @@ async function main() {
   var now = new Date();
   var jst = new Date(now.getTime() + 9 * 3600 * 1000);
   var ts  = jst.toISOString().replace('Z', '+09:00').slice(0, 19) + '+09:00';
-  console.log('[' + ts + '] 収集開始（X/RSS方式）');
+  console.log('[' + ts + '] 収集開始（公式サイト＋X/RSS方式）');
 
-  var allClosures = [];   // 鮮度チェックを通過した「通行止め」投稿のみ
-  var allReleases = [];   // 鮮度チェックを通過した「解除」投稿のみ
-  var staleSkipped = 0, unparsedSkipped = 0;
+  // ── 取得源ごとに items を集める ──────────────────────────────
+  // ① NEXCO西日本・東日本：公式サイトを直接取得（robots.txt許可・安定）
+  // ② NEXCO中日本：公式サイトがrobots.txtで自動アクセス禁止のため、
+  //    引き続きX/RSS経由のベストエフォート取得とする
+  var sources = [];
+
+  var westItems = await fetchWestNotices();
+  console.log('  NEXCO西日本(公式サイト): ' + westItems.length + '件');
+  sources.push({ tag: 'w_nexco_official_site', items: westItems });
+
+  var eastItems = await fetchEastNotices();
+  console.log('  NEXCO東日本(公式サイト): ' + eastItems.length + '件');
+  sources.push({ tag: 'e_nexco_official_site', items: eastItems });
 
   for (var i = 0; i < ACCOUNTS.length; i++) {
     var acct = ACCOUNTS[i];
     var xml = await fetchAccountRSS(acct);
-    if (!xml) continue;
-    var items = parseItems(xml);
-    console.log('  ' + acct + ': ' + items.length + '件の投稿');
-    for (var j = 0; j < items.length; j++) {
-      var c = extractClosure(items[j].text, items[j].date);
+    var items = xml ? parseItems(xml) : [];
+    console.log('  ' + acct + '(X/RSS・ベストエフォート): ' + items.length + '件');
+    sources.push({ tag: acct, items: items });
+  }
+
+  var allClosures = [];   // 鮮度チェックを通過した「通行止め」情報のみ
+  var allReleases = [];   // 鮮度チェックを通過した「解除」情報のみ
+  var staleSkipped = 0, unparsedSkipped = 0;
+
+  for (var s = 0; s < sources.length; s++) {
+    var tag = sources[s].tag, srcItems = sources[s].items;
+    for (var j = 0; j < srcItems.length; j++) {
+      var c = extractClosure(srcItems[j].text, srcItems[j].date);
       if (!c) continue;
-      var pd = parsePostDate(items[j].date);
-      // 投稿日時が読み取れない、または古すぎる／未来すぎる投稿は
-      // 「壊れたNitterミラーが返す古いキャッシュ」の可能性が高いため除外する。
+      var pd = parsePostDate(srcItems[j].date);
+      // 日時が読み取れない、または古すぎる／未来すぎる情報は
+      // 「壊れたキャッシュ・古い情報」の可能性が高いため除外する。
       if (!pd) { unparsedSkipped++; continue; }
       var age = now.getTime() - pd.getTime();
       if (age > FRESH_WINDOW_MS || age < -CLOCK_SKEW_MS) { staleSkipped++; continue; }
-      c.account = acct;
+      c.account = tag;
       c.postDate = pd.toISOString();
       if (c.status === '解除') allReleases.push(c); else allClosures.push(c);
     }
   }
-  console.log('  通行止め関連の投稿: 通行止め' + allClosures.length + '件 / 解除' + allReleases.length + '件'
+  console.log('  通行止め関連の情報: 通行止め' + allClosures.length + '件 / 解除' + allReleases.length + '件'
     + '（鮮度NGで除外: 古い/未来' + staleSkipped + '件、日時不明' + unparsedSkipped + '件）');
 
   // ── 永続状態（road-state.json）の更新 ─────────────────────────
