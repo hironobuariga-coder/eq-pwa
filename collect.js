@@ -23,6 +23,37 @@ function fmtJST(d) {
   return mo + '/' + dd + ' ' + hh + ':' + mm;
 }
 
+// ─── 鮮度・状態管理の閾値 ────────────────────────────────────────
+// 無料Nitterミラーは壊れていると「古いキャッシュ」をHTTP 200で返すことがあり、
+// 数ヶ月前の投稿（例：冬の大雪通行止め）を「今の情報」として誤収集してしまう。
+// これを防ぐため、投稿日時が新しいものだけを「今回の検知」として採用する。
+var FRESH_WINDOW_MS  = 24 * 3600 * 1000; // これより古い投稿は「新規の検知情報」として信用しない
+var CLOCK_SKEW_MS    = 15 * 60 * 1000;   // 未来日時の許容誤差（時刻ズレ対策）
+// 一定時間、鮮度のある投稿で再確認できない通行止めは「解除ツイートが出ないまま
+// 実際には解消された」とみなして自動的に一覧から外す（=ずっと通行止めのままに
+// ならないようにする安全弁）。収集は1時間毎なので、数回分の欠測を許容する。
+var STALE_TTL_MS     = 6 * 3600 * 1000;
+// buildSummary()で「継続した1つの通行止め期間」とみなす最大の空白時間。
+// これを超えて記録が途切れたら、再出現時は「別の通行止め」として扱う。
+var SUMMARY_GAP_MS   = 150 * 60 * 1000;
+
+// RSSの pubDate（RFC822）/ updated（ISO8601）を Date に変換。パース不能は null。
+function parsePostDate(s) {
+  if (!s) return null;
+  var d = new Date(s);
+  if (isNaN(d.getTime())) return null;
+  return d;
+}
+
+// 通行止め／解除の「同一地点」を識別するキー。
+// road+section が基本だが、section が取れない投稿も多いため、その場合は
+// reason を補助的に使って衝突（別々の通行止めの混同）をできるだけ減らす。
+function locKey(c) {
+  var sec = (c.section || '').trim();
+  if (sec) return c.road + '|' + sec;
+  return c.road + '|#' + (c.reason || '');
+}
+
 // Node.js 18+ 組み込みの fetch を使用（追加パッケージ不要）
 if (typeof globalThis.fetch === 'undefined') {
   console.error('fetch が利用できません。Node.js 18以上が必要です。');
@@ -199,7 +230,10 @@ async function main() {
   var ts  = jst.toISOString().replace('Z', '+09:00').slice(0, 19) + '+09:00';
   console.log('[' + ts + '] 収集開始（X/RSS方式）');
 
-  var allClosures = [];
+  var allClosures = [];   // 鮮度チェックを通過した「通行止め」投稿のみ
+  var allReleases = [];   // 鮮度チェックを通過した「解除」投稿のみ
+  var staleSkipped = 0, unparsedSkipped = 0;
+
   for (var i = 0; i < ACCOUNTS.length; i++) {
     var acct = ACCOUNTS[i];
     var xml = await fetchAccountRSS(acct);
@@ -208,21 +242,96 @@ async function main() {
     console.log('  ' + acct + ': ' + items.length + '件の投稿');
     for (var j = 0; j < items.length; j++) {
       var c = extractClosure(items[j].text, items[j].date);
-      if (c) { c.account = acct; allClosures.push(c); }
+      if (!c) continue;
+      var pd = parsePostDate(items[j].date);
+      // 投稿日時が読み取れない、または古すぎる／未来すぎる投稿は
+      // 「壊れたNitterミラーが返す古いキャッシュ」の可能性が高いため除外する。
+      if (!pd) { unparsedSkipped++; continue; }
+      var age = now.getTime() - pd.getTime();
+      if (age > FRESH_WINDOW_MS || age < -CLOCK_SKEW_MS) { staleSkipped++; continue; }
+      c.account = acct;
+      c.postDate = pd.toISOString();
+      if (c.status === '解除') allReleases.push(c); else allClosures.push(c);
     }
   }
-  console.log('  通行止め関連の投稿: ' + allClosures.length + '件');
+  console.log('  通行止め関連の投稿: 通行止め' + allClosures.length + '件 / 解除' + allReleases.length + '件'
+    + '（鮮度NGで除外: 古い/未来' + staleSkipped + '件、日時不明' + unparsedSkipped + '件）');
 
+  // ── 永続状態（road-state.json）の更新 ─────────────────────────
+  // road-log.json は24時間で切り詰められるため「開始時刻」の記録用には使えない。
+  // ここでは「今も通行止めが続いている場所」を key 単位で永続管理し、
+  // ①鮮度のある投稿で再確認できた分は継続、②解除投稿があれば即削除、
+  // ③一定時間(TTL)再確認できなかった分は「解除ツイートが無いまま解消された」
+  //   とみなして自動的に外す。これにより「ずっと通行止めのまま残り続ける」事象を防ぐ。
+  var statePath = path.join(__dirname, 'data', 'road-state.json');
+  var state = { active: {} };
+  if (fs.existsSync(statePath)) {
+    try { state = JSON.parse(fs.readFileSync(statePath, 'utf-8')); } catch (e) { state = { active: {} }; }
+  }
+  if (!state.active) state.active = {};
+
+  // 解除が確認できた場所を先に消す（同時に、今回バッチ内での解除キー集合も作る）
+  var releasedThisRun = {};
+  for (var r = 0; r < allReleases.length; r++) {
+    var rk = locKey(allReleases[r]);
+    releasedThisRun[rk] = true;
+    if (state.active[rk]) delete state.active[rk];
+  }
+
+  // 今回の通行止め投稿ごとに、同一キーの重複を除いて最新情報を保持
+  // （同じ投稿バッチ内に解除ツイートも含まれていた場合はスキップ＝閉じたまま扱わない）
+  for (var k = 0; k < allClosures.length; k++) {
+    var c = allClosures[k];
+    var key = locKey(c);
+    if (releasedThisRun[key]) continue;
+    var existing = state.active[key];
+    if (existing) {
+      // 継続確認：最終確認時刻とその他の付帯情報（区間・方向・理由など）を更新
+      existing.lastSeenTs = c.postDate;
+      existing.direction  = c.direction || existing.direction;
+      existing.reason     = c.reason || existing.reason;
+      existing.startTime  = c.eventTime || existing.startTime;
+      existing.source     = c.account;
+      existing.section    = c.section || existing.section;
+    } else {
+      state.active[key] = {
+        road: c.road, section: c.section, direction: c.direction, reason: c.reason,
+        firstSeenTs: c.postDate, lastSeenTs: c.postDate,
+        startTime: c.eventTime, source: c.account
+      };
+    }
+  }
+
+  // TTL切れ（一定時間、鮮度のある投稿で再確認できなかった）を自動解除
+  var expiredKeys = [];
+  for (var key2 in state.active) {
+    var e = state.active[key2];
+    var lastSeen = new Date(e.lastSeenTs).getTime();
+    if (now.getTime() - lastSeen > STALE_TTL_MS) expiredKeys.push(key2);
+  }
+  expiredKeys.forEach(function(k){ delete state.active[k]; });
+  if (expiredKeys.length) console.log('  TTL切れで自動解除: ' + expiredKeys.length + '件（' + expiredKeys.join(', ') + '）');
+
+  fs.writeFileSync(statePath, JSON.stringify(state, null, 2), 'utf-8');
+
+  var active = Object.keys(state.active).map(function(k){
+    var e = state.active[k];
+    return {
+      road: e.road, section: e.section, direction: e.direction, status: '通行止め',
+      reason: e.reason, startTime: e.startTime, source: e.source,
+      firstSeenTs: e.firstSeenTs, lastSeenTs: e.lastSeenTs
+    };
+  });
+
+  // ── road-log.json（直近24時間のスナップショット履歴） ───────────
   var logPath = path.join(__dirname, 'data', 'road-log.json');
   var log = [];
   if (fs.existsSync(logPath)) {
     try { log = JSON.parse(fs.readFileSync(logPath, 'utf-8')); } catch (e) { log = []; }
   }
-  // 24時間以内のスナップショットのみ保持
   var cutoff = new Date(now.getTime() - 24 * 3600 * 1000);
   log = log.filter(function(e){ return new Date(e.ts) > cutoff; });
 
-  var active = computeActive(allClosures);
   log.push({ ts: ts, closures: active, rawCount: allClosures.length });
   log.sort(function(a, b){ return a.ts.localeCompare(b.ts); });
   fs.writeFileSync(logPath, JSON.stringify(log, null, 2), 'utf-8');
@@ -233,52 +342,56 @@ async function main() {
   console.log('road-log-summary.json 更新（通行止め期間' + summary.periods.length + '件）');
 }
 
-function computeActive(closures) {
-  var released = {};
-  for (var i = 0; i < closures.length; i++) {
-    if (closures[i].status === '解除') released[closures[i].road + '|' + closures[i].section] = true;
-  }
-  var seen = {};
-  var active = [];
-  for (var i = 0; i < closures.length; i++) {
-    var c = closures[i];
-    if (c.status !== '通行止め') continue;
-    var key = c.road + '|' + c.section;
-    if (released[key]) continue;
-    if (seen[key]) continue;
-    seen[key] = true;
-    active.push({ road: c.road, section: c.section, direction: c.direction, status: '通行止め', reason: c.reason, startTime: c.eventTime, source: c.account });
-  }
-  return active;
-}
-
+// road-log.json（直近24時間のスナップショット列）から、通行止めの「期間」を組み立てる。
+// ポイント：同じ場所（road-state.jsonのkeyと同じlocKey）が一度記録から消え、
+// 一定時間（SUMMARY_GAP_MS）を超えてから再び現れた場合は「別の通行止め期間」として
+// 分割する。これにより、一度解除されて再度通行止めになったケースが
+// 「ずっと通行止めが続いている」ように連結表示されるのを防ぐ。
 function buildSummary(log) {
   if (!log.length) return { generated: new Date().toISOString(), periods: [] };
   var snaps = log.map(function(e){
-    var keys = {};
-    (e.closures || []).forEach(function(c){ keys[c.road + '|' + c.section] = true; });
-    return { ts: e.ts, keys: keys, closures: e.closures || [] };
+    var byKey = {};
+    (e.closures || []).forEach(function(c){ byKey[locKey(c)] = c; });
+    return { ts: e.ts, byKey: byKey };
   });
   var allKeys = {};
-  snaps.forEach(function(s){ for (var k in s.keys) allKeys[k] = true; });
+  snaps.forEach(function(s){ for (var k in s.byKey) allKeys[k] = true; });
+  var lastSnapTs = snaps[snaps.length - 1].ts;
+
   var periods = [];
   for (var key in allKeys) {
-    var parts = key.split('|');
-    var road = parts[0], section = parts[1] || '';
-    var appears = snaps.filter(function(s){ return s.keys[key]; });
+    // このキーが登場するスナップショットだけを時系列で抽出
+    var appears = [];
+    for (var i = 0; i < snaps.length; i++) {
+      if (snaps[i].byKey[key]) appears.push(snaps[i]);
+    }
     if (!appears.length) continue;
-    var first = appears[0];
-    var fc = first.closures.filter(function(c){ return c.road + '|' + c.section === key; })[0] || {};
-    var last = appears[appears.length - 1];
-    var lastSnap = snaps[snaps.length - 1];
-    var ongoing = !!lastSnap.keys[key];
-    periods.push({
-      road: road, section: section, direction: fc.direction || '', reason: fc.reason || '',
-      status: '通行止め', start: first.ts, end: ongoing ? null : last.ts,
-      startJST: fmtJST(new Date(first.ts)),
-      endJST:   ongoing ? null : fmtJST(new Date(last.ts)),
-      startTimeJST: fc.startTime || '', source: fc.source || '',
-      snapshots: appears.map(function(s){ return fmtJST(new Date(s.ts)); })
+
+    // 出現間隔が SUMMARY_GAP_MS を超えたら別期間に分割
+    var groups = [[appears[0]]];
+    for (var i2 = 1; i2 < appears.length; i2++) {
+      var prevTs = new Date(appears[i2 - 1].ts).getTime();
+      var curTs  = new Date(appears[i2].ts).getTime();
+      if (curTs - prevTs > SUMMARY_GAP_MS) groups.push([appears[i2]]);
+      else groups[groups.length - 1].push(appears[i2]);
+    }
+
+    groups.forEach(function(g){
+      var first = g[0], last = g[g.length - 1];
+      var fc = first.byKey[key], lc = last.byKey[key];
+      var ongoing = last.ts === lastSnapTs; // 最新スナップショットまで途切れず続いている
+      // 開始時刻は road-state.json 由来の firstSeenTs（24時間ロールオーバーの影響を受けない）
+      // があれば優先し、無ければスナップショット時刻にフォールバックする。
+      var startTs = fc.firstSeenTs || first.ts;
+      var endTs = ongoing ? null : (lc.lastSeenTs || last.ts);
+      periods.push({
+        road: fc.road, section: fc.section || '', direction: fc.direction || '', reason: fc.reason || '',
+        status: '通行止め', start: startTs, end: endTs,
+        startJST: fmtJST(new Date(startTs)),
+        endJST:   endTs ? fmtJST(new Date(endTs)) : null,
+        startTimeJST: fc.startTime || '', source: lc.source || fc.source || '',
+        snapshots: g.map(function(s){ return fmtJST(new Date(s.ts)); })
+      });
     });
   }
   periods.sort(function(a, b){ return a.start.localeCompare(b.start); });
