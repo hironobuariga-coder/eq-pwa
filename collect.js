@@ -103,16 +103,19 @@ function parseWestNotices(html) {
   var items = [];
   // お知らせリンクを列挙。正確なHTML構造（クラス名等）に依存しないよう、
   // 「直前に出現した日付見出し（YYYY年 MM月 DD日）」を逆探索して関連付ける。
+  // href は相対パス（例: /corporate/release/...）で書かれているのが実際のサイトの
+  // 仕様だったため、絶対URL・相対パスの両方にマッチするようにしている。
   var dateRe = /(\d{4})年\s*(\d{1,2})月\s*(\d{1,2})日/g;
   var dates = [];
   var dm;
   while ((dm = dateRe.exec(html))) dates.push({ idx: dm.index, y: +dm[1], mo: +dm[2], d: +dm[3] });
 
-  var linkRe = /<a\s+href="(https:\/\/corp\.w-nexco\.co\.jp\/[^"]+)"[^>]*>([\s\S]{1,300}?)<\/a>/g;
-  var lm, di = 0;
+  var linkRe = /<a\s+href="((?:https?:\/\/corp\.w-nexco\.co\.jp)?\/[^"]+)"[^>]*>([\s\S]{1,300}?)<\/a>/g;
+  var lm, di = 0, matched = 0;
   while ((lm = linkRe.exec(html))) {
     var href = lm[1];
     if (!/\/(corporate\/release|newly)\//.test(href)) continue; // ナビ等の非お知らせリンクを除外
+    matched++;
     var title = stripHtml(lm[2]).trim();
     if (!title) continue;
     while (di + 1 < dates.length && dates[di + 1].idx <= lm.index) di++;
@@ -121,6 +124,7 @@ function parseWestNotices(html) {
     var iso = nearest.y + '-' + String(nearest.mo).padStart(2, '0') + '-' + String(nearest.d).padStart(2, '0') + 'T12:00:00+09:00';
     items.push({ text: title, date: iso });
   }
+  if (!items.length) console.log('  [debug] west html=' + html.length + 'B, dateHits=' + dates.length + ', linkMatched=' + matched);
   return items;
 }
 
@@ -141,11 +145,13 @@ function parseEastNotices(html) {
   var items = [];
   // 1つの<a>タグの中に「YYYY年MM月DD日 カテゴリ カテゴリ タイトル」が
   // まとめて入っている構造（新着情報一覧ページの実測に基づく）。
-  var re = /<a\s+href="(https:\/\/www\.e-nexco\.co\.jp\/[^"]+)"[^>]*>([\s\S]{1,400}?)<\/a>/g;
-  var m;
+  // href は相対パスの可能性があるため、絶対URL・相対パス両方にマッチさせる。
+  var re = /<a\s+href="((?:https?:\/\/www\.e-nexco\.co\.jp)?\/[^"]+)"[^>]*>([\s\S]{1,400}?)<\/a>/g;
+  var m, matched = 0;
   while ((m = re.exec(html))) {
     var href = m[1];
     if (!/\/(news|pressroom|cms_assets)\//.test(href)) continue;
+    matched++;
     var raw = stripHtml(m[2]).trim();
     var dm = raw.match(/^(\d{4})年(\d{2})月(\d{2})日\s*(.*)$/);
     if (!dm) continue;
@@ -154,6 +160,7 @@ function parseEastNotices(html) {
     var iso = dm[1] + '-' + dm[2] + '-' + dm[3] + 'T12:00:00+09:00';
     items.push({ text: title, date: iso });
   }
+  if (!items.length) console.log('  [debug] east html=' + html.length + 'B, linkMatched=' + matched);
   return items;
 }
 
