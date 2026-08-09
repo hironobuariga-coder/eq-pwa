@@ -114,22 +114,32 @@ const TARGET_ROADS = [
 ];
 
 async function fetchAccountRSS(user) {
-  for (var i = 0; i < RSS_PROVIDERS.length; i++) {
-    var url = RSS_PROVIDERS[i].replace('{user}', user);
-    try {
-      var opt = { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; RoadInfoBot/2.0)' } };
-      if (typeof AbortSignal !== 'undefined' && AbortSignal.timeout) opt.signal = AbortSignal.timeout(12000);
-      var res = await fetchFn(url, opt);
-      if (!res.ok) { console.warn('  ' + user + ': ' + url + ' -> HTTP ' + res.status); continue; }
-      var xml = await res.text();
-      if (xml && xml.length > 200 && (xml.indexOf('<item') >= 0 || xml.indexOf('<entry') >= 0)) {
-        console.log('  OK ' + user + ': ' + url + ' (' + xml.length + 'B)');
-        return xml;
-      }
-    } catch (e) {
-      console.warn('  ' + user + ': ' + url + ' -> ' + e.message);
+  // 4プロバイダを並列で試す（順番に待つと壊れたミラー全滅時に1アカウントあたり
+  // 最大48秒かかり、7アカウント合計で数分の無駄が生じるため）。
+  // 有効な応答が複数返っても、RSS_PROVIDERSの優先順位が高いものを採用する。
+  var results = await Promise.allSettled(RSS_PROVIDERS.map(function(tpl){
+    var url = tpl.replace('{user}', user);
+    var opt = { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; RoadInfoBot/2.0)' } };
+    if (typeof AbortSignal !== 'undefined' && AbortSignal.timeout) opt.signal = AbortSignal.timeout(8000);
+    return fetchFn(url, opt).then(function(res){
+      if (!res.ok) return { ok: false, url: url, err: 'HTTP ' + res.status };
+      return res.text().then(function(xml){
+        var valid = xml && xml.length > 200 && (xml.indexOf('<item') >= 0 || xml.indexOf('<entry') >= 0);
+        return valid ? { ok: true, url: url, xml: xml } : { ok: false, url: url, err: '内容不正/空' };
+      });
+    }).catch(function(e){ return { ok: false, url: url, err: e.message }; });
+  }));
+
+  for (var i = 0; i < results.length; i++) {
+    var r = results[i].value; // allSettledなので必ずfulfilled（内部でcatch済み）
+    if (r && r.ok) {
+      console.log('  OK ' + user + ': ' + r.url + ' (' + r.xml.length + 'B)');
+      return r.xml;
     }
   }
+  results.forEach(function(res){
+    if (res.value) console.warn('  ' + user + ': ' + res.value.url + ' -> ' + res.value.err);
+  });
   console.warn('  NG ' + user + ': 全プロバイダ失敗');
   return null;
 }
@@ -198,8 +208,17 @@ function extractClosure(text, postDate) {
   var section = '';
   // IC/JCT名の前後のゴミ文字を除いた区間を抽出
   // 「白石IC〜平泉前沢IC」のような形式に限定（各IC名は15文字以内）
-  var secMatch = text.match(/([^\s　（）()、。\uff0c]{1,15}(?:IC|JCT|PA|SA|入口|出口))\s*[〜～\-]\s*([^\s　（）()、。\uff0c]{1,15}(?:IC|JCT|PA|SA))/);
-  if (secMatch) section = secMatch[1] + '〜' + secMatch[2];
+  var secMatch = text.match(/([^\s　（）()【】、。\uff0c]{1,15}(?:IC|JCT|PA|SA|入口|出口))\s*[〜～\-]\s*([^\s　（）()【】、。\uff0c]{1,15}(?:IC|JCT|PA|SA))/);
+  if (secMatch) {
+    section = secMatch[1] + '〜' + secMatch[2];
+  } else if (/全線/.test(text)) {
+    // 両端が特定できないが「全線通行止め」と明記されているケース
+    section = '全線';
+  } else {
+    // 片側のIC/JCTのみ言及されているケース（例：「○○IC付近で通行止め」）
+    var oneSide = text.match(/([^\s　（）()【】、。\uff0c]{1,15}(?:IC|JCT|PA|SA))\s*(?:付近|周辺)?/);
+    if (oneSide) section = oneSide[1];
+  }
   var direction = '';
   if (text.indexOf('上下線') >= 0) direction = '上下線';
   else if (text.indexOf('上り') >= 0) direction = '上り';
@@ -210,7 +229,7 @@ function extractClosure(text, postDate) {
   if (timeMatch) eventTime = timeMatch[1].padStart(2, '0') + ':' + timeMatch[2].padStart(2, '0');
   var reason = '';
   if (/地震/.test(text)) reason = '地震';
-  else if (/大雪|積雪|雪/.test(text)) reason = '大雪';
+  else if (/大雪|積雪|降雪|吹雪|雪崩|路面凍結|凍結/.test(text)) reason = '大雪';
   else if (/台風|強風|暴風/.test(text)) reason = '台風';
   else if (/大雨|豪雨|冠水/.test(text)) reason = '大雨';
   else if (/火災/.test(text)) reason = '車両火災';
