@@ -1,13 +1,17 @@
 {
-  "generated": "2026-08-11 00:04:04+09:00",
-  "triggers": [],
+  "generated": "2026-08-11 01:06:59+09:00",
+  "triggers": [
+    {
+      "id": "nerv:https://unnerv.jp/@UN_NERV/117072037457635455",
+      "type": "typhoon",
+      "dtype": "typhoon",
+      "title": "UN_NERV: “【台風第13号実況・予報 2026年08月11日 00:58…”",
+      "detected": "2026-08-11 01:06:59+09:00",
+      "url": "https://unnerv.jp/@UN_NERV/117072037457635455",
+      "source": "NERV"
+    }
+  ],
   "processed_ids": [
-    "nerv:https://unnerv.jp/@UN_NERV/117063451676069889",
-    "nerv:https://unnerv.jp/@UN_NERV/117063404221554730",
-    "nerv:https://unnerv.jp/@UN_NERV/117063356757130495",
-    "nerv:https://unnerv.jp/@UN_NERV/117063329318705180",
-    "nerv:https://unnerv.jp/@UN_NERV/117063324528682854",
-    "nerv:https://unnerv.jp/@UN_NERV/117063311832048326",
     "nerv:https://unnerv.jp/@UN_NERV/117063265105745061",
     "nerv:https://unnerv.jp/@UN_NERV/117063222524654274",
     "nerv:https://unnerv.jp/@UN_NERV/117063206415047980",
@@ -2001,6 +2005,12 @@
     "https://www.data.jma.go.jp/developer/xml/data/20260810135724_0_VPWW54_013000.xml",
     "nerv:https://unnerv.jp/@UN_NERV/117071804738468221",
     "nerv:https://unnerv.jp/@UN_NERV/117071712598348856",
-    "nerv:https://unnerv.jp/@UN_NERV/117071648505352847"
+    "nerv:https://unnerv.jp/@UN_NERV/117071648505352847",
+    "https://www.data.jma.go.jp/developer/xml/data/20260810155809_0_VXSE53_270000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260810155823_0_VPTW60_010000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260810154041_0_VPTW62_010000.xml",
+    "nerv:https://unnerv.jp/@UN_NERV/117072037457635455",
+    "nerv:https://unnerv.jp/@UN_NERV/117072035642603897",
+    "nerv:https://unnerv.jp/@UN_NERV/117071966967193591"
   ]
 }
