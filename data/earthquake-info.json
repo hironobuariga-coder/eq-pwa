@@ -1,34 +1,31 @@
 {
-  "generated": "2026-08-11 02:59:07+09:00",
+  "generated": "2026-08-11 04:07:19+09:00",
   "source": "jma_xml",
-  "time": "2026/8/11 02:47 (JST)",
+  "time": "2026/8/11 03:12 (JST)",
   "epicenter": "熊本県天草・芦北地方",
   "depth": "約10km",
-  "magnitude": "M4.1",
+  "magnitude": "M3.7",
   "maxShindo": "3",
   "tsunami": "この地震による津波の心配はありません。",
   "shindoAreas": [
     {
       "level": "3",
-      "area": "長崎県・熊本県"
+      "area": "熊本県"
     },
     {
       "level": "2",
-      "area": "鹿児島県"
+      "area": "長崎県"
     },
     {
       "level": "1",
-      "area": "福岡県・佐賀県・大分県・宮崎県"
+      "area": "宮崎県・鹿児島県"
     }
   ],
   "alertLevel": "normal",
   "affectedPrefs": [
-    "長崎県",
     "熊本県",
-    "鹿児島県",
-    "福岡県",
-    "佐賀県",
-    "大分県",
-    "宮崎県"
+    "長崎県",
+    "宮崎県",
+    "鹿児島県"
   ]
 }
