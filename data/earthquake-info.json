@@ -1,32 +1,20 @@
 {
-  "generated": "2026-08-11 08:42:35+09:00",
+  "generated": "2026-08-12 08:54:28+09:00",
   "source": "jma_xml",
-  "time": "2026/8/11 07:59 (JST)",
-  "epicenter": "熊本県熊本地方",
+  "time": "",
+  "epicenter": "震度３",
   "depth": "",
-  "magnitude": "M4.3",
+  "magnitude": "",
   "maxShindo": "3",
-  "tsunami": "この地震による津波の心配はありません。",
+  "tsunami": "今後の情報に注意してください。",
   "shindoAreas": [
     {
       "level": "3",
       "area": "熊本県"
-    },
-    {
-      "level": "2",
-      "area": "長崎県・鹿児島県"
-    },
-    {
-      "level": "1",
-      "area": "佐賀県・宮崎県"
     }
   ],
   "alertLevel": "normal",
   "affectedPrefs": [
-    "熊本県",
-    "長崎県",
-    "鹿児島県",
-    "佐賀県",
-    "宮崎県"
+    "熊本県"
   ]
 }
