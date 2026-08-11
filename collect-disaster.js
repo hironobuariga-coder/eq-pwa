@@ -34,6 +34,22 @@ const fetchFn = globalThis.fetch.bind(globalThis);
 const CONFIG_PATH   = path.join(__dirname, 'data', 'disaster-config.json');
 const TRIGGER_PATH  = path.join(__dirname, 'data', 'disaster-trigger.json');
 const EQ_INFO_PATH  = path.join(__dirname, 'data', 'earthquake-info.json');
+const LOC_WARN_PATH = path.join(__dirname, 'data', 'location-warnings.json');
+const TYPHOON_PATH  = path.join(__dirname, 'data', 'typhoon-track.json');
+
+// ─── 監視対象拠点（市区町村単位の警報・注意報を個別に追跡） ─────
+// prefCode は気象庁の府県予報区コード（VPWW54ファイル名の末尾6桁の上2桁）。
+// cityPrefix は警報XML内の<Area><Name>と前方一致で照合する。
+// 川崎市・熊本市中央区のような政令指定都市は区単位で発表されることが
+// あるため、市区町村単位の完全一致ではなく前方一致にしている。
+const TARGET_LOCATIONS = [
+  { id: 'higashi_rc',    label: '東RC',         prefCode: '14', cityPrefix: '川崎市' },
+  { id: 'naka_rc',       label: '中RC',         prefCode: '23', cityPrefix: '稲沢市' },
+  { id: 'nishi_rc',      label: '西RC',         prefCode: '28', cityPrefix: '三田市' },
+  { id: 'nishi2_rc',     label: '西第2RC',      prefCode: '28', cityPrefix: '川西市' },
+  { id: 'kudanshita',    label: '九段下オフィス', prefCode: '13', cityPrefix: '千代田区' },
+  { id: 'kumamoto_qct',  label: '熊Q',           prefCode: '43', cityPrefix: '熊本市中央区' },
+];
 
 // ─── 気象庁XMLフィードURL ─────────────────────────────────────────
 const JMA_FEEDS = {
@@ -309,6 +325,158 @@ async function fetchAndParseEq(url) {
   return { xml, maxShindo, parsed: null }; // parsed は必要時に計算
 }
 
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// 拠点別・市区町村単位の警報・注意報（VPWW54）
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// 気象警報・注意報（VPWW54）から「市町村等」単位の<Warning>ブロックを抜き出し、
+// 対象拠点（TARGET_LOCATIONS）の市区町村名に一致する部分だけを取り出す。
+// XMLパーサーを使わず正規表現で処理しているため、入れ子構造への依存を
+// 最小限にし、<Item>...</Item>を1件ずつに分割してから中身を見る設計にしている。
+function parseCityWarningsFromVPWW54(xml, cityPrefixes) {
+  var result = {}; // cityPrefix -> [{name, status}]
+  var warnBlockM = xml.match(/<Warning type="気象警報・注意報（市町村等）">([\s\S]*?)<\/Warning>/);
+  if (!warnBlockM) return result;
+  var block = warnBlockM[1];
+  var items = block.split(/<Item>/).slice(1).map(function(s){ return s.split('</Item>')[0]; });
+
+  items.forEach(function(item) {
+    var areaM = item.match(/<Area>\s*<Name>([^<]+)<\/Name>/);
+    if (!areaM) return;
+    var areaName = areaM[1];
+    var matchedPrefix = cityPrefixes.find(function(p){ return areaName.indexOf(p) === 0; });
+    if (!matchedPrefix) return;
+
+    // <Kind>...</Kind>を1件ずつ抜き出し、警報・注意報名とステータスを取得
+    var kinds = item.split(/<Kind>/).slice(1).map(function(s){ return s.split('</Kind>')[0]; });
+    var warnings = [];
+    kinds.forEach(function(k) {
+      var nameM = k.match(/<Name>([^<]+)<\/Name>/);
+      var statusM = k.match(/<Status>([^<]+)<\/Status>/);
+      if (nameM) warnings.push({ name: nameM[1], status: statusM ? statusM[1] : '' });
+    });
+
+    if (!result[matchedPrefix]) result[matchedPrefix] = [];
+    result[matchedPrefix].push({ area: areaName, warnings: warnings });
+  });
+
+  return result;
+}
+
+async function fetchLocationWarnings(exEntries, ts) {
+  // 対象拠点が属する府県予報区コードを重複なく集める（兵庫県は西RC/西第2RCで共有）
+  var neededPrefCodes = Array.from(new Set(TARGET_LOCATIONS.map(function(l){ return l.prefCode; })));
+
+  var byPrefCode = {}; // prefCode -> 最新のVPWW54エントリー
+  exEntries.forEach(function(entry) {
+    var m = entry.url.match(/_VPWW54_(\d{2})0000\.xml$/);
+    if (!m) return;
+    var pc = m[1];
+    if (neededPrefCodes.indexOf(pc) < 0) return;
+    // exEntriesは新しい順に並んでいるため、最初に見つかったものが最新
+    if (!byPrefCode[pc]) byPrefCode[pc] = entry;
+  });
+
+  var results = {}; // location.id -> { label, areas: [...] }
+  for (var i = 0; i < neededPrefCodes.length; i++) {
+    var pc = neededPrefCodes[i];
+    var entry = byPrefCode[pc];
+    if (!entry) { console.warn('  [拠点警報] 府県コード', pc, 'の最新VPWW54が見つかりません'); continue; }
+    var xml = await fetchXML(entry.url);
+    if (!xml) { console.warn('  [拠点警報] 取得失敗:', entry.url); continue; }
+    var cityPrefixes = TARGET_LOCATIONS.filter(function(l){ return l.prefCode === pc; }).map(function(l){ return l.cityPrefix; });
+    var parsed = parseCityWarningsFromVPWW54(xml, cityPrefixes);
+    TARGET_LOCATIONS.filter(function(l){ return l.prefCode === pc; }).forEach(function(loc) {
+      results[loc.id] = { label: loc.label, cityPrefix: loc.cityPrefix, areas: parsed[loc.cityPrefix] || [] };
+    });
+  }
+
+  var out = { generated: ts, locations: results };
+  fs.writeFileSync(LOC_WARN_PATH, JSON.stringify(out, null, 2), 'utf-8');
+  var activeCount = Object.keys(results).filter(function(k){
+    return results[k].areas.some(function(a){ return a.warnings.length > 0; });
+  }).length;
+  console.log('  [拠点警報] location-warnings.json 更新（' + Object.keys(results).length + '拠点中' + activeCount + '拠点で警報・注意報あり）');
+}
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// 台風の予測進路（VPTW：台風解析・予報情報）
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// <MeteorologicalInfo>を時系列順に1件ずつ取り出し、各時刻の中心位置
+// （実況・推定は<Coordinate>、予報は予報円<ProbabilityCircle>の中心）を
+// 緯度経度として抽出する。地図への線描画にそのまま使える配列にする。
+function parseTyphoonTrackXML(xml) {
+  var titleM = xml.match(/<Title>台風解析・予報情報<\/Title>/);
+  if (!titleM) return null;
+
+  var typhoonNameM = xml.match(/<Name>([^<]+)<\/Name>\s*<NameKana>([^<]*)<\/NameKana>\s*<Number>([^<]*)<\/Number>/);
+  var reportTimeM = xml.match(/<ReportDateTime>([^<]+)<\/ReportDateTime>/);
+
+  var infoBlocks = xml.split(/<MeteorologicalInfo>/).slice(1).map(function(s){ return s.split('</MeteorologicalInfo>')[0]; });
+  var track = [];
+
+  infoBlocks.forEach(function(block) {
+    var dtM = block.match(/<DateTime type="([^"]*)">([^<]+)<\/DateTime>/);
+    if (!dtM) return;
+    var timeLabel = dtM[1].trim();
+    var isoTime = dtM[2].trim();
+
+    // 実況・推定：<jmx_eb:Coordinate type="中心位置（度）">+36.6+142.7/</jmx_eb:Coordinate>
+    // 予報：<ProbabilityCircle type="予報円">...<jmx_eb:BasePoint type="中心位置（度）">+36.4+142.1/</jmx_eb:BasePoint>
+    var coordM = block.match(/type="中心位置（度）">([+-][\d.]+)([+-][\d.]+)\//);
+    if (!coordM) return;
+    var lat = parseFloat(coordM[1]);
+    var lon = parseFloat(coordM[2]);
+
+    // 予報円の半径（km）。「７０パーセント確率半径」タグは海里・kmの2回出現するため、2つ目（km）を採用
+    var radiusAll = block.match(/type="７０パーセント確率半径">(\d+)<\/jmx_eb:Radius>/g);
+    var radiusKmVal = null;
+    if (radiusAll && radiusAll.length >= 2) {
+      var kmMatch = radiusAll[1].match(/>(\d+)</);
+      if (kmMatch) radiusKmVal = parseInt(kmMatch[1], 10);
+    }
+
+    var classM = block.match(/<jmx_eb:TyphoonClass[^>]*>([^<]+)<\/jmx_eb:TyphoonClass>/);
+    var pressureM = block.match(/type="中心気圧">(\d+)<\/jmx_eb:Pressure>/);
+    var locationM = block.match(/<Location>([^<]+)<\/Location>/);
+
+    track.push({
+      timeLabel: timeLabel,
+      time: isoTime,
+      lat: lat, lon: lon,
+      class: classM ? classM[1] : '',
+      pressureHpa: pressureM ? parseInt(pressureM[1], 10) : null,
+      locationText: locationM ? locationM[1] : '',
+      forecastRadiusKm: radiusKmVal,
+    });
+  });
+
+  return {
+    name: typhoonNameM ? typhoonNameM[1] : '',
+    nameKana: typhoonNameM ? typhoonNameM[2] : '',
+    number: typhoonNameM ? typhoonNameM[3] : '',
+    reportTime: reportTimeM ? reportTimeM[1] : '',
+    track: track,
+  };
+}
+
+async function fetchTyphoonTrack(exEntries, ts) {
+  // extra.xmlは新しい順なので、最初に見つかったVPTW6*エントリーが最新
+  var entry = exEntries.find(function(e){ return /_VPTW6\d_010000\.xml$/.test(e.url); });
+  if (!entry) {
+    console.log('  [台風進路] 現在配信中の台風解析・予報情報なし');
+    fs.writeFileSync(TYPHOON_PATH, JSON.stringify({ generated: ts, active: false, typhoons: [] }, null, 2), 'utf-8');
+    return;
+  }
+  var xml = await fetchXML(entry.url);
+  if (!xml) { console.warn('  [台風進路] 取得失敗:', entry.url); return; }
+  var parsed = parseTyphoonTrackXML(xml);
+  if (!parsed) { console.warn('  [台風進路] パース失敗'); return; }
+
+  var out = { generated: ts, active: true, typhoons: [parsed] };
+  fs.writeFileSync(TYPHOON_PATH, JSON.stringify(out, null, 2), 'utf-8');
+  console.log('  [台風進路] typhoon-track.json 更新（台風' + parsed.number + ' ' + parsed.name + '、' + parsed.track.length + '地点）');
+}
+
 // ─── メイン ─────────────────────────────────────────────────────
 async function main() {
   var ts  = nowJST();
@@ -444,6 +612,20 @@ async function main() {
 
     processedIds.add(entry.id);
   });
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // ②-2 拠点別・市区町村単位の警報・注意報、および台風の予測進路
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  try {
+    await fetchLocationWarnings(exEntries, ts);
+  } catch (e) {
+    console.warn('  [拠点警報] エラー:', e.message);
+  }
+  try {
+    await fetchTyphoonTrack(exEntries, ts);
+  } catch (e) {
+    console.warn('  [台風進路] エラー:', e.message);
+  }
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // ③ 特務機関NERV Mastodon RSSチェック（フォールバック）
