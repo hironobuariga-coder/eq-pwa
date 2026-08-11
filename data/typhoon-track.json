@@ -1,42 +1,32 @@
 {
-  "generated": "2026-08-12 07:11:05+09:00",
+  "generated": "2026-08-12 08:05:47+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "PEILOU",
-      "nameKana": "ペイロー",
-      "number": "2616",
-      "reportTime": "2026-08-12T07:05:00+09:00",
+      "name": "CHAN-HOM",
+      "nameKana": "チャンホン",
+      "number": "2615",
+      "reportTime": "2026-08-12T07:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-12T06:00:00+09:00",
-          "lat": 29.5,
-          "lon": 160.2,
+          "time": "2026-08-12T07:00:00+09:00",
+          "lat": 35.9,
+          "lon": 135.9,
           "class": "台風(TS)",
           "pressureHpa": 998,
-          "locationText": "ウェーク島近海",
+          "locationText": "鯖江市の西南西約30km",
           "forecastRadiusKm": null
         },
         {
-          "timeLabel": "予報　１２時間後",
-          "time": "2026-08-12T18:00:00+09:00",
-          "lat": 30.3,
-          "lon": 163,
+          "timeLabel": "推定　１時間後",
+          "time": "2026-08-12T08:00:00+09:00",
+          "lat": 35.9,
+          "lon": 135.5,
           "class": "台風(TS)",
           "pressureHpa": 998,
-          "locationText": "日本のはるか東",
-          "forecastRadiusKm": 85
-        },
-        {
-          "timeLabel": "予報　２４時間後",
-          "time": "2026-08-13T06:00:00+09:00",
-          "lat": 30.9,
-          "lon": 165.4,
-          "class": "熱帯低気圧(TD)",
-          "pressureHpa": 998,
-          "locationText": "日本のはるか東",
-          "forecastRadiusKm": 120
+          "locationText": "舞鶴市の北北東約50km",
+          "forecastRadiusKm": null
         }
       ]
     }
