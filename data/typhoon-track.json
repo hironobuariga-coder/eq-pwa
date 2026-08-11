@@ -1,31 +1,31 @@
 {
-  "generated": "2026-08-12 05:26:41+09:00",
+  "generated": "2026-08-12 06:21:42+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "CHAN-HOM",
       "nameKana": "チャンホン",
       "number": "2615",
-      "reportTime": "2026-08-12T04:45:00+09:00",
+      "reportTime": "2026-08-12T05:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-12T04:00:00+09:00",
-          "lat": 35.5,
-          "lon": 136.7,
+          "time": "2026-08-12T05:00:00+09:00",
+          "lat": 35.6,
+          "lon": 136.5,
           "class": "台風(TS)",
           "pressureHpa": 996,
-          "locationText": "岐阜市付近",
+          "locationText": "大垣市付近",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "推定　１時間後",
-          "time": "2026-08-12T05:00:00+09:00",
-          "lat": 35.4,
-          "lon": 136.3,
+          "time": "2026-08-12T06:00:00+09:00",
+          "lat": 35.6,
+          "lon": 136,
           "class": "台風(TS)",
           "pressureHpa": 996,
-          "locationText": "長浜市付近",
+          "locationText": "敦賀市付近",
           "forecastRadiusKm": null
         }
       ]
