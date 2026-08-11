@@ -1,32 +1,42 @@
 {
-  "generated": "2026-08-12 06:21:42+09:00",
+  "generated": "2026-08-12 07:11:05+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "CHAN-HOM",
-      "nameKana": "チャンホン",
-      "number": "2615",
-      "reportTime": "2026-08-12T05:45:00+09:00",
+      "name": "PEILOU",
+      "nameKana": "ペイロー",
+      "number": "2616",
+      "reportTime": "2026-08-12T07:05:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-12T05:00:00+09:00",
-          "lat": 35.6,
-          "lon": 136.5,
+          "time": "2026-08-12T06:00:00+09:00",
+          "lat": 29.5,
+          "lon": 160.2,
           "class": "台風(TS)",
-          "pressureHpa": 996,
-          "locationText": "大垣市付近",
+          "pressureHpa": 998,
+          "locationText": "ウェーク島近海",
           "forecastRadiusKm": null
         },
         {
-          "timeLabel": "推定　１時間後",
-          "time": "2026-08-12T06:00:00+09:00",
-          "lat": 35.6,
-          "lon": 136,
+          "timeLabel": "予報　１２時間後",
+          "time": "2026-08-12T18:00:00+09:00",
+          "lat": 30.3,
+          "lon": 163,
           "class": "台風(TS)",
-          "pressureHpa": 996,
-          "locationText": "敦賀市付近",
-          "forecastRadiusKm": null
+          "pressureHpa": 998,
+          "locationText": "日本のはるか東",
+          "forecastRadiusKm": 85
+        },
+        {
+          "timeLabel": "予報　２４時間後",
+          "time": "2026-08-13T06:00:00+09:00",
+          "lat": 30.9,
+          "lon": 165.4,
+          "class": "熱帯低気圧(TD)",
+          "pressureHpa": 998,
+          "locationText": "日本のはるか東",
+          "forecastRadiusKm": 120
         }
       ]
     }
