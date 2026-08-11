@@ -1,0 +1,105 @@
+{
+  "generated": "2026-08-11 22:39:15+09:00",
+  "locations": {
+    "higashi_rc": {
+      "label": "東RC",
+      "cityPrefix": "川崎市",
+      "areas": [
+        {
+          "area": "川崎市",
+          "warnings": [
+            {
+              "name": "雷注意報",
+              "status": "継続"
+            },
+            {
+              "name": "強風注意報",
+              "status": "継続"
+            },
+            {
+              "name": "波浪注意報",
+              "status": "継続"
+            }
+          ]
+        }
+      ]
+    },
+    "naka_rc": {
+      "label": "中RC",
+      "cityPrefix": "稲沢市",
+      "areas": [
+        {
+          "area": "稲沢市",
+          "warnings": [
+            {
+              "name": "雷注意報",
+              "status": "発表"
+            }
+          ]
+        }
+      ]
+    },
+    "nishi_rc": {
+      "label": "西RC",
+      "cityPrefix": "三田市",
+      "areas": [
+        {
+          "area": "三田市",
+          "warnings": [
+            {
+              "name": "強風注意報",
+              "status": "継続"
+            },
+            {
+              "name": "乾燥注意報",
+              "status": "解除"
+            }
+          ]
+        }
+      ]
+    },
+    "nishi2_rc": {
+      "label": "西第2RC",
+      "cityPrefix": "川西市",
+      "areas": [
+        {
+          "area": "川西市",
+          "warnings": [
+            {
+              "name": "強風注意報",
+              "status": "継続"
+            },
+            {
+              "name": "乾燥注意報",
+              "status": "解除"
+            }
+          ]
+        }
+      ]
+    },
+    "kudanshita": {
+      "label": "九段下オフィス",
+      "cityPrefix": "千代田区",
+      "areas": [
+        {
+          "area": "千代田区",
+          "warnings": [
+            {
+              "name": "雷注意報",
+              "status": "継続"
+            },
+            {
+              "name": "強風注意報",
+              "status": "継続"
+            }
+          ]
+        }
+      ]
+    },
+    "kumamoto_qct": {
+      "label": "熊Q",
+      "cityPrefix": "熊本市中央区",
+      "areas": []
+    }
+  }
+}
