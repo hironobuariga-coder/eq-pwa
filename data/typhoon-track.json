@@ -1,22 +1,82 @@
 {
-  "generated": "2026-08-12 23:56:00+09:00",
+  "generated": "2026-08-13 00:58:06+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "PEILOU",
-      "nameKana": "ペイロー",
-      "number": "2616",
-      "reportTime": "2026-08-12T22:00:00+09:00",
+      "name": "NANGKA",
+      "nameKana": "ナンカー",
+      "number": "2617",
+      "reportTime": "2026-08-13T00:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-12T21:00:00+09:00",
-          "lat": 30,
-          "lon": 164,
-          "class": "熱帯低気圧(TD)",
-          "pressureHpa": 998,
-          "locationText": "日本のはるか東",
+          "time": "2026-08-13T00:00:00+09:00",
+          "lat": 24,
+          "lon": 145.3,
+          "class": "台風(TS)",
+          "pressureHpa": 994,
+          "locationText": "小笠原近海",
           "forecastRadiusKm": null
+        },
+        {
+          "timeLabel": "予報　１２時間後",
+          "time": "2026-08-13T12:00:00+09:00",
+          "lat": 26.7,
+          "lon": 148.1,
+          "class": "台風(TS)",
+          "pressureHpa": 994,
+          "locationText": "南鳥島近海",
+          "forecastRadiusKm": 55
+        },
+        {
+          "timeLabel": "予報　２４時間後",
+          "time": "2026-08-14T00:00:00+09:00",
+          "lat": 27.8,
+          "lon": 149.8,
+          "class": "台風(TS)",
+          "pressureHpa": 994,
+          "locationText": "南鳥島近海",
+          "forecastRadiusKm": 80
+        },
+        {
+          "timeLabel": "予報　４５時間後",
+          "time": "2026-08-14T21:00:00+09:00",
+          "lat": 28.7,
+          "lon": 150.6,
+          "class": "台風(TS)",
+          "pressureHpa": 996,
+          "locationText": "南鳥島近海",
+          "forecastRadiusKm": 130
+        },
+        {
+          "timeLabel": "予報　６９時間後",
+          "time": "2026-08-15T21:00:00+09:00",
+          "lat": 30.1,
+          "lon": 149.7,
+          "class": "台風(TS)",
+          "pressureHpa": 996,
+          "locationText": "日本の東",
+          "forecastRadiusKm": 185
+        },
+        {
+          "timeLabel": "予報　９３時間後",
+          "time": "2026-08-16T21:00:00+09:00",
+          "lat": 33.1,
+          "lon": 147.1,
+          "class": "台風(TS)",
+          "pressureHpa": 996,
+          "locationText": "日本の東",
+          "forecastRadiusKm": 280
+        },
+        {
+          "timeLabel": "予報　１１７時間後",
+          "time": "2026-08-17T21:00:00+09:00",
+          "lat": 37,
+          "lon": 148.8,
+          "class": "台風(TS)",
+          "pressureHpa": 998,
+          "locationText": "日本の東",
+          "forecastRadiusKm": 460
         }
       ]
     }
