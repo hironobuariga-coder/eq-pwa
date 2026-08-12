@@ -1,32 +1,72 @@
 {
-  "generated": "2026-08-12 08:54:28+09:00",
+  "generated": "2026-08-12 10:43:03+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "CHAN-HOM",
-      "nameKana": "チャンホン",
-      "number": "2615",
-      "reportTime": "2026-08-12T08:45:00+09:00",
+      "name": "NANGKA",
+      "nameKana": "ナンカー",
+      "number": "2617",
+      "reportTime": "2026-08-12T10:25:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-12T08:00:00+09:00",
-          "lat": 36,
-          "lon": 135.5,
+          "time": "2026-08-12T09:00:00+09:00",
+          "lat": 22.1,
+          "lon": 141.9,
           "class": "台風(TS)",
-          "pressureHpa": 998,
-          "locationText": "舞鶴市の北北東約60km",
+          "pressureHpa": 994,
+          "locationText": "小笠原近海",
           "forecastRadiusKm": null
         },
         {
-          "timeLabel": "推定　１時間後",
-          "time": "2026-08-12T09:00:00+09:00",
+          "timeLabel": "予報　２４時間後",
+          "time": "2026-08-13T09:00:00+09:00",
+          "lat": 26.6,
+          "lon": 147.3,
+          "class": "台風(TS)",
+          "pressureHpa": 994,
+          "locationText": "小笠原近海",
+          "forecastRadiusKm": 80
+        },
+        {
+          "timeLabel": "予報　４８時間後",
+          "time": "2026-08-14T09:00:00+09:00",
+          "lat": 29.2,
+          "lon": 149.6,
+          "class": "台風(TS)",
+          "pressureHpa": 994,
+          "locationText": "南鳥島近海",
+          "forecastRadiusKm": 130
+        },
+        {
+          "timeLabel": "予報　７２時間後",
+          "time": "2026-08-15T09:00:00+09:00",
+          "lat": 30.5,
+          "lon": 149.2,
+          "class": "台風(TS)",
+          "pressureHpa": 996,
+          "locationText": "日本の東",
+          "forecastRadiusKm": 185
+        },
+        {
+          "timeLabel": "予報　９６時間後",
+          "time": "2026-08-16T09:00:00+09:00",
+          "lat": 32.7,
+          "lon": 147.3,
+          "class": "台風(TS)",
+          "pressureHpa": 996,
+          "locationText": "日本の東",
+          "forecastRadiusKm": 280
+        },
+        {
+          "timeLabel": "予報　１２０時間後",
+          "time": "2026-08-17T09:00:00+09:00",
           "lat": 36,
-          "lon": 135.1,
+          "lon": 146.9,
           "class": "台風(TS)",
           "pressureHpa": 998,
-          "locationText": "豊岡市の北北東約60km",
-          "forecastRadiusKm": null
+          "locationText": "日本の東",
+          "forecastRadiusKm": 400
         }
       ]
     }
