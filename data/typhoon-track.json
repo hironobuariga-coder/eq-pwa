@@ -1,42 +1,22 @@
 {
-  "generated": "2026-08-12 21:25:35+09:00",
+  "generated": "2026-08-12 22:55:58+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "PEILOU",
       "nameKana": "ペイロー",
       "number": "2616",
-      "reportTime": "2026-08-12T19:05:00+09:00",
+      "reportTime": "2026-08-12T22:00:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-12T18:00:00+09:00",
-          "lat": 30.2,
-          "lon": 163,
-          "class": "台風(TS)",
+          "time": "2026-08-12T21:00:00+09:00",
+          "lat": 30,
+          "lon": 164,
+          "class": "熱帯低気圧(TD)",
           "pressureHpa": 998,
           "locationText": "日本のはるか東",
           "forecastRadiusKm": null
-        },
-        {
-          "timeLabel": "予報　１２時間後",
-          "time": "2026-08-13T06:00:00+09:00",
-          "lat": 31.2,
-          "lon": 165.6,
-          "class": "熱帯低気圧(TD)",
-          "pressureHpa": 998,
-          "locationText": "日本のはるか東",
-          "forecastRadiusKm": 85
-        },
-        {
-          "timeLabel": "予報　２４時間後",
-          "time": "2026-08-13T18:00:00+09:00",
-          "lat": 32.3,
-          "lon": 168.2,
-          "class": "熱帯低気圧(TD)",
-          "pressureHpa": 998,
-          "locationText": "日本のはるか東",
-          "forecastRadiusKm": 120
         }
       ]
     }
