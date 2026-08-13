@@ -1,28 +1,28 @@
 {
-  "generated": "2026-08-13 11:42:22+09:00",
+  "generated": "2026-08-13 13:31:32+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "NANGKA",
       "nameKana": "ナンカー",
       "number": "2617",
-      "reportTime": "2026-08-13T09:45:00+09:00",
+      "reportTime": "2026-08-13T12:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-13T09:00:00+09:00",
-          "lat": 26.3,
-          "lon": 148.1,
+          "time": "2026-08-13T12:00:00+09:00",
+          "lat": 26.8,
+          "lon": 148.8,
           "class": "台風(TS)",
           "pressureHpa": 994,
-          "locationText": "小笠原近海",
+          "locationText": "南鳥島近海",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-08-13T21:00:00+09:00",
-          "lat": 27.6,
-          "lon": 149.6,
+          "time": "2026-08-14T00:00:00+09:00",
+          "lat": 27.8,
+          "lon": 149.7,
           "class": "台風(TS)",
           "pressureHpa": 994,
           "locationText": "南鳥島近海",
@@ -30,16 +30,16 @@
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-08-14T09:00:00+09:00",
-          "lat": 28.3,
-          "lon": 151,
+          "time": "2026-08-14T12:00:00+09:00",
+          "lat": 28.4,
+          "lon": 150.9,
           "class": "台風(TS)",
           "pressureHpa": 996,
           "locationText": "南鳥島近海",
           "forecastRadiusKm": 105
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-08-15T09:00:00+09:00",
           "lat": 29.4,
           "lon": 151.5,
@@ -49,7 +49,7 @@
           "forecastRadiusKm": 185
         },
         {
-          "timeLabel": "予報　７２時間後",
+          "timeLabel": "予報　６９時間後",
           "time": "2026-08-16T09:00:00+09:00",
           "lat": 30.7,
           "lon": 152.7,
@@ -59,7 +59,7 @@
           "forecastRadiusKm": 260
         },
         {
-          "timeLabel": "予報　９６時間後",
+          "timeLabel": "予報　９３時間後",
           "time": "2026-08-17T09:00:00+09:00",
           "lat": 34.2,
           "lon": 148.5,
@@ -69,7 +69,7 @@
           "forecastRadiusKm": 370
         },
         {
-          "timeLabel": "予報　１２０時間後",
+          "timeLabel": "予報　１１７時間後",
           "time": "2026-08-18T09:00:00+09:00",
           "lat": 36.5,
           "lon": 150.5,
