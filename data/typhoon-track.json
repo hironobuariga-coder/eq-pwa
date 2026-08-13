@@ -1,18 +1,18 @@
 {
-  "generated": "2026-08-13 17:56:38+09:00",
+  "generated": "2026-08-13 19:07:24+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "NANGKA",
       "nameKana": "ナンカー",
       "number": "2617",
-      "reportTime": "2026-08-13T15:45:00+09:00",
+      "reportTime": "2026-08-13T18:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-13T15:00:00+09:00",
-          "lat": 27.5,
-          "lon": 149.7,
+          "time": "2026-08-13T18:00:00+09:00",
+          "lat": 28.6,
+          "lon": 150.2,
           "class": "台風(TS)",
           "pressureHpa": 994,
           "locationText": "南鳥島近海",
@@ -20,16 +20,16 @@
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-08-14T15:00:00+09:00",
-          "lat": 28.6,
-          "lon": 150.7,
+          "time": "2026-08-14T18:00:00+09:00",
+          "lat": 28.8,
+          "lon": 151.1,
           "class": "台風(TS)",
           "pressureHpa": 996,
           "locationText": "南鳥島近海",
           "forecastRadiusKm": 120
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-08-15T15:00:00+09:00",
           "lat": 29.7,
           "lon": 149.3,
@@ -39,7 +39,7 @@
           "forecastRadiusKm": 210
         },
         {
-          "timeLabel": "予報　７２時間後",
+          "timeLabel": "予報　６９時間後",
           "time": "2026-08-16T15:00:00+09:00",
           "lat": 32.2,
           "lon": 148.9,
@@ -49,7 +49,7 @@
           "forecastRadiusKm": 300
         },
         {
-          "timeLabel": "予報　９６時間後",
+          "timeLabel": "予報　９３時間後",
           "time": "2026-08-17T15:00:00+09:00",
           "lat": 35.2,
           "lon": 148.8,
@@ -59,7 +59,7 @@
           "forecastRadiusKm": 370
         },
         {
-          "timeLabel": "予報　１２０時間後",
+          "timeLabel": "予報　１１７時間後",
           "time": "2026-08-18T15:00:00+09:00",
           "lat": 36.8,
           "lon": 150,
