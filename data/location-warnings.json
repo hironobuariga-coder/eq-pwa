@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-15 04:28:02+09:00",
+  "generated": "2026-08-15 05:03:54+09:00",
   "locations": {
     "higashi_rc": {
       "label": "東RC",
@@ -7,16 +7,7 @@
       "areas": [
         {
           "area": "川崎市",
-          "warnings": [
-            {
-              "name": "大雨注意報",
-              "status": "継続"
-            },
-            {
-              "name": "雷注意報",
-              "status": "解除"
-            }
-          ]
+          "warnings": []
         }
       ]
     },
@@ -71,12 +62,7 @@
       "areas": [
         {
           "area": "千代田区",
-          "warnings": [
-            {
-              "name": "雷注意報",
-              "status": "継続"
-            }
-          ]
+          "warnings": []
         }
       ]
     },
