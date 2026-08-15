@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-15 11:27:06+09:00",
+  "generated": "2026-08-15 12:12:22+09:00",
   "triggers": [
     {
       "id": "https://www.data.jma.go.jp/developer/xml/data/20260813201555_0_VXWW50_120000.xml",
@@ -11,26 +11,6 @@
     }
   ],
   "processed_ids": [
-    "https://www.data.jma.go.jp/developer/xml/data/20260814015827_0_VPWW53_460040.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260814015826_0_VPWW54_360000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260814015826_0_VPWW53_360000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260814015825_0_VPWW53_390000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260814015825_0_VPWW54_390000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260814015824_0_VPWW54_370000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260814015824_0_VPWW53_370000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260814015823_0_VPWW53_380000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260814015823_0_VPWW54_380000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260814015819_0_VPWW54_300000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260814015819_0_VPWW53_300000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260814015817_0_VPWW54_280000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260814015817_0_VPWW53_280000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260814015815_0_VPWW54_330000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260814015815_0_VPWW53_330000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260814015814_0_VPWW53_340000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260814015814_0_VPWW54_340000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260814015813_0_VPWW53_250000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260814015813_0_VPWW54_250000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260814015811_0_VPWW54_310000.xml",
     "https://www.data.jma.go.jp/developer/xml/data/20260814015811_0_VPWW53_310000.xml",
     "https://www.data.jma.go.jp/developer/xml/data/20260814015811_0_VPWW53_320000.xml",
     "https://www.data.jma.go.jp/developer/xml/data/20260814015811_0_VPWW54_320000.xml",
@@ -2010,6 +1990,26 @@
     "nerv:https://unnerv.jp/@UN_NERV/117096925447984728",
     "nerv:https://unnerv.jp/@UN_NERV/117096914291675770",
     "nerv:https://unnerv.jp/@UN_NERV/117096898665532073",
-    "nerv:https://unnerv.jp/@UN_NERV/117096880847554151"
+    "nerv:https://unnerv.jp/@UN_NERV/117096880847554151",
+    "https://www.data.jma.go.jp/developer/xml/data/20260815030334_0_VPWW54_020000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260815030334_0_VPWW53_020000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260815030325_0_VPWW56_020000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260815025319_0_VPWW54_020000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260815025319_0_VPWW53_020000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260815025315_0_VPWW55_020000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260815025250_0_VPWW54_130000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260815025250_0_VPWW53_130000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260815025243_0_VPWW56_130000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260815023305_0_VPWW54_140000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260815023305_0_VPWW53_140000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260815023258_0_VPWW56_140000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260815022843_0_VPWW54_040000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260815022843_0_VPWW53_040000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260815022834_0_VPWW56_040000.xml",
+    "nerv:https://unnerv.jp/@UN_NERV/117097301729866666",
+    "nerv:https://unnerv.jp/@UN_NERV/117097261791600841",
+    "nerv:https://unnerv.jp/@UN_NERV/117097259501966983",
+    "nerv:https://unnerv.jp/@UN_NERV/117097181708587568",
+    "nerv:https://unnerv.jp/@UN_NERV/117097164622034441"
   ]
 }
