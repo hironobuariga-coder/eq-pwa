@@ -1,20 +1,34 @@
 {
-  "generated": "2026-08-15 10:15:55+09:00",
+  "generated": "2026-08-15 11:27:06+09:00",
   "source": "jma_xml",
-  "time": "",
-  "epicenter": "震度３",
-  "depth": "",
-  "magnitude": "",
+  "time": "2026/8/15 10:10 (JST)",
+  "epicenter": "福島県沖",
+  "depth": "約50km",
+  "magnitude": "M4.5",
   "maxShindo": "3",
-  "tsunami": "今後の情報に注意してください。",
+  "tsunami": "この地震による津波の心配はありません。",
   "shindoAreas": [
     {
       "level": "3",
       "area": "福島県"
+    },
+    {
+      "level": "2",
+      "area": "宮城県・茨城県・栃木県"
+    },
+    {
+      "level": "1",
+      "area": "群馬県・埼玉県・千葉県"
     }
   ],
   "alertLevel": "normal",
   "affectedPrefs": [
-    "福島県"
+    "福島県",
+    "宮城県",
+    "茨城県",
+    "栃木県",
+    "群馬県",
+    "埼玉県",
+    "千葉県"
   ]
 }
