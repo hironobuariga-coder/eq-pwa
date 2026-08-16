@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-17 04:53:39+09:00",
+  "generated": "2026-08-17 05:17:46+09:00",
   "locations": {
     "higashi_rc": {
       "label": "東RC",
@@ -10,7 +10,7 @@
           "warnings": [
             {
               "name": "濃霧注意報",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         }
