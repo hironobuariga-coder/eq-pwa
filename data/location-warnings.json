@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-16 16:01:55+09:00",
+  "generated": "2026-08-16 16:40:41+09:00",
   "locations": {
     "nishi_rc": {
       "label": "西RC",
@@ -28,6 +28,16 @@
               "status": "継続"
             }
           ]
+        }
+      ]
+    },
+    "kudanshita": {
+      "label": "九段下オフィス",
+      "cityPrefix": "千代田区",
+      "areas": [
+        {
+          "area": "千代田区",
+          "warnings": []
         }
       ]
     },
