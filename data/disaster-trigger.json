@@ -1,15 +1,6 @@
 {
-  "generated": "2026-08-17 00:59:49+09:00",
-  "triggers": [
-    {
-      "id": "https://www.data.jma.go.jp/developer/xml/data/20260815064123_0_VXWW50_020000.xml",
-      "type": "rain",
-      "dtype": "rain",
-      "title": "土砂災害警戒情報",
-      "detected": "2026-08-15 16:15:25+09:00",
-      "url": "https://www.data.jma.go.jp/developer/xml/data/20260815064123_0_VXWW50_020000.xml"
-    }
-  ],
+  "generated": "2026-08-17 01:34:25+09:00",
+  "triggers": [],
   "processed_ids": [
     "https://www.data.jma.go.jp/developer/xml/data/20260814152550_0_VPWW56_310000.xml",
     "nerv:https://unnerv.jp/@UN_NERV/117094761087856998",
