@@ -1,18 +1,18 @@
 {
-  "generated": "2026-08-19 07:00:56+09:00",
+  "generated": "2026-08-19 07:36:58+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "",
       "nameKana": "",
       "number": "",
-      "reportTime": "2026-08-19T04:15:00+09:00",
+      "reportTime": "2026-08-19T07:15:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-19T03:00:00+09:00",
-          "lat": 7.9,
-          "lon": 151.7,
+          "time": "2026-08-19T06:00:00+09:00",
+          "lat": 8,
+          "lon": 152,
           "class": "熱帯低気圧(TD)",
           "pressureHpa": 1004,
           "locationText": "トラック諸島近海",
@@ -20,16 +20,16 @@
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-08-20T03:00:00+09:00",
-          "lat": 10.8,
-          "lon": 153.7,
+          "time": "2026-08-20T06:00:00+09:00",
+          "lat": 11.2,
+          "lon": 153.4,
           "class": "台風(TS)",
           "pressureHpa": 1002,
           "locationText": "トラック諸島近海",
           "forecastRadiusKm": 130
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-08-21T03:00:00+09:00",
           "lat": 13.6,
           "lon": 151.4,
@@ -39,7 +39,7 @@
           "forecastRadiusKm": 240
         },
         {
-          "timeLabel": "予報　７２時間後",
+          "timeLabel": "予報　６９時間後",
           "time": "2026-08-22T03:00:00+09:00",
           "lat": 16.4,
           "lon": 148.7,
@@ -49,7 +49,7 @@
           "forecastRadiusKm": 310
         },
         {
-          "timeLabel": "予報　９６時間後",
+          "timeLabel": "予報　９３時間後",
           "time": "2026-08-23T03:00:00+09:00",
           "lat": 18.8,
           "lon": 145.1,
@@ -59,7 +59,7 @@
           "forecastRadiusKm": 390
         },
         {
-          "timeLabel": "予報　１２０時間後",
+          "timeLabel": "予報　１１７時間後",
           "time": "2026-08-24T03:00:00+09:00",
           "lat": 20.9,
           "lon": 140.6,
