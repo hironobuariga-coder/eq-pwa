@@ -1,30 +1,4 @@
 {
-  "generated": "2026-08-18 08:54:33+09:00",
-  "locations": {
-    "nishi_rc": {
-      "label": "西RC",
-      "cityPrefix": "三田市",
-      "areas": [
-        {
-          "area": "三田市",
-          "warnings": []
-        }
-      ]
-    },
-    "nishi2_rc": {
-      "label": "西第2RC",
-      "cityPrefix": "川西市",
-      "areas": [
-        {
-          "area": "川西市",
-          "warnings": []
-        }
-      ]
-    },
-    "kumamoto_qct": {
-      "label": "熊Q",
-      "cityPrefix": "熊本市中央区",
-      "areas": []
-    }
-  }
+  "generated": "2026-08-18 10:03:41+09:00",
+  "locations": {}
 }
