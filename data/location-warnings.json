@@ -1,4 +1,10 @@
 {
-  "generated": "2026-08-18 10:03:41+09:00",
-  "locations": {}
+  "generated": "2026-08-18 11:19:54+09:00",
+  "locations": {
+    "kumamoto_qct": {
+      "label": "熊Q",
+      "cityPrefix": "熊本市中央区",
+      "areas": []
+    }
+  }
 }
