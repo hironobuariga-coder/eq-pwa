@@ -1,5 +1,74 @@
 {
-  "generated": "2026-08-18 22:03:59+09:00",
-  "active": false,
-  "typhoons": []
+  "generated": "2026-08-18 22:52:58+09:00",
+  "active": true,
+  "typhoons": [
+    {
+      "name": "",
+      "nameKana": "",
+      "number": "",
+      "reportTime": "2026-08-18T22:15:00+09:00",
+      "track": [
+        {
+          "timeLabel": "実況",
+          "time": "2026-08-18T21:00:00+09:00",
+          "lat": 7.8,
+          "lon": 153.2,
+          "class": "熱帯低気圧(TD)",
+          "pressureHpa": 1006,
+          "locationText": "トラック諸島近海",
+          "forecastRadiusKm": null
+        },
+        {
+          "timeLabel": "予報　２４時間後",
+          "time": "2026-08-19T21:00:00+09:00",
+          "lat": 10.4,
+          "lon": 153.9,
+          "class": "台風(TS)",
+          "pressureHpa": 1002,
+          "locationText": "トラック諸島近海",
+          "forecastRadiusKm": 130
+        },
+        {
+          "timeLabel": "予報　４８時間後",
+          "time": "2026-08-20T21:00:00+09:00",
+          "lat": 12.8,
+          "lon": 152.5,
+          "class": "台風(TS)",
+          "pressureHpa": 998,
+          "locationText": "トラック諸島近海",
+          "forecastRadiusKm": 200
+        },
+        {
+          "timeLabel": "予報　７２時間後",
+          "time": "2026-08-21T21:00:00+09:00",
+          "lat": 15.2,
+          "lon": 149.9,
+          "class": "台風(TS)",
+          "pressureHpa": 992,
+          "locationText": "マリアナ諸島",
+          "forecastRadiusKm": 260
+        },
+        {
+          "timeLabel": "予報　９６時間後",
+          "time": "2026-08-22T21:00:00+09:00",
+          "lat": 17.6,
+          "lon": 146.5,
+          "class": "台風(STS)",
+          "pressureHpa": 985,
+          "locationText": "マリアナ諸島",
+          "forecastRadiusKm": 330
+        },
+        {
+          "timeLabel": "予報　１２０時間後",
+          "time": "2026-08-23T21:00:00+09:00",
+          "lat": 20,
+          "lon": 142.2,
+          "class": "台風(TY)",
+          "pressureHpa": 975,
+          "locationText": "マリアナ諸島",
+          "forecastRadiusKm": 440
+        }
+      ]
+    }
+  ]
 }
