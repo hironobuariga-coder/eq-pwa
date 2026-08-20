@@ -1,18 +1,18 @@
 {
-  "generated": "2026-08-20 18:00:22+09:00",
+  "generated": "2026-08-20 18:46:33+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "SAUDEL",
       "nameKana": "ソウデル",
       "number": "2618",
-      "reportTime": "2026-08-20T15:50:00+09:00",
+      "reportTime": "2026-08-20T18:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-20T15:00:00+09:00",
+          "time": "2026-08-20T18:00:00+09:00",
           "lat": 11.5,
-          "lon": 150.5,
+          "lon": 150.2,
           "class": "台風(TS)",
           "pressureHpa": 992,
           "locationText": "トラック諸島近海",
@@ -20,9 +20,9 @@
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-08-21T03:00:00+09:00",
-          "lat": 13.6,
-          "lon": 149.8,
+          "time": "2026-08-21T06:00:00+09:00",
+          "lat": 13.8,
+          "lon": 149.4,
           "class": "台風(STS)",
           "pressureHpa": 985,
           "locationText": "マリアナ諸島",
@@ -30,16 +30,16 @@
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-08-21T15:00:00+09:00",
-          "lat": 15.6,
-          "lon": 148.8,
+          "time": "2026-08-21T18:00:00+09:00",
+          "lat": 15.8,
+          "lon": 148.3,
           "class": "台風(TY)",
           "pressureHpa": 975,
           "locationText": "マリアナ諸島",
           "forecastRadiusKm": 105
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-08-22T15:00:00+09:00",
           "lat": 19.2,
           "lon": 145.8,
@@ -49,7 +49,7 @@
           "forecastRadiusKm": 155
         },
         {
-          "timeLabel": "予報　７２時間後",
+          "timeLabel": "予報　６９時間後",
           "time": "2026-08-23T15:00:00+09:00",
           "lat": 22.4,
           "lon": 141.2,
@@ -59,7 +59,7 @@
           "forecastRadiusKm": 220
         },
         {
-          "timeLabel": "予報　９６時間後",
+          "timeLabel": "予報　９３時間後",
           "time": "2026-08-24T15:00:00+09:00",
           "lat": 25,
           "lon": 136.2,
@@ -69,7 +69,7 @@
           "forecastRadiusKm": 280
         },
         {
-          "timeLabel": "予報　１２０時間後",
+          "timeLabel": "予報　１１７時間後",
           "time": "2026-08-25T15:00:00+09:00",
           "lat": 27.1,
           "lon": 133.1,
