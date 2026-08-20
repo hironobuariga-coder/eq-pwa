@@ -1,25 +1,20 @@
 {
-  "generated": "2026-08-20 01:00:31+09:00",
+  "generated": "2026-08-20 14:33:41+09:00",
   "source": "jma_xml",
-  "time": "2026/8/20 00:50 (JST)",
-  "epicenter": "浦河沖",
-  "depth": "約40km",
-  "magnitude": "M4.0",
+  "time": "",
+  "epicenter": "震度３",
+  "depth": "",
+  "magnitude": "",
   "maxShindo": "3",
-  "tsunami": "この地震による津波の心配はありません。",
+  "tsunami": "今後の情報に注意してください。",
   "shindoAreas": [
     {
       "level": "3",
-      "area": "北海道"
-    },
-    {
-      "level": "1",
-      "area": "青森県"
+      "area": "茨城県"
     }
   ],
   "alertLevel": "normal",
   "affectedPrefs": [
-    "北海道",
-    "青森県"
+    "茨城県"
   ]
 }
