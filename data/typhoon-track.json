@@ -1,18 +1,18 @@
 {
-  "generated": "2026-08-20 15:00:07+09:00",
+  "generated": "2026-08-20 15:58:47+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "SAUDEL",
       "nameKana": "ソウデル",
       "number": "2618",
-      "reportTime": "2026-08-20T12:50:00+09:00",
+      "reportTime": "2026-08-20T15:50:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-20T12:00:00+09:00",
+          "time": "2026-08-20T15:00:00+09:00",
           "lat": 11.5,
-          "lon": 151.1,
+          "lon": 150.5,
           "class": "台風(TS)",
           "pressureHpa": 992,
           "locationText": "トラック諸島近海",
@@ -20,61 +20,61 @@
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-08-21T00:00:00+09:00",
-          "lat": 13.3,
-          "lon": 150.4,
+          "time": "2026-08-21T03:00:00+09:00",
+          "lat": 13.6,
+          "lon": 149.8,
           "class": "台風(STS)",
           "pressureHpa": 985,
-          "locationText": "トラック諸島近海",
+          "locationText": "マリアナ諸島",
           "forecastRadiusKm": 75
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-08-21T12:00:00+09:00",
-          "lat": 15.1,
-          "lon": 149.2,
-          "class": "台風(STS)",
+          "time": "2026-08-21T15:00:00+09:00",
+          "lat": 15.6,
+          "lon": 148.8,
+          "class": "台風(TY)",
           "pressureHpa": 975,
           "locationText": "マリアナ諸島",
-          "forecastRadiusKm": 95
+          "forecastRadiusKm": 105
         },
         {
-          "timeLabel": "予報　４５時間後",
-          "time": "2026-08-22T09:00:00+09:00",
-          "lat": 18.1,
-          "lon": 147,
+          "timeLabel": "予報　４８時間後",
+          "time": "2026-08-22T15:00:00+09:00",
+          "lat": 19.2,
+          "lon": 145.8,
           "class": "台風(TY)",
-          "pressureHpa": 950,
+          "pressureHpa": 955,
           "locationText": "マリアナ諸島",
-          "forecastRadiusKm": 130
+          "forecastRadiusKm": 155
         },
         {
-          "timeLabel": "予報　６９時間後",
-          "time": "2026-08-23T09:00:00+09:00",
-          "lat": 21.3,
-          "lon": 142.7,
+          "timeLabel": "予報　７２時間後",
+          "time": "2026-08-23T15:00:00+09:00",
+          "lat": 22.4,
+          "lon": 141.2,
           "class": "台風(TY)",
-          "pressureHpa": 935,
+          "pressureHpa": 940,
           "locationText": "小笠原近海",
-          "forecastRadiusKm": 185
+          "forecastRadiusKm": 220
         },
         {
-          "timeLabel": "予報　９３時間後",
-          "time": "2026-08-24T09:00:00+09:00",
-          "lat": 24,
-          "lon": 137.3,
+          "timeLabel": "予報　９６時間後",
+          "time": "2026-08-24T15:00:00+09:00",
+          "lat": 25,
+          "lon": 136.2,
           "class": "台風(TY)",
-          "pressureHpa": 935,
+          "pressureHpa": 945,
           "locationText": "日本の南",
-          "forecastRadiusKm": 230
+          "forecastRadiusKm": 280
         },
         {
-          "timeLabel": "予報　１１７時間後",
-          "time": "2026-08-25T09:00:00+09:00",
-          "lat": 26.3,
+          "timeLabel": "予報　１２０時間後",
+          "time": "2026-08-25T15:00:00+09:00",
+          "lat": 27.1,
           "lon": 133.1,
           "class": "台風(TY)",
-          "pressureHpa": 950,
+          "pressureHpa": 960,
           "locationText": "日本の南",
           "forecastRadiusKm": 330
         }
