@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-20 15:00:07+09:00",
+  "generated": "2026-08-21 10:39:42+09:00",
   "source": "jma_xml",
-  "time": "2026/8/20 14:28 (JST)",
-  "epicenter": "茨城県沖",
+  "time": "2026/8/21 09:01 (JST)",
+  "epicenter": "沖縄本島近海",
   "depth": "約40km",
   "magnitude": "M4.2",
   "maxShindo": "3",
@@ -10,22 +10,11 @@
   "shindoAreas": [
     {
       "level": "3",
-      "area": "茨城県"
-    },
-    {
-      "level": "2",
-      "area": "福島県"
-    },
-    {
-      "level": "1",
-      "area": "栃木県・千葉県"
+      "area": "沖縄県"
     }
   ],
   "alertLevel": "normal",
   "affectedPrefs": [
-    "茨城県",
-    "福島県",
-    "栃木県",
-    "千葉県"
+    "沖縄県"
   ]
 }
