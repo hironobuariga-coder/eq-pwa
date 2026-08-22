@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-22 16:57:44+09:00",
+  "generated": "2026-08-22 17:34:14+09:00",
   "locations": {
     "higashi_rc": {
       "label": "東RC",
@@ -9,9 +9,24 @@
           "area": "川崎市",
           "warnings": [
             {
-              "name": "大雨注意報",
+              "name": "大雨警報",
               "status": "発表"
             },
+            {
+              "name": "雷注意報",
+              "status": "継続"
+            }
+          ]
+        }
+      ]
+    },
+    "naka_rc": {
+      "label": "中RC",
+      "cityPrefix": "稲沢市",
+      "areas": [
+        {
+          "area": "稲沢市",
+          "warnings": [
             {
               "name": "雷注意報",
               "status": "継続"
