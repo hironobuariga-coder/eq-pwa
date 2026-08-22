@@ -1,82 +1,42 @@
 {
-  "generated": "2026-08-22 18:56:35+09:00",
+  "generated": "2026-08-22 19:23:58+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "SAUDEL",
-      "nameKana": "ソウデル",
-      "number": "2618",
-      "reportTime": "2026-08-22T18:45:00+09:00",
+      "name": "GAENARI",
+      "nameKana": "ケナリ",
+      "number": "2620",
+      "reportTime": "2026-08-22T19:10:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
           "time": "2026-08-22T18:00:00+09:00",
-          "lat": 19.2,
-          "lon": 145.7,
-          "class": "台風(TY)",
-          "pressureHpa": 960,
-          "locationText": "マリアナ諸島",
+          "lat": 25.9,
+          "lon": 124,
+          "class": "台風(TS)",
+          "pressureHpa": 998,
+          "locationText": "石垣島の北約170km",
           "forecastRadiusKm": null
-        },
-        {
-          "timeLabel": "予報　１２時間後",
-          "time": "2026-08-23T06:00:00+09:00",
-          "lat": 20.6,
-          "lon": 143.2,
-          "class": "台風(TY)",
-          "pressureHpa": 945,
-          "locationText": "小笠原近海",
-          "forecastRadiusKm": 65
         },
         {
           "timeLabel": "予報　２４時間後",
           "time": "2026-08-23T18:00:00+09:00",
-          "lat": 21.9,
-          "lon": 140.5,
-          "class": "台風(TY)",
-          "pressureHpa": 935,
-          "locationText": "小笠原近海",
-          "forecastRadiusKm": 95
+          "lat": 25.3,
+          "lon": 122.3,
+          "class": "台風(TS)",
+          "pressureHpa": 998,
+          "locationText": "与那国島の北西約110km",
+          "forecastRadiusKm": 120
         },
         {
           "timeLabel": "予報　４５時間後",
           "time": "2026-08-24T15:00:00+09:00",
-          "lat": 23.6,
-          "lon": 135.5,
-          "class": "台風(TY)",
-          "pressureHpa": 925,
-          "locationText": "日本の南",
-          "forecastRadiusKm": 155
-        },
-        {
-          "timeLabel": "予報　６９時間後",
-          "time": "2026-08-25T15:00:00+09:00",
-          "lat": 25,
-          "lon": 131,
-          "class": "台風(TY)",
-          "pressureHpa": 935,
-          "locationText": "日本の南",
-          "forecastRadiusKm": 220
-        },
-        {
-          "timeLabel": "予報　９３時間後",
-          "time": "2026-08-26T15:00:00+09:00",
-          "lat": 25.9,
-          "lon": 127.7,
-          "class": "台風(TY)",
-          "pressureHpa": 950,
-          "locationText": "沖縄の南",
-          "forecastRadiusKm": 280
-        },
-        {
-          "timeLabel": "予報　１１７時間後",
-          "time": "2026-08-27T15:00:00+09:00",
-          "lat": 25,
-          "lon": 124.7,
-          "class": "台風(TY)",
-          "pressureHpa": 960,
+          "lat": 25.5,
+          "lon": 120.9,
+          "class": "熱帯低気圧(TD)",
+          "pressureHpa": 1000,
           "locationText": "東シナ海",
-          "forecastRadiusKm": 330
+          "forecastRadiusKm": 210
         }
       ]
     }
