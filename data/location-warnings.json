@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-22 21:32:42+09:00",
+  "generated": "2026-08-22 22:16:14+09:00",
   "locations": {
     "higashi_rc": {
       "label": "東RC",
@@ -40,7 +40,7 @@
           "warnings": [
             {
               "name": "雷注意報",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         }
@@ -54,12 +54,8 @@
           "area": "川西市",
           "warnings": [
             {
-              "name": "大雨注意報",
-              "status": "解除"
-            },
-            {
               "name": "雷注意報",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         }

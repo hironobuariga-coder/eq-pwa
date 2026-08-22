@@ -1,41 +1,41 @@
 {
-  "generated": "2026-08-22 21:32:42+09:00",
+  "generated": "2026-08-22 22:16:14+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "GAENARI",
       "nameKana": "ケナリ",
       "number": "2620",
-      "reportTime": "2026-08-22T19:10:00+09:00",
+      "reportTime": "2026-08-22T22:05:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-22T18:00:00+09:00",
-          "lat": 25.9,
-          "lon": 124,
+          "time": "2026-08-22T21:00:00+09:00",
+          "lat": 26,
+          "lon": 123.3,
           "class": "台風(TS)",
           "pressureHpa": 998,
-          "locationText": "石垣島の北約170km",
+          "locationText": "石垣島の北北西約200km",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-08-23T18:00:00+09:00",
-          "lat": 25.3,
-          "lon": 122.3,
+          "time": "2026-08-23T21:00:00+09:00",
+          "lat": 25.6,
+          "lon": 121.7,
           "class": "台風(TS)",
           "pressureHpa": 998,
-          "locationText": "与那国島の北西約110km",
+          "locationText": "与那国島の北西約180km",
           "forecastRadiusKm": 120
         },
         {
-          "timeLabel": "予報　４５時間後",
-          "time": "2026-08-24T15:00:00+09:00",
-          "lat": 25.5,
-          "lon": 120.9,
+          "timeLabel": "予報　４８時間後",
+          "time": "2026-08-24T21:00:00+09:00",
+          "lat": 25,
+          "lon": 119.6,
           "class": "熱帯低気圧(TD)",
           "pressureHpa": 1000,
-          "locationText": "東シナ海",
+          "locationText": "台湾海峡",
           "forecastRadiusKm": 210
         }
       ]
