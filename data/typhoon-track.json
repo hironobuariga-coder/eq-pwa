@@ -1,62 +1,52 @@
 {
-  "generated": "2026-08-23 03:57:41+09:00",
+  "generated": "2026-08-23 04:25:12+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "NARRA",
-      "nameKana": "ナーラ",
-      "number": "2619",
-      "reportTime": "2026-08-23T03:50:00+09:00",
+      "name": "",
+      "nameKana": "",
+      "number": "",
+      "reportTime": "2026-08-23T04:15:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
           "time": "2026-08-23T03:00:00+09:00",
-          "lat": 20.8,
-          "lon": 107.8,
-          "class": "台風(TS)",
-          "pressureHpa": 994,
-          "locationText": "トンキン湾",
+          "lat": 12.6,
+          "lon": 134.6,
+          "class": "熱帯低気圧(TD)",
+          "pressureHpa": 1000,
+          "locationText": "フィリピンの東",
           "forecastRadiusKm": null
+        },
+        {
+          "timeLabel": "予報　１２時間後",
+          "time": "2026-08-23T15:00:00+09:00",
+          "lat": 13.8,
+          "lon": 137.3,
+          "class": "台風(TS)",
+          "pressureHpa": 998,
+          "locationText": "フィリピンの東",
+          "forecastRadiusKm": 100
         },
         {
           "timeLabel": "予報　２４時間後",
           "time": "2026-08-24T03:00:00+09:00",
-          "lat": 20.4,
-          "lon": 108,
+          "lat": 14.6,
+          "lon": 139.1,
           "class": "台風(TS)",
-          "pressureHpa": 994,
-          "locationText": "トンキン湾",
-          "forecastRadiusKm": 95
+          "pressureHpa": 998,
+          "locationText": "フィリピンの東",
+          "forecastRadiusKm": 130
         },
         {
           "timeLabel": "予報　４８時間後",
           "time": "2026-08-25T03:00:00+09:00",
-          "lat": 19.8,
-          "lon": 108,
-          "class": "台風(TS)",
-          "pressureHpa": 994,
-          "locationText": "トンキン湾",
-          "forecastRadiusKm": 210
-        },
-        {
-          "timeLabel": "予報　７２時間後",
-          "time": "2026-08-26T03:00:00+09:00",
-          "lat": 21.4,
-          "lon": 109.1,
-          "class": "台風(TS)",
-          "pressureHpa": 994,
-          "locationText": "トンキン湾",
-          "forecastRadiusKm": 300
-        },
-        {
-          "timeLabel": "予報　９６時間後",
-          "time": "2026-08-27T03:00:00+09:00",
-          "lat": 22.2,
-          "lon": 108.4,
+          "lat": 18.1,
+          "lon": 140.8,
           "class": "熱帯低気圧(TD)",
-          "pressureHpa": 998,
-          "locationText": "華南",
-          "forecastRadiusKm": 320
+          "pressureHpa": 1002,
+          "locationText": "マリアナ諸島",
+          "forecastRadiusKm": 200
         }
       ]
     }
