@@ -1,42 +1,52 @@
 {
-  "generated": "2026-08-23 07:00:01+09:00",
+  "generated": "2026-08-23 07:30:32+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "GAENARI",
-      "nameKana": "ケナリ",
-      "number": "2620",
-      "reportTime": "2026-08-23T07:00:00+09:00",
+      "name": "",
+      "nameKana": "",
+      "number": "",
+      "reportTime": "2026-08-23T07:15:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
           "time": "2026-08-23T06:00:00+09:00",
-          "lat": 25.3,
-          "lon": 122.6,
+          "lat": 12.9,
+          "lon": 134.5,
+          "class": "熱帯低気圧(TD)",
+          "pressureHpa": 1000,
+          "locationText": "フィリピンの東",
+          "forecastRadiusKm": null
+        },
+        {
+          "timeLabel": "予報　１２時間後",
+          "time": "2026-08-23T18:00:00+09:00",
+          "lat": 14,
+          "lon": 137.8,
           "class": "台風(TS)",
           "pressureHpa": 998,
-          "locationText": "与那国島の北北西約100km",
-          "forecastRadiusKm": null
+          "locationText": "フィリピンの東",
+          "forecastRadiusKm": 100
         },
         {
           "timeLabel": "予報　２４時間後",
           "time": "2026-08-24T06:00:00+09:00",
-          "lat": 24.9,
-          "lon": 120,
+          "lat": 15.1,
+          "lon": 139.3,
           "class": "台風(TS)",
           "pressureHpa": 998,
-          "locationText": "台湾海峡",
-          "forecastRadiusKm": 120
+          "locationText": "フィリピンの東",
+          "forecastRadiusKm": 130
         },
         {
           "timeLabel": "予報　４５時間後",
           "time": "2026-08-25T03:00:00+09:00",
-          "lat": 24,
-          "lon": 119.8,
+          "lat": 18.1,
+          "lon": 140.8,
           "class": "熱帯低気圧(TD)",
-          "pressureHpa": 1000,
-          "locationText": "台湾海峡",
-          "forecastRadiusKm": 210
+          "pressureHpa": 1002,
+          "locationText": "マリアナ諸島",
+          "forecastRadiusKm": 200
         }
       ]
     }
