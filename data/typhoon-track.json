@@ -1,52 +1,42 @@
 {
-  "generated": "2026-08-23 06:40:55+09:00",
+  "generated": "2026-08-23 07:00:01+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "",
-      "nameKana": "",
-      "number": "",
-      "reportTime": "2026-08-23T04:15:00+09:00",
+      "name": "GAENARI",
+      "nameKana": "ケナリ",
+      "number": "2620",
+      "reportTime": "2026-08-23T07:00:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-23T03:00:00+09:00",
-          "lat": 12.6,
-          "lon": 134.6,
-          "class": "熱帯低気圧(TD)",
-          "pressureHpa": 1000,
-          "locationText": "フィリピンの東",
+          "time": "2026-08-23T06:00:00+09:00",
+          "lat": 25.3,
+          "lon": 122.6,
+          "class": "台風(TS)",
+          "pressureHpa": 998,
+          "locationText": "与那国島の北北西約100km",
           "forecastRadiusKm": null
         },
         {
-          "timeLabel": "予報　１２時間後",
-          "time": "2026-08-23T15:00:00+09:00",
-          "lat": 13.8,
-          "lon": 137.3,
-          "class": "台風(TS)",
-          "pressureHpa": 998,
-          "locationText": "フィリピンの東",
-          "forecastRadiusKm": 100
-        },
-        {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-08-24T03:00:00+09:00",
-          "lat": 14.6,
-          "lon": 139.1,
+          "time": "2026-08-24T06:00:00+09:00",
+          "lat": 24.9,
+          "lon": 120,
           "class": "台風(TS)",
           "pressureHpa": 998,
-          "locationText": "フィリピンの東",
-          "forecastRadiusKm": 130
+          "locationText": "台湾海峡",
+          "forecastRadiusKm": 120
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-08-25T03:00:00+09:00",
-          "lat": 18.1,
-          "lon": 140.8,
+          "lat": 24,
+          "lon": 119.8,
           "class": "熱帯低気圧(TD)",
-          "pressureHpa": 1002,
-          "locationText": "マリアナ諸島",
-          "forecastRadiusKm": 200
+          "pressureHpa": 1000,
+          "locationText": "台湾海峡",
+          "forecastRadiusKm": 210
         }
       ]
     }
