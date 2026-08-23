@@ -1,12 +1,12 @@
 {
-  "generated": "2026-08-23 22:48:29+09:00",
+  "generated": "2026-08-23 23:08:57+09:00",
   "source": "jma_xml",
-  "time": "",
-  "epicenter": "震度４",
-  "depth": "",
-  "magnitude": "",
+  "time": "2026/8/23 22:44 (JST)",
+  "epicenter": "浦河沖",
+  "depth": "約40km",
+  "magnitude": "M6.0",
   "maxShindo": "4",
-  "tsunami": "今後の情報に注意してください。",
+  "tsunami": "この地震による津波の心配はありません。",
   "shindoAreas": [
     {
       "level": "4",
@@ -15,12 +15,19 @@
     {
       "level": "3",
       "area": "青森県・岩手県"
+    },
+    {
+      "level": "1",
+      "area": "宮城県・秋田県・山形県"
     }
   ],
   "alertLevel": "normal",
   "affectedPrefs": [
     "北海道",
     "青森県",
-    "岩手県"
+    "岩手県",
+    "宮城県",
+    "秋田県",
+    "山形県"
   ]
 }
