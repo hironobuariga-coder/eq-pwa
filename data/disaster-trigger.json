@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-24 06:53:56+09:00",
+  "generated": "2026-08-24 07:18:10+09:00",
   "triggers": [
     {
       "id": "https://www.data.jma.go.jp/developer/xml/data/20260822170635_0_VXSE53_010000.xml",
@@ -71,13 +71,6 @@
     }
   ],
   "processed_ids": [
-    "https://www.data.jma.go.jp/developer/xml/data/20260822103731_0_VPWW56_030000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260822103708_0_VPWW53_260000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260822103708_0_VPWW54_260000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260822103151_0_VPWW54_140000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260822103151_0_VPWW53_140000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260822103137_0_VPWW56_140000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260822102950_0_VPWW53_260000.xml",
     "https://www.data.jma.go.jp/developer/xml/data/20260822102950_0_VPWW54_260000.xml",
     "https://www.data.jma.go.jp/developer/xml/data/20260822102939_0_VPWW55_260000.xml",
     "https://www.data.jma.go.jp/developer/xml/data/20260822102642_0_VPWW53_290000.xml",
@@ -2070,6 +2063,13 @@
     "nerv:https://unnerv.jp/@UN_NERV/117147029095488820",
     "nerv:https://unnerv.jp/@UN_NERV/117147025287950531",
     "nerv:https://unnerv.jp/@UN_NERV/117146994333816443",
-    "nerv:https://unnerv.jp/@UN_NERV/117146964631786715"
+    "nerv:https://unnerv.jp/@UN_NERV/117146964631786715",
+    "https://www.data.jma.go.jp/developer/xml/data/20260823221624_0_VPTW63_010000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260823220958_0_VPTW62_010000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260823220801_0_VPWW54_015000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260823220801_0_VPWW53_015000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260823220756_0_VPWW61_015000.xml",
+    "nerv:https://unnerv.jp/@UN_NERV/117147107667410145",
+    "nerv:https://unnerv.jp/@UN_NERV/117147100542278672"
   ]
 }
