@@ -1,52 +1,52 @@
 {
-  "generated": "2026-08-24 04:08:03+09:00",
+  "generated": "2026-08-24 04:31:52+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "NARRA",
-      "nameKana": "ナーラ",
-      "number": "2619",
-      "reportTime": "2026-08-24T03:55:00+09:00",
+      "name": "",
+      "nameKana": "",
+      "number": "",
+      "reportTime": "2026-08-24T04:20:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
           "time": "2026-08-24T03:00:00+09:00",
-          "lat": 20.4,
-          "lon": 107.9,
-          "class": "台風(TS)",
-          "pressureHpa": 990,
-          "locationText": "トンキン湾",
+          "lat": 14.1,
+          "lon": 136.4,
+          "class": "熱帯低気圧(TD)",
+          "pressureHpa": 1000,
+          "locationText": "フィリピンの東",
           "forecastRadiusKm": null
+        },
+        {
+          "timeLabel": "予報　１２時間後",
+          "time": "2026-08-24T15:00:00+09:00",
+          "lat": 16.3,
+          "lon": 138.5,
+          "class": "台風(TS)",
+          "pressureHpa": 998,
+          "locationText": "フィリピンの東",
+          "forecastRadiusKm": 85
         },
         {
           "timeLabel": "予報　２４時間後",
           "time": "2026-08-25T03:00:00+09:00",
-          "lat": 19.8,
-          "lon": 107.7,
+          "lat": 18.7,
+          "lon": 138.5,
           "class": "台風(TS)",
-          "pressureHpa": 992,
-          "locationText": "トンキン湾",
-          "forecastRadiusKm": 120
+          "pressureHpa": 998,
+          "locationText": "フィリピンの東",
+          "forecastRadiusKm": 110
         },
         {
           "timeLabel": "予報　４８時間後",
           "time": "2026-08-26T03:00:00+09:00",
-          "lat": 20.9,
-          "lon": 109,
-          "class": "台風(TS)",
-          "pressureHpa": 994,
-          "locationText": "トンキン湾",
-          "forecastRadiusKm": 210
-        },
-        {
-          "timeLabel": "予報　７２時間後",
-          "time": "2026-08-27T03:00:00+09:00",
-          "lat": 22.3,
-          "lon": 108.9,
+          "lat": 22.8,
+          "lon": 136.3,
           "class": "熱帯低気圧(TD)",
-          "pressureHpa": 998,
-          "locationText": "華南",
-          "forecastRadiusKm": 300
+          "pressureHpa": 1002,
+          "locationText": "日本の南",
+          "forecastRadiusKm": 240
         }
       ]
     }
