@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-23 13:19:47+09:00",
+  "generated": "2026-08-23 13:56:33+09:00",
   "triggers": [
     {
       "id": "https://www.data.jma.go.jp/developer/xml/data/20260821204832_0_VXWW50_473000.xml",
@@ -79,13 +79,6 @@
     }
   ],
   "processed_ids": [
-    "https://www.data.jma.go.jp/developer/xml/data/20260821135721_0_VPWW54_160000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260821135721_0_VPWW53_160000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260821135720_0_VPWW53_170000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260821135720_0_VPWW54_170000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260821135718_0_VPWW53_150000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260821135718_0_VPWW54_150000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260821135636_0_VPWW56_474000.xml",
     "https://www.data.jma.go.jp/developer/xml/data/20260821134427_0_VPWW54_100000.xml",
     "https://www.data.jma.go.jp/developer/xml/data/20260821134427_0_VPWW53_100000.xml",
     "https://www.data.jma.go.jp/developer/xml/data/20260821134414_0_VPWW55_100000.xml",
@@ -2078,6 +2071,13 @@
     "nerv:https://unnerv.jp/@UN_NERV/117142785967374862",
     "nerv:https://unnerv.jp/@UN_NERV/117142767179327114",
     "nerv:https://unnerv.jp/@UN_NERV/117142757587787514",
-    "nerv:https://unnerv.jp/@UN_NERV/117142744883794330"
+    "nerv:https://unnerv.jp/@UN_NERV/117142744883794330",
+    "https://www.data.jma.go.jp/developer/xml/data/20260823044714_0_VPWW53_170000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260823044714_0_VPWW54_170000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260823044323_0_VPWW54_170000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260823044323_0_VPWW53_170000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260823044310_0_VPWW61_170000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260823042021_0_VPTW63_010000.xml",
+    "nerv:https://unnerv.jp/@UN_NERV/117142992344329064"
   ]
 }
