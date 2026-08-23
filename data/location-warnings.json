@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-24 07:18:10+09:00",
+  "generated": "2026-08-24 07:42:14+09:00",
   "locations": {
     "higashi_rc": {
       "label": "東RC",
@@ -21,36 +21,6 @@
             {
               "name": "雷注意報",
               "status": "発表"
-            }
-          ]
-        }
-      ]
-    },
-    "nishi_rc": {
-      "label": "西RC",
-      "cityPrefix": "三田市",
-      "areas": [
-        {
-          "area": "三田市",
-          "warnings": [
-            {
-              "name": "雷注意報",
-              "status": "解除"
-            }
-          ]
-        }
-      ]
-    },
-    "nishi2_rc": {
-      "label": "西第2RC",
-      "cityPrefix": "川西市",
-      "areas": [
-        {
-          "area": "川西市",
-          "warnings": [
-            {
-              "name": "雷注意報",
-              "status": "解除"
             }
           ]
         }
