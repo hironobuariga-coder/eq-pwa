@@ -1,42 +1,42 @@
 {
-  "generated": "2026-08-24 10:06:44+09:00",
+  "generated": "2026-08-24 11:36:00+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "NARRA",
-      "nameKana": "ナーラ",
-      "number": "2619",
-      "reportTime": "2026-08-24T10:00:00+09:00",
+      "name": "ATSANI",
+      "nameKana": "アッサニー",
+      "number": "2621",
+      "reportTime": "2026-08-24T10:25:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
           "time": "2026-08-24T09:00:00+09:00",
-          "lat": 20.6,
-          "lon": 107.6,
+          "lat": 15.1,
+          "lon": 137.3,
           "class": "台風(TS)",
-          "pressureHpa": 990,
-          "locationText": "トンキン湾",
+          "pressureHpa": 998,
+          "locationText": "フィリピンの東",
           "forecastRadiusKm": null
+        },
+        {
+          "timeLabel": "予報　１２時間後",
+          "time": "2026-08-24T21:00:00+09:00",
+          "lat": 17.3,
+          "lon": 138.4,
+          "class": "台風(TS)",
+          "pressureHpa": 998,
+          "locationText": "フィリピンの東",
+          "forecastRadiusKm": 65
         },
         {
           "timeLabel": "予報　２４時間後",
           "time": "2026-08-25T09:00:00+09:00",
-          "lat": 19.7,
-          "lon": 107.8,
-          "class": "台風(TS)",
-          "pressureHpa": 994,
-          "locationText": "トンキン湾",
-          "forecastRadiusKm": 120
-        },
-        {
-          "timeLabel": "予報　４８時間後",
-          "time": "2026-08-26T09:00:00+09:00",
-          "lat": 20.9,
-          "lon": 109.2,
+          "lat": 19.6,
+          "lon": 138,
           "class": "熱帯低気圧(TD)",
-          "pressureHpa": 996,
-          "locationText": "トンキン湾",
-          "forecastRadiusKm": 210
+          "pressureHpa": 1004,
+          "locationText": "フィリピンの東",
+          "forecastRadiusKm": 95
         }
       ]
     }
