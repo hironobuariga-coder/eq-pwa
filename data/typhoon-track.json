@@ -1,42 +1,42 @@
 {
-  "generated": "2026-08-24 21:00:17+09:00",
+  "generated": "2026-08-24 22:09:25+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "ATSANI",
-      "nameKana": "アッサニー",
-      "number": "2621",
-      "reportTime": "2026-08-24T19:20:00+09:00",
+      "name": "GAENARI",
+      "nameKana": "ケナリ",
+      "number": "2620",
+      "reportTime": "2026-08-24T22:10:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-24T18:00:00+09:00",
-          "lat": 16.4,
-          "lon": 138.2,
+          "time": "2026-08-24T21:00:00+09:00",
+          "lat": 23.6,
+          "lon": 117.4,
           "class": "台風(TS)",
           "pressureHpa": 998,
-          "locationText": "フィリピンの東",
+          "locationText": "台湾海峡",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-08-25T06:00:00+09:00",
-          "lat": 18.7,
-          "lon": 138.2,
+          "time": "2026-08-25T09:00:00+09:00",
+          "lat": 23.9,
+          "lon": 117.8,
           "class": "熱帯低気圧(TD)",
           "pressureHpa": 1002,
-          "locationText": "フィリピンの東",
-          "forecastRadiusKm": 65
+          "locationText": "台湾海峡",
+          "forecastRadiusKm": 85
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-08-25T18:00:00+09:00",
-          "lat": 20.5,
-          "lon": 137.5,
+          "time": "2026-08-25T21:00:00+09:00",
+          "lat": 24.2,
+          "lon": 118.2,
           "class": "熱帯低気圧(TD)",
-          "pressureHpa": 1004,
-          "locationText": "日本の南",
-          "forecastRadiusKm": 95
+          "pressureHpa": 1002,
+          "locationText": "台湾海峡",
+          "forecastRadiusKm": 120
         }
       ]
     }
