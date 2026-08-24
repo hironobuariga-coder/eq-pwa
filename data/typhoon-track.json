@@ -1,42 +1,32 @@
 {
-  "generated": "2026-08-24 22:09:25+09:00",
+  "generated": "2026-08-24 23:00:47+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "GAENARI",
-      "nameKana": "ケナリ",
-      "number": "2620",
-      "reportTime": "2026-08-24T22:10:00+09:00",
+      "name": "SAUDEL",
+      "nameKana": "ソウデル",
+      "number": "2618",
+      "reportTime": "2026-08-24T22:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-24T21:00:00+09:00",
-          "lat": 23.6,
-          "lon": 117.4,
-          "class": "台風(TS)",
-          "pressureHpa": 998,
-          "locationText": "台湾海峡",
+          "time": "2026-08-24T22:00:00+09:00",
+          "lat": 25,
+          "lon": 133.2,
+          "class": "台風(TY)",
+          "pressureHpa": 940,
+          "locationText": "南大東島の東南東約220km",
           "forecastRadiusKm": null
         },
         {
-          "timeLabel": "予報　１２時間後",
-          "time": "2026-08-25T09:00:00+09:00",
-          "lat": 23.9,
-          "lon": 117.8,
-          "class": "熱帯低気圧(TD)",
-          "pressureHpa": 1002,
-          "locationText": "台湾海峡",
-          "forecastRadiusKm": 85
-        },
-        {
-          "timeLabel": "予報　２４時間後",
-          "time": "2026-08-25T21:00:00+09:00",
-          "lat": 24.2,
-          "lon": 118.2,
-          "class": "熱帯低気圧(TD)",
-          "pressureHpa": 1002,
-          "locationText": "台湾海峡",
-          "forecastRadiusKm": 120
+          "timeLabel": "推定　１時間後",
+          "time": "2026-08-24T23:00:00+09:00",
+          "lat": 25.1,
+          "lon": 133,
+          "class": "台風(TY)",
+          "pressureHpa": 940,
+          "locationText": "南大東島の東南東約200km",
+          "forecastRadiusKm": null
         }
       ]
     }
