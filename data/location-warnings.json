@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-24 14:55:56+09:00",
+  "generated": "2026-08-24 15:56:07+09:00",
   "locations": {
     "higashi_rc": {
       "label": "東RC",
@@ -20,7 +20,7 @@
           "warnings": [
             {
               "name": "雷注意報",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         }
@@ -35,7 +35,7 @@
           "warnings": [
             {
               "name": "雷注意報",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         }
@@ -50,7 +50,7 @@
           "warnings": [
             {
               "name": "雷注意報",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         }
@@ -65,11 +65,6 @@
           "warnings": []
         }
       ]
-    },
-    "kumamoto_qct": {
-      "label": "熊Q",
-      "cityPrefix": "熊本市中央区",
-      "areas": []
     }
   }
 }
