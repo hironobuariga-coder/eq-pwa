@@ -1,28 +1,28 @@
 {
-  "generated": "2026-08-25 10:48:39+09:00",
+  "generated": "2026-08-25 11:46:47+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "SAUDEL",
       "nameKana": "ソウデル",
       "number": "2618",
-      "reportTime": "2026-08-25T10:45:00+09:00",
+      "reportTime": "2026-08-25T11:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-25T10:00:00+09:00",
+          "time": "2026-08-25T11:00:00+09:00",
           "lat": 26.2,
-          "lon": 130.9,
+          "lon": 130.8,
           "class": "台風(TY)",
           "pressureHpa": 950,
-          "locationText": "南大東島の北北西約50km",
+          "locationText": "南大東島の北西約60km",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "推定　１時間後",
-          "time": "2026-08-25T11:00:00+09:00",
+          "time": "2026-08-25T12:00:00+09:00",
           "lat": 26.3,
-          "lon": 130.7,
+          "lon": 130.6,
           "class": "台風(TY)",
           "pressureHpa": 950,
           "locationText": "南大東島の北西約80km",
