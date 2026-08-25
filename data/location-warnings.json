@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-26 06:46:14+09:00",
+  "generated": "2026-08-26 07:02:53+09:00",
   "locations": {
     "higashi_rc": {
       "label": "東RC",
@@ -52,7 +52,12 @@
       "areas": [
         {
           "area": "千代田区",
-          "warnings": []
+          "warnings": [
+            {
+              "name": "雷注意報",
+              "status": "発表"
+            }
+          ]
         }
       ]
     }
