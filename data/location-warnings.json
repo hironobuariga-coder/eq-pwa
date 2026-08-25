@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-25 14:43:16+09:00",
+  "generated": "2026-08-25 15:18:04+09:00",
   "locations": {
     "higashi_rc": {
       "label": "東RC",
@@ -66,15 +66,14 @@
             {
               "name": "雷注意報",
               "status": "継続"
+            },
+            {
+              "name": "強風注意報",
+              "status": "発表"
             }
           ]
         }
       ]
-    },
-    "kumamoto_qct": {
-      "label": "熊Q",
-      "cityPrefix": "熊本市中央区",
-      "areas": []
     }
   }
 }
