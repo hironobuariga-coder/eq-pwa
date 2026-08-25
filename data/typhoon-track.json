@@ -1,32 +1,32 @@
 {
-  "generated": "2026-08-25 18:32:38+09:00",
+  "generated": "2026-08-25 19:03:54+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "SAUDEL",
-      "nameKana": "ソウデル",
-      "number": "2618",
-      "reportTime": "2026-08-25T17:45:00+09:00",
+      "name": "NARRA",
+      "nameKana": "ナーラ",
+      "number": "2619",
+      "reportTime": "2026-08-25T19:05:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-25T17:00:00+09:00",
-          "lat": 26.9,
-          "lon": 129.7,
-          "class": "台風(TY)",
-          "pressureHpa": 950,
-          "locationText": "沖永良部島の東南東約110km",
+          "time": "2026-08-25T18:00:00+09:00",
+          "lat": 19.5,
+          "lon": 108.5,
+          "class": "台風(TS)",
+          "pressureHpa": 994,
+          "locationText": "トンキン湾",
           "forecastRadiusKm": null
         },
         {
-          "timeLabel": "推定　１時間後",
-          "time": "2026-08-25T18:00:00+09:00",
-          "lat": 27,
-          "lon": 129.5,
-          "class": "台風(TY)",
-          "pressureHpa": 950,
-          "locationText": "沖永良部島の東南東約90km",
-          "forecastRadiusKm": null
+          "timeLabel": "予報　２４時間後",
+          "time": "2026-08-26T18:00:00+09:00",
+          "lat": 21.6,
+          "lon": 110.2,
+          "class": "熱帯低気圧(TD)",
+          "pressureHpa": 996,
+          "locationText": "華南",
+          "forecastRadiusKm": 120
         }
       ]
     }
