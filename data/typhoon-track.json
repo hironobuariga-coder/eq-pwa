@@ -1,32 +1,132 @@
 {
-  "generated": "2026-08-26 00:00:43+09:00",
+  "generated": "2026-08-26 00:55:08+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "SAUDEL",
       "nameKana": "ソウデル",
       "number": "2618",
-      "reportTime": "2026-08-25T23:45:00+09:00",
+      "reportTime": "2026-08-26T00:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-25T23:00:00+09:00",
-          "lat": 27.3,
-          "lon": 128.6,
+          "time": "2026-08-26T00:00:00+09:00",
+          "lat": 27.4,
+          "lon": 128.5,
           "class": "台風(TY)",
-          "pressureHpa": 950,
+          "pressureHpa": 955,
           "locationText": "沖永良部島付近",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "推定　１時間後",
-          "time": "2026-08-26T00:00:00+09:00",
-          "lat": 27.4,
-          "lon": 128.4,
+          "time": "2026-08-26T01:00:00+09:00",
+          "lat": 27.5,
+          "lon": 128.3,
           "class": "台風(TY)",
-          "pressureHpa": 950,
-          "locationText": "沖永良部島の西約30km",
+          "pressureHpa": 955,
+          "locationText": "沖永良部島の西北西約40km",
           "forecastRadiusKm": null
+        },
+        {
+          "timeLabel": "予報　３時間後",
+          "time": "2026-08-26T03:00:00+09:00",
+          "lat": 27.6,
+          "lon": 128.1,
+          "class": "台風(TY)",
+          "pressureHpa": 960,
+          "locationText": "",
+          "forecastRadiusKm": 30
+        },
+        {
+          "timeLabel": "予報　６時間後",
+          "time": "2026-08-26T06:00:00+09:00",
+          "lat": 27.9,
+          "lon": 127.6,
+          "class": "台風(TY)",
+          "pressureHpa": 960,
+          "locationText": "",
+          "forecastRadiusKm": 35
+        },
+        {
+          "timeLabel": "予報　９時間後",
+          "time": "2026-08-26T09:00:00+09:00",
+          "lat": 28.1,
+          "lon": 127.1,
+          "class": "台風(TY)",
+          "pressureHpa": 960,
+          "locationText": "",
+          "forecastRadiusKm": 40
+        },
+        {
+          "timeLabel": "予報　１２時間後",
+          "time": "2026-08-26T12:00:00+09:00",
+          "lat": 28.3,
+          "lon": 126.7,
+          "class": "台風(TY)",
+          "pressureHpa": 960,
+          "locationText": "久米島の北約220km",
+          "forecastRadiusKm": 45
+        },
+        {
+          "timeLabel": "予報　１５時間後",
+          "time": "2026-08-26T15:00:00+09:00",
+          "lat": 28.4,
+          "lon": 126.3,
+          "class": "台風(TY)",
+          "pressureHpa": 965,
+          "locationText": "",
+          "forecastRadiusKm": 50
+        },
+        {
+          "timeLabel": "予報　１８時間後",
+          "time": "2026-08-26T18:00:00+09:00",
+          "lat": 28.4,
+          "lon": 126,
+          "class": "台風(TY)",
+          "pressureHpa": 965,
+          "locationText": "",
+          "forecastRadiusKm": 55
+        },
+        {
+          "timeLabel": "予報　２１時間後",
+          "time": "2026-08-26T21:00:00+09:00",
+          "lat": 28.4,
+          "lon": 125.6,
+          "class": "台風(TY)",
+          "pressureHpa": 965,
+          "locationText": "",
+          "forecastRadiusKm": 60
+        },
+        {
+          "timeLabel": "予報　２４時間後",
+          "time": "2026-08-27T00:00:00+09:00",
+          "lat": 28.4,
+          "lon": 125.2,
+          "class": "台風(TY)",
+          "pressureHpa": 965,
+          "locationText": "久米島の北北西約280km",
+          "forecastRadiusKm": 65
+        },
+        {
+          "timeLabel": "予報　４５時間後",
+          "time": "2026-08-27T21:00:00+09:00",
+          "lat": 27.6,
+          "lon": 123,
+          "class": "台風(TY)",
+          "pressureHpa": 970,
+          "locationText": "東シナ海",
+          "forecastRadiusKm": 100
+        },
+        {
+          "timeLabel": "予報　６９時間後",
+          "time": "2026-08-28T21:00:00+09:00",
+          "lat": 26.1,
+          "lon": 117.6,
+          "class": "熱帯低気圧(TD)",
+          "pressureHpa": 992,
+          "locationText": "華南",
+          "forecastRadiusKm": 220
         }
       ]
     }
