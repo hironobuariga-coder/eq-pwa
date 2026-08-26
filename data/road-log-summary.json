@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-26T03:14:02.071Z",
+  "generated": "2026-08-26T04:50:10.116Z",
   "periods": [
     {
       "road": "山形",
@@ -14,7 +14,8 @@
       "startTimeJST": "",
       "source": "e_nexco_official_site",
       "snapshots": [
-        "8/26 12:13"
+        "8/26 12:13",
+        "8/26 13:50"
       ]
     }
   ]
