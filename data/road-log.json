@@ -1,10 +1,5 @@
 [
   {
-    "ts": "2026-08-25T14:40:17+09:00",
-    "closures": [],
-    "rawCount": 0
-  },
-  {
     "ts": "2026-08-25T16:02:14+09:00",
     "closures": [],
     "rawCount": 0
@@ -118,6 +113,23 @@
   },
   {
     "ts": "2026-08-26T13:50:06+09:00",
+    "closures": [
+      {
+        "road": "山形",
+        "section": "宮城川崎IC⇒山形蔵王IC",
+        "direction": "下り",
+        "status": "通行止め",
+        "reason": "",
+        "startTime": "",
+        "source": "e_nexco_official_site",
+        "firstSeenTs": "2026-08-26T03:00:00.000Z",
+        "lastSeenTs": "2026-08-26T03:00:00.000Z"
+      }
+    ],
+    "rawCount": 1
+  },
+  {
+    "ts": "2026-08-26T14:43:29+09:00",
     "closures": [
       {
         "road": "山形",
