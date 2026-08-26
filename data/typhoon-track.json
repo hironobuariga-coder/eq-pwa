@@ -1,42 +1,22 @@
 {
-  "generated": "2026-08-26 15:20:41+09:00",
+  "generated": "2026-08-26 16:24:40+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "NARRA",
       "nameKana": "ナーラ",
       "number": "2619",
-      "reportTime": "2026-08-26T13:00:00+09:00",
+      "reportTime": "2026-08-26T16:05:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-26T12:00:00+09:00",
-          "lat": 20.8,
-          "lon": 109.9,
-          "class": "台風(TS)",
-          "pressureHpa": 998,
-          "locationText": "華南",
-          "forecastRadiusKm": null
-        },
-        {
-          "timeLabel": "予報　１２時間後",
-          "time": "2026-08-27T00:00:00+09:00",
-          "lat": 22.5,
-          "lon": 110,
-          "class": "熱帯低気圧(TD)",
-          "pressureHpa": 998,
-          "locationText": "華南",
-          "forecastRadiusKm": 85
-        },
-        {
-          "timeLabel": "予報　２４時間後",
-          "time": "2026-08-27T12:00:00+09:00",
-          "lat": 23.1,
+          "time": "2026-08-26T15:00:00+09:00",
+          "lat": 21,
           "lon": 110,
           "class": "熱帯低気圧(TD)",
           "pressureHpa": 1000,
           "locationText": "華南",
-          "forecastRadiusKm": 120
+          "forecastRadiusKm": null
         }
       ]
     }
