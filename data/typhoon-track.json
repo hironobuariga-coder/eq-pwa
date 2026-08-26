@@ -1,18 +1,18 @@
 {
-  "generated": "2026-08-27 05:07:02+09:00",
+  "generated": "2026-08-27 08:28:19+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "",
       "nameKana": "",
       "number": "",
-      "reportTime": "2026-08-27T04:15:00+09:00",
+      "reportTime": "2026-08-27T07:15:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-27T03:00:00+09:00",
-          "lat": 20.1,
-          "lon": 168.1,
+          "time": "2026-08-27T06:00:00+09:00",
+          "lat": 20.6,
+          "lon": 168.3,
           "class": "熱帯低気圧(TD)",
           "pressureHpa": 1004,
           "locationText": "ウェーク島近海",
@@ -20,16 +20,16 @@
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-08-28T03:00:00+09:00",
-          "lat": 22.7,
-          "lon": 167.2,
+          "time": "2026-08-28T06:00:00+09:00",
+          "lat": 23,
+          "lon": 167.1,
           "class": "台風(TS)",
           "pressureHpa": 1000,
           "locationText": "ウェーク島近海",
           "forecastRadiusKm": 130
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-08-29T03:00:00+09:00",
           "lat": 25.6,
           "lon": 166.7,
@@ -39,7 +39,7 @@
           "forecastRadiusKm": 200
         },
         {
-          "timeLabel": "予報　７２時間後",
+          "timeLabel": "予報　６９時間後",
           "time": "2026-08-30T03:00:00+09:00",
           "lat": 30.4,
           "lon": 166,
@@ -49,7 +49,7 @@
           "forecastRadiusKm": 260
         },
         {
-          "timeLabel": "予報　９６時間後",
+          "timeLabel": "予報　９３時間後",
           "time": "2026-08-31T03:00:00+09:00",
           "lat": 32.1,
           "lon": 166.3,
@@ -59,7 +59,7 @@
           "forecastRadiusKm": 330
         },
         {
-          "timeLabel": "予報　１２０時間後",
+          "timeLabel": "予報　１１７時間後",
           "time": "2026-09-01T03:00:00+09:00",
           "lat": 32.2,
           "lon": 166,
