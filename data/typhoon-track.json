@@ -1,35 +1,35 @@
 {
-  "generated": "2026-08-26 23:58:28+09:00",
+  "generated": "2026-08-27 01:22:37+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "",
       "nameKana": "",
       "number": "",
-      "reportTime": "2026-08-26T22:30:00+09:00",
+      "reportTime": "2026-08-27T01:15:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-26T21:00:00+09:00",
-          "lat": 18.3,
-          "lon": 167.9,
+          "time": "2026-08-27T00:00:00+09:00",
+          "lat": 19.4,
+          "lon": 167.8,
           "class": "熱帯低気圧(TD)",
-          "pressureHpa": 1006,
+          "pressureHpa": 1004,
           "locationText": "ウェーク島近海",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-08-27T21:00:00+09:00",
-          "lat": 20.6,
-          "lon": 166.7,
+          "time": "2026-08-28T00:00:00+09:00",
+          "lat": 20.9,
+          "lon": 166.6,
           "class": "台風(TS)",
           "pressureHpa": 1002,
           "locationText": "ウェーク島近海",
           "forecastRadiusKm": 130
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-08-28T21:00:00+09:00",
           "lat": 22.8,
           "lon": 166,
@@ -39,7 +39,7 @@
           "forecastRadiusKm": 200
         },
         {
-          "timeLabel": "予報　７２時間後",
+          "timeLabel": "予報　６９時間後",
           "time": "2026-08-29T21:00:00+09:00",
           "lat": 27.1,
           "lon": 165.8,
@@ -49,7 +49,7 @@
           "forecastRadiusKm": 260
         },
         {
-          "timeLabel": "予報　９６時間後",
+          "timeLabel": "予報　９３時間後",
           "time": "2026-08-30T21:00:00+09:00",
           "lat": 30.3,
           "lon": 164.9,
@@ -59,7 +59,7 @@
           "forecastRadiusKm": 330
         },
         {
-          "timeLabel": "予報　１２０時間後",
+          "timeLabel": "予報　１１７時間後",
           "time": "2026-08-31T21:00:00+09:00",
           "lat": 30.1,
           "lon": 163.8,
