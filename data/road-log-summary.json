@@ -1,4 +1,21 @@
 {
-  "generated": "2026-08-26T01:52:12.137Z",
-  "periods": []
+  "generated": "2026-08-26T03:14:02.071Z",
+  "periods": [
+    {
+      "road": "山形",
+      "section": "宮城川崎IC⇒山形蔵王IC",
+      "direction": "下り",
+      "reason": "",
+      "status": "通行止め",
+      "start": "2026-08-26T03:00:00.000Z",
+      "end": null,
+      "startJST": "8/26 12:00",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_official_site",
+      "snapshots": [
+        "8/26 12:13"
+      ]
+    }
+  ]
 }
