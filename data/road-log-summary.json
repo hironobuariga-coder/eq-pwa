@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-26T08:55:35.529Z",
+  "generated": "2026-08-26T09:52:02.476Z",
   "periods": [
     {
       "road": "山形",
@@ -8,9 +8,9 @@
       "reason": "",
       "status": "通行止め",
       "start": "2026-08-26T03:00:00.000Z",
-      "end": null,
+      "end": "2026-08-26T03:00:00.000Z",
       "startJST": "8/26 12:00",
-      "endJST": null,
+      "endJST": "8/26 12:00",
       "startTimeJST": "",
       "source": "e_nexco_official_site",
       "snapshots": [
