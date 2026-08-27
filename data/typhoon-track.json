@@ -1,72 +1,82 @@
 {
-  "generated": "2026-08-27 13:39:32+09:00",
+  "generated": "2026-08-28 00:30:58+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "",
-      "nameKana": "",
-      "number": "",
-      "reportTime": "2026-08-27T13:20:00+09:00",
+      "name": "ETAU",
+      "nameKana": "アータウ",
+      "number": "2622",
+      "reportTime": "2026-08-27T22:10:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-27T12:00:00+09:00",
-          "lat": 20.8,
-          "lon": 167.7,
-          "class": "熱帯低気圧(TD)",
-          "pressureHpa": 1004,
+          "time": "2026-08-27T21:00:00+09:00",
+          "lat": 22.2,
+          "lon": 168.1,
+          "class": "台風(TS)",
+          "pressureHpa": 998,
           "locationText": "ウェーク島近海",
           "forecastRadiusKm": null
         },
         {
-          "timeLabel": "予報　２４時間後",
-          "time": "2026-08-28T12:00:00+09:00",
-          "lat": 23.9,
-          "lon": 167.2,
+          "timeLabel": "予報　１２時間後",
+          "time": "2026-08-28T09:00:00+09:00",
+          "lat": 23.6,
+          "lon": 167.8,
           "class": "台風(TS)",
-          "pressureHpa": 1000,
+          "pressureHpa": 996,
           "locationText": "ウェーク島近海",
-          "forecastRadiusKm": 130
+          "forecastRadiusKm": 55
         },
         {
-          "timeLabel": "予報　４５時間後",
-          "time": "2026-08-29T09:00:00+09:00",
-          "lat": 27,
-          "lon": 166.6,
+          "timeLabel": "予報　２４時間後",
+          "time": "2026-08-28T21:00:00+09:00",
+          "lat": 26,
+          "lon": 167.3,
+          "class": "台風(TS)",
+          "pressureHpa": 996,
+          "locationText": "ウェーク島近海",
+          "forecastRadiusKm": 80
+        },
+        {
+          "timeLabel": "予報　４８時間後",
+          "time": "2026-08-29T21:00:00+09:00",
+          "lat": 31.2,
+          "lon": 165.5,
           "class": "台風(TS)",
           "pressureHpa": 998,
-          "locationText": "ウェーク島近海",
-          "forecastRadiusKm": 200
-        },
-        {
-          "timeLabel": "予報　６９時間後",
-          "time": "2026-08-30T09:00:00+09:00",
-          "lat": 31.7,
-          "lon": 165.1,
-          "class": "台風(TS)",
-          "pressureHpa": 996,
           "locationText": "日本のはるか東",
-          "forecastRadiusKm": 310
+          "forecastRadiusKm": 155
         },
         {
-          "timeLabel": "予報　９３時間後",
-          "time": "2026-08-31T09:00:00+09:00",
-          "lat": 34,
-          "lon": 166,
+          "timeLabel": "予報　７２時間後",
+          "time": "2026-08-30T21:00:00+09:00",
+          "lat": 33.8,
+          "lon": 164.6,
           "class": "台風(TS)",
-          "pressureHpa": 996,
+          "pressureHpa": 998,
           "locationText": "日本のはるか東",
-          "forecastRadiusKm": 390
+          "forecastRadiusKm": 300
         },
         {
-          "timeLabel": "予報　１１７時間後",
-          "time": "2026-09-01T09:00:00+09:00",
-          "lat": 34.3,
-          "lon": 166.2,
+          "timeLabel": "予報　９６時間後",
+          "time": "2026-08-31T21:00:00+09:00",
+          "lat": 36.7,
+          "lon": 165.6,
+          "class": "台風(TS)",
+          "pressureHpa": 998,
+          "locationText": "日本のはるか東",
+          "forecastRadiusKm": 370
+        },
+        {
+          "timeLabel": "予報　１２０時間後",
+          "time": "2026-09-01T21:00:00+09:00",
+          "lat": 36.8,
+          "lon": 168.4,
           "class": "熱帯低気圧(TD)",
           "pressureHpa": 1000,
           "locationText": "日本のはるか東",
-          "forecastRadiusKm": 590
+          "forecastRadiusKm": 460
         }
       ]
     }
