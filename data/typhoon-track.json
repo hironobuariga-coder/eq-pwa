@@ -1,62 +1,82 @@
 {
-  "generated": "2026-08-28 09:35:20+09:00",
+  "generated": "2026-08-28 21:10:48+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "",
-      "nameKana": "",
-      "number": "",
-      "reportTime": "2026-08-28T07:15:00+09:00",
+      "name": "BANG-LANG",
+      "nameKana": "バンラン",
+      "number": "2623",
+      "reportTime": "2026-08-28T19:15:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-28T06:00:00+09:00",
-          "lat": 17.7,
-          "lon": 164.2,
-          "class": "熱帯低気圧(TD)",
-          "pressureHpa": 1004,
+          "time": "2026-08-28T18:00:00+09:00",
+          "lat": 19.4,
+          "lon": 165.8,
+          "class": "台風(TS)",
+          "pressureHpa": 1000,
           "locationText": "ウェーク島近海",
           "forecastRadiusKm": null
         },
         {
-          "timeLabel": "予報　２４時間後",
+          "timeLabel": "予報　１２時間後",
           "time": "2026-08-29T06:00:00+09:00",
-          "lat": 21.9,
-          "lon": 167.3,
+          "lat": 21.5,
+          "lon": 167.1,
+          "class": "台風(TS)",
+          "pressureHpa": 1000,
+          "locationText": "ウェーク島近海",
+          "forecastRadiusKm": 55
+        },
+        {
+          "timeLabel": "予報　２４時間後",
+          "time": "2026-08-29T18:00:00+09:00",
+          "lat": 24.6,
+          "lon": 167.5,
+          "class": "台風(TS)",
+          "pressureHpa": 1000,
+          "locationText": "ウェーク島近海",
+          "forecastRadiusKm": 80
+        },
+        {
+          "timeLabel": "予報　４５時間後",
+          "time": "2026-08-30T15:00:00+09:00",
+          "lat": 28,
+          "lon": 169.2,
           "class": "台風(TS)",
           "pressureHpa": 1000,
           "locationText": "ウェーク島近海",
           "forecastRadiusKm": 130
         },
         {
-          "timeLabel": "予報　４５時間後",
-          "time": "2026-08-30T03:00:00+09:00",
-          "lat": 27.7,
-          "lon": 167.8,
+          "timeLabel": "予報　６９時間後",
+          "time": "2026-08-31T15:00:00+09:00",
+          "lat": 34.2,
+          "lon": 166.7,
           "class": "台風(TS)",
           "pressureHpa": 998,
-          "locationText": "ウェーク島近海",
-          "forecastRadiusKm": 200
-        },
-        {
-          "timeLabel": "予報　６９時間後",
-          "time": "2026-08-31T03:00:00+09:00",
-          "lat": 34,
-          "lon": 168,
-          "class": "台風(TS)",
-          "pressureHpa": 1000,
           "locationText": "日本のはるか東",
-          "forecastRadiusKm": 260
+          "forecastRadiusKm": 220
         },
         {
           "timeLabel": "予報　９３時間後",
-          "time": "2026-09-01T03:00:00+09:00",
-          "lat": 37.2,
-          "lon": 164.8,
+          "time": "2026-09-01T15:00:00+09:00",
+          "lat": 35.8,
+          "lon": 167.4,
+          "class": "台風(TS)",
+          "pressureHpa": 998,
+          "locationText": "日本のはるか東",
+          "forecastRadiusKm": 320
+        },
+        {
+          "timeLabel": "予報　１１７時間後",
+          "time": "2026-09-02T15:00:00+09:00",
+          "lat": 40,
+          "lon": 173.2,
           "class": "熱帯低気圧(TD)",
           "pressureHpa": 1002,
-          "locationText": "日本のはるか東",
-          "forecastRadiusKm": 330
+          "locationText": "アリューシャンの南",
+          "forecastRadiusKm": 460
         }
       ]
     }
