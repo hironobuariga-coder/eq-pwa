@@ -1,10 +1,5 @@
 [
   {
-    "ts": "2026-08-27T08:22:12+09:00",
-    "closures": [],
-    "rawCount": 1
-  },
-  {
     "ts": "2026-08-27T18:28:48+09:00",
     "closures": [],
     "rawCount": 1
@@ -13,5 +8,33 @@
     "ts": "2026-08-28T05:19:26+09:00",
     "closures": [],
     "rawCount": 1
+  },
+  {
+    "ts": "2026-08-28T14:18:09+09:00",
+    "closures": [
+      {
+        "road": "東北",
+        "section": "",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "",
+        "startTime": "",
+        "source": "e_nexco_official_site",
+        "firstSeenTs": "2026-08-28T03:00:00.000Z",
+        "lastSeenTs": "2026-08-28T03:00:00.000Z"
+      },
+      {
+        "road": "秋田",
+        "section": "北上JCT〜湯田IC",
+        "direction": "上下線",
+        "status": "通行止め",
+        "reason": "",
+        "startTime": "",
+        "source": "e_nexco_official_site",
+        "firstSeenTs": "2026-08-28T03:00:00.000Z",
+        "lastSeenTs": "2026-08-28T03:00:00.000Z"
+      }
+    ],
+    "rawCount": 2
   }
 ]

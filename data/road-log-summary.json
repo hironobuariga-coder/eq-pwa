@@ -1,4 +1,37 @@
 {
-  "generated": "2026-08-27T20:19:31.442Z",
-  "periods": []
+  "generated": "2026-08-28T05:18:13.031Z",
+  "periods": [
+    {
+      "road": "東北",
+      "section": "",
+      "direction": "",
+      "reason": "",
+      "status": "通行止め",
+      "start": "2026-08-28T03:00:00.000Z",
+      "end": null,
+      "startJST": "8/28 12:00",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_official_site",
+      "snapshots": [
+        "8/28 14:18"
+      ]
+    },
+    {
+      "road": "秋田",
+      "section": "北上JCT〜湯田IC",
+      "direction": "上下線",
+      "reason": "",
+      "status": "通行止め",
+      "start": "2026-08-28T03:00:00.000Z",
+      "end": null,
+      "startJST": "8/28 12:00",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_official_site",
+      "snapshots": [
+        "8/28 14:18"
+      ]
+    }
+  ]
 }
