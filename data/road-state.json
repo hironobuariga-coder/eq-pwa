@@ -1,24 +1,3 @@
 {
-  "active": {
-    "東北|#": {
-      "road": "東北",
-      "section": "",
-      "direction": "",
-      "reason": "",
-      "firstSeenTs": "2026-08-28T03:00:00.000Z",
-      "lastSeenTs": "2026-08-28T03:00:00.000Z",
-      "startTime": "",
-      "source": "e_nexco_official_site"
-    },
-    "秋田|北上JCT〜湯田IC": {
-      "road": "秋田",
-      "section": "北上JCT〜湯田IC",
-      "direction": "上下線",
-      "reason": "",
-      "firstSeenTs": "2026-08-28T03:00:00.000Z",
-      "lastSeenTs": "2026-08-28T03:00:00.000Z",
-      "startTime": "",
-      "source": "e_nexco_official_site"
-    }
-  }
+  "active": {}
 }
