@@ -1,32 +1,35 @@
 {
-  "generated": "2026-08-28 09:35:20+09:00",
+  "generated": "2026-08-30 03:35:16+09:00",
   "source": "jma_xml",
-  "time": "2026/8/28 04:54 (JST)",
-  "epicenter": "青森県東方沖",
-  "depth": "約50km",
-  "magnitude": "M4.6",
-  "maxShindo": "3",
+  "time": "2026/8/30 00:17 (JST)",
+  "epicenter": "千葉県東方沖",
+  "depth": "約30km",
+  "magnitude": "M4.8",
+  "maxShindo": "4",
   "tsunami": "この地震による津波の心配はありません。",
   "shindoAreas": [
     {
-      "level": "3",
-      "area": "青森県・岩手県"
+      "level": "4",
+      "area": "茨城県"
     },
     {
-      "level": "2",
-      "area": "北海道"
+      "level": "3",
+      "area": "千葉県"
     },
     {
       "level": "1",
-      "area": "宮城県・秋田県"
+      "area": "福島県・栃木県・群馬県・埼玉県・東京都・神奈川県"
     }
   ],
   "alertLevel": "normal",
   "affectedPrefs": [
-    "青森県",
-    "岩手県",
-    "北海道",
-    "宮城県",
-    "秋田県"
+    "茨城県",
+    "千葉県",
+    "福島県",
+    "栃木県",
+    "群馬県",
+    "埼玉県",
+    "東京都",
+    "神奈川県"
   ]
 }
