@@ -1,21 +1,6 @@
 {
-  "generated": "2026-08-29 07:25:52+09:00",
+  "generated": "2026-08-29 12:47:49+09:00",
   "locations": {
-    "higashi_rc": {
-      "label": "東RC",
-      "cityPrefix": "川崎市",
-      "areas": [
-        {
-          "area": "川崎市",
-          "warnings": [
-            {
-              "name": "雷注意報",
-              "status": "解除"
-            }
-          ]
-        }
-      ]
-    },
     "naka_rc": {
       "label": "中RC",
       "cityPrefix": "稲沢市",
@@ -58,10 +43,6 @@
           "area": "川西市",
           "warnings": [
             {
-              "name": "大雨注意報",
-              "status": "継続"
-            },
-            {
               "name": "雷注意報",
               "status": "継続"
             }
@@ -78,11 +59,6 @@
           "warnings": []
         }
       ]
-    },
-    "kumamoto_qct": {
-      "label": "熊Q",
-      "cityPrefix": "熊本市中央区",
-      "areas": []
     }
   }
 }
