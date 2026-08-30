@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-31 01:59:54+09:00",
+  "generated": "2026-08-31 04:43:44+09:00",
   "locations": {
     "naka_rc": {
       "label": "中RC",
@@ -32,6 +32,16 @@
       "areas": [
         {
           "area": "川西市",
+          "warnings": []
+        }
+      ]
+    },
+    "kudanshita": {
+      "label": "九段下オフィス",
+      "cityPrefix": "千代田区",
+      "areas": [
+        {
+          "area": "千代田区",
           "warnings": []
         }
       ]

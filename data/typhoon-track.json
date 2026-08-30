@@ -1,42 +1,52 @@
 {
-  "generated": "2026-08-31 01:59:54+09:00",
+  "generated": "2026-08-31 04:43:44+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "ETAU",
-      "nameKana": "アータウ",
-      "number": "2622",
-      "reportTime": "2026-08-31T01:05:00+09:00",
+      "name": "",
+      "nameKana": "",
+      "number": "",
+      "reportTime": "2026-08-31T04:20:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-31T00:00:00+09:00",
-          "lat": 31.2,
-          "lon": 166.9,
-          "class": "台風(TS)",
-          "pressureHpa": 996,
-          "locationText": "日本のはるか東",
+          "time": "2026-08-31T03:00:00+09:00",
+          "lat": 21.1,
+          "lon": 110.5,
+          "class": "熱帯低気圧(TD)",
+          "pressureHpa": 998,
+          "locationText": "南シナ海",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-01T00:00:00+09:00",
-          "lat": 36.5,
-          "lon": 168.1,
+          "time": "2026-09-01T03:00:00+09:00",
+          "lat": 19.3,
+          "lon": 112.6,
           "class": "台風(TS)",
-          "pressureHpa": 994,
-          "locationText": "日本のはるか東",
-          "forecastRadiusKm": 120
+          "pressureHpa": 996,
+          "locationText": "南シナ海",
+          "forecastRadiusKm": 130
         },
         {
-          "timeLabel": "予報　４５時間後",
-          "time": "2026-09-01T21:00:00+09:00",
-          "lat": 45.2,
-          "lon": 172.1,
-          "class": "温帯低気圧(LOW)",
-          "pressureHpa": 992,
-          "locationText": "アリューシャンの南",
-          "forecastRadiusKm": 210
+          "timeLabel": "予報　４８時間後",
+          "time": "2026-09-02T03:00:00+09:00",
+          "lat": 21.5,
+          "lon": 116.4,
+          "class": "台風(TS)",
+          "pressureHpa": 994,
+          "locationText": "南シナ海",
+          "forecastRadiusKm": 200
+        },
+        {
+          "timeLabel": "予報　７２時間後",
+          "time": "2026-09-03T03:00:00+09:00",
+          "lat": 22.5,
+          "lon": 118.5,
+          "class": "熱帯低気圧(TD)",
+          "pressureHpa": 996,
+          "locationText": "南シナ海",
+          "forecastRadiusKm": 260
         }
       ]
     }
