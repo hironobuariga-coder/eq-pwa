@@ -1,35 +1,35 @@
 {
-  "generated": "2026-08-31 04:43:44+09:00",
+  "generated": "2026-08-31 07:06:47+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "",
       "nameKana": "",
       "number": "",
-      "reportTime": "2026-08-31T04:20:00+09:00",
+      "reportTime": "2026-08-31T07:05:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-31T03:00:00+09:00",
-          "lat": 21.1,
-          "lon": 110.5,
+          "time": "2026-08-31T06:00:00+09:00",
+          "lat": 21,
+          "lon": 110.4,
           "class": "熱帯低気圧(TD)",
-          "pressureHpa": 998,
+          "pressureHpa": 996,
           "locationText": "南シナ海",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-01T03:00:00+09:00",
-          "lat": 19.3,
-          "lon": 112.6,
+          "time": "2026-09-01T06:00:00+09:00",
+          "lat": 19.5,
+          "lon": 113.1,
           "class": "台風(TS)",
           "pressureHpa": 996,
           "locationText": "南シナ海",
           "forecastRadiusKm": 130
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-09-02T03:00:00+09:00",
           "lat": 21.5,
           "lon": 116.4,
@@ -39,7 +39,7 @@
           "forecastRadiusKm": 200
         },
         {
-          "timeLabel": "予報　７２時間後",
+          "timeLabel": "予報　６９時間後",
           "time": "2026-09-03T03:00:00+09:00",
           "lat": 22.5,
           "lon": 118.5,
