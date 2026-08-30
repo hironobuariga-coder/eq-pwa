@@ -1,52 +1,52 @@
 {
-  "generated": "2026-08-30 16:06:51+09:00",
+  "generated": "2026-08-30 21:49:48+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "ETAU",
-      "nameKana": "アータウ",
-      "number": "2622",
-      "reportTime": "2026-08-30T16:10:00+09:00",
+      "name": "BANG-LANG",
+      "nameKana": "バンラン",
+      "number": "2623",
+      "reportTime": "2026-08-30T21:50:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-30T15:00:00+09:00",
-          "lat": 30.7,
-          "lon": 165.6,
+          "time": "2026-08-30T21:00:00+09:00",
+          "lat": 34.5,
+          "lon": 166.3,
           "class": "台風(TS)",
-          "pressureHpa": 996,
+          "pressureHpa": 994,
           "locationText": "日本のはるか東",
           "forecastRadiusKm": null
         },
         {
-          "timeLabel": "予報　２４時間後",
-          "time": "2026-08-31T15:00:00+09:00",
-          "lat": 32.4,
-          "lon": 167.3,
+          "timeLabel": "予報　１２時間後",
+          "time": "2026-08-31T09:00:00+09:00",
+          "lat": 35.6,
+          "lon": 165.5,
           "class": "台風(TS)",
-          "pressureHpa": 996,
+          "pressureHpa": 998,
+          "locationText": "日本のはるか東",
+          "forecastRadiusKm": 85
+        },
+        {
+          "timeLabel": "予報　２４時間後",
+          "time": "2026-08-31T21:00:00+09:00",
+          "lat": 38.4,
+          "lon": 166.2,
+          "class": "台風(TS)",
+          "pressureHpa": 994,
           "locationText": "日本のはるか東",
           "forecastRadiusKm": 120
         },
         {
           "timeLabel": "予報　４８時間後",
-          "time": "2026-09-01T15:00:00+09:00",
-          "lat": 36.2,
-          "lon": 168.4,
-          "class": "台風(TS)",
-          "pressureHpa": 998,
-          "locationText": "日本のはるか東",
+          "time": "2026-09-01T21:00:00+09:00",
+          "lat": 52.4,
+          "lon": 169.7,
+          "class": "温帯低気圧(LOW)",
+          "pressureHpa": 992,
+          "locationText": "カムチャツカの東",
           "forecastRadiusKm": 210
-        },
-        {
-          "timeLabel": "予報　７２時間後",
-          "time": "2026-09-02T15:00:00+09:00",
-          "lat": 40.5,
-          "lon": 170.4,
-          "class": "熱帯低気圧(TD)",
-          "pressureHpa": 1000,
-          "locationText": "アリューシャンの南",
-          "forecastRadiusKm": 300
         }
       ]
     }
