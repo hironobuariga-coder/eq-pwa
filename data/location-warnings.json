@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30 08:23:17+09:00",
+  "generated": "2026-08-30 10:26:10+09:00",
   "locations": {
     "naka_rc": {
       "label": "中RC",
@@ -22,7 +22,12 @@
       "areas": [
         {
           "area": "三田市",
-          "warnings": []
+          "warnings": [
+            {
+              "name": "雷注意報",
+              "status": "継続"
+            }
+          ]
         }
       ]
     },
@@ -32,7 +37,12 @@
       "areas": [
         {
           "area": "川西市",
-          "warnings": []
+          "warnings": [
+            {
+              "name": "雷注意報",
+              "status": "継続"
+            }
+          ]
         }
       ]
     },
