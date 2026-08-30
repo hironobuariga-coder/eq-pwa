@@ -1,51 +1,51 @@
 {
-  "generated": "2026-08-30 10:26:10+09:00",
+  "generated": "2026-08-30 16:06:51+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "ETAU",
       "nameKana": "アータウ",
       "number": "2622",
-      "reportTime": "2026-08-30T10:10:00+09:00",
+      "reportTime": "2026-08-30T16:10:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-30T09:00:00+09:00",
-          "lat": 30.9,
-          "lon": 164.7,
+          "time": "2026-08-30T15:00:00+09:00",
+          "lat": 30.7,
+          "lon": 165.6,
           "class": "台風(TS)",
-          "pressureHpa": 994,
+          "pressureHpa": 996,
           "locationText": "日本のはるか東",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-08-31T09:00:00+09:00",
-          "lat": 30.5,
-          "lon": 166.4,
+          "time": "2026-08-31T15:00:00+09:00",
+          "lat": 32.4,
+          "lon": 167.3,
           "class": "台風(TS)",
-          "pressureHpa": 994,
+          "pressureHpa": 996,
           "locationText": "日本のはるか東",
           "forecastRadiusKm": 120
         },
         {
           "timeLabel": "予報　４８時間後",
-          "time": "2026-09-01T09:00:00+09:00",
-          "lat": 32.7,
-          "lon": 168.5,
+          "time": "2026-09-01T15:00:00+09:00",
+          "lat": 36.2,
+          "lon": 168.4,
           "class": "台風(TS)",
-          "pressureHpa": 996,
+          "pressureHpa": 998,
           "locationText": "日本のはるか東",
           "forecastRadiusKm": 210
         },
         {
           "timeLabel": "予報　７２時間後",
-          "time": "2026-09-02T09:00:00+09:00",
-          "lat": 33.8,
-          "lon": 171.1,
+          "time": "2026-09-02T15:00:00+09:00",
+          "lat": 40.5,
+          "lon": 170.4,
           "class": "熱帯低気圧(TD)",
           "pressureHpa": 1000,
-          "locationText": "ミッドウェー諸島近海",
+          "locationText": "アリューシャンの南",
           "forecastRadiusKm": 300
         }
       ]
