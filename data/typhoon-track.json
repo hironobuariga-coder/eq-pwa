@@ -1,51 +1,41 @@
 {
-  "generated": "2026-08-30 21:49:48+09:00",
+  "generated": "2026-08-31 01:59:54+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "BANG-LANG",
-      "nameKana": "バンラン",
-      "number": "2623",
-      "reportTime": "2026-08-30T21:50:00+09:00",
+      "name": "ETAU",
+      "nameKana": "アータウ",
+      "number": "2622",
+      "reportTime": "2026-08-31T01:05:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-30T21:00:00+09:00",
-          "lat": 34.5,
-          "lon": 166.3,
+          "time": "2026-08-31T00:00:00+09:00",
+          "lat": 31.2,
+          "lon": 166.9,
           "class": "台風(TS)",
-          "pressureHpa": 994,
+          "pressureHpa": 996,
           "locationText": "日本のはるか東",
           "forecastRadiusKm": null
         },
         {
-          "timeLabel": "予報　１２時間後",
-          "time": "2026-08-31T09:00:00+09:00",
-          "lat": 35.6,
-          "lon": 165.5,
-          "class": "台風(TS)",
-          "pressureHpa": 998,
-          "locationText": "日本のはるか東",
-          "forecastRadiusKm": 85
-        },
-        {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-08-31T21:00:00+09:00",
-          "lat": 38.4,
-          "lon": 166.2,
+          "time": "2026-09-01T00:00:00+09:00",
+          "lat": 36.5,
+          "lon": 168.1,
           "class": "台風(TS)",
           "pressureHpa": 994,
           "locationText": "日本のはるか東",
           "forecastRadiusKm": 120
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-09-01T21:00:00+09:00",
-          "lat": 52.4,
-          "lon": 169.7,
+          "lat": 45.2,
+          "lon": 172.1,
           "class": "温帯低気圧(LOW)",
           "pressureHpa": 992,
-          "locationText": "カムチャツカの東",
+          "locationText": "アリューシャンの南",
           "forecastRadiusKm": 210
         }
       ]

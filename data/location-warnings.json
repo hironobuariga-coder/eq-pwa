@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30 21:49:48+09:00",
+  "generated": "2026-08-31 01:59:54+09:00",
   "locations": {
     "naka_rc": {
       "label": "中RC",
@@ -22,12 +22,7 @@
       "areas": [
         {
           "area": "三田市",
-          "warnings": [
-            {
-              "name": "雷注意報",
-              "status": "継続"
-            }
-          ]
+          "warnings": []
         }
       ]
     },
@@ -37,21 +32,6 @@
       "areas": [
         {
           "area": "川西市",
-          "warnings": [
-            {
-              "name": "雷注意報",
-              "status": "継続"
-            }
-          ]
-        }
-      ]
-    },
-    "kudanshita": {
-      "label": "九段下オフィス",
-      "cityPrefix": "千代田区",
-      "areas": [
-        {
-          "area": "千代田区",
           "warnings": []
         }
       ]
