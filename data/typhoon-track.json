@@ -1,28 +1,28 @@
 {
-  "generated": "2026-08-31 09:32:54+09:00",
+  "generated": "2026-08-31 15:04:30+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "",
       "nameKana": "",
       "number": "",
-      "reportTime": "2026-08-31T07:05:00+09:00",
+      "reportTime": "2026-08-31T13:15:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-31T06:00:00+09:00",
-          "lat": 21,
-          "lon": 110.4,
+          "time": "2026-08-31T12:00:00+09:00",
+          "lat": 19.6,
+          "lon": 110.3,
           "class": "熱帯低気圧(TD)",
-          "pressureHpa": 996,
-          "locationText": "南シナ海",
+          "pressureHpa": 998,
+          "locationText": "海南島",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-01T06:00:00+09:00",
-          "lat": 19.5,
-          "lon": 113.1,
+          "time": "2026-09-01T12:00:00+09:00",
+          "lat": 19.8,
+          "lon": 114.2,
           "class": "台風(TS)",
           "pressureHpa": 996,
           "locationText": "南シナ海",
@@ -30,9 +30,9 @@
         },
         {
           "timeLabel": "予報　４５時間後",
-          "time": "2026-09-02T03:00:00+09:00",
-          "lat": 21.5,
-          "lon": 116.4,
+          "time": "2026-09-02T09:00:00+09:00",
+          "lat": 21.3,
+          "lon": 116.9,
           "class": "台風(TS)",
           "pressureHpa": 994,
           "locationText": "南シナ海",
@@ -40,12 +40,12 @@
         },
         {
           "timeLabel": "予報　６９時間後",
-          "time": "2026-09-03T03:00:00+09:00",
-          "lat": 22.5,
-          "lon": 118.5,
+          "time": "2026-09-03T09:00:00+09:00",
+          "lat": 23.1,
+          "lon": 118.9,
           "class": "熱帯低気圧(TD)",
           "pressureHpa": 996,
-          "locationText": "南シナ海",
+          "locationText": "台湾海峡",
           "forecastRadiusKm": 260
         }
       ]
