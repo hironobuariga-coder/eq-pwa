@@ -1,52 +1,62 @@
 {
-  "generated": "2026-08-31 15:04:30+09:00",
+  "generated": "2026-08-31 22:36:32+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "",
       "nameKana": "",
       "number": "",
-      "reportTime": "2026-08-31T13:15:00+09:00",
+      "reportTime": "2026-08-31T22:25:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-08-31T12:00:00+09:00",
-          "lat": 19.6,
-          "lon": 110.3,
+          "time": "2026-08-31T21:00:00+09:00",
+          "lat": 18.9,
+          "lon": 110.2,
           "class": "熱帯低気圧(TD)",
           "pressureHpa": 998,
           "locationText": "海南島",
           "forecastRadiusKm": null
         },
         {
-          "timeLabel": "予報　２４時間後",
-          "time": "2026-09-01T12:00:00+09:00",
-          "lat": 19.8,
-          "lon": 114.2,
-          "class": "台風(TS)",
-          "pressureHpa": 996,
-          "locationText": "南シナ海",
-          "forecastRadiusKm": 130
-        },
-        {
-          "timeLabel": "予報　４５時間後",
-          "time": "2026-09-02T09:00:00+09:00",
-          "lat": 21.3,
-          "lon": 116.9,
+          "timeLabel": "予報　１２時間後",
+          "time": "2026-09-01T09:00:00+09:00",
+          "lat": 19.6,
+          "lon": 113.6,
           "class": "台風(TS)",
           "pressureHpa": 994,
           "locationText": "南シナ海",
-          "forecastRadiusKm": 200
+          "forecastRadiusKm": 85
         },
         {
-          "timeLabel": "予報　６９時間後",
-          "time": "2026-09-03T09:00:00+09:00",
-          "lat": 23.1,
-          "lon": 118.9,
+          "timeLabel": "予報　２４時間後",
+          "time": "2026-09-01T21:00:00+09:00",
+          "lat": 20.9,
+          "lon": 115.9,
+          "class": "台風(TS)",
+          "pressureHpa": 994,
+          "locationText": "南シナ海",
+          "forecastRadiusKm": 110
+        },
+        {
+          "timeLabel": "予報　４８時間後",
+          "time": "2026-09-02T21:00:00+09:00",
+          "lat": 22.4,
+          "lon": 118,
+          "class": "台風(TS)",
+          "pressureHpa": 994,
+          "locationText": "南シナ海",
+          "forecastRadiusKm": 165
+        },
+        {
+          "timeLabel": "予報　７２時間後",
+          "time": "2026-09-03T21:00:00+09:00",
+          "lat": 22.7,
+          "lon": 117.7,
           "class": "熱帯低気圧(TD)",
           "pressureHpa": 996,
-          "locationText": "台湾海峡",
-          "forecastRadiusKm": 260
+          "locationText": "南シナ海",
+          "forecastRadiusKm": 210
         }
       ]
     }
