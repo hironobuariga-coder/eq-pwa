@@ -1,6 +1,21 @@
 {
-  "generated": "2026-09-02 04:47:19+09:00",
+  "generated": "2026-09-02 07:06:15+09:00",
   "locations": {
+    "naka_rc": {
+      "label": "中RC",
+      "cityPrefix": "稲沢市",
+      "areas": [
+        {
+          "area": "稲沢市",
+          "warnings": [
+            {
+              "name": "雷注意報",
+              "status": "発表"
+            }
+          ]
+        }
+      ]
+    },
     "nishi_rc": {
       "label": "西RC",
       "cityPrefix": "三田市",
@@ -10,7 +25,7 @@
           "warnings": [
             {
               "name": "雷注意報",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         }
@@ -25,16 +40,21 @@
           "warnings": [
             {
               "name": "雷注意報",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         }
       ]
     },
-    "kumamoto_qct": {
-      "label": "熊Q",
-      "cityPrefix": "熊本市中央区",
-      "areas": []
+    "kudanshita": {
+      "label": "九段下オフィス",
+      "cityPrefix": "千代田区",
+      "areas": [
+        {
+          "area": "千代田区",
+          "warnings": []
+        }
+      ]
     }
   }
 }

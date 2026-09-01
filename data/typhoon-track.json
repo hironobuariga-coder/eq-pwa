@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-02 04:47:19+09:00",
+  "generated": "2026-09-02 07:06:15+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "SAUDEL",
       "nameKana": "ソウデル",
       "number": "2618",
-      "reportTime": "2026-09-02T04:05:00+09:00",
+      "reportTime": "2026-09-02T07:05:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-02T03:00:00+09:00",
-          "lat": 21.5,
-          "lon": 116.4,
+          "time": "2026-09-02T06:00:00+09:00",
+          "lat": 22,
+          "lon": 116.8,
           "class": "台風(TS)",
           "pressureHpa": 992,
           "locationText": "南シナ海",
@@ -20,9 +20,9 @@
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-09-02T15:00:00+09:00",
-          "lat": 22,
-          "lon": 117.2,
+          "time": "2026-09-02T18:00:00+09:00",
+          "lat": 22.1,
+          "lon": 117.7,
           "class": "台風(TS)",
           "pressureHpa": 992,
           "locationText": "南シナ海",
@@ -30,8 +30,8 @@
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-03T03:00:00+09:00",
-          "lat": 22.7,
+          "time": "2026-09-03T06:00:00+09:00",
+          "lat": 22.9,
           "lon": 117.8,
           "class": "台風(TS)",
           "pressureHpa": 992,
@@ -39,7 +39,7 @@
           "forecastRadiusKm": 95
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-09-04T03:00:00+09:00",
           "lat": 22.6,
           "lon": 116.4,
@@ -49,7 +49,7 @@
           "forecastRadiusKm": 155
         },
         {
-          "timeLabel": "予報　７２時間後",
+          "timeLabel": "予報　６９時間後",
           "time": "2026-09-05T03:00:00+09:00",
           "lat": 21.9,
           "lon": 114.5,
@@ -59,7 +59,7 @@
           "forecastRadiusKm": 300
         },
         {
-          "timeLabel": "予報　９６時間後",
+          "timeLabel": "予報　９３時間後",
           "time": "2026-09-06T03:00:00+09:00",
           "lat": 21.2,
           "lon": 112.8,
