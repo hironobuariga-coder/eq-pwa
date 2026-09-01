@@ -1,72 +1,72 @@
 {
-  "generated": "2026-09-01 08:23:04+09:00",
+  "generated": "2026-09-01 10:56:54+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "",
-      "nameKana": "",
-      "number": "",
-      "reportTime": "2026-09-01T07:05:00+09:00",
+      "name": "KROVANH",
+      "nameKana": "クロヴァン",
+      "number": "2624",
+      "reportTime": "2026-09-01T10:20:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-01T06:00:00+09:00",
-          "lat": 22,
+          "time": "2026-09-01T09:00:00+09:00",
+          "lat": 22.6,
           "lon": 131.9,
-          "class": "熱帯低気圧(TD)",
-          "pressureHpa": 998,
+          "class": "台風(TS)",
+          "pressureHpa": 996,
           "locationText": "日本の南",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-02T06:00:00+09:00",
-          "lat": 22.9,
+          "time": "2026-09-02T09:00:00+09:00",
+          "lat": 23.3,
           "lon": 132.5,
           "class": "台風(TS)",
           "pressureHpa": 994,
           "locationText": "日本の南",
-          "forecastRadiusKm": 110
+          "forecastRadiusKm": 80
         },
         {
-          "timeLabel": "予報　４５時間後",
-          "time": "2026-09-03T03:00:00+09:00",
-          "lat": 25.4,
-          "lon": 130.3,
-          "class": "台風(TS)",
-          "pressureHpa": 994,
-          "locationText": "南大東島近海",
-          "forecastRadiusKm": 165
-        },
-        {
-          "timeLabel": "予報　６９時間後",
-          "time": "2026-09-04T03:00:00+09:00",
-          "lat": 28.2,
-          "lon": 128.8,
-          "class": "台風(TS)",
-          "pressureHpa": 994,
-          "locationText": "奄美群島近海",
-          "forecastRadiusKm": 260
-        },
-        {
-          "timeLabel": "予報　９３時間後",
-          "time": "2026-09-05T03:00:00+09:00",
-          "lat": 29.1,
+          "timeLabel": "予報　４８時間後",
+          "time": "2026-09-03T09:00:00+09:00",
+          "lat": 26.6,
           "lon": 130,
           "class": "台風(TS)",
           "pressureHpa": 994,
-          "locationText": "日本の南",
-          "forecastRadiusKm": 390
+          "locationText": "南大東島の北西約150km",
+          "forecastRadiusKm": 130
         },
         {
-          "timeLabel": "予報　１１７時間後",
-          "time": "2026-09-06T03:00:00+09:00",
-          "lat": 27.8,
-          "lon": 130.4,
+          "timeLabel": "予報　７２時間後",
+          "time": "2026-09-04T09:00:00+09:00",
+          "lat": 29.5,
+          "lon": 129.3,
+          "class": "台風(TS)",
+          "pressureHpa": 994,
+          "locationText": "奄美群島近海",
+          "forecastRadiusKm": 185
+        },
+        {
+          "timeLabel": "予報　９６時間後",
+          "time": "2026-09-05T09:00:00+09:00",
+          "lat": 29.9,
+          "lon": 131.1,
           "class": "台風(TS)",
           "pressureHpa": 994,
           "locationText": "日本の南",
-          "forecastRadiusKm": 590
+          "forecastRadiusKm": 280
+        },
+        {
+          "timeLabel": "予報　１２０時間後",
+          "time": "2026-09-06T09:00:00+09:00",
+          "lat": 29.4,
+          "lon": 131.4,
+          "class": "台風(TS)",
+          "pressureHpa": 994,
+          "locationText": "日本の南",
+          "forecastRadiusKm": 400
         }
       ]
     }
