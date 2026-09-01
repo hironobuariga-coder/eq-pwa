@@ -1,35 +1,45 @@
 {
-  "generated": "2026-09-01 16:26:11+09:00",
+  "generated": "2026-09-01 21:40:29+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "SAUDEL",
       "nameKana": "ソウデル",
       "number": "2618",
-      "reportTime": "2026-09-01T16:05:00+09:00",
+      "reportTime": "2026-09-01T19:10:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-01T15:00:00+09:00",
-          "lat": 19.9,
-          "lon": 114.4,
+          "time": "2026-09-01T18:00:00+09:00",
+          "lat": 20.3,
+          "lon": 115.1,
           "class": "台風(TS)",
           "pressureHpa": 994,
           "locationText": "南シナ海",
           "forecastRadiusKm": null
         },
         {
+          "timeLabel": "予報　１２時間後",
+          "time": "2026-09-02T06:00:00+09:00",
+          "lat": 21.4,
+          "lon": 116.3,
+          "class": "台風(TS)",
+          "pressureHpa": 994,
+          "locationText": "南シナ海",
+          "forecastRadiusKm": 65
+        },
+        {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-02T15:00:00+09:00",
+          "time": "2026-09-02T18:00:00+09:00",
           "lat": 22,
-          "lon": 117.3,
+          "lon": 117.4,
           "class": "台風(TS)",
           "pressureHpa": 994,
           "locationText": "南シナ海",
           "forecastRadiusKm": 95
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-09-03T15:00:00+09:00",
           "lat": 22.9,
           "lon": 117.5,
@@ -39,7 +49,7 @@
           "forecastRadiusKm": 155
         },
         {
-          "timeLabel": "予報　７２時間後",
+          "timeLabel": "予報　６９時間後",
           "time": "2026-09-04T15:00:00+09:00",
           "lat": 22.7,
           "lon": 118.3,
@@ -49,7 +59,7 @@
           "forecastRadiusKm": 260
         },
         {
-          "timeLabel": "予報　９６時間後",
+          "timeLabel": "予報　９３時間後",
           "time": "2026-09-05T15:00:00+09:00",
           "lat": 21.6,
           "lon": 116,
