@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02 07:06:15+09:00",
+  "generated": "2026-09-02 09:06:19+09:00",
   "locations": {
     "naka_rc": {
       "label": "中RC",
@@ -55,6 +55,11 @@
           "warnings": []
         }
       ]
+    },
+    "kumamoto_qct": {
+      "label": "熊Q",
+      "cityPrefix": "熊本市中央区",
+      "areas": []
     }
   }
 }
