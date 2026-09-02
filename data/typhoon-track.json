@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-02 17:55:35+09:00",
+  "generated": "2026-09-02 22:14:23+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "SAUDEL",
       "nameKana": "ソウデル",
       "number": "2618",
-      "reportTime": "2026-09-02T16:05:00+09:00",
+      "reportTime": "2026-09-02T22:05:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-02T15:00:00+09:00",
-          "lat": 21.8,
-          "lon": 117.5,
+          "time": "2026-09-02T21:00:00+09:00",
+          "lat": 22.4,
+          "lon": 118.2,
           "class": "台風(TS)",
           "pressureHpa": 992,
           "locationText": "南シナ海",
@@ -20,9 +20,9 @@
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-03T15:00:00+09:00",
-          "lat": 23.4,
-          "lon": 117.4,
+          "time": "2026-09-03T21:00:00+09:00",
+          "lat": 23.2,
+          "lon": 116.9,
           "class": "台風(TS)",
           "pressureHpa": 994,
           "locationText": "南シナ海",
@@ -30,9 +30,9 @@
         },
         {
           "timeLabel": "予報　４８時間後",
-          "time": "2026-09-04T15:00:00+09:00",
-          "lat": 23,
-          "lon": 115.5,
+          "time": "2026-09-04T21:00:00+09:00",
+          "lat": 22.7,
+          "lon": 114.5,
           "class": "熱帯低気圧(TD)",
           "pressureHpa": 998,
           "locationText": "華南",
