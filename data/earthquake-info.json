@@ -1,35 +1,20 @@
 {
-  "generated": "2026-08-30 03:35:16+09:00",
+  "generated": "2026-09-02 17:55:35+09:00",
   "source": "jma_xml",
-  "time": "2026/8/30 00:17 (JST)",
-  "epicenter": "千葉県東方沖",
-  "depth": "約30km",
-  "magnitude": "M4.8",
-  "maxShindo": "4",
+  "time": "2026/9/2 17:23 (JST)",
+  "epicenter": "和歌山県北部",
+  "depth": "約10km",
+  "magnitude": "M3.3",
+  "maxShindo": "3",
   "tsunami": "この地震による津波の心配はありません。",
   "shindoAreas": [
     {
-      "level": "4",
-      "area": "茨城県"
-    },
-    {
       "level": "3",
-      "area": "千葉県"
-    },
-    {
-      "level": "1",
-      "area": "福島県・栃木県・群馬県・埼玉県・東京都・神奈川県"
+      "area": "和歌山県"
     }
   ],
   "alertLevel": "normal",
   "affectedPrefs": [
-    "茨城県",
-    "千葉県",
-    "福島県",
-    "栃木県",
-    "群馬県",
-    "埼玉県",
-    "東京都",
-    "神奈川県"
+    "和歌山県"
   ]
 }
