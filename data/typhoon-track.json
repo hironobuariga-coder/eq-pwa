@@ -1,38 +1,28 @@
 {
-  "generated": "2026-09-02 09:06:19+09:00",
+  "generated": "2026-09-02 13:24:04+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "SAUDEL",
       "nameKana": "ソウデル",
       "number": "2618",
-      "reportTime": "2026-09-02T07:05:00+09:00",
+      "reportTime": "2026-09-02T13:05:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-02T06:00:00+09:00",
-          "lat": 22,
-          "lon": 116.8,
+          "time": "2026-09-02T12:00:00+09:00",
+          "lat": 22.5,
+          "lon": 116.7,
           "class": "台風(TS)",
           "pressureHpa": 992,
           "locationText": "南シナ海",
           "forecastRadiusKm": null
         },
         {
-          "timeLabel": "予報　１２時間後",
-          "time": "2026-09-02T18:00:00+09:00",
-          "lat": 22.1,
-          "lon": 117.7,
-          "class": "台風(TS)",
-          "pressureHpa": 992,
-          "locationText": "南シナ海",
-          "forecastRadiusKm": 65
-        },
-        {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-03T06:00:00+09:00",
-          "lat": 22.9,
-          "lon": 117.8,
+          "time": "2026-09-03T12:00:00+09:00",
+          "lat": 23,
+          "lon": 117.7,
           "class": "台風(TS)",
           "pressureHpa": 992,
           "locationText": "南シナ海",
@@ -40,9 +30,9 @@
         },
         {
           "timeLabel": "予報　４５時間後",
-          "time": "2026-09-04T03:00:00+09:00",
-          "lat": 22.6,
-          "lon": 116.4,
+          "time": "2026-09-04T09:00:00+09:00",
+          "lat": 22.5,
+          "lon": 116.3,
           "class": "台風(TS)",
           "pressureHpa": 994,
           "locationText": "南シナ海",
@@ -50,23 +40,13 @@
         },
         {
           "timeLabel": "予報　６９時間後",
-          "time": "2026-09-05T03:00:00+09:00",
-          "lat": 21.9,
-          "lon": 114.5,
-          "class": "台風(TS)",
-          "pressureHpa": 994,
+          "time": "2026-09-05T09:00:00+09:00",
+          "lat": 21.8,
+          "lon": 114.2,
+          "class": "熱帯低気圧(TD)",
+          "pressureHpa": 996,
           "locationText": "南シナ海",
           "forecastRadiusKm": 300
-        },
-        {
-          "timeLabel": "予報　９３時間後",
-          "time": "2026-09-06T03:00:00+09:00",
-          "lat": 21.2,
-          "lon": 112.8,
-          "class": "熱帯低気圧(TD)",
-          "pressureHpa": 1002,
-          "locationText": "南シナ海",
-          "forecastRadiusKm": 370
         }
       ]
     }

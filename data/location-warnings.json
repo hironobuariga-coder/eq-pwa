@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02 09:06:19+09:00",
+  "generated": "2026-09-02 13:24:04+09:00",
   "locations": {
     "naka_rc": {
       "label": "中RC",
@@ -10,7 +10,7 @@
           "warnings": [
             {
               "name": "雷注意報",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         }
