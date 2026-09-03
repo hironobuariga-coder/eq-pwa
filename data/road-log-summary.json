@@ -1,21 +1,4 @@
 {
-  "generated": "2026-09-03T04:13:28.363Z",
-  "periods": [
-    {
-      "road": "東北",
-      "section": "",
-      "direction": "",
-      "reason": "大雨",
-      "status": "通行止め",
-      "start": "2026-09-02T03:00:00.000Z",
-      "end": "2026-09-02T03:00:00.000Z",
-      "startJST": "9/2 12:00",
-      "endJST": "9/2 12:00",
-      "startTimeJST": "",
-      "source": "e_nexco_official_site",
-      "snapshots": [
-        "9/2 13:18"
-      ]
-    }
-  ]
+  "generated": "2026-09-03T09:38:51.159Z",
+  "periods": []
 }

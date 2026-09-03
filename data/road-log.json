@@ -1,27 +1,5 @@
 [
   {
-    "ts": "2026-09-02T13:18:58+09:00",
-    "closures": [
-      {
-        "road": "東北",
-        "section": "",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "大雨",
-        "startTime": "",
-        "source": "e_nexco_official_site",
-        "firstSeenTs": "2026-09-02T03:00:00.000Z",
-        "lastSeenTs": "2026-09-02T03:00:00.000Z"
-      }
-    ],
-    "rawCount": 4
-  },
-  {
-    "ts": "2026-09-02T18:29:30+09:00",
-    "closures": [],
-    "rawCount": 2
-  },
-  {
     "ts": "2026-09-02T23:21:41+09:00",
     "closures": [],
     "rawCount": 2
@@ -43,6 +21,11 @@
   },
   {
     "ts": "2026-09-03T13:13:24+09:00",
+    "closures": [],
+    "rawCount": 2
+  },
+  {
+    "ts": "2026-09-03T18:38:46+09:00",
     "closures": [],
     "rawCount": 2
   }
