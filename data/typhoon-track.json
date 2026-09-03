@@ -1,22 +1,72 @@
 {
-  "generated": "2026-09-03 22:31:20+09:00",
+  "generated": "2026-09-04 02:10:32+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "SAUDEL",
-      "nameKana": "ソウデル",
-      "number": "2618",
-      "reportTime": "2026-09-03T22:05:00+09:00",
+      "name": "KROVANH",
+      "nameKana": "クロヴァン",
+      "number": "2624",
+      "reportTime": "2026-09-04T00:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-03T21:00:00+09:00",
-          "lat": 24,
-          "lon": 116,
-          "class": "熱帯低気圧(TD)",
-          "pressureHpa": 998,
-          "locationText": "華南",
+          "time": "2026-09-04T00:00:00+09:00",
+          "lat": 28.3,
+          "lon": 128.9,
+          "class": "台風(TS)",
+          "pressureHpa": 992,
+          "locationText": "奄美市の西約60km",
           "forecastRadiusKm": null
+        },
+        {
+          "timeLabel": "予報　２４時間後",
+          "time": "2026-09-05T00:00:00+09:00",
+          "lat": 28.7,
+          "lon": 127.1,
+          "class": "台風(TS)",
+          "pressureHpa": 992,
+          "locationText": "奄美市の西約240km",
+          "forecastRadiusKm": 95
+        },
+        {
+          "timeLabel": "予報　４５時間後",
+          "time": "2026-09-05T21:00:00+09:00",
+          "lat": 26.1,
+          "lon": 127.1,
+          "class": "台風(TS)",
+          "pressureHpa": 992,
+          "locationText": "那覇市の西約60km",
+          "forecastRadiusKm": 155
+        },
+        {
+          "timeLabel": "予報　６９時間後",
+          "time": "2026-09-06T21:00:00+09:00",
+          "lat": 25,
+          "lon": 129.7,
+          "class": "台風(TS)",
+          "pressureHpa": 992,
+          "locationText": "南大東島近海",
+          "forecastRadiusKm": 260
+        },
+        {
+          "timeLabel": "予報　９３時間後",
+          "time": "2026-09-07T21:00:00+09:00",
+          "lat": 26.6,
+          "lon": 131.7,
+          "class": "台風(TS)",
+          "pressureHpa": 990,
+          "locationText": "南大東島近海",
+          "forecastRadiusKm": 320
+        },
+        {
+          "timeLabel": "予報　１１７時間後",
+          "time": "2026-09-08T21:00:00+09:00",
+          "lat": 29.2,
+          "lon": 130.1,
+          "class": "台風(TS)",
+          "pressureHpa": 990,
+          "locationText": "九州の南",
+          "forecastRadiusKm": 400
         }
       ]
     }
