@@ -1,45 +1,45 @@
 {
-  "generated": "2026-09-06 00:46:53+09:00",
+  "generated": "2026-09-06 02:43:20+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "KROVANH",
       "nameKana": "クロヴァン",
       "number": "2624",
-      "reportTime": "2026-09-05T21:50:00+09:00",
+      "reportTime": "2026-09-06T00:50:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-05T21:00:00+09:00",
-          "lat": 25.5,
-          "lon": 128.3,
+          "time": "2026-09-06T00:00:00+09:00",
+          "lat": 25.4,
+          "lon": 128.1,
           "class": "台風(TS)",
           "pressureHpa": 992,
-          "locationText": "那覇市の南東約100km",
+          "locationText": "那覇市の南南東約100km",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-09-06T09:00:00+09:00",
-          "lat": 24.6,
-          "lon": 128.9,
+          "time": "2026-09-06T12:00:00+09:00",
+          "lat": 24.8,
+          "lon": 129.3,
           "class": "台風(TS)",
           "pressureHpa": 992,
-          "locationText": "那覇市の南南東約220km",
+          "locationText": "南大東島の西南西約220km",
           "forecastRadiusKm": 75
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-06T21:00:00+09:00",
-          "lat": 24.7,
-          "lon": 130.3,
+          "time": "2026-09-07T00:00:00+09:00",
+          "lat": 25.2,
+          "lon": 131,
           "class": "台風(TS)",
           "pressureHpa": 992,
-          "locationText": "南大東島の南西約150km",
+          "locationText": "南大東島の南南西約70km",
           "forecastRadiusKm": 105
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-09-07T21:00:00+09:00",
           "lat": 27,
           "lon": 133.1,
