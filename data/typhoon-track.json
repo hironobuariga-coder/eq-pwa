@@ -1,35 +1,35 @@
 {
-  "generated": "2026-09-05 10:03:55+09:00",
+  "generated": "2026-09-05 14:40:16+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "KROVANH",
       "nameKana": "クロヴァン",
       "number": "2624",
-      "reportTime": "2026-09-05T09:45:00+09:00",
+      "reportTime": "2026-09-05T12:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-05T09:00:00+09:00",
-          "lat": 27.8,
-          "lon": 126.5,
+          "time": "2026-09-05T12:00:00+09:00",
+          "lat": 27.1,
+          "lon": 127.1,
           "class": "台風(TS)",
-          "pressureHpa": 990,
-          "locationText": "久米島の北約170km",
+          "pressureHpa": 992,
+          "locationText": "久米島の北北東約90km",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-06T09:00:00+09:00",
-          "lat": 24.7,
-          "lon": 127.5,
+          "time": "2026-09-06T12:00:00+09:00",
+          "lat": 24.8,
+          "lon": 128.1,
           "class": "台風(TS)",
           "pressureHpa": 994,
-          "locationText": "久米島の南南東約190km",
+          "locationText": "久米島の南東約210km",
           "forecastRadiusKm": 95
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-09-07T09:00:00+09:00",
           "lat": 25.1,
           "lon": 132.1,
@@ -39,7 +39,7 @@
           "forecastRadiusKm": 155
         },
         {
-          "timeLabel": "予報　７２時間後",
+          "timeLabel": "予報　６９時間後",
           "time": "2026-09-08T09:00:00+09:00",
           "lat": 28.7,
           "lon": 132.6,
@@ -49,7 +49,7 @@
           "forecastRadiusKm": 220
         },
         {
-          "timeLabel": "予報　９６時間後",
+          "timeLabel": "予報　９３時間後",
           "time": "2026-09-09T09:00:00+09:00",
           "lat": 31.4,
           "lon": 131.6,
