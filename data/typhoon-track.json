@@ -1,52 +1,52 @@
 {
-  "generated": "2026-09-06 08:18:55+09:00",
+  "generated": "2026-09-06 10:05:03+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "KROVANH",
       "nameKana": "クロヴァン",
       "number": "2624",
-      "reportTime": "2026-09-06T06:45:00+09:00",
+      "reportTime": "2026-09-06T09:50:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-06T06:00:00+09:00",
-          "lat": 25.6,
-          "lon": 128.8,
+          "time": "2026-09-06T09:00:00+09:00",
+          "lat": 26.1,
+          "lon": 129.6,
           "class": "台風(TS)",
           "pressureHpa": 992,
-          "locationText": "那覇市の東南東約130km",
+          "locationText": "那覇市の東約190km",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-09-06T18:00:00+09:00",
-          "lat": 25.4,
-          "lon": 130.6,
+          "time": "2026-09-06T21:00:00+09:00",
+          "lat": 26.2,
+          "lon": 130.9,
           "class": "台風(TS)",
           "pressureHpa": 992,
-          "locationText": "南大東島の南西約80km",
-          "forecastRadiusKm": 85
+          "locationText": "南大東島の北北西約50km",
+          "forecastRadiusKm": 75
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-07T06:00:00+09:00",
-          "lat": 26.1,
-          "lon": 132,
+          "time": "2026-09-07T09:00:00+09:00",
+          "lat": 27,
+          "lon": 132.4,
           "class": "台風(TS)",
           "pressureHpa": 992,
-          "locationText": "南大東島の東北東約90km",
-          "forecastRadiusKm": 120
+          "locationText": "南大東島の北東約180km",
+          "forecastRadiusKm": 105
         },
         {
-          "timeLabel": "予報　４５時間後",
-          "time": "2026-09-08T03:00:00+09:00",
-          "lat": 28.2,
-          "lon": 132.6,
+          "timeLabel": "予報　４８時間後",
+          "time": "2026-09-08T09:00:00+09:00",
+          "lat": 29.6,
+          "lon": 132.8,
           "class": "熱帯低気圧(TD)",
           "pressureHpa": 996,
           "locationText": "日本の南",
-          "forecastRadiusKm": 210
+          "forecastRadiusKm": 185
         }
       ]
     }
