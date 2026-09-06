@@ -1,40 +1,40 @@
 {
-  "generated": "2026-09-06 19:14:22+09:00",
+  "generated": "2026-09-06 22:42:17+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "KROVANH",
       "nameKana": "クロヴァン",
       "number": "2624",
-      "reportTime": "2026-09-06T18:45:00+09:00",
+      "reportTime": "2026-09-06T21:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-06T18:00:00+09:00",
-          "lat": 25.8,
-          "lon": 130.6,
+          "time": "2026-09-06T21:00:00+09:00",
+          "lat": 25.9,
+          "lon": 130.7,
           "class": "台風(TS)",
           "pressureHpa": 990,
-          "locationText": "南大東島の西約60km",
+          "locationText": "南大東島の西約50km",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-09-07T06:00:00+09:00",
-          "lat": 26.3,
-          "lon": 131.8,
-          "class": "台風(TS)",
-          "pressureHpa": 990,
-          "locationText": "南大東島の北東約80km",
+          "time": "2026-09-07T09:00:00+09:00",
+          "lat": 26.6,
+          "lon": 132.1,
+          "class": "熱帯低気圧(TD)",
+          "pressureHpa": 992,
+          "locationText": "南大東島の北東約130km",
           "forecastRadiusKm": 65
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-07T18:00:00+09:00",
-          "lat": 27.5,
-          "lon": 132.7,
+          "time": "2026-09-07T21:00:00+09:00",
+          "lat": 27.8,
+          "lon": 132.8,
           "class": "熱帯低気圧(TD)",
-          "pressureHpa": 992,
+          "pressureHpa": 994,
           "locationText": "日本の南",
           "forecastRadiusKm": 95
         }
