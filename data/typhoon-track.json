@@ -1,52 +1,42 @@
 {
-  "generated": "2026-09-06 14:52:27+09:00",
+  "generated": "2026-09-06 19:14:22+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "KROVANH",
       "nameKana": "クロヴァン",
       "number": "2624",
-      "reportTime": "2026-09-06T12:45:00+09:00",
+      "reportTime": "2026-09-06T18:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-06T12:00:00+09:00",
-          "lat": 26,
-          "lon": 129.7,
+          "time": "2026-09-06T18:00:00+09:00",
+          "lat": 25.8,
+          "lon": 130.6,
           "class": "台風(TS)",
-          "pressureHpa": 992,
-          "locationText": "那覇市の東約200km",
+          "pressureHpa": 990,
+          "locationText": "南大東島の西約60km",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-09-07T00:00:00+09:00",
-          "lat": 26.4,
-          "lon": 131.3,
+          "time": "2026-09-07T06:00:00+09:00",
+          "lat": 26.3,
+          "lon": 131.8,
           "class": "台風(TS)",
-          "pressureHpa": 992,
-          "locationText": "南大東島の北約70km",
-          "forecastRadiusKm": 75
+          "pressureHpa": 990,
+          "locationText": "南大東島の北東約80km",
+          "forecastRadiusKm": 65
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-07T12:00:00+09:00",
-          "lat": 27.1,
-          "lon": 132.4,
-          "class": "台風(TS)",
-          "pressureHpa": 992,
-          "locationText": "南大東島の北東約190km",
-          "forecastRadiusKm": 105
-        },
-        {
-          "timeLabel": "予報　４５時間後",
-          "time": "2026-09-08T09:00:00+09:00",
-          "lat": 29.6,
-          "lon": 132.8,
+          "time": "2026-09-07T18:00:00+09:00",
+          "lat": 27.5,
+          "lon": 132.7,
           "class": "熱帯低気圧(TD)",
-          "pressureHpa": 996,
+          "pressureHpa": 992,
           "locationText": "日本の南",
-          "forecastRadiusKm": 185
+          "forecastRadiusKm": 95
         }
       ]
     }
