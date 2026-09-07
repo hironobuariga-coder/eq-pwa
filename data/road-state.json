@@ -1,3 +1,14 @@
 {
-  "active": {}
+  "active": {
+    "徳島|鳴門JCT〜徳島IC": {
+      "road": "徳島",
+      "section": "鳴門JCT〜徳島IC",
+      "direction": "",
+      "reason": "工事",
+      "firstSeenTs": "2026-09-07T03:00:00.000Z",
+      "lastSeenTs": "2026-09-07T03:00:00.000Z",
+      "startTime": "",
+      "source": "w_nexco_official_site"
+    }
+  }
 }
