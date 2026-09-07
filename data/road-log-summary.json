@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T04:24:37.325Z",
+  "generated": "2026-09-07T10:09:15.148Z",
   "periods": [
     {
       "road": "徳島",
@@ -8,9 +8,9 @@
       "reason": "工事",
       "status": "通行止め",
       "start": "2026-09-07T03:00:00.000Z",
-      "end": null,
+      "end": "2026-09-07T03:00:00.000Z",
       "startJST": "9/7 12:00",
-      "endJST": null,
+      "endJST": "9/7 12:00",
       "startTimeJST": "",
       "source": "w_nexco_official_site",
       "snapshots": [
