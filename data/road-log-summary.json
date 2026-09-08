@@ -1,21 +1,4 @@
 {
-  "generated": "2026-09-08T01:07:20.195Z",
-  "periods": [
-    {
-      "road": "徳島",
-      "section": "鳴門JCT〜徳島IC",
-      "direction": "",
-      "reason": "工事",
-      "status": "通行止め",
-      "start": "2026-09-07T03:00:00.000Z",
-      "end": "2026-09-07T03:00:00.000Z",
-      "startJST": "9/7 12:00",
-      "endJST": "9/7 12:00",
-      "startTimeJST": "",
-      "source": "w_nexco_official_site",
-      "snapshots": [
-        "9/7 13:24"
-      ]
-    }
-  ]
+  "generated": "2026-09-08T05:54:11.202Z",
+  "periods": []
 }
