@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-10 02:52:23+09:00",
+  "generated": "2026-09-10 05:23:06+09:00",
   "locations": {
     "higashi_rc": {
       "label": "東RC",
@@ -10,10 +10,6 @@
           "warnings": [
             {
               "name": "大雨注意報",
-              "status": "継続"
-            },
-            {
-              "name": "強風注意報",
               "status": "継続"
             }
           ]
@@ -61,20 +57,7 @@
       "areas": [
         {
           "area": "千代田区",
-          "warnings": [
-            {
-              "name": "大雨注意報",
-              "status": "継続"
-            },
-            {
-              "name": "雷注意報",
-              "status": "解除"
-            },
-            {
-              "name": "強風注意報",
-              "status": "継続"
-            }
-          ]
+          "warnings": []
         }
       ]
     },
