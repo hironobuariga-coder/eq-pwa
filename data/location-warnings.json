@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-09 23:19:58+09:00",
+  "generated": "2026-09-10 02:52:23+09:00",
   "locations": {
     "higashi_rc": {
       "label": "東RC",
@@ -10,10 +10,6 @@
           "warnings": [
             {
               "name": "大雨注意報",
-              "status": "継続"
-            },
-            {
-              "name": "雷注意報",
               "status": "継続"
             },
             {
@@ -33,7 +29,7 @@
           "warnings": [
             {
               "name": "洪水注意報",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         }
@@ -72,7 +68,7 @@
             },
             {
               "name": "雷注意報",
-              "status": "継続"
+              "status": "解除"
             },
             {
               "name": "強風注意報",
