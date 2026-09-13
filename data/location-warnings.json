@@ -1,16 +1,6 @@
 {
-  "generated": "2026-09-13 18:59:45+09:00",
+  "generated": "2026-09-13 23:10:44+09:00",
   "locations": {
-    "higashi_rc": {
-      "label": "東RC",
-      "cityPrefix": "川崎市",
-      "areas": [
-        {
-          "area": "川崎市",
-          "warnings": []
-        }
-      ]
-    },
     "naka_rc": {
       "label": "中RC",
       "cityPrefix": "稲沢市",
@@ -39,7 +29,7 @@
             },
             {
               "name": "強風注意報",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         }
@@ -58,7 +48,7 @@
             },
             {
               "name": "強風注意報",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         }
