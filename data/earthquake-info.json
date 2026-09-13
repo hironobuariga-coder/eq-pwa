@@ -1,20 +1,26 @@
 {
-  "generated": "2026-09-10 22:53:37+09:00",
+  "generated": "2026-09-13 18:59:45+09:00",
   "source": "jma_xml",
-  "time": "2026/9/10 18:55 (JST)",
-  "epicenter": "福島県会津",
-  "depth": "",
-  "magnitude": "M3.2",
+  "time": "2026/9/13 17:31 (JST)",
+  "epicenter": "津軽海峡",
+  "depth": "約120km",
+  "magnitude": "M4.5",
   "maxShindo": "3",
   "tsunami": "この地震による津波の心配はありません。",
   "shindoAreas": [
     {
       "level": "3",
-      "area": "福島県"
+      "area": "北海道・青森県"
+    },
+    {
+      "level": "2",
+      "area": "岩手県"
     }
   ],
   "alertLevel": "normal",
   "affectedPrefs": [
-    "福島県"
+    "北海道",
+    "青森県",
+    "岩手県"
   ]
 }
