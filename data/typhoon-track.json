@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-15 04:05:05+09:00",
+  "generated": "2026-09-15 07:26:23+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "",
       "nameKana": "",
       "number": "",
-      "reportTime": "2026-09-15T04:05:00+09:00",
+      "reportTime": "2026-09-15T07:05:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-15T03:00:00+09:00",
+          "time": "2026-09-15T06:00:00+09:00",
           "lat": 13.3,
-          "lon": 152,
+          "lon": 151.7,
           "class": "熱帯低気圧(TD)",
           "pressureHpa": 1002,
           "locationText": "トラック諸島近海",
@@ -20,16 +20,16 @@
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-16T03:00:00+09:00",
-          "lat": 16.7,
-          "lon": 151.6,
+          "time": "2026-09-16T06:00:00+09:00",
+          "lat": 17.2,
+          "lon": 151.3,
           "class": "台風(TS)",
           "pressureHpa": 998,
           "locationText": "南鳥島近海",
           "forecastRadiusKm": 150
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-09-17T03:00:00+09:00",
           "lat": 21.6,
           "lon": 150.2,
@@ -39,7 +39,7 @@
           "forecastRadiusKm": 240
         },
         {
-          "timeLabel": "予報　７２時間後",
+          "timeLabel": "予報　６９時間後",
           "time": "2026-09-18T03:00:00+09:00",
           "lat": 24,
           "lon": 145.2,
@@ -49,7 +49,7 @@
           "forecastRadiusKm": 310
         },
         {
-          "timeLabel": "予報　９６時間後",
+          "timeLabel": "予報　９３時間後",
           "time": "2026-09-19T03:00:00+09:00",
           "lat": 25.1,
           "lon": 140.3,
@@ -59,7 +59,7 @@
           "forecastRadiusKm": 390
         },
         {
-          "timeLabel": "予報　１２０時間後",
+          "timeLabel": "予報　１１７時間後",
           "time": "2026-09-20T03:00:00+09:00",
           "lat": 26.3,
           "lon": 136.1,
