@@ -1,5 +1,74 @@
 {
-  "generated": "2026-09-14 08:37:05+09:00",
-  "active": false,
-  "typhoons": []
+  "generated": "2026-09-14 10:37:50+09:00",
+  "active": true,
+  "typhoons": [
+    {
+      "name": "",
+      "nameKana": "",
+      "number": "",
+      "reportTime": "2026-09-14T10:30:00+09:00",
+      "track": [
+        {
+          "timeLabel": "実況",
+          "time": "2026-09-14T09:00:00+09:00",
+          "lat": 12.1,
+          "lon": 154.8,
+          "class": "熱帯低気圧(TD)",
+          "pressureHpa": 1004,
+          "locationText": "トラック諸島近海",
+          "forecastRadiusKm": null
+        },
+        {
+          "timeLabel": "予報　２４時間後",
+          "time": "2026-09-15T09:00:00+09:00",
+          "lat": 14.7,
+          "lon": 152,
+          "class": "台風(TS)",
+          "pressureHpa": 1000,
+          "locationText": "トラック諸島近海",
+          "forecastRadiusKm": 130
+        },
+        {
+          "timeLabel": "予報　４８時間後",
+          "time": "2026-09-16T09:00:00+09:00",
+          "lat": 17.8,
+          "lon": 151.8,
+          "class": "台風(STS)",
+          "pressureHpa": 990,
+          "locationText": "南鳥島近海",
+          "forecastRadiusKm": 200
+        },
+        {
+          "timeLabel": "予報　７２時間後",
+          "time": "2026-09-17T09:00:00+09:00",
+          "lat": 22.5,
+          "lon": 149.3,
+          "class": "台風(TY)",
+          "pressureHpa": 970,
+          "locationText": "南鳥島近海",
+          "forecastRadiusKm": 260
+        },
+        {
+          "timeLabel": "予報　９６時間後",
+          "time": "2026-09-18T09:00:00+09:00",
+          "lat": 24.4,
+          "lon": 143.3,
+          "class": "台風(TY)",
+          "pressureHpa": 970,
+          "locationText": "小笠原近海",
+          "forecastRadiusKm": 330
+        },
+        {
+          "timeLabel": "予報　１２０時間後",
+          "time": "2026-09-19T09:00:00+09:00",
+          "lat": 25.4,
+          "lon": 138,
+          "class": "台風(TY)",
+          "pressureHpa": 970,
+          "locationText": "日本の南",
+          "forecastRadiusKm": 440
+        }
+      ]
+    }
+  ]
 }
