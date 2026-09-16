@@ -1,82 +1,82 @@
 {
-  "generated": "2026-09-16 18:39:45+09:00",
+  "generated": "2026-09-16 23:21:30+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "",
-      "nameKana": "",
-      "number": "",
-      "reportTime": "2026-09-16T16:15:00+09:00",
+      "name": "DUJUAN",
+      "nameKana": "ドゥージェン",
+      "number": "2625",
+      "reportTime": "2026-09-16T22:10:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-16T15:00:00+09:00",
-          "lat": 15.6,
-          "lon": 148.9,
-          "class": "熱帯低気圧(TD)",
-          "pressureHpa": 1000,
+          "time": "2026-09-16T21:00:00+09:00",
+          "lat": 16.4,
+          "lon": 149.4,
+          "class": "台風(TS)",
+          "pressureHpa": 998,
           "locationText": "マリアナ諸島",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-09-17T03:00:00+09:00",
-          "lat": 18.9,
-          "lon": 150.1,
+          "time": "2026-09-17T09:00:00+09:00",
+          "lat": 20.2,
+          "lon": 150,
           "class": "台風(TS)",
-          "pressureHpa": 998,
+          "pressureHpa": 994,
           "locationText": "南鳥島近海",
-          "forecastRadiusKm": 100
+          "forecastRadiusKm": 75
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-17T15:00:00+09:00",
-          "lat": 22.5,
-          "lon": 149.3,
+          "time": "2026-09-17T21:00:00+09:00",
+          "lat": 24,
+          "lon": 148.2,
           "class": "台風(TS)",
-          "pressureHpa": 996,
+          "pressureHpa": 990,
           "locationText": "南鳥島近海",
-          "forecastRadiusKm": 130
+          "forecastRadiusKm": 105
         },
         {
           "timeLabel": "予報　４８時間後",
-          "time": "2026-09-18T15:00:00+09:00",
-          "lat": 25.4,
-          "lon": 143.6,
-          "class": "台風(STS)",
-          "pressureHpa": 985,
-          "locationText": "小笠原近海",
-          "forecastRadiusKm": 200
-        },
-        {
-          "timeLabel": "予報　７２時間後",
-          "time": "2026-09-19T15:00:00+09:00",
-          "lat": 27.5,
-          "lon": 140,
+          "time": "2026-09-18T21:00:00+09:00",
+          "lat": 25.7,
+          "lon": 142.7,
           "class": "台風(STS)",
           "pressureHpa": 980,
           "locationText": "小笠原近海",
+          "forecastRadiusKm": 185
+        },
+        {
+          "timeLabel": "予報　７２時間後",
+          "time": "2026-09-19T21:00:00+09:00",
+          "lat": 28.1,
+          "lon": 139.5,
+          "class": "台風(STS)",
+          "pressureHpa": 975,
+          "locationText": "日本の南",
           "forecastRadiusKm": 260
         },
         {
           "timeLabel": "予報　９６時間後",
-          "time": "2026-09-20T15:00:00+09:00",
-          "lat": 31.1,
-          "lon": 139.2,
+          "time": "2026-09-20T21:00:00+09:00",
+          "lat": 32.3,
+          "lon": 139.8,
           "class": "台風(STS)",
           "pressureHpa": 975,
           "locationText": "日本の南",
-          "forecastRadiusKm": 330
+          "forecastRadiusKm": 320
         },
         {
           "timeLabel": "予報　１２０時間後",
-          "time": "2026-09-21T15:00:00+09:00",
-          "lat": 37,
-          "lon": 143.1,
+          "time": "2026-09-21T21:00:00+09:00",
+          "lat": 38.1,
+          "lon": 145.8,
           "class": "台風(STS)",
           "pressureHpa": 975,
           "locationText": "日本の東",
-          "forecastRadiusKm": 520
+          "forecastRadiusKm": 460
         }
       ]
     }
