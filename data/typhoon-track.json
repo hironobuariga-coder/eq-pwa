@@ -1,45 +1,45 @@
 {
-  "generated": "2026-09-18 23:26:40+09:00",
+  "generated": "2026-09-19 02:46:52+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "DUJUAN",
       "nameKana": "ドゥージェン",
       "number": "2625",
-      "reportTime": "2026-09-18T21:45:00+09:00",
+      "reportTime": "2026-09-19T00:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-18T21:00:00+09:00",
-          "lat": 25.4,
-          "lon": 141.5,
+          "time": "2026-09-19T00:00:00+09:00",
+          "lat": 25.6,
+          "lon": 141.3,
           "class": "台風(STS)",
           "pressureHpa": 975,
-          "locationText": "父島の南南西約200km",
+          "locationText": "父島の南南西約190km",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-09-19T09:00:00+09:00",
-          "lat": 26.4,
-          "lon": 139.7,
+          "time": "2026-09-19T12:00:00+09:00",
+          "lat": 26.7,
+          "lon": 139.4,
           "class": "台風(STS)",
           "pressureHpa": 970,
-          "locationText": "父島の西南西約260km",
+          "locationText": "父島の西約280km",
           "forecastRadiusKm": 45
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-19T21:00:00+09:00",
-          "lat": 27.8,
-          "lon": 138.3,
+          "time": "2026-09-20T00:00:00+09:00",
+          "lat": 28.1,
+          "lon": 137.9,
           "class": "台風(TY)",
           "pressureHpa": 960,
           "locationText": "日本の南",
           "forecastRadiusKm": 65
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-09-20T21:00:00+09:00",
           "lat": 31,
           "lon": 137.5,
@@ -49,7 +49,7 @@
           "forecastRadiusKm": 100
         },
         {
-          "timeLabel": "予報　７２時間後",
+          "timeLabel": "予報　６９時間後",
           "time": "2026-09-21T21:00:00+09:00",
           "lat": 35.6,
           "lon": 142.3,
@@ -59,7 +59,7 @@
           "forecastRadiusKm": 220
         },
         {
-          "timeLabel": "予報　９６時間後",
+          "timeLabel": "予報　９３時間後",
           "time": "2026-09-22T21:00:00+09:00",
           "lat": 45,
           "lon": 165,
