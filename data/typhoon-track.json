@@ -1,28 +1,28 @@
 {
-  "generated": "2026-09-19 13:59:47+09:00",
+  "generated": "2026-09-19 18:22:38+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "DUJUAN",
       "nameKana": "ドゥージェン",
       "number": "2625",
-      "reportTime": "2026-09-19T12:45:00+09:00",
+      "reportTime": "2026-09-19T15:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-19T12:00:00+09:00",
-          "lat": 26.7,
-          "lon": 139.5,
+          "time": "2026-09-19T15:00:00+09:00",
+          "lat": 26.9,
+          "lon": 139.1,
           "class": "台風(STS)",
           "pressureHpa": 975,
-          "locationText": "父島の西約270km",
+          "locationText": "日本の南",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-09-20T00:00:00+09:00",
-          "lat": 28,
-          "lon": 137.8,
+          "time": "2026-09-20T03:00:00+09:00",
+          "lat": 28.1,
+          "lon": 137.6,
           "class": "台風(STS)",
           "pressureHpa": 975,
           "locationText": "日本の南",
@@ -30,43 +30,43 @@
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-20T12:00:00+09:00",
-          "lat": 29.2,
-          "lon": 137.3,
-          "class": "台風(TY)",
-          "pressureHpa": 970,
+          "time": "2026-09-20T15:00:00+09:00",
+          "lat": 29.3,
+          "lon": 137.2,
+          "class": "台風(STS)",
+          "pressureHpa": 975,
           "locationText": "日本の南",
           "forecastRadiusKm": 65
         },
         {
-          "timeLabel": "予報　４５時間後",
-          "time": "2026-09-21T09:00:00+09:00",
-          "lat": 31.9,
-          "lon": 137.8,
+          "timeLabel": "予報　４８時間後",
+          "time": "2026-09-21T15:00:00+09:00",
+          "lat": 33,
+          "lon": 138.2,
           "class": "台風(TY)",
           "pressureHpa": 960,
-          "locationText": "八丈島の西南西約230km",
+          "locationText": "八丈島の西約150km",
           "forecastRadiusKm": 100
         },
         {
-          "timeLabel": "予報　６９時間後",
-          "time": "2026-09-22T09:00:00+09:00",
-          "lat": 37.3,
-          "lon": 145.2,
-          "class": "台風(TY)",
-          "pressureHpa": 960,
-          "locationText": "三陸沖",
-          "forecastRadiusKm": 185
+          "timeLabel": "予報　７２時間後",
+          "time": "2026-09-22T15:00:00+09:00",
+          "lat": 38.8,
+          "lon": 148.2,
+          "class": "台風(STS)",
+          "pressureHpa": 970,
+          "locationText": "日本の東",
+          "forecastRadiusKm": 220
         },
         {
-          "timeLabel": "予報　９３時間後",
-          "time": "2026-09-23T09:00:00+09:00",
-          "lat": 41.8,
-          "lon": 160.6,
+          "timeLabel": "予報　９６時間後",
+          "time": "2026-09-23T15:00:00+09:00",
+          "lat": 43.7,
+          "lon": 165.1,
           "class": "温帯低気圧(LOW)",
-          "pressureHpa": 984,
+          "pressureHpa": 986,
           "locationText": "日本のはるか東",
-          "forecastRadiusKm": 320
+          "forecastRadiusKm": 280
         }
       ]
     }
