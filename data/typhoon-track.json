@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-20 15:22:25+09:00",
+  "generated": "2026-09-20 20:40:58+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "DUJUAN",
       "nameKana": "ドゥージェン",
       "number": "2625",
-      "reportTime": "2026-09-20T12:45:00+09:00",
+      "reportTime": "2026-09-20T18:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-20T12:00:00+09:00",
-          "lat": 29.2,
-          "lon": 137.5,
+          "time": "2026-09-20T18:00:00+09:00",
+          "lat": 30,
+          "lon": 137.6,
           "class": "台風(TY)",
           "pressureHpa": 970,
           "locationText": "日本の南",
@@ -20,43 +20,43 @@
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-09-21T00:00:00+09:00",
-          "lat": 30.8,
-          "lon": 137.4,
+          "time": "2026-09-21T06:00:00+09:00",
+          "lat": 31.8,
+          "lon": 137.8,
           "class": "台風(TY)",
           "pressureHpa": 970,
-          "locationText": "日本の南",
+          "locationText": "八丈島の南西約240km",
           "forecastRadiusKm": 45
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-21T12:00:00+09:00",
-          "lat": 32.8,
-          "lon": 138.5,
+          "time": "2026-09-21T18:00:00+09:00",
+          "lat": 34,
+          "lon": 139.9,
           "class": "台風(TY)",
           "pressureHpa": 965,
-          "locationText": "八丈島の西南西約130km",
+          "locationText": "三宅島の東南東約40km",
           "forecastRadiusKm": 65
         },
         {
           "timeLabel": "予報　４５時間後",
-          "time": "2026-09-22T09:00:00+09:00",
-          "lat": 37.8,
-          "lon": 146,
+          "time": "2026-09-22T15:00:00+09:00",
+          "lat": 39.2,
+          "lon": 149.6,
           "class": "台風(TY)",
-          "pressureHpa": 965,
+          "pressureHpa": 970,
           "locationText": "日本の東",
           "forecastRadiusKm": 155
         },
         {
           "timeLabel": "予報　６９時間後",
-          "time": "2026-09-23T09:00:00+09:00",
-          "lat": 42.6,
-          "lon": 161.6,
+          "time": "2026-09-23T15:00:00+09:00",
+          "lat": 43.8,
+          "lon": 166.7,
           "class": "温帯低気圧(LOW)",
-          "pressureHpa": 980,
+          "pressureHpa": 984,
           "locationText": "日本のはるか東",
-          "forecastRadiusKm": 220
+          "forecastRadiusKm": 260
         }
       ]
     }
