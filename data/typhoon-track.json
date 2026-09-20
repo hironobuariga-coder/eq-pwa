@@ -1,52 +1,32 @@
 {
-  "generated": "2026-09-21 02:56:34+09:00",
+  "generated": "2026-09-21 05:23:43+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "DUJUAN",
       "nameKana": "ドゥージェン",
       "number": "2625",
-      "reportTime": "2026-09-21T00:45:00+09:00",
+      "reportTime": "2026-09-21T04:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-21T00:00:00+09:00",
-          "lat": 30.7,
-          "lon": 137.7,
+          "time": "2026-09-21T04:00:00+09:00",
+          "lat": 31.7,
+          "lon": 137.9,
           "class": "台風(TY)",
-          "pressureHpa": 970,
-          "locationText": "日本の南",
+          "pressureHpa": 965,
+          "locationText": "八丈島の南西約240km",
           "forecastRadiusKm": null
         },
         {
-          "timeLabel": "予報　１２時間後",
-          "time": "2026-09-21T12:00:00+09:00",
-          "lat": 32.9,
-          "lon": 138.5,
-          "class": "台風(TY)",
-          "pressureHpa": 970,
-          "locationText": "八丈島の西約120km",
-          "forecastRadiusKm": 45
-        },
-        {
-          "timeLabel": "予報　２４時間後",
-          "time": "2026-09-22T00:00:00+09:00",
-          "lat": 35.5,
-          "lon": 142,
+          "timeLabel": "推定　１時間後",
+          "time": "2026-09-21T05:00:00+09:00",
+          "lat": 31.9,
+          "lon": 137.9,
           "class": "台風(TY)",
           "pressureHpa": 965,
-          "locationText": "銚子市の東約110km",
-          "forecastRadiusKm": 65
-        },
-        {
-          "timeLabel": "予報　４５時間後",
-          "time": "2026-09-22T21:00:00+09:00",
-          "lat": 40,
-          "lon": 153.4,
-          "class": "温帯低気圧(LOW)",
-          "pressureHpa": 980,
-          "locationText": "日本の東",
-          "forecastRadiusKm": 155
+          "locationText": "八丈島の南西約220km",
+          "forecastRadiusKm": null
         }
       ]
     }
