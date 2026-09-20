@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-20 23:54:01+09:00",
+  "generated": "2026-09-21 02:56:34+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "DUJUAN",
       "nameKana": "ドゥージェン",
       "number": "2625",
-      "reportTime": "2026-09-20T21:45:00+09:00",
+      "reportTime": "2026-09-21T00:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-20T21:00:00+09:00",
-          "lat": 30.3,
-          "lon": 137.6,
+          "time": "2026-09-21T00:00:00+09:00",
+          "lat": 30.7,
+          "lon": 137.7,
           "class": "台風(TY)",
           "pressureHpa": 970,
           "locationText": "日本の南",
@@ -20,26 +20,26 @@
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-09-21T09:00:00+09:00",
-          "lat": 32.4,
-          "lon": 138.1,
+          "time": "2026-09-21T12:00:00+09:00",
+          "lat": 32.9,
+          "lon": 138.5,
           "class": "台風(TY)",
           "pressureHpa": 970,
-          "locationText": "八丈島の西南西約180km",
+          "locationText": "八丈島の西約120km",
           "forecastRadiusKm": 45
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-21T21:00:00+09:00",
-          "lat": 34.8,
-          "lon": 141,
+          "time": "2026-09-22T00:00:00+09:00",
+          "lat": 35.5,
+          "lon": 142,
           "class": "台風(TY)",
           "pressureHpa": 965,
-          "locationText": "勝浦市の東南東約80km",
+          "locationText": "銚子市の東約110km",
           "forecastRadiusKm": 65
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-09-22T21:00:00+09:00",
           "lat": 40,
           "lon": 153.4,
