@@ -1,20 +1,26 @@
 {
-  "generated": "2026-09-20 20:40:58+09:00",
+  "generated": "2026-09-22 01:46:37+09:00",
   "source": "jma_xml",
-  "time": "2026/9/20 16:28 (JST)",
-  "epicenter": "奄美大島近海",
-  "depth": "約60km",
-  "magnitude": "M5.0",
+  "time": "2026/9/22 01:39 (JST)",
+  "epicenter": "熊本県熊本地方",
+  "depth": "",
+  "magnitude": "M3.5",
   "maxShindo": "3",
   "tsunami": "この地震による津波の心配はありません。",
   "shindoAreas": [
     {
       "level": "3",
-      "area": "鹿児島県"
+      "area": "熊本県"
+    },
+    {
+      "level": "1",
+      "area": "宮崎県・鹿児島県"
     }
   ],
   "alertLevel": "normal",
   "affectedPrefs": [
+    "熊本県",
+    "宮崎県",
     "鹿児島県"
   ]
 }
