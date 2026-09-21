@@ -1,31 +1,31 @@
 {
-  "generated": "2026-09-21 14:19:06+09:00",
+  "generated": "2026-09-21 19:51:07+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "DUJUAN",
       "nameKana": "ドゥージェン",
       "number": "2625",
-      "reportTime": "2026-09-21T13:45:00+09:00",
+      "reportTime": "2026-09-21T19:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-21T13:00:00+09:00",
-          "lat": 33.2,
-          "lon": 139.3,
+          "time": "2026-09-21T19:00:00+09:00",
+          "lat": 34.7,
+          "lon": 141.2,
           "class": "台風(TY)",
           "pressureHpa": 960,
-          "locationText": "八丈島の西約50km",
+          "locationText": "勝浦市の東南東約100km",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "推定　１時間後",
-          "time": "2026-09-21T14:00:00+09:00",
-          "lat": 33.4,
-          "lon": 139.5,
+          "time": "2026-09-21T20:00:00+09:00",
+          "lat": 34.9,
+          "lon": 141.5,
           "class": "台風(TY)",
           "pressureHpa": 960,
-          "locationText": "八丈島の北西約40km",
+          "locationText": "勝浦市の東南東約110km",
           "forecastRadiusKm": null
         }
       ]
