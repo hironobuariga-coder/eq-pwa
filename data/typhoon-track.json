@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-22 08:38:08+09:00",
+  "generated": "2026-09-22 10:51:51+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "DUJUAN",
       "nameKana": "ドゥージェン",
       "number": "2625",
-      "reportTime": "2026-09-22T06:45:00+09:00",
+      "reportTime": "2026-09-22T09:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-22T06:00:00+09:00",
-          "lat": 37.2,
-          "lon": 145.9,
+          "time": "2026-09-22T09:00:00+09:00",
+          "lat": 38.3,
+          "lon": 147.7,
           "class": "台風(TY)",
           "pressureHpa": 970,
           "locationText": "日本の東",
@@ -20,23 +20,23 @@
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-09-22T18:00:00+09:00",
-          "lat": 39.6,
-          "lon": 152.1,
-          "class": "台風(STS)",
+          "time": "2026-09-22T21:00:00+09:00",
+          "lat": 40,
+          "lon": 153.6,
+          "class": "温帯低気圧(LOW)",
           "pressureHpa": 980,
           "locationText": "日本の東",
-          "forecastRadiusKm": 55
+          "forecastRadiusKm": 65
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-23T06:00:00+09:00",
-          "lat": 41.3,
-          "lon": 159.5,
+          "time": "2026-09-23T09:00:00+09:00",
+          "lat": 42,
+          "lon": 161.7,
           "class": "温帯低気圧(LOW)",
-          "pressureHpa": 986,
+          "pressureHpa": 990,
           "locationText": "日本のはるか東",
-          "forecastRadiusKm": 95
+          "forecastRadiusKm": 105
         }
       ]
     }
