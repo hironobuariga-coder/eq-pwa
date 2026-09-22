@@ -1,28 +1,28 @@
 {
-  "generated": "2026-09-22 16:16:33+09:00",
+  "generated": "2026-09-22 21:40:04+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "DUJUAN",
       "nameKana": "ドゥージェン",
       "number": "2625",
-      "reportTime": "2026-09-22T15:45:00+09:00",
+      "reportTime": "2026-09-22T18:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-22T15:00:00+09:00",
-          "lat": 39.4,
-          "lon": 150.6,
+          "time": "2026-09-22T18:00:00+09:00",
+          "lat": 39.8,
+          "lon": 152,
           "class": "台風(STS)",
-          "pressureHpa": 975,
+          "pressureHpa": 980,
           "locationText": "日本の東",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-09-23T03:00:00+09:00",
-          "lat": 41,
-          "lon": 157.6,
+          "time": "2026-09-23T06:00:00+09:00",
+          "lat": 41.4,
+          "lon": 159.5,
           "class": "温帯低気圧(LOW)",
           "pressureHpa": 984,
           "locationText": "日本のはるか東",
@@ -30,12 +30,12 @@
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-23T15:00:00+09:00",
-          "lat": 43.2,
-          "lon": 166.8,
+          "time": "2026-09-23T18:00:00+09:00",
+          "lat": 44.4,
+          "lon": 169.2,
           "class": "温帯低気圧(LOW)",
           "pressureHpa": 988,
-          "locationText": "日本のはるか東",
+          "locationText": "千島の東",
           "forecastRadiusKm": 120
         }
       ]
