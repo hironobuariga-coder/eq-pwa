@@ -1,82 +1,82 @@
 {
-  "generated": "2026-09-23 20:50:41+09:00",
+  "generated": "2026-09-24 01:04:36+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "",
-      "nameKana": "",
-      "number": "",
-      "reportTime": "2026-09-23T19:10:00+09:00",
+      "name": "SURIGAE",
+      "nameKana": "スリゲ",
+      "number": "2626",
+      "reportTime": "2026-09-24T00:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-23T18:00:00+09:00",
-          "lat": 16.5,
-          "lon": 137.8,
-          "class": "熱帯低気圧(TD)",
-          "pressureHpa": 1006,
+          "time": "2026-09-24T00:00:00+09:00",
+          "lat": 17.9,
+          "lon": 136.4,
+          "class": "台風(TS)",
+          "pressureHpa": 1004,
           "locationText": "フィリピンの東",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-09-24T06:00:00+09:00",
-          "lat": 16.7,
-          "lon": 135.3,
-          "class": "熱帯低気圧(TD)",
-          "pressureHpa": 1004,
-          "locationText": "フィリピンの東",
-          "forecastRadiusKm": 100
-        },
-        {
-          "timeLabel": "予報　２４時間後",
-          "time": "2026-09-24T18:00:00+09:00",
-          "lat": 17.3,
-          "lon": 133.2,
+          "time": "2026-09-24T12:00:00+09:00",
+          "lat": 17.9,
+          "lon": 134.2,
           "class": "台風(TS)",
           "pressureHpa": 1002,
           "locationText": "フィリピンの東",
-          "forecastRadiusKm": 130
+          "forecastRadiusKm": 65
+        },
+        {
+          "timeLabel": "予報　２４時間後",
+          "time": "2026-09-25T00:00:00+09:00",
+          "lat": 18.4,
+          "lon": 132.1,
+          "class": "台風(TS)",
+          "pressureHpa": 1000,
+          "locationText": "フィリピンの東",
+          "forecastRadiusKm": 95
         },
         {
           "timeLabel": "予報　４５時間後",
-          "time": "2026-09-25T15:00:00+09:00",
-          "lat": 18.6,
-          "lon": 130,
+          "time": "2026-09-25T21:00:00+09:00",
+          "lat": 19.5,
+          "lon": 128.9,
           "class": "台風(TS)",
           "pressureHpa": 998,
           "locationText": "フィリピンの東",
-          "forecastRadiusKm": 200
+          "forecastRadiusKm": 155
         },
         {
           "timeLabel": "予報　６９時間後",
-          "time": "2026-09-26T15:00:00+09:00",
-          "lat": 20.2,
-          "lon": 127.1,
+          "time": "2026-09-26T21:00:00+09:00",
+          "lat": 21.2,
+          "lon": 126.7,
           "class": "台風(STS)",
           "pressureHpa": 990,
           "locationText": "沖縄の南",
-          "forecastRadiusKm": 260
+          "forecastRadiusKm": 220
         },
         {
           "timeLabel": "予報　９３時間後",
-          "time": "2026-09-27T15:00:00+09:00",
-          "lat": 21.5,
-          "lon": 126,
+          "time": "2026-09-27T21:00:00+09:00",
+          "lat": 22.7,
+          "lon": 126.5,
           "class": "台風(STS)",
           "pressureHpa": 980,
           "locationText": "沖縄の南",
-          "forecastRadiusKm": 330
+          "forecastRadiusKm": 280
         },
         {
           "timeLabel": "予報　１１７時間後",
-          "time": "2026-09-28T15:00:00+09:00",
-          "lat": 22.6,
-          "lon": 124.7,
+          "time": "2026-09-28T21:00:00+09:00",
+          "lat": 23.9,
+          "lon": 126.5,
           "class": "台風(TY)",
           "pressureHpa": 970,
           "locationText": "沖縄の南",
-          "forecastRadiusKm": 440
+          "forecastRadiusKm": 330
         }
       ]
     }
