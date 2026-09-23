@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-24 01:04:36+09:00",
+  "generated": "2026-09-24 04:38:35+09:00",
   "locations": {
     "higashi_rc": {
       "label": "東RC",
@@ -10,9 +10,29 @@
           "warnings": [
             {
               "name": "大雨注意報",
-              "status": "継続"
+              "status": "解除"
             }
           ]
+        }
+      ]
+    },
+    "nishi_rc": {
+      "label": "西RC",
+      "cityPrefix": "三田市",
+      "areas": [
+        {
+          "area": "三田市",
+          "warnings": []
+        }
+      ]
+    },
+    "nishi2_rc": {
+      "label": "西第2RC",
+      "cityPrefix": "川西市",
+      "areas": [
+        {
+          "area": "川西市",
+          "warnings": []
         }
       ]
     },
@@ -25,11 +45,6 @@
           "warnings": []
         }
       ]
-    },
-    "kumamoto_qct": {
-      "label": "熊Q",
-      "cityPrefix": "熊本市中央区",
-      "areas": []
     }
   }
 }
