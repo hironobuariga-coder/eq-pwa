@@ -1,21 +1,6 @@
 {
-  "generated": "2026-09-24 14:30:14+09:00",
+  "generated": "2026-09-24 19:28:50+09:00",
   "locations": {
-    "higashi_rc": {
-      "label": "東RC",
-      "cityPrefix": "川崎市",
-      "areas": [
-        {
-          "area": "川崎市",
-          "warnings": [
-            {
-              "name": "大雨注意報",
-              "status": "解除"
-            }
-          ]
-        }
-      ]
-    },
     "nishi_rc": {
       "label": "西RC",
       "cityPrefix": "三田市",
@@ -32,16 +17,6 @@
       "areas": [
         {
           "area": "川西市",
-          "warnings": []
-        }
-      ]
-    },
-    "kudanshita": {
-      "label": "九段下オフィス",
-      "cityPrefix": "千代田区",
-      "areas": [
-        {
-          "area": "千代田区",
           "warnings": []
         }
       ]
