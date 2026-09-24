@@ -1,4 +1,15 @@
 {
-  "generated": "2026-09-25 04:24:25+09:00",
-  "locations": {}
+  "generated": "2026-09-25 07:37:11+09:00",
+  "locations": {
+    "kudanshita": {
+      "label": "九段下オフィス",
+      "cityPrefix": "千代田区",
+      "areas": [
+        {
+          "area": "千代田区",
+          "warnings": []
+        }
+      ]
+    }
+  }
 }
