@@ -1,25 +1,4 @@
 {
-  "generated": "2026-09-24 19:28:50+09:00",
-  "locations": {
-    "nishi_rc": {
-      "label": "西RC",
-      "cityPrefix": "三田市",
-      "areas": [
-        {
-          "area": "三田市",
-          "warnings": []
-        }
-      ]
-    },
-    "nishi2_rc": {
-      "label": "西第2RC",
-      "cityPrefix": "川西市",
-      "areas": [
-        {
-          "area": "川西市",
-          "warnings": []
-        }
-      ]
-    }
-  }
+  "generated": "2026-09-25 00:26:17+09:00",
+  "locations": {}
 }
