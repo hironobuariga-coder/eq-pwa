@@ -1,78 +1,78 @@
 {
-  "generated": "2026-09-25 19:28:27+09:00",
+  "generated": "2026-09-26 00:27:27+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "SURIGAE",
       "nameKana": "スリゲ",
       "number": "2626",
-      "reportTime": "2026-09-25T18:45:00+09:00",
+      "reportTime": "2026-09-25T21:50:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-25T18:00:00+09:00",
-          "lat": 20.8,
-          "lon": 128.3,
+          "time": "2026-09-25T21:00:00+09:00",
+          "lat": 21.3,
+          "lon": 127.9,
           "class": "台風(TS)",
-          "pressureHpa": 1000,
+          "pressureHpa": 998,
           "locationText": "沖縄の南",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-09-26T06:00:00+09:00",
-          "lat": 21.8,
-          "lon": 127.4,
+          "time": "2026-09-26T09:00:00+09:00",
+          "lat": 22,
+          "lon": 127.2,
           "class": "台風(STS)",
           "pressureHpa": 996,
           "locationText": "沖縄の南",
-          "forecastRadiusKm": 85
+          "forecastRadiusKm": 75
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-26T18:00:00+09:00",
-          "lat": 22.8,
-          "lon": 127.1,
+          "time": "2026-09-26T21:00:00+09:00",
+          "lat": 22.9,
+          "lon": 127,
           "class": "台風(STS)",
           "pressureHpa": 985,
           "locationText": "沖縄の南",
-          "forecastRadiusKm": 120
+          "forecastRadiusKm": 105
         },
         {
-          "timeLabel": "予報　４５時間後",
-          "time": "2026-09-27T15:00:00+09:00",
-          "lat": 24.7,
-          "lon": 128,
+          "timeLabel": "予報　４８時間後",
+          "time": "2026-09-27T21:00:00+09:00",
+          "lat": 24.8,
+          "lon": 128.1,
           "class": "台風(TY)",
           "pressureHpa": 970,
           "locationText": "沖縄の南",
-          "forecastRadiusKm": 185
+          "forecastRadiusKm": 155
         },
         {
-          "timeLabel": "予報　６９時間後",
-          "time": "2026-09-28T15:00:00+09:00",
-          "lat": 26.5,
+          "timeLabel": "予報　７２時間後",
+          "time": "2026-09-28T21:00:00+09:00",
+          "lat": 26.6,
           "lon": 130.3,
           "class": "台風(TY)",
           "pressureHpa": 960,
           "locationText": "日本の南",
-          "forecastRadiusKm": 260
+          "forecastRadiusKm": 220
         },
         {
-          "timeLabel": "予報　９３時間後",
-          "time": "2026-09-29T15:00:00+09:00",
+          "timeLabel": "予報　９６時間後",
+          "time": "2026-09-29T21:00:00+09:00",
           "lat": 27.7,
-          "lon": 132.6,
+          "lon": 132.4,
           "class": "台風(TY)",
           "pressureHpa": 965,
           "locationText": "日本の南",
           "forecastRadiusKm": 320
         },
         {
-          "timeLabel": "予報　１１７時間後",
-          "time": "2026-09-30T15:00:00+09:00",
-          "lat": 29.6,
-          "lon": 134.8,
+          "timeLabel": "予報　１２０時間後",
+          "time": "2026-09-30T21:00:00+09:00",
+          "lat": 29.7,
+          "lon": 134.2,
           "class": "台風(TY)",
           "pressureHpa": 970,
           "locationText": "日本の南",

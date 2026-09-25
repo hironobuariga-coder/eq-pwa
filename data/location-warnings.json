@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25 19:28:27+09:00",
+  "generated": "2026-09-26 00:27:27+09:00",
   "locations": {
     "kudanshita": {
       "label": "九段下オフィス",
@@ -10,6 +10,11 @@
           "warnings": []
         }
       ]
+    },
+    "kumamoto_qct": {
+      "label": "熊Q",
+      "cityPrefix": "熊本市中央区",
+      "areas": []
     }
   }
 }
