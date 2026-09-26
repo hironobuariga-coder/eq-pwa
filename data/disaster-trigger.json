@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26 07:40:30+09:00",
+  "generated": "2026-09-26 09:55:31+09:00",
   "triggers": [
     {
       "id": "https://www.data.jma.go.jp/developer/xml/data/20260925125000_0_VPTA51_010000.xml",
@@ -11,25 +11,6 @@
     }
   ],
   "processed_ids": [
-    "https://www.data.jma.go.jp/developer/xml/data/20260921213122_0_VPWW53_060000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260921212443_0_VPWW53_130000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260921212443_0_VPWW54_130000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260921212029_0_VPWW54_080000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260921212029_0_VPWW53_080000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260921212012_0_VXKO70_080000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260921211342_0_VPFJ50_190000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260921211342_0_VPFJ51_190000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260921211222_0_VPWW54_060000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260921211222_0_VPWW53_060000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260921211220_0_VPWW54_050000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260921211220_0_VPWW53_050000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260921211208_0_VPWW61_060000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260921211207_0_VPWW61_050000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260921210540_0_VXWW50_120000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260921210531_0_VPWW54_120000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260921210531_0_VPWW53_120000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260921210523_0_VPWW55_120000.xml",
-    "https://www.data.jma.go.jp/developer/xml/data/20260921210523_0_VPWW56_120000.xml",
     "https://www.data.jma.go.jp/developer/xml/data/20260921210311_0_VPFJ50_140000.xml",
     "https://www.data.jma.go.jp/developer/xml/data/20260921210311_0_VPFJ51_140000.xml",
     "https://www.data.jma.go.jp/developer/xml/data/20260921205804_0_VPFJ51_080000.xml",
@@ -2010,6 +1991,25 @@
     "nerv:https://unnerv.jp/@UN_NERV/117333574109171706",
     "nerv:https://unnerv.jp/@UN_NERV/117333547843257289",
     "nerv:https://unnerv.jp/@UN_NERV/117333544245076652",
-    "nerv:https://unnerv.jp/@UN_NERV/117333540929985127"
+    "nerv:https://unnerv.jp/@UN_NERV/117333540929985127",
+    "https://www.data.jma.go.jp/developer/xml/data/20260926004500_0_VPTA51_010000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260926004235_0_VPWW54_016000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260926004235_0_VPWW53_016000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260926004223_0_VPWW61_016000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260926004122_0_VPWW53_012000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260926004122_0_VPWW54_012000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260926004121_0_VPTW61_010000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260926004117_0_VPWW61_012000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260926004107_0_VPWW54_014100.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260926004107_0_VPWW53_014100.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260926004037_0_VPWW61_014100.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260926004005_0_VPWW53_011000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260926004005_0_VPWW54_011000.xml",
+    "https://www.data.jma.go.jp/developer/xml/data/20260926003951_0_VPWW61_011000.xml",
+    "nerv:https://unnerv.jp/@UN_NERV/117334564096826903",
+    "nerv:https://unnerv.jp/@UN_NERV/117334560876393897",
+    "nerv:https://unnerv.jp/@UN_NERV/117334559163496983",
+    "nerv:https://unnerv.jp/@UN_NERV/117334557069131253",
+    "nerv:https://unnerv.jp/@UN_NERV/117334554379963026"
   ]
 }
