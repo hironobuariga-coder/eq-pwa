@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-26 09:55:31+09:00",
+  "generated": "2026-09-26 14:51:14+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "SURIGAE",
       "nameKana": "スリゲ",
       "number": "2626",
-      "reportTime": "2026-09-26T09:45:00+09:00",
+      "reportTime": "2026-09-26T12:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-26T09:00:00+09:00",
-          "lat": 22.2,
-          "lon": 127.2,
+          "time": "2026-09-26T12:00:00+09:00",
+          "lat": 22.5,
+          "lon": 127,
           "class": "台風(STS)",
           "pressureHpa": 996,
           "locationText": "沖縄の南",
@@ -20,9 +20,9 @@
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-09-26T21:00:00+09:00",
-          "lat": 23.4,
-          "lon": 126.9,
+          "time": "2026-09-27T00:00:00+09:00",
+          "lat": 23.7,
+          "lon": 127.1,
           "class": "台風(STS)",
           "pressureHpa": 990,
           "locationText": "沖縄の南",
@@ -30,16 +30,16 @@
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-27T09:00:00+09:00",
-          "lat": 24.3,
-          "lon": 127.5,
+          "time": "2026-09-27T12:00:00+09:00",
+          "lat": 24.7,
+          "lon": 127.8,
           "class": "台風(TY)",
           "pressureHpa": 975,
-          "locationText": "宮古島の東約230km",
+          "locationText": "沖縄の南約200km",
           "forecastRadiusKm": 95
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-09-28T09:00:00+09:00",
           "lat": 26.1,
           "lon": 129.7,
@@ -49,7 +49,7 @@
           "forecastRadiusKm": 155
         },
         {
-          "timeLabel": "予報　７２時間後",
+          "timeLabel": "予報　６９時間後",
           "time": "2026-09-29T09:00:00+09:00",
           "lat": 27.4,
           "lon": 132,
@@ -59,7 +59,7 @@
           "forecastRadiusKm": 220
         },
         {
-          "timeLabel": "予報　９６時間後",
+          "timeLabel": "予報　９３時間後",
           "time": "2026-09-30T09:00:00+09:00",
           "lat": 28.4,
           "lon": 133.8,
@@ -69,7 +69,7 @@
           "forecastRadiusKm": 320
         },
         {
-          "timeLabel": "予報　１２０時間後",
+          "timeLabel": "予報　１１７時間後",
           "time": "2026-10-01T09:00:00+09:00",
           "lat": 30.7,
           "lon": 135.9,
