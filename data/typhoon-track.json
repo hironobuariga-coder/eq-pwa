@@ -1,31 +1,31 @@
 {
-  "generated": "2026-09-28 02:39:06+09:00",
+  "generated": "2026-09-28 05:23:27+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "SURIGAE",
       "nameKana": "スリゲ",
       "number": "2626",
-      "reportTime": "2026-09-28T01:45:00+09:00",
+      "reportTime": "2026-09-28T04:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-28T01:00:00+09:00",
-          "lat": 26.2,
-          "lon": 129.6,
+          "time": "2026-09-28T04:00:00+09:00",
+          "lat": 26.5,
+          "lon": 130.1,
           "class": "台風(TY)",
           "pressureHpa": 945,
-          "locationText": "南大東島の西北西約170km",
+          "locationText": "南大東島の北西約140km",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "推定　１時間後",
-          "time": "2026-09-28T02:00:00+09:00",
-          "lat": 26.3,
-          "lon": 129.7,
+          "time": "2026-09-28T05:00:00+09:00",
+          "lat": 26.6,
+          "lon": 130.2,
           "class": "台風(TY)",
           "pressureHpa": 945,
-          "locationText": "南大東島の西北西約160km",
+          "locationText": "南大東島の北西約130km",
           "forecastRadiusKm": null
         }
       ]
