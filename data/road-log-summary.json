@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-28T06:41:35.055Z",
+  "generated": "2026-09-28T15:19:03.652Z",
   "periods": [
     {
       "road": "南九州",
@@ -8,9 +8,9 @@
       "reason": "工事",
       "status": "通行止め",
       "start": "2026-09-28T03:00:00.000Z",
-      "end": null,
+      "end": "2026-09-28T03:00:00.000Z",
       "startJST": "9/28 12:00",
-      "endJST": null,
+      "endJST": "9/28 12:00",
       "startTimeJST": "",
       "source": "w_nexco_official_site",
       "snapshots": [
