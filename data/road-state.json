@@ -1,3 +1,14 @@
 {
-  "active": {}
+  "active": {
+    "南九州|八代南IC〜日奈久IC": {
+      "road": "南九州",
+      "section": "八代南IC〜日奈久IC",
+      "direction": "上下線",
+      "reason": "工事",
+      "firstSeenTs": "2026-09-28T03:00:00.000Z",
+      "lastSeenTs": "2026-09-28T03:00:00.000Z",
+      "startTime": "",
+      "source": "w_nexco_official_site"
+    }
+  }
 }

@@ -1,4 +1,21 @@
 {
-  "generated": "2026-09-28T00:34:08.986Z",
-  "periods": []
+  "generated": "2026-09-28T06:41:35.055Z",
+  "periods": [
+    {
+      "road": "南九州",
+      "section": "八代南IC〜日奈久IC",
+      "direction": "上下線",
+      "reason": "工事",
+      "status": "通行止め",
+      "start": "2026-09-28T03:00:00.000Z",
+      "end": null,
+      "startJST": "9/28 12:00",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "w_nexco_official_site",
+      "snapshots": [
+        "9/28 15:41"
+      ]
+    }
+  ]
 }
