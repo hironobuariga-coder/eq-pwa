@@ -1,71 +1,71 @@
 {
-  "generated": "2026-09-28 16:42:55+09:00",
+  "generated": "2026-09-29 01:02:33+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "SURIGAE",
       "nameKana": "スリゲ",
       "number": "2626",
-      "reportTime": "2026-09-28T15:45:00+09:00",
+      "reportTime": "2026-09-29T00:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-28T15:00:00+09:00",
-          "lat": 27.1,
-          "lon": 131.9,
+          "time": "2026-09-29T00:00:00+09:00",
+          "lat": 27.6,
+          "lon": 133.5,
           "class": "台風(TY)",
-          "pressureHpa": 955,
-          "locationText": "南大東島の北北東約160km",
+          "pressureHpa": 970,
+          "locationText": "南大東島の北東約300km",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-09-29T03:00:00+09:00",
-          "lat": 27.9,
-          "lon": 133.2,
+          "time": "2026-09-29T12:00:00+09:00",
+          "lat": 28.4,
+          "lon": 134.5,
           "class": "台風(TY)",
-          "pressureHpa": 960,
-          "locationText": "南大東島の北東約310km",
+          "pressureHpa": 980,
+          "locationText": "日本の南",
           "forecastRadiusKm": 45
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-29T15:00:00+09:00",
-          "lat": 28.7,
-          "lon": 134.9,
-          "class": "台風(TY)",
-          "pressureHpa": 975,
-          "locationText": "日本の南",
-          "forecastRadiusKm": 80
-        },
-        {
-          "timeLabel": "予報　４８時間後",
-          "time": "2026-09-30T15:00:00+09:00",
-          "lat": 30.5,
-          "lon": 138,
+          "time": "2026-09-30T00:00:00+09:00",
+          "lat": 29.3,
+          "lon": 136.4,
           "class": "台風(STS)",
           "pressureHpa": 985,
-          "locationText": "八丈島の南南西約340km",
-          "forecastRadiusKm": 185
+          "locationText": "日本の南",
+          "forecastRadiusKm": 95
         },
         {
-          "timeLabel": "予報　７２時間後",
-          "time": "2026-10-01T15:00:00+09:00",
-          "lat": 33.9,
-          "lon": 141,
+          "timeLabel": "予報　４５時間後",
+          "time": "2026-09-30T21:00:00+09:00",
+          "lat": 31.2,
+          "lon": 138.5,
           "class": "台風(STS)",
           "pressureHpa": 990,
-          "locationText": "伊豆諸島近海",
+          "locationText": "日本の南",
+          "forecastRadiusKm": 210
+        },
+        {
+          "timeLabel": "予報　６９時間後",
+          "time": "2026-10-01T21:00:00+09:00",
+          "lat": 35.5,
+          "lon": 143.5,
+          "class": "台風(STS)",
+          "pressureHpa": 990,
+          "locationText": "日本の東",
           "forecastRadiusKm": 300
         },
         {
-          "timeLabel": "予報　９６時間後",
-          "time": "2026-10-02T15:00:00+09:00",
-          "lat": 41.6,
-          "lon": 156.3,
+          "timeLabel": "予報　９３時間後",
+          "time": "2026-10-02T21:00:00+09:00",
+          "lat": 46,
+          "lon": 160,
           "class": "温帯低気圧(LOW)",
-          "pressureHpa": 984,
-          "locationText": "日本のはるか東",
+          "pressureHpa": 990,
+          "locationText": "千島の東",
           "forecastRadiusKm": 370
         }
       ]
