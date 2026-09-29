@@ -1,61 +1,61 @@
 {
-  "generated": "2026-09-29 16:21:32+09:00",
+  "generated": "2026-09-29 23:13:19+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "SURIGAE",
       "nameKana": "スリゲ",
       "number": "2626",
-      "reportTime": "2026-09-29T15:45:00+09:00",
+      "reportTime": "2026-09-29T21:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-29T15:00:00+09:00",
-          "lat": 29,
-          "lon": 134.9,
-          "class": "台風(STS)",
-          "pressureHpa": 992,
+          "time": "2026-09-29T21:00:00+09:00",
+          "lat": 29.1,
+          "lon": 136.1,
+          "class": "台風(TS)",
+          "pressureHpa": 994,
           "locationText": "日本の南",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-09-30T03:00:00+09:00",
-          "lat": 29.7,
-          "lon": 136.8,
+          "time": "2026-09-30T09:00:00+09:00",
+          "lat": 30.2,
+          "lon": 137.4,
           "class": "台風(TS)",
-          "pressureHpa": 994,
+          "pressureHpa": 998,
           "locationText": "日本の南",
           "forecastRadiusKm": 65
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-09-30T15:00:00+09:00",
-          "lat": 31.1,
-          "lon": 138.6,
+          "time": "2026-09-30T21:00:00+09:00",
+          "lat": 31.7,
+          "lon": 139.1,
           "class": "台風(TS)",
           "pressureHpa": 998,
-          "locationText": "八丈島の南南西約250km",
-          "forecastRadiusKm": 95
+          "locationText": "八丈島の南南西約170km",
+          "forecastRadiusKm": 105
         },
         {
           "timeLabel": "予報　４８時間後",
-          "time": "2026-10-01T15:00:00+09:00",
-          "lat": 35.2,
-          "lon": 143,
+          "time": "2026-10-01T21:00:00+09:00",
+          "lat": 36.7,
+          "lon": 144.7,
           "class": "台風(TS)",
-          "pressureHpa": 996,
-          "locationText": "日本の東",
-          "forecastRadiusKm": 185
+          "pressureHpa": 998,
+          "locationText": "いわき市の東約340km",
+          "forecastRadiusKm": 210
         },
         {
           "timeLabel": "予報　７２時間後",
-          "time": "2026-10-02T15:00:00+09:00",
-          "lat": 43,
-          "lon": 159.5,
+          "time": "2026-10-02T21:00:00+09:00",
+          "lat": 45.6,
+          "lon": 163.7,
           "class": "温帯低気圧(LOW)",
           "pressureHpa": 992,
-          "locationText": "日本のはるか東",
+          "locationText": "千島の東",
           "forecastRadiusKm": 300
         }
       ]
