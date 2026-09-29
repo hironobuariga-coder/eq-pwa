@@ -1,22 +1,5 @@
 [
   {
-    "ts": "2026-09-28T15:41:31+09:00",
-    "closures": [
-      {
-        "road": "南九州",
-        "section": "八代南IC〜日奈久IC",
-        "direction": "上下線",
-        "status": "通行止め",
-        "reason": "工事",
-        "startTime": "",
-        "source": "w_nexco_official_site",
-        "firstSeenTs": "2026-09-28T03:00:00.000Z",
-        "lastSeenTs": "2026-09-28T03:00:00.000Z"
-      }
-    ],
-    "rawCount": 2
-  },
-  {
     "ts": "2026-09-29T00:18:59+09:00",
     "closures": [],
     "rawCount": 3
@@ -30,5 +13,22 @@
     "ts": "2026-09-29T10:48:15+09:00",
     "closures": [],
     "rawCount": 3
+  },
+  {
+    "ts": "2026-09-29T17:20:31+09:00",
+    "closures": [
+      {
+        "road": "道央",
+        "section": "",
+        "direction": "",
+        "status": "通行止め",
+        "reason": "",
+        "startTime": "",
+        "source": "e_nexco_official_site",
+        "firstSeenTs": "2026-09-29T03:00:00.000Z",
+        "lastSeenTs": "2026-09-29T03:00:00.000Z"
+      }
+    ],
+    "rawCount": 4
   }
 ]

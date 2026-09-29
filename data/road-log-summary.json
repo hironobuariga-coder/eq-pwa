@@ -1,20 +1,20 @@
 {
-  "generated": "2026-09-29T01:48:19.018Z",
+  "generated": "2026-09-29T08:20:35.095Z",
   "periods": [
     {
-      "road": "南九州",
-      "section": "八代南IC〜日奈久IC",
-      "direction": "上下線",
-      "reason": "工事",
+      "road": "道央",
+      "section": "",
+      "direction": "",
+      "reason": "",
       "status": "通行止め",
-      "start": "2026-09-28T03:00:00.000Z",
-      "end": "2026-09-28T03:00:00.000Z",
-      "startJST": "9/28 12:00",
-      "endJST": "9/28 12:00",
+      "start": "2026-09-29T03:00:00.000Z",
+      "end": null,
+      "startJST": "9/29 12:00",
+      "endJST": null,
       "startTimeJST": "",
-      "source": "w_nexco_official_site",
+      "source": "e_nexco_official_site",
       "snapshots": [
-        "9/28 15:41"
+        "9/29 17:20"
       ]
     }
   ]
