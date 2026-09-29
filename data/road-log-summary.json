@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T08:20:35.095Z",
+  "generated": "2026-09-29T15:41:55.502Z",
   "periods": [
     {
       "road": "道央",
@@ -8,9 +8,9 @@
       "reason": "",
       "status": "通行止め",
       "start": "2026-09-29T03:00:00.000Z",
-      "end": null,
+      "end": "2026-09-29T03:00:00.000Z",
       "startJST": "9/29 12:00",
-      "endJST": null,
+      "endJST": "9/29 12:00",
       "startTimeJST": "",
       "source": "e_nexco_official_site",
       "snapshots": [
