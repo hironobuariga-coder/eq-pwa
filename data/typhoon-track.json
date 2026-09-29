@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-30 04:26:47+09:00",
+  "generated": "2026-09-30 08:06:20+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "SURIGAE",
       "nameKana": "スリゲ",
       "number": "2626",
-      "reportTime": "2026-09-30T03:45:00+09:00",
+      "reportTime": "2026-09-30T06:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-30T03:00:00+09:00",
-          "lat": 29.4,
-          "lon": 136.7,
+          "time": "2026-09-30T06:00:00+09:00",
+          "lat": 29.8,
+          "lon": 136.9,
           "class": "台風(TS)",
           "pressureHpa": 996,
           "locationText": "日本の南",
@@ -20,26 +20,26 @@
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-09-30T15:00:00+09:00",
-          "lat": 31,
-          "lon": 138.4,
+          "time": "2026-09-30T18:00:00+09:00",
+          "lat": 31.5,
+          "lon": 138.8,
           "class": "台風(TS)",
           "pressureHpa": 996,
-          "locationText": "八丈島の南南西約270km",
+          "locationText": "青ヶ島の南西約150km",
           "forecastRadiusKm": 75
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-10-01T03:00:00+09:00",
-          "lat": 32.6,
-          "lon": 140,
+          "time": "2026-10-01T06:00:00+09:00",
+          "lat": 33,
+          "lon": 140.4,
           "class": "台風(TS)",
           "pressureHpa": 996,
-          "locationText": "青ヶ島付近",
+          "locationText": "青ヶ島の北東約80km",
           "forecastRadiusKm": 120
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-10-02T03:00:00+09:00",
           "lat": 38.6,
           "lon": 148.6,
