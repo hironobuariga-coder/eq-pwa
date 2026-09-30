@@ -1,3 +1,14 @@
 {
-  "active": {}
+  "active": {
+    "東北|松尾八幡平IC⇒安代JCT": {
+      "road": "東北",
+      "section": "松尾八幡平IC⇒安代JCT",
+      "direction": "下り",
+      "reason": "",
+      "firstSeenTs": "2026-09-30T03:00:00.000Z",
+      "lastSeenTs": "2026-09-30T03:00:00.000Z",
+      "startTime": "",
+      "source": "e_nexco_official_site"
+    }
+  }
 }

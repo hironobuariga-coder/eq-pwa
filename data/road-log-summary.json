@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-30T00:19:29.329Z",
+  "generated": "2026-09-30T06:36:34.831Z",
   "periods": [
     {
       "road": "道央",
@@ -15,6 +15,22 @@
       "source": "e_nexco_official_site",
       "snapshots": [
         "9/29 17:20"
+      ]
+    },
+    {
+      "road": "東北",
+      "section": "松尾八幡平IC⇒安代JCT",
+      "direction": "下り",
+      "reason": "",
+      "status": "通行止め",
+      "start": "2026-09-30T03:00:00.000Z",
+      "end": null,
+      "startJST": "9/30 12:00",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_official_site",
+      "snapshots": [
+        "9/30 15:36"
       ]
     }
   ]
