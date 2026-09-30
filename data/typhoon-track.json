@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-01 04:58:24+09:00",
+  "generated": "2026-10-01 08:36:34+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "CHOI-WAN",
       "nameKana": "チョーイワン",
       "number": "2627",
-      "reportTime": "2026-10-01T04:30:00+09:00",
+      "reportTime": "2026-10-01T07:10:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-01T03:00:00+09:00",
+          "time": "2026-10-01T06:00:00+09:00",
           "lat": 16.4,
-          "lon": 149.5,
+          "lon": 148.5,
           "class": "台風(TS)",
           "pressureHpa": 998,
           "locationText": "マリアナ諸島",
@@ -20,8 +20,8 @@
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-10-02T03:00:00+09:00",
-          "lat": 16.9,
+          "time": "2026-10-02T06:00:00+09:00",
+          "lat": 17,
           "lon": 146.1,
           "class": "台風(TS)",
           "pressureHpa": 992,
@@ -29,7 +29,7 @@
           "forecastRadiusKm": 105
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-10-03T03:00:00+09:00",
           "lat": 18.1,
           "lon": 146.1,
@@ -39,7 +39,7 @@
           "forecastRadiusKm": 185
         },
         {
-          "timeLabel": "予報　７２時間後",
+          "timeLabel": "予報　６９時間後",
           "time": "2026-10-04T03:00:00+09:00",
           "lat": 20.8,
           "lon": 147.7,
@@ -49,7 +49,7 @@
           "forecastRadiusKm": 260
         },
         {
-          "timeLabel": "予報　９６時間後",
+          "timeLabel": "予報　９３時間後",
           "time": "2026-10-05T03:00:00+09:00",
           "lat": 23.1,
           "lon": 147.3,
@@ -59,7 +59,7 @@
           "forecastRadiusKm": 320
         },
         {
-          "timeLabel": "予報　１２０時間後",
+          "timeLabel": "予報　１１７時間後",
           "time": "2026-10-06T03:00:00+09:00",
           "lat": 26.2,
           "lon": 145.8,
