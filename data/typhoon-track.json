@@ -1,52 +1,72 @@
 {
-  "generated": "2026-09-30 17:25:29+09:00",
+  "generated": "2026-10-01 00:05:58+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "SURIGAE",
-      "nameKana": "スリゲ",
-      "number": "2626",
-      "reportTime": "2026-09-30T15:45:00+09:00",
+      "name": "",
+      "nameKana": "",
+      "number": "",
+      "reportTime": "2026-09-30T22:30:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-09-30T15:00:00+09:00",
-          "lat": 31.1,
-          "lon": 138.4,
-          "class": "台風(TS)",
-          "pressureHpa": 1000,
-          "locationText": "八丈島の南南西約260km",
+          "time": "2026-09-30T21:00:00+09:00",
+          "lat": 16,
+          "lon": 150.8,
+          "class": "熱帯低気圧(TD)",
+          "pressureHpa": 1002,
+          "locationText": "南鳥島近海",
           "forecastRadiusKm": null
         },
         {
-          "timeLabel": "予報　１２時間後",
-          "time": "2026-10-01T03:00:00+09:00",
-          "lat": 32.4,
-          "lon": 139.3,
-          "class": "台風(TS)",
-          "pressureHpa": 1000,
-          "locationText": "八丈島の南南西約90km",
-          "forecastRadiusKm": 75
-        },
-        {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-10-01T15:00:00+09:00",
-          "lat": 34.8,
-          "lon": 142,
+          "time": "2026-10-01T21:00:00+09:00",
+          "lat": 17,
+          "lon": 147,
           "class": "台風(TS)",
-          "pressureHpa": 1000,
-          "locationText": "銚子市の南東約150km",
-          "forecastRadiusKm": 120
+          "pressureHpa": 998,
+          "locationText": "マリアナ諸島",
+          "forecastRadiusKm": 130
         },
         {
           "timeLabel": "予報　４８時間後",
-          "time": "2026-10-02T15:00:00+09:00",
-          "lat": 40.9,
-          "lon": 156.4,
-          "class": "温帯低気圧(LOW)",
-          "pressureHpa": 998,
-          "locationText": "日本のはるか東",
-          "forecastRadiusKm": 210
+          "time": "2026-10-02T21:00:00+09:00",
+          "lat": 17.3,
+          "lon": 145.4,
+          "class": "台風(TS)",
+          "pressureHpa": 992,
+          "locationText": "マリアナ諸島",
+          "forecastRadiusKm": 200
+        },
+        {
+          "timeLabel": "予報　７２時間後",
+          "time": "2026-10-03T21:00:00+09:00",
+          "lat": 19.5,
+          "lon": 147.6,
+          "class": "台風(STS)",
+          "pressureHpa": 980,
+          "locationText": "マリアナ諸島",
+          "forecastRadiusKm": 260
+        },
+        {
+          "timeLabel": "予報　９６時間後",
+          "time": "2026-10-04T21:00:00+09:00",
+          "lat": 21.8,
+          "lon": 147.8,
+          "class": "台風(TY)",
+          "pressureHpa": 970,
+          "locationText": "南鳥島近海",
+          "forecastRadiusKm": 330
+        },
+        {
+          "timeLabel": "予報　１２０時間後",
+          "time": "2026-10-05T21:00:00+09:00",
+          "lat": 24.7,
+          "lon": 146.3,
+          "class": "台風(TY)",
+          "pressureHpa": 965,
+          "locationText": "小笠原近海",
+          "forecastRadiusKm": 440
         }
       ]
     }
