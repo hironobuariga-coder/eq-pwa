@@ -1,22 +1,5 @@
 [
   {
-    "ts": "2026-09-29T17:20:31+09:00",
-    "closures": [
-      {
-        "road": "道央",
-        "section": "",
-        "direction": "",
-        "status": "通行止め",
-        "reason": "",
-        "startTime": "",
-        "source": "e_nexco_official_site",
-        "firstSeenTs": "2026-09-29T03:00:00.000Z",
-        "lastSeenTs": "2026-09-29T03:00:00.000Z"
-      }
-    ],
-    "rawCount": 4
-  },
-  {
     "ts": "2026-09-30T00:41:51+09:00",
     "closures": [],
     "rawCount": 2
@@ -46,6 +29,11 @@
         "lastSeenTs": "2026-09-30T03:00:00.000Z"
       }
     ],
+    "rawCount": 2
+  },
+  {
+    "ts": "2026-09-30T22:35:28+09:00",
+    "closures": [],
     "rawCount": 2
   }
 ]
