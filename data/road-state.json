@@ -1,24 +1,3 @@
 {
-  "active": {
-    "東北|湯殿山IC〜庄内あさひIC": {
-      "road": "東北",
-      "section": "湯殿山IC〜庄内あさひIC",
-      "direction": "上下線",
-      "reason": "",
-      "firstSeenTs": "2026-10-02T03:00:00.000Z",
-      "lastSeenTs": "2026-10-02T03:00:00.000Z",
-      "startTime": "",
-      "source": "e_nexco_official_site"
-    },
-    "常磐|南相馬IC〜山元IC": {
-      "road": "常磐",
-      "section": "南相馬IC〜山元IC",
-      "direction": "上下線",
-      "reason": "",
-      "firstSeenTs": "2026-10-02T03:00:00.000Z",
-      "lastSeenTs": "2026-10-02T03:00:00.000Z",
-      "startTime": "",
-      "source": "e_nexco_official_site"
-    }
-  }
+  "active": {}
 }

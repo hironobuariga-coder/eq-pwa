@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T08:23:34.269Z",
+  "generated": "2026-10-02T15:43:05.879Z",
   "periods": [
     {
       "road": "東北",
@@ -8,9 +8,9 @@
       "reason": "",
       "status": "通行止め",
       "start": "2026-10-02T03:00:00.000Z",
-      "end": null,
+      "end": "2026-10-02T03:00:00.000Z",
       "startJST": "10/2 12:00",
-      "endJST": null,
+      "endJST": "10/2 12:00",
       "startTimeJST": "",
       "source": "e_nexco_official_site",
       "snapshots": [
@@ -24,9 +24,9 @@
       "reason": "",
       "status": "通行止め",
       "start": "2026-10-02T03:00:00.000Z",
-      "end": null,
+      "end": "2026-10-02T03:00:00.000Z",
       "startJST": "10/2 12:00",
-      "endJST": null,
+      "endJST": "10/2 12:00",
       "startTimeJST": "",
       "source": "e_nexco_official_site",
       "snapshots": [
