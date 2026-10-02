@@ -1,10 +1,5 @@
 [
   {
-    "ts": "2026-10-01T11:01:59+09:00",
-    "closures": [],
-    "rawCount": 2
-  },
-  {
     "ts": "2026-10-01T17:45:29+09:00",
     "closures": [],
     "rawCount": 1
@@ -23,5 +18,33 @@
     "ts": "2026-10-02T10:35:43+09:00",
     "closures": [],
     "rawCount": 1
+  },
+  {
+    "ts": "2026-10-02T17:23:30+09:00",
+    "closures": [
+      {
+        "road": "東北",
+        "section": "湯殿山IC〜庄内あさひIC",
+        "direction": "上下線",
+        "status": "通行止め",
+        "reason": "",
+        "startTime": "",
+        "source": "e_nexco_official_site",
+        "firstSeenTs": "2026-10-02T03:00:00.000Z",
+        "lastSeenTs": "2026-10-02T03:00:00.000Z"
+      },
+      {
+        "road": "常磐",
+        "section": "南相馬IC〜山元IC",
+        "direction": "上下線",
+        "status": "通行止め",
+        "reason": "",
+        "startTime": "",
+        "source": "e_nexco_official_site",
+        "firstSeenTs": "2026-10-02T03:00:00.000Z",
+        "lastSeenTs": "2026-10-02T03:00:00.000Z"
+      }
+    ],
+    "rawCount": 2
   }
 ]
