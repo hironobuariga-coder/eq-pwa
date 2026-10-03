@@ -1,72 +1,72 @@
 {
-  "generated": "2026-10-03 07:28:44+09:00",
+  "generated": "2026-10-03 10:20:46+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "CHOI-WAN",
       "nameKana": "チョーイワン",
       "number": "2627",
-      "reportTime": "2026-10-03T06:45:00+09:00",
+      "reportTime": "2026-10-03T09:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-03T06:00:00+09:00",
-          "lat": 18.1,
-          "lon": 144.9,
+          "time": "2026-10-03T09:00:00+09:00",
+          "lat": 18.5,
+          "lon": 145.2,
           "class": "台風(TY)",
-          "pressureHpa": 970,
+          "pressureHpa": 965,
           "locationText": "マリアナ諸島",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-10-04T06:00:00+09:00",
-          "lat": 21.3,
-          "lon": 146.4,
+          "time": "2026-10-04T09:00:00+09:00",
+          "lat": 21.7,
+          "lon": 146.5,
           "class": "台風(TY)",
-          "pressureHpa": 945,
+          "pressureHpa": 935,
           "locationText": "小笠原近海",
           "forecastRadiusKm": 105
         },
         {
-          "timeLabel": "予報　４５時間後",
-          "time": "2026-10-05T03:00:00+09:00",
-          "lat": 24.1,
-          "lon": 146.3,
+          "timeLabel": "予報　４８時間後",
+          "time": "2026-10-05T09:00:00+09:00",
+          "lat": 24.7,
+          "lon": 145.8,
           "class": "台風(TY)",
           "pressureHpa": 925,
           "locationText": "小笠原近海",
           "forecastRadiusKm": 155
         },
         {
-          "timeLabel": "予報　６９時間後",
-          "time": "2026-10-06T03:00:00+09:00",
-          "lat": 28.1,
-          "lon": 144.8,
+          "timeLabel": "予報　７２時間後",
+          "time": "2026-10-06T09:00:00+09:00",
+          "lat": 29.5,
+          "lon": 144.7,
           "class": "台風(TY)",
-          "pressureHpa": 935,
+          "pressureHpa": 945,
           "locationText": "小笠原近海",
           "forecastRadiusKm": 220
         },
         {
-          "timeLabel": "予報　９３時間後",
-          "time": "2026-10-07T03:00:00+09:00",
-          "lat": 36.6,
-          "lon": 148.7,
+          "timeLabel": "予報　９６時間後",
+          "time": "2026-10-07T09:00:00+09:00",
+          "lat": 40,
+          "lon": 151.4,
           "class": "台風(TY)",
           "pressureHpa": 950,
           "locationText": "日本の東",
           "forecastRadiusKm": 280
         },
         {
-          "timeLabel": "予報　１１７時間後",
-          "time": "2026-10-08T03:00:00+09:00",
-          "lat": 49.4,
-          "lon": 165.9,
+          "timeLabel": "予報　１２０時間後",
+          "time": "2026-10-08T09:00:00+09:00",
+          "lat": 53.8,
+          "lon": 170.7,
           "class": "温帯低気圧(LOW)",
-          "pressureHpa": 964,
-          "locationText": "千島の東",
-          "forecastRadiusKm": 460
+          "pressureHpa": 970,
+          "locationText": "アリューシャン近海",
+          "forecastRadiusKm": 400
         }
       ]
     }
