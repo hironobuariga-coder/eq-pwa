@@ -1,37 +1,4 @@
 {
-  "generated": "2026-10-03T06:22:45.290Z",
-  "periods": [
-    {
-      "road": "東北",
-      "section": "湯殿山IC〜庄内あさひIC",
-      "direction": "上下線",
-      "reason": "",
-      "status": "通行止め",
-      "start": "2026-10-02T03:00:00.000Z",
-      "end": "2026-10-02T03:00:00.000Z",
-      "startJST": "10/2 12:00",
-      "endJST": "10/2 12:00",
-      "startTimeJST": "",
-      "source": "e_nexco_official_site",
-      "snapshots": [
-        "10/2 17:23"
-      ]
-    },
-    {
-      "road": "常磐",
-      "section": "南相馬IC〜山元IC",
-      "direction": "上下線",
-      "reason": "",
-      "status": "通行止め",
-      "start": "2026-10-02T03:00:00.000Z",
-      "end": "2026-10-02T03:00:00.000Z",
-      "startJST": "10/2 12:00",
-      "endJST": "10/2 12:00",
-      "startTimeJST": "",
-      "source": "e_nexco_official_site",
-      "snapshots": [
-        "10/2 17:23"
-      ]
-    }
-  ]
+  "generated": "2026-10-03T12:26:48.779Z",
+  "periods": []
 }
