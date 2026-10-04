@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-05 02:04:40+09:00",
+  "generated": "2026-10-05 05:07:12+09:00",
   "locations": {
     "higashi_rc": {
       "label": "東RC",
@@ -30,6 +30,11 @@
           "warnings": []
         }
       ]
+    },
+    "kumamoto_qct": {
+      "label": "熊Q",
+      "cityPrefix": "熊本市中央区",
+      "areas": []
     }
   }
 }
