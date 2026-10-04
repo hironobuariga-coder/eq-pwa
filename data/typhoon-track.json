@@ -1,62 +1,72 @@
 {
-  "generated": "2026-10-04 21:42:57+09:00",
+  "generated": "2026-10-05 02:04:40+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "CHOI-WAN",
-      "nameKana": "チョーイワン",
-      "number": "2627",
-      "reportTime": "2026-10-04T18:45:00+09:00",
+      "name": "",
+      "nameKana": "",
+      "number": "",
+      "reportTime": "2026-10-05T01:15:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-04T18:00:00+09:00",
-          "lat": 23.1,
-          "lon": 146.9,
-          "class": "台風(TY)",
-          "pressureHpa": 935,
-          "locationText": "小笠原近海",
+          "time": "2026-10-05T00:00:00+09:00",
+          "lat": 10.1,
+          "lon": 166.8,
+          "class": "熱帯低気圧(TD)",
+          "pressureHpa": 1002,
+          "locationText": "マーシャル諸島",
           "forecastRadiusKm": null
         },
         {
-          "timeLabel": "予報　１２時間後",
-          "time": "2026-10-05T06:00:00+09:00",
-          "lat": 24.8,
-          "lon": 146.6,
-          "class": "台風(TY)",
-          "pressureHpa": 925,
-          "locationText": "小笠原近海",
-          "forecastRadiusKm": 65
-        },
-        {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-10-05T18:00:00+09:00",
-          "lat": 26.7,
-          "lon": 145.9,
-          "class": "台風(TY)",
-          "pressureHpa": 925,
-          "locationText": "小笠原近海",
-          "forecastRadiusKm": 95
+          "time": "2026-10-06T00:00:00+09:00",
+          "lat": 11.9,
+          "lon": 166.9,
+          "class": "台風(TS)",
+          "pressureHpa": 1000,
+          "locationText": "マーシャル諸島",
+          "forecastRadiusKm": 110
         },
         {
           "timeLabel": "予報　４５時間後",
-          "time": "2026-10-06T15:00:00+09:00",
-          "lat": 31.5,
-          "lon": 146.1,
-          "class": "台風(TY)",
-          "pressureHpa": 950,
-          "locationText": "日本の東",
-          "forecastRadiusKm": 155
+          "time": "2026-10-06T21:00:00+09:00",
+          "lat": 14.2,
+          "lon": 165.4,
+          "class": "台風(TS)",
+          "pressureHpa": 994,
+          "locationText": "マーシャル諸島",
+          "forecastRadiusKm": 165
         },
         {
           "timeLabel": "予報　６９時間後",
-          "time": "2026-10-07T15:00:00+09:00",
-          "lat": 42.9,
-          "lon": 156.7,
-          "class": "温帯低気圧(LOW)",
-          "pressureHpa": 960,
-          "locationText": "日本のはるか東",
-          "forecastRadiusKm": 220
+          "time": "2026-10-07T21:00:00+09:00",
+          "lat": 16.6,
+          "lon": 163,
+          "class": "台風(TS)",
+          "pressureHpa": 994,
+          "locationText": "ウェーク島近海",
+          "forecastRadiusKm": 210
+        },
+        {
+          "timeLabel": "予報　９３時間後",
+          "time": "2026-10-08T21:00:00+09:00",
+          "lat": 18.4,
+          "lon": 158.2,
+          "class": "台風(STS)",
+          "pressureHpa": 990,
+          "locationText": "南鳥島近海",
+          "forecastRadiusKm": 280
+        },
+        {
+          "timeLabel": "予報　１１７時間後",
+          "time": "2026-10-09T21:00:00+09:00",
+          "lat": 20.4,
+          "lon": 151.8,
+          "class": "台風(STS)",
+          "pressureHpa": 975,
+          "locationText": "南鳥島近海",
+          "forecastRadiusKm": 370
         }
       ]
     }
