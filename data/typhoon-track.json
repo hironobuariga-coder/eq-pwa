@@ -1,72 +1,72 @@
 {
-  "generated": "2026-10-05 08:04:19+09:00",
+  "generated": "2026-10-05 10:54:12+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "",
-      "nameKana": "",
-      "number": "",
-      "reportTime": "2026-10-05T07:05:00+09:00",
+      "name": "KOGUMA",
+      "nameKana": "コグマ",
+      "number": "2629",
+      "reportTime": "2026-10-05T10:15:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-05T06:00:00+09:00",
-          "lat": 10.2,
-          "lon": 167.7,
-          "class": "熱帯低気圧(TD)",
-          "pressureHpa": 1002,
+          "time": "2026-10-05T09:00:00+09:00",
+          "lat": 10.4,
+          "lon": 168.1,
+          "class": "台風(TS)",
+          "pressureHpa": 1000,
           "locationText": "マーシャル諸島",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-10-06T06:00:00+09:00",
-          "lat": 12.4,
-          "lon": 167.4,
+          "time": "2026-10-06T09:00:00+09:00",
+          "lat": 13,
+          "lon": 167.5,
           "class": "台風(TS)",
           "pressureHpa": 1000,
           "locationText": "マーシャル諸島",
-          "forecastRadiusKm": 110
+          "forecastRadiusKm": 95
         },
         {
-          "timeLabel": "予報　４５時間後",
-          "time": "2026-10-07T03:00:00+09:00",
-          "lat": 15.2,
-          "lon": 165.7,
+          "timeLabel": "予報　４８時間後",
+          "time": "2026-10-07T09:00:00+09:00",
+          "lat": 15.7,
+          "lon": 165.6,
           "class": "台風(TS)",
           "pressureHpa": 994,
           "locationText": "ウェーク島近海",
-          "forecastRadiusKm": 165
+          "forecastRadiusKm": 155
         },
         {
-          "timeLabel": "予報　６９時間後",
-          "time": "2026-10-08T03:00:00+09:00",
-          "lat": 17.2,
-          "lon": 163,
+          "timeLabel": "予報　７２時間後",
+          "time": "2026-10-08T09:00:00+09:00",
+          "lat": 17.4,
+          "lon": 161.9,
           "class": "台風(STS)",
           "pressureHpa": 990,
           "locationText": "ウェーク島近海",
-          "forecastRadiusKm": 210
+          "forecastRadiusKm": 220
         },
         {
-          "timeLabel": "予報　９３時間後",
-          "time": "2026-10-09T03:00:00+09:00",
-          "lat": 19,
-          "lon": 157.9,
+          "timeLabel": "予報　９６時間後",
+          "time": "2026-10-09T09:00:00+09:00",
+          "lat": 18.8,
+          "lon": 156.5,
           "class": "台風(TY)",
-          "pressureHpa": 975,
+          "pressureHpa": 970,
           "locationText": "南鳥島近海",
           "forecastRadiusKm": 280
         },
         {
-          "timeLabel": "予報　１１７時間後",
-          "time": "2026-10-10T03:00:00+09:00",
-          "lat": 21.3,
-          "lon": 152.8,
+          "timeLabel": "予報　１２０時間後",
+          "time": "2026-10-10T09:00:00+09:00",
+          "lat": 20.5,
+          "lon": 151.1,
           "class": "台風(TY)",
-          "pressureHpa": 965,
+          "pressureHpa": 960,
           "locationText": "南鳥島近海",
-          "forecastRadiusKm": 370
+          "forecastRadiusKm": 330
         }
       ]
     }
