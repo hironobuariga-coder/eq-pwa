@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07 01:47:13+09:00",
+  "generated": "2026-10-07 06:17:21+09:00",
   "locations": {
     "higashi_rc": {
       "label": "東RC",
@@ -22,7 +22,12 @@
       "areas": [
         {
           "area": "稲沢市",
-          "warnings": []
+          "warnings": [
+            {
+              "name": "乾燥注意報",
+              "status": "継続"
+            }
+          ]
         }
       ]
     },
