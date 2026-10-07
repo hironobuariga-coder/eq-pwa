@@ -1,36 +1,32 @@
 {
-  "generated": "2026-10-08 04:42:49+09:00",
+  "generated": "2026-10-08 08:52:01+09:00",
   "source": "jma_xml",
-  "time": "2026/10/8 04:13 (JST)",
-  "epicenter": "千葉県北東部",
-  "depth": "約50km",
-  "magnitude": "M4.8",
-  "maxShindo": "4",
+  "time": "2026/10/8 07:14 (JST)",
+  "epicenter": "茨城県北部",
+  "depth": "約60km",
+  "magnitude": "M4.0",
+  "maxShindo": "3",
   "tsunami": "この地震による津波の心配はありません。",
   "shindoAreas": [
-    {
-      "level": "4",
-      "area": "千葉県"
-    },
     {
       "level": "3",
       "area": "茨城県"
     },
     {
+      "level": "2",
+      "area": "福島県・栃木県"
+    },
+    {
       "level": "1",
-      "area": "福島県・栃木県・群馬県・埼玉県・東京都・神奈川県・静岡県"
+      "area": "埼玉県・千葉県"
     }
   ],
   "alertLevel": "normal",
   "affectedPrefs": [
-    "千葉県",
     "茨城県",
     "福島県",
     "栃木県",
-    "群馬県",
     "埼玉県",
-    "東京都",
-    "神奈川県",
-    "静岡県"
+    "千葉県"
   ]
 }
