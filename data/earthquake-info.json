@@ -1,20 +1,36 @@
 {
-  "generated": "2026-10-02 22:11:16+09:00",
+  "generated": "2026-10-08 04:42:49+09:00",
   "source": "jma_xml",
-  "time": "2026/10/2 17:39 (JST)",
-  "epicenter": "熊本県熊本地方",
-  "depth": "",
-  "magnitude": "M3.1",
-  "maxShindo": "3",
+  "time": "2026/10/8 04:13 (JST)",
+  "epicenter": "千葉県北東部",
+  "depth": "約50km",
+  "magnitude": "M4.8",
+  "maxShindo": "4",
   "tsunami": "この地震による津波の心配はありません。",
   "shindoAreas": [
     {
+      "level": "4",
+      "area": "千葉県"
+    },
+    {
       "level": "3",
-      "area": "熊本県"
+      "area": "茨城県"
+    },
+    {
+      "level": "1",
+      "area": "福島県・栃木県・群馬県・埼玉県・東京都・神奈川県・静岡県"
     }
   ],
   "alertLevel": "normal",
   "affectedPrefs": [
-    "熊本県"
+    "千葉県",
+    "茨城県",
+    "福島県",
+    "栃木県",
+    "群馬県",
+    "埼玉県",
+    "東京都",
+    "神奈川県",
+    "静岡県"
   ]
 }
