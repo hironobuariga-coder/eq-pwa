@@ -1,81 +1,81 @@
 {
-  "generated": "2026-10-08 13:27:25+09:00",
+  "generated": "2026-10-08 20:32:46+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "KOGUMA",
       "nameKana": "コグマ",
       "number": "2629",
-      "reportTime": "2026-10-08T13:05:00+09:00",
+      "reportTime": "2026-10-08T19:10:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-08T12:00:00+09:00",
-          "lat": 17.1,
-          "lon": 160.8,
+          "time": "2026-10-08T18:00:00+09:00",
+          "lat": 17.5,
+          "lon": 159.6,
           "class": "台風(STS)",
-          "pressureHpa": 990,
-          "locationText": "ウェーク島近海",
+          "pressureHpa": 985,
+          "locationText": "南鳥島近海",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-10-09T00:00:00+09:00",
-          "lat": 17.8,
-          "lon": 158.5,
+          "time": "2026-10-09T06:00:00+09:00",
+          "lat": 18.3,
+          "lon": 157.2,
           "class": "台風(STS)",
-          "pressureHpa": 980,
+          "pressureHpa": 985,
           "locationText": "南鳥島近海",
-          "forecastRadiusKm": 75
+          "forecastRadiusKm": 65
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-10-09T12:00:00+09:00",
-          "lat": 18.7,
-          "lon": 156.2,
+          "time": "2026-10-09T18:00:00+09:00",
+          "lat": 19.5,
+          "lon": 154.9,
           "class": "台風(TY)",
-          "pressureHpa": 970,
+          "pressureHpa": 975,
           "locationText": "南鳥島近海",
-          "forecastRadiusKm": 105
+          "forecastRadiusKm": 95
         },
         {
           "timeLabel": "予報　４５時間後",
-          "time": "2026-10-10T09:00:00+09:00",
-          "lat": 20.6,
-          "lon": 152.1,
+          "time": "2026-10-10T15:00:00+09:00",
+          "lat": 21.7,
+          "lon": 150.9,
           "class": "台風(TY)",
-          "pressureHpa": 955,
+          "pressureHpa": 960,
           "locationText": "南鳥島近海",
-          "forecastRadiusKm": 185
+          "forecastRadiusKm": 155
         },
         {
           "timeLabel": "予報　６９時間後",
-          "time": "2026-10-11T09:00:00+09:00",
-          "lat": 23,
-          "lon": 148.5,
+          "time": "2026-10-11T15:00:00+09:00",
+          "lat": 24.1,
+          "lon": 148.1,
           "class": "台風(TY)",
-          "pressureHpa": 955,
+          "pressureHpa": 960,
           "locationText": "南鳥島近海",
-          "forecastRadiusKm": 260
+          "forecastRadiusKm": 220
         },
         {
           "timeLabel": "予報　９３時間後",
-          "time": "2026-10-12T09:00:00+09:00",
-          "lat": 25,
-          "lon": 146.1,
-          "class": "台風(TY)",
-          "pressureHpa": 965,
-          "locationText": "小笠原近海",
-          "forecastRadiusKm": 320
-        },
-        {
-          "timeLabel": "予報　１１７時間後",
-          "time": "2026-10-13T09:00:00+09:00",
-          "lat": 27.9,
-          "lon": 145.3,
+          "time": "2026-10-12T15:00:00+09:00",
+          "lat": 26.4,
+          "lon": 146.5,
           "class": "台風(TY)",
           "pressureHpa": 970,
           "locationText": "小笠原近海",
+          "forecastRadiusKm": 370
+        },
+        {
+          "timeLabel": "予報　１１７時間後",
+          "time": "2026-10-13T15:00:00+09:00",
+          "lat": 30.6,
+          "lon": 146.7,
+          "class": "台風(TY)",
+          "pressureHpa": 980,
+          "locationText": "日本の東",
           "forecastRadiusKm": 460
         }
       ]
