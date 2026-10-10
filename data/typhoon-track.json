@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-10 22:48:13+09:00",
+  "generated": "2026-10-11 03:04:03+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "KOGUMA",
       "nameKana": "コグマ",
       "number": "2629",
-      "reportTime": "2026-10-10T22:10:00+09:00",
+      "reportTime": "2026-10-11T01:05:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-10T21:00:00+09:00",
-          "lat": 22.9,
-          "lon": 149.6,
+          "time": "2026-10-11T00:00:00+09:00",
+          "lat": 23.3,
+          "lon": 149.3,
           "class": "台風(TY)",
           "pressureHpa": 950,
           "locationText": "南鳥島近海",
@@ -20,9 +20,9 @@
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-10-11T09:00:00+09:00",
-          "lat": 24.5,
-          "lon": 148.3,
+          "time": "2026-10-11T12:00:00+09:00",
+          "lat": 24.9,
+          "lon": 148.1,
           "class": "台風(TY)",
           "pressureHpa": 950,
           "locationText": "南鳥島近海",
@@ -30,16 +30,16 @@
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-10-11T21:00:00+09:00",
-          "lat": 26,
-          "lon": 147.5,
+          "time": "2026-10-12T00:00:00+09:00",
+          "lat": 26.4,
+          "lon": 147.3,
           "class": "台風(TY)",
           "pressureHpa": 955,
           "locationText": "小笠原近海",
           "forecastRadiusKm": 65
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-10-12T21:00:00+09:00",
           "lat": 30.4,
           "lon": 148.1,
@@ -49,7 +49,7 @@
           "forecastRadiusKm": 130
         },
         {
-          "timeLabel": "予報　７２時間後",
+          "timeLabel": "予報　６９時間後",
           "time": "2026-10-13T21:00:00+09:00",
           "lat": 36.3,
           "lon": 154.1,
@@ -59,7 +59,7 @@
           "forecastRadiusKm": 220
         },
         {
-          "timeLabel": "予報　９６時間後",
+          "timeLabel": "予報　９３時間後",
           "time": "2026-10-14T21:00:00+09:00",
           "lat": 42.2,
           "lon": 162.2,
