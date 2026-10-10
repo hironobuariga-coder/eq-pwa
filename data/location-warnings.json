@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-10 16:13:46+09:00",
+  "generated": "2026-10-10 22:48:13+09:00",
   "locations": {
     "nishi_rc": {
       "label": "西RC",
@@ -10,7 +10,7 @@
           "warnings": [
             {
               "name": "乾燥注意報",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         }
@@ -25,7 +25,7 @@
           "warnings": [
             {
               "name": "乾燥注意報",
-              "status": "継続"
+              "status": "解除"
             }
           ]
         }
