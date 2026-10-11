@@ -1,48 +1,48 @@
 {
-  "generated": "2026-10-12 03:01:09+09:00",
+  "generated": "2026-10-12 06:51:23+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "KOGUMA",
       "nameKana": "コグマ",
       "number": "2629",
-      "reportTime": "2026-10-12T00:45:00+09:00",
+      "reportTime": "2026-10-12T06:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-12T00:00:00+09:00",
-          "lat": 26.6,
+          "time": "2026-10-12T06:00:00+09:00",
+          "lat": 27.7,
           "lon": 147.3,
           "class": "台風(TY)",
-          "pressureHpa": 950,
+          "pressureHpa": 955,
           "locationText": "小笠原近海",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-10-12T12:00:00+09:00",
-          "lat": 28.9,
-          "lon": 147.3,
+          "time": "2026-10-12T18:00:00+09:00",
+          "lat": 30.3,
+          "lon": 147.9,
           "class": "台風(TY)",
-          "pressureHpa": 955,
-          "locationText": "小笠原近海",
-          "forecastRadiusKm": 45
+          "pressureHpa": 960,
+          "locationText": "日本の東",
+          "forecastRadiusKm": 55
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-10-13T00:00:00+09:00",
-          "lat": 31.7,
-          "lon": 148.7,
+          "time": "2026-10-13T06:00:00+09:00",
+          "lat": 33.1,
+          "lon": 150.2,
           "class": "台風(TY)",
-          "pressureHpa": 965,
+          "pressureHpa": 970,
           "locationText": "日本の東",
-          "forecastRadiusKm": 65
+          "forecastRadiusKm": 80
         },
         {
           "timeLabel": "予報　４５時間後",
-          "time": "2026-10-13T21:00:00+09:00",
-          "lat": 36.5,
-          "lon": 154.7,
+          "time": "2026-10-14T03:00:00+09:00",
+          "lat": 38,
+          "lon": 156.4,
           "class": "台風(STS)",
           "pressureHpa": 980,
           "locationText": "日本のはるか東",
@@ -50,9 +50,9 @@
         },
         {
           "timeLabel": "予報　６９時間後",
-          "time": "2026-10-14T21:00:00+09:00",
-          "lat": 41.4,
-          "lon": 162.2,
+          "time": "2026-10-15T03:00:00+09:00",
+          "lat": 42.4,
+          "lon": 164.5,
           "class": "温帯低気圧(LOW)",
           "pressureHpa": 984,
           "locationText": "日本のはるか東",

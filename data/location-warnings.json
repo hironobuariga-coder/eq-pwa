@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-12 03:01:09+09:00",
+  "generated": "2026-10-12 06:51:23+09:00",
   "locations": {
     "nishi_rc": {
       "label": "西RC",
@@ -30,6 +30,11 @@
           "warnings": []
         }
       ]
+    },
+    "kumamoto_qct": {
+      "label": "熊Q",
+      "cityPrefix": "熊本市中央区",
+      "areas": []
     }
   }
 }
