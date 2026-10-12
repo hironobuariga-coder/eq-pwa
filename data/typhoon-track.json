@@ -1,50 +1,50 @@
 {
-  "generated": "2026-10-12 16:02:42+09:00",
+  "generated": "2026-10-13 01:41:01+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "KOGUMA",
       "nameKana": "コグマ",
       "number": "2629",
-      "reportTime": "2026-10-12T15:45:00+09:00",
+      "reportTime": "2026-10-13T00:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-12T15:00:00+09:00",
-          "lat": 29.9,
-          "lon": 147.8,
+          "time": "2026-10-13T00:00:00+09:00",
+          "lat": 32,
+          "lon": 149.3,
           "class": "台風(TY)",
-          "pressureHpa": 955,
-          "locationText": "小笠原近海",
+          "pressureHpa": 965,
+          "locationText": "日本の東",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-10-13T03:00:00+09:00",
-          "lat": 32.9,
-          "lon": 149.9,
+          "time": "2026-10-13T12:00:00+09:00",
+          "lat": 34.8,
+          "lon": 151.9,
           "class": "台風(TY)",
-          "pressureHpa": 965,
+          "pressureHpa": 970,
           "locationText": "日本の東",
-          "forecastRadiusKm": 45
+          "forecastRadiusKm": 55
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-10-13T15:00:00+09:00",
-          "lat": 35.5,
-          "lon": 153.1,
-          "class": "台風(TY)",
-          "pressureHpa": 975,
-          "locationText": "日本の東",
-          "forecastRadiusKm": 65
+          "time": "2026-10-14T00:00:00+09:00",
+          "lat": 37.5,
+          "lon": 155.4,
+          "class": "台風(STS)",
+          "pressureHpa": 980,
+          "locationText": "日本のはるか東",
+          "forecastRadiusKm": 80
         },
         {
-          "timeLabel": "予報　４８時間後",
-          "time": "2026-10-14T15:00:00+09:00",
-          "lat": 40.7,
-          "lon": 160.4,
+          "timeLabel": "予報　４５時間後",
+          "time": "2026-10-14T21:00:00+09:00",
+          "lat": 41.7,
+          "lon": 162.4,
           "class": "温帯低気圧(LOW)",
-          "pressureHpa": 980,
+          "pressureHpa": 984,
           "locationText": "日本のはるか東",
           "forecastRadiusKm": 100
         }
