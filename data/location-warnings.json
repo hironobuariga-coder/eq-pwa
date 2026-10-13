@@ -1,6 +1,21 @@
 {
-  "generated": "2026-10-14 03:11:29+09:00",
+  "generated": "2026-10-14 07:51:28+09:00",
   "locations": {
+    "higashi_rc": {
+      "label": "東RC",
+      "cityPrefix": "川崎市",
+      "areas": [
+        {
+          "area": "川崎市",
+          "warnings": [
+            {
+              "name": "雷注意報",
+              "status": "継続"
+            }
+          ]
+        }
+      ]
+    },
     "naka_rc": {
       "label": "中RC",
       "cityPrefix": "稲沢市",
@@ -10,7 +25,7 @@
           "warnings": [
             {
               "name": "雷注意報",
-              "status": "発表"
+              "status": "継続"
             }
           ]
         }
@@ -60,7 +75,12 @@
       "areas": [
         {
           "area": "千代田区",
-          "warnings": []
+          "warnings": [
+            {
+              "name": "雷注意報",
+              "status": "継続"
+            }
+          ]
         }
       ]
     },

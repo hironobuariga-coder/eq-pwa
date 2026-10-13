@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-14 03:11:29+09:00",
+  "generated": "2026-10-14 07:51:28+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "KOGUMA",
       "nameKana": "コグマ",
       "number": "2629",
-      "reportTime": "2026-10-14T00:45:00+09:00",
+      "reportTime": "2026-10-14T06:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-14T00:00:00+09:00",
-          "lat": 37.3,
-          "lon": 156,
+          "time": "2026-10-14T06:00:00+09:00",
+          "lat": 38.7,
+          "lon": 158.2,
           "class": "台風(STS)",
           "pressureHpa": 985,
           "locationText": "日本のはるか東",
@@ -20,23 +20,23 @@
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-10-14T12:00:00+09:00",
-          "lat": 40.1,
-          "lon": 159.4,
-          "class": "台風(STS)",
-          "pressureHpa": 985,
+          "time": "2026-10-14T18:00:00+09:00",
+          "lat": 41,
+          "lon": 161.3,
+          "class": "温帯低気圧(LOW)",
+          "pressureHpa": 986,
           "locationText": "日本のはるか東",
-          "forecastRadiusKm": 45
+          "forecastRadiusKm": 55
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-10-15T00:00:00+09:00",
-          "lat": 41.9,
-          "lon": 163.8,
+          "time": "2026-10-15T06:00:00+09:00",
+          "lat": 42.3,
+          "lon": 166.4,
           "class": "温帯低気圧(LOW)",
           "pressureHpa": 988,
           "locationText": "日本のはるか東",
-          "forecastRadiusKm": 65
+          "forecastRadiusKm": 80
         }
       ]
     }
