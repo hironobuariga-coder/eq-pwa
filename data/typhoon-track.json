@@ -1,42 +1,72 @@
 {
-  "generated": "2026-10-14 07:51:28+09:00",
+  "generated": "2026-10-14 10:34:43+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "KOGUMA",
-      "nameKana": "コグマ",
-      "number": "2629",
-      "reportTime": "2026-10-14T06:45:00+09:00",
+      "name": "",
+      "nameKana": "",
+      "number": "",
+      "reportTime": "2026-10-14T10:30:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-14T06:00:00+09:00",
-          "lat": 38.7,
-          "lon": 158.2,
-          "class": "台風(STS)",
-          "pressureHpa": 985,
-          "locationText": "日本のはるか東",
+          "time": "2026-10-14T09:00:00+09:00",
+          "lat": 9.5,
+          "lon": 160,
+          "class": "熱帯低気圧(TD)",
+          "pressureHpa": 1004,
+          "locationText": "マーシャル諸島",
           "forecastRadiusKm": null
         },
         {
-          "timeLabel": "予報　１２時間後",
-          "time": "2026-10-14T18:00:00+09:00",
-          "lat": 41,
-          "lon": 161.3,
-          "class": "温帯低気圧(LOW)",
-          "pressureHpa": 986,
-          "locationText": "日本のはるか東",
-          "forecastRadiusKm": 55
+          "timeLabel": "予報　２４時間後",
+          "time": "2026-10-15T09:00:00+09:00",
+          "lat": 10.3,
+          "lon": 160,
+          "class": "台風(TS)",
+          "pressureHpa": 1002,
+          "locationText": "マーシャル諸島",
+          "forecastRadiusKm": 130
         },
         {
-          "timeLabel": "予報　２４時間後",
-          "time": "2026-10-15T06:00:00+09:00",
-          "lat": 42.3,
-          "lon": 166.4,
-          "class": "温帯低気圧(LOW)",
-          "pressureHpa": 988,
-          "locationText": "日本のはるか東",
-          "forecastRadiusKm": 80
+          "timeLabel": "予報　４８時間後",
+          "time": "2026-10-16T09:00:00+09:00",
+          "lat": 11.7,
+          "lon": 156.2,
+          "class": "台風(TS)",
+          "pressureHpa": 998,
+          "locationText": "マーシャル諸島",
+          "forecastRadiusKm": 200
+        },
+        {
+          "timeLabel": "予報　７２時間後",
+          "time": "2026-10-17T09:00:00+09:00",
+          "lat": 12.8,
+          "lon": 150.9,
+          "class": "台風(STS)",
+          "pressureHpa": 990,
+          "locationText": "トラック諸島近海",
+          "forecastRadiusKm": 260
+        },
+        {
+          "timeLabel": "予報　９６時間後",
+          "time": "2026-10-18T09:00:00+09:00",
+          "lat": 13.9,
+          "lon": 146.5,
+          "class": "台風(STS)",
+          "pressureHpa": 980,
+          "locationText": "マリアナ諸島",
+          "forecastRadiusKm": 330
+        },
+        {
+          "timeLabel": "予報　１２０時間後",
+          "time": "2026-10-19T09:00:00+09:00",
+          "lat": 14.8,
+          "lon": 141.9,
+          "class": "台風(TY)",
+          "pressureHpa": 970,
+          "locationText": "マリアナ諸島",
+          "forecastRadiusKm": 440
         }
       ]
     }
