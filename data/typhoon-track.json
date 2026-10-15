@@ -1,45 +1,45 @@
 {
-  "generated": "2026-10-15 10:50:37+09:00",
+  "generated": "2026-10-15 15:55:54+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "",
       "nameKana": "",
       "number": "",
-      "reportTime": "2026-10-15T10:20:00+09:00",
+      "reportTime": "2026-10-15T13:15:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-15T09:00:00+09:00",
-          "lat": 10.8,
-          "lon": 159.4,
+          "time": "2026-10-15T12:00:00+09:00",
+          "lat": 10.9,
+          "lon": 158.9,
           "class": "熱帯低気圧(TD)",
-          "pressureHpa": 1004,
+          "pressureHpa": 1002,
           "locationText": "マーシャル諸島",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-10-15T21:00:00+09:00",
+          "time": "2026-10-16T00:00:00+09:00",
           "lat": 11.3,
-          "lon": 158,
+          "lon": 157.2,
           "class": "台風(TS)",
-          "pressureHpa": 1002,
+          "pressureHpa": 1000,
           "locationText": "マーシャル諸島",
           "forecastRadiusKm": 85
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-10-16T09:00:00+09:00",
-          "lat": 11.8,
-          "lon": 155.5,
+          "time": "2026-10-16T12:00:00+09:00",
+          "lat": 11.9,
+          "lon": 154.6,
           "class": "台風(TS)",
           "pressureHpa": 1000,
-          "locationText": "マーシャル諸島",
+          "locationText": "トラック諸島近海",
           "forecastRadiusKm": 110
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-10-17T09:00:00+09:00",
           "lat": 12.7,
           "lon": 150.4,
@@ -49,7 +49,7 @@
           "forecastRadiusKm": 165
         },
         {
-          "timeLabel": "予報　７２時間後",
+          "timeLabel": "予報　６９時間後",
           "time": "2026-10-18T09:00:00+09:00",
           "lat": 13.9,
           "lon": 146,
@@ -59,7 +59,7 @@
           "forecastRadiusKm": 210
         },
         {
-          "timeLabel": "予報　９６時間後",
+          "timeLabel": "予報　９３時間後",
           "time": "2026-10-19T09:00:00+09:00",
           "lat": 15,
           "lon": 141.3,
@@ -69,7 +69,7 @@
           "forecastRadiusKm": 280
         },
         {
-          "timeLabel": "予報　１２０時間後",
+          "timeLabel": "予報　１１７時間後",
           "time": "2026-10-20T09:00:00+09:00",
           "lat": 16.9,
           "lon": 136.9,
