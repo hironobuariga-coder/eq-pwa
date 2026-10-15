@@ -1,82 +1,82 @@
 {
-  "generated": "2026-10-15 21:28:03+09:00",
+  "generated": "2026-10-16 02:16:20+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "CHAMPI",
       "nameKana": "チャンパー",
       "number": "2630",
-      "reportTime": "2026-10-15T18:50:00+09:00",
+      "reportTime": "2026-10-16T00:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-15T18:00:00+09:00",
+          "time": "2026-10-16T00:00:00+09:00",
           "lat": 11.3,
-          "lon": 157.9,
+          "lon": 156.5,
           "class": "台風(TS)",
-          "pressureHpa": 1000,
+          "pressureHpa": 998,
           "locationText": "マーシャル諸島",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-10-16T06:00:00+09:00",
-          "lat": 11.5,
-          "lon": 155.7,
-          "class": "台風(TS)",
-          "pressureHpa": 998,
-          "locationText": "マーシャル諸島",
-          "forecastRadiusKm": 65
-        },
-        {
-          "timeLabel": "予報　２４時間後",
-          "time": "2026-10-16T18:00:00+09:00",
-          "lat": 12.1,
-          "lon": 152.8,
+          "time": "2026-10-16T12:00:00+09:00",
+          "lat": 11.9,
+          "lon": 154.1,
           "class": "台風(TS)",
           "pressureHpa": 992,
           "locationText": "トラック諸島近海",
-          "forecastRadiusKm": 95
+          "forecastRadiusKm": 55
+        },
+        {
+          "timeLabel": "予報　２４時間後",
+          "time": "2026-10-17T00:00:00+09:00",
+          "lat": 12.2,
+          "lon": 151.2,
+          "class": "台風(STS)",
+          "pressureHpa": 990,
+          "locationText": "トラック諸島近海",
+          "forecastRadiusKm": 80
         },
         {
           "timeLabel": "予報　４５時間後",
-          "time": "2026-10-17T15:00:00+09:00",
-          "lat": 13,
-          "lon": 148.9,
-          "class": "台風(STS)",
-          "pressureHpa": 985,
+          "time": "2026-10-17T21:00:00+09:00",
+          "lat": 13.2,
+          "lon": 147.2,
+          "class": "台風(TY)",
+          "pressureHpa": 975,
           "locationText": "マリアナ諸島",
-          "forecastRadiusKm": 155
+          "forecastRadiusKm": 130
         },
         {
           "timeLabel": "予報　６９時間後",
-          "time": "2026-10-18T15:00:00+09:00",
-          "lat": 13.8,
-          "lon": 144.2,
+          "time": "2026-10-18T21:00:00+09:00",
+          "lat": 14,
+          "lon": 142.5,
           "class": "台風(TY)",
-          "pressureHpa": 970,
+          "pressureHpa": 965,
           "locationText": "マリアナ諸島",
-          "forecastRadiusKm": 220
+          "forecastRadiusKm": 185
         },
         {
           "timeLabel": "予報　９３時間後",
-          "time": "2026-10-19T15:00:00+09:00",
-          "lat": 15.3,
-          "lon": 140,
+          "time": "2026-10-19T21:00:00+09:00",
+          "lat": 15.6,
+          "lon": 138.2,
           "class": "台風(TY)",
-          "pressureHpa": 955,
-          "locationText": "マリアナ諸島",
-          "forecastRadiusKm": 280
+          "pressureHpa": 950,
+          "locationText": "フィリピンの東",
+          "forecastRadiusKm": 230
         },
         {
           "timeLabel": "予報　１１７時間後",
-          "time": "2026-10-20T15:00:00+09:00",
-          "lat": 17.5,
-          "lon": 135.7,
+          "time": "2026-10-20T21:00:00+09:00",
+          "lat": 17.8,
+          "lon": 133.6,
           "class": "台風(TY)",
           "pressureHpa": 940,
           "locationText": "フィリピンの東",
-          "forecastRadiusKm": 330
+          "forecastRadiusKm": 280
         }
       ]
     }
