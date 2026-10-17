@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-18 02:54:34+09:00",
+  "generated": "2026-10-18 05:05:14+09:00",
   "locations": {
     "naka_rc": {
       "label": "中RC",
@@ -11,6 +11,36 @@
             {
               "name": "乾燥注意報",
               "status": "解除"
+            }
+          ]
+        }
+      ]
+    },
+    "nishi_rc": {
+      "label": "西RC",
+      "cityPrefix": "三田市",
+      "areas": [
+        {
+          "area": "三田市",
+          "warnings": [
+            {
+              "name": "乾燥注意報",
+              "status": "継続"
+            }
+          ]
+        }
+      ]
+    },
+    "nishi2_rc": {
+      "label": "西第2RC",
+      "cityPrefix": "川西市",
+      "areas": [
+        {
+          "area": "川西市",
+          "warnings": [
+            {
+              "name": "乾燥注意報",
+              "status": "継続"
             }
           ]
         }
