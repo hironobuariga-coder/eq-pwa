@@ -1,45 +1,45 @@
 {
-  "generated": "2026-10-19 10:24:02+09:00",
+  "generated": "2026-10-19 15:31:01+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "CHAMPI",
       "nameKana": "チャンパー",
       "number": "2630",
-      "reportTime": "2026-10-19T09:45:00+09:00",
+      "reportTime": "2026-10-19T12:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-19T09:00:00+09:00",
-          "lat": 14,
-          "lon": 139.3,
+          "time": "2026-10-19T12:00:00+09:00",
+          "lat": 14.2,
+          "lon": 138.8,
           "class": "台風(TY)",
-          "pressureHpa": 950,
+          "pressureHpa": 945,
           "locationText": "フィリピンの東",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-10-19T21:00:00+09:00",
-          "lat": 15.4,
-          "lon": 137.5,
+          "time": "2026-10-20T00:00:00+09:00",
+          "lat": 15.7,
+          "lon": 137,
           "class": "台風(TY)",
-          "pressureHpa": 940,
+          "pressureHpa": 935,
           "locationText": "フィリピンの東",
           "forecastRadiusKm": 45
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-10-20T09:00:00+09:00",
-          "lat": 16.4,
-          "lon": 135.3,
+          "time": "2026-10-20T12:00:00+09:00",
+          "lat": 16.7,
+          "lon": 134.7,
           "class": "台風(TY)",
-          "pressureHpa": 935,
+          "pressureHpa": 920,
           "locationText": "フィリピンの東",
           "forecastRadiusKm": 65
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-10-21T09:00:00+09:00",
           "lat": 18.6,
           "lon": 130.2,
@@ -49,7 +49,7 @@
           "forecastRadiusKm": 100
         },
         {
-          "timeLabel": "予報　７２時間後",
+          "timeLabel": "予報　６９時間後",
           "time": "2026-10-22T09:00:00+09:00",
           "lat": 20.4,
           "lon": 126.7,
@@ -59,7 +59,7 @@
           "forecastRadiusKm": 150
         },
         {
-          "timeLabel": "予報　９６時間後",
+          "timeLabel": "予報　９３時間後",
           "time": "2026-10-23T09:00:00+09:00",
           "lat": 22,
           "lon": 124.3,
@@ -69,7 +69,7 @@
           "forecastRadiusKm": 185
         },
         {
-          "timeLabel": "予報　１２０時間後",
+          "timeLabel": "予報　１１７時間後",
           "time": "2026-10-24T09:00:00+09:00",
           "lat": 24.2,
           "lon": 120.8,
