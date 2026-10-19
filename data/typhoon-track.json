@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-19 22:53:50+09:00",
+  "generated": "2026-10-20 04:38:02+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "CHAMPI",
       "nameKana": "チャンパー",
       "number": "2630",
-      "reportTime": "2026-10-19T21:45:00+09:00",
+      "reportTime": "2026-10-20T03:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-19T21:00:00+09:00",
-          "lat": 14.8,
-          "lon": 137.7,
+          "time": "2026-10-20T03:00:00+09:00",
+          "lat": 15.4,
+          "lon": 136.7,
           "class": "台風(TY)",
           "pressureHpa": 935,
           "locationText": "フィリピンの東",
@@ -20,19 +20,19 @@
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-10-20T09:00:00+09:00",
-          "lat": 16.3,
-          "lon": 135.6,
+          "time": "2026-10-20T15:00:00+09:00",
+          "lat": 16.8,
+          "lon": 134.2,
           "class": "台風(TY)",
-          "pressureHpa": 935,
+          "pressureHpa": 925,
           "locationText": "フィリピンの東",
           "forecastRadiusKm": 45
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-10-20T21:00:00+09:00",
-          "lat": 17.3,
-          "lon": 132.9,
+          "time": "2026-10-21T03:00:00+09:00",
+          "lat": 17.9,
+          "lon": 131.4,
           "class": "台風(TY)",
           "pressureHpa": 925,
           "locationText": "フィリピンの東",
@@ -40,29 +40,29 @@
         },
         {
           "timeLabel": "予報　４８時間後",
-          "time": "2026-10-21T21:00:00+09:00",
-          "lat": 19.7,
-          "lon": 128.1,
+          "time": "2026-10-22T03:00:00+09:00",
+          "lat": 20.2,
+          "lon": 127.1,
           "class": "台風(TY)",
           "pressureHpa": 925,
-          "locationText": "フィリピンの東",
+          "locationText": "沖縄の南",
           "forecastRadiusKm": 100
         },
         {
           "timeLabel": "予報　７２時間後",
-          "time": "2026-10-22T21:00:00+09:00",
-          "lat": 21,
-          "lon": 125.4,
+          "time": "2026-10-23T03:00:00+09:00",
+          "lat": 21.7,
+          "lon": 124.9,
           "class": "台風(TY)",
-          "pressureHpa": 940,
+          "pressureHpa": 935,
           "locationText": "沖縄の南",
           "forecastRadiusKm": 150
         },
         {
           "timeLabel": "予報　９６時間後",
-          "time": "2026-10-23T21:00:00+09:00",
-          "lat": 23.3,
-          "lon": 122.2,
+          "time": "2026-10-24T03:00:00+09:00",
+          "lat": 23.9,
+          "lon": 122.1,
           "class": "台風(TY)",
           "pressureHpa": 950,
           "locationText": "沖縄の南",
@@ -70,13 +70,13 @@
         },
         {
           "timeLabel": "予報　１２０時間後",
-          "time": "2026-10-24T21:00:00+09:00",
-          "lat": 25.2,
-          "lon": 119.9,
+          "time": "2026-10-25T03:00:00+09:00",
+          "lat": 26.4,
+          "lon": 120.4,
           "class": "台風(STS)",
           "pressureHpa": 985,
-          "locationText": "台湾海峡",
-          "forecastRadiusKm": 330
+          "locationText": "東シナ海",
+          "forecastRadiusKm": 400
         }
       ]
     }
