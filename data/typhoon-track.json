@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-21 16:01:39+09:00",
+  "generated": "2026-10-21 21:52:51+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "CHAMPI",
       "nameKana": "チャンパー",
       "number": "2630",
-      "reportTime": "2026-10-21T15:45:00+09:00",
+      "reportTime": "2026-10-21T21:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-21T15:00:00+09:00",
-          "lat": 18.7,
-          "lon": 128.9,
+          "time": "2026-10-21T21:00:00+09:00",
+          "lat": 19.3,
+          "lon": 128,
           "class": "台風(TY)",
           "pressureHpa": 900,
           "locationText": "フィリピンの東",
@@ -20,62 +20,62 @@
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-10-22T03:00:00+09:00",
-          "lat": 19.8,
-          "lon": 127.1,
+          "time": "2026-10-22T09:00:00+09:00",
+          "lat": 20.3,
+          "lon": 126.1,
           "class": "台風(TY)",
-          "pressureHpa": 905,
-          "locationText": "フィリピンの東",
+          "pressureHpa": 915,
+          "locationText": "沖縄の南",
           "forecastRadiusKm": 45
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-10-22T15:00:00+09:00",
-          "lat": 20.7,
-          "lon": 125.7,
+          "time": "2026-10-22T21:00:00+09:00",
+          "lat": 21.1,
+          "lon": 124.8,
           "class": "台風(TY)",
-          "pressureHpa": 925,
+          "pressureHpa": 935,
           "locationText": "沖縄の南",
-          "forecastRadiusKm": 65
+          "forecastRadiusKm": 95
         },
         {
           "timeLabel": "予報　４８時間後",
-          "time": "2026-10-23T15:00:00+09:00",
-          "lat": 23.4,
-          "lon": 123.2,
+          "time": "2026-10-23T21:00:00+09:00",
+          "lat": 23.5,
+          "lon": 122,
           "class": "台風(TY)",
-          "pressureHpa": 950,
-          "locationText": "与那国島の南約120km",
-          "forecastRadiusKm": 155
+          "pressureHpa": 955,
+          "locationText": "与那国島の南西約150km",
+          "forecastRadiusKm": 210
         },
         {
           "timeLabel": "予報　７２時間後",
-          "time": "2026-10-24T15:00:00+09:00",
-          "lat": 26.5,
-          "lon": 122.4,
-          "class": "台風(TY)",
-          "pressureHpa": 975,
+          "time": "2026-10-24T21:00:00+09:00",
+          "lat": 27,
+          "lon": 122.7,
+          "class": "台風(STS)",
+          "pressureHpa": 980,
           "locationText": "東シナ海",
-          "forecastRadiusKm": 260
+          "forecastRadiusKm": 300
         },
         {
           "timeLabel": "予報　９６時間後",
-          "time": "2026-10-25T15:00:00+09:00",
-          "lat": 30.7,
-          "lon": 124.6,
-          "class": "台風(STS)",
-          "pressureHpa": 990,
+          "time": "2026-10-25T21:00:00+09:00",
+          "lat": 31.6,
+          "lon": 125.6,
+          "class": "台風(TS)",
+          "pressureHpa": 992,
           "locationText": "東シナ海",
           "forecastRadiusKm": 370
         },
         {
           "timeLabel": "予報　１２０時間後",
-          "time": "2026-10-26T15:00:00+09:00",
-          "lat": 35.2,
-          "lon": 130.2,
+          "time": "2026-10-26T21:00:00+09:00",
+          "lat": 36.6,
+          "lon": 133.5,
           "class": "温帯低気圧(LOW)",
-          "pressureHpa": 996,
-          "locationText": "対馬近海",
+          "pressureHpa": 1002,
+          "locationText": "日本海",
           "forecastRadiusKm": 460
         }
       ]
