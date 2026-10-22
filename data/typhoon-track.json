@@ -1,72 +1,32 @@
 {
-  "generated": "2026-10-22 18:35:57+09:00",
+  "generated": "2026-10-22 23:38:05+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "CHAMPI",
       "nameKana": "チャンパー",
       "number": "2630",
-      "reportTime": "2026-10-22T15:45:00+09:00",
+      "reportTime": "2026-10-22T22:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-22T15:00:00+09:00",
-          "lat": 20.8,
-          "lon": 125.4,
+          "time": "2026-10-22T22:00:00+09:00",
+          "lat": 21.3,
+          "lon": 124.8,
           "class": "台風(TY)",
-          "pressureHpa": 925,
+          "pressureHpa": 940,
           "locationText": "沖縄の南",
           "forecastRadiusKm": null
         },
         {
-          "timeLabel": "予報　１２時間後",
-          "time": "2026-10-23T03:00:00+09:00",
-          "lat": 21.9,
-          "lon": 124.4,
+          "timeLabel": "推定　１時間後",
+          "time": "2026-10-22T23:00:00+09:00",
+          "lat": 21.4,
+          "lon": 124.7,
           "class": "台風(TY)",
           "pressureHpa": 940,
           "locationText": "沖縄の南",
-          "forecastRadiusKm": 45
-        },
-        {
-          "timeLabel": "予報　２４時間後",
-          "time": "2026-10-23T15:00:00+09:00",
-          "lat": 23.8,
-          "lon": 123.2,
-          "class": "台風(TY)",
-          "pressureHpa": 950,
-          "locationText": "与那国島の南約80km",
-          "forecastRadiusKm": 80
-        },
-        {
-          "timeLabel": "予報　４８時間後",
-          "time": "2026-10-24T15:00:00+09:00",
-          "lat": 27,
-          "lon": 123.1,
-          "class": "台風(TY)",
-          "pressureHpa": 975,
-          "locationText": "与那国島の北約280km",
-          "forecastRadiusKm": 155
-        },
-        {
-          "timeLabel": "予報　７２時間後",
-          "time": "2026-10-25T15:00:00+09:00",
-          "lat": 31.7,
-          "lon": 126.4,
-          "class": "台風(TS)",
-          "pressureHpa": 992,
-          "locationText": "東シナ海",
-          "forecastRadiusKm": 260
-        },
-        {
-          "timeLabel": "予報　９６時間後",
-          "time": "2026-10-26T15:00:00+09:00",
-          "lat": 34.2,
-          "lon": 134,
-          "class": "温帯低気圧(LOW)",
-          "pressureHpa": 998,
-          "locationText": "西日本",
-          "forecastRadiusKm": 370
+          "forecastRadiusKm": null
         }
       ]
     }
