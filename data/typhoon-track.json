@@ -1,32 +1,142 @@
 {
-  "generated": "2026-10-22 23:38:05+09:00",
+  "generated": "2026-10-23 03:47:40+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "CHAMPI",
       "nameKana": "チャンパー",
       "number": "2630",
-      "reportTime": "2026-10-22T22:45:00+09:00",
+      "reportTime": "2026-10-23T03:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-22T22:00:00+09:00",
-          "lat": 21.3,
-          "lon": 124.8,
+          "time": "2026-10-23T03:00:00+09:00",
+          "lat": 21.9,
+          "lon": 124.3,
           "class": "台風(TY)",
-          "pressureHpa": 940,
+          "pressureHpa": 950,
           "locationText": "沖縄の南",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "推定　１時間後",
-          "time": "2026-10-22T23:00:00+09:00",
-          "lat": 21.4,
-          "lon": 124.7,
+          "time": "2026-10-23T04:00:00+09:00",
+          "lat": 22,
+          "lon": 124.2,
           "class": "台風(TY)",
-          "pressureHpa": 940,
+          "pressureHpa": 950,
           "locationText": "沖縄の南",
           "forecastRadiusKm": null
+        },
+        {
+          "timeLabel": "予報　３時間後",
+          "time": "2026-10-23T06:00:00+09:00",
+          "lat": 22.4,
+          "lon": 124,
+          "class": "台風(TY)",
+          "pressureHpa": 950,
+          "locationText": "",
+          "forecastRadiusKm": 30
+        },
+        {
+          "timeLabel": "予報　６時間後",
+          "time": "2026-10-23T09:00:00+09:00",
+          "lat": 22.9,
+          "lon": 123.8,
+          "class": "台風(TY)",
+          "pressureHpa": 955,
+          "locationText": "",
+          "forecastRadiusKm": 35
+        },
+        {
+          "timeLabel": "予報　９時間後",
+          "time": "2026-10-23T12:00:00+09:00",
+          "lat": 23.4,
+          "lon": 123.5,
+          "class": "台風(TY)",
+          "pressureHpa": 955,
+          "locationText": "",
+          "forecastRadiusKm": 40
+        },
+        {
+          "timeLabel": "予報　１２時間後",
+          "time": "2026-10-23T15:00:00+09:00",
+          "lat": 23.9,
+          "lon": 123.2,
+          "class": "台風(TY)",
+          "pressureHpa": 965,
+          "locationText": "与那国島の南南東約70km",
+          "forecastRadiusKm": 45
+        },
+        {
+          "timeLabel": "予報　１５時間後",
+          "time": "2026-10-23T18:00:00+09:00",
+          "lat": 24.2,
+          "lon": 122.8,
+          "class": "台風(TY)",
+          "pressureHpa": 965,
+          "locationText": "",
+          "forecastRadiusKm": 50
+        },
+        {
+          "timeLabel": "予報　１８時間後",
+          "time": "2026-10-23T21:00:00+09:00",
+          "lat": 24.4,
+          "lon": 122.6,
+          "class": "台風(TY)",
+          "pressureHpa": 970,
+          "locationText": "",
+          "forecastRadiusKm": 55
+        },
+        {
+          "timeLabel": "予報　２１時間後",
+          "time": "2026-10-24T00:00:00+09:00",
+          "lat": 24.5,
+          "lon": 122.5,
+          "class": "台風(TY)",
+          "pressureHpa": 970,
+          "locationText": "",
+          "forecastRadiusKm": 70
+        },
+        {
+          "timeLabel": "予報　２４時間後",
+          "time": "2026-10-24T03:00:00+09:00",
+          "lat": 24.6,
+          "lon": 122.6,
+          "class": "台風(TY)",
+          "pressureHpa": 975,
+          "locationText": "与那国島の西北西約40km",
+          "forecastRadiusKm": 80
+        },
+        {
+          "timeLabel": "予報　４８時間後",
+          "time": "2026-10-25T03:00:00+09:00",
+          "lat": 28.6,
+          "lon": 123.7,
+          "class": "台風(STS)",
+          "pressureHpa": 985,
+          "locationText": "東シナ海",
+          "forecastRadiusKm": 185
+        },
+        {
+          "timeLabel": "予報　７２時間後",
+          "time": "2026-10-26T03:00:00+09:00",
+          "lat": 32.5,
+          "lon": 129.1,
+          "class": "台風(TS)",
+          "pressureHpa": 996,
+          "locationText": "九州の西",
+          "forecastRadiusKm": 300
+        },
+        {
+          "timeLabel": "予報　９６時間後",
+          "time": "2026-10-27T03:00:00+09:00",
+          "lat": 34.4,
+          "lon": 138.9,
+          "class": "温帯低気圧(LOW)",
+          "pressureHpa": 998,
+          "locationText": "東海道沖",
+          "forecastRadiusKm": 370
         }
       ]
     }
