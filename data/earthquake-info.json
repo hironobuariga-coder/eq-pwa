@@ -1,32 +1,33 @@
 {
-  "generated": "2026-10-08 08:52:01+09:00",
+  "generated": "2026-10-24 04:03:04+09:00",
   "source": "jma_xml",
-  "time": "2026/10/8 07:14 (JST)",
-  "epicenter": "茨城県北部",
-  "depth": "約60km",
-  "magnitude": "M4.0",
+  "time": "2026/10/24 01:07 (JST)",
+  "epicenter": "岩手県沖",
+  "depth": "約20km",
+  "magnitude": "M5.0",
   "maxShindo": "3",
   "tsunami": "この地震による津波の心配はありません。",
   "shindoAreas": [
     {
       "level": "3",
-      "area": "茨城県"
+      "area": "岩手県"
     },
     {
       "level": "2",
-      "area": "福島県・栃木県"
+      "area": "青森県・宮城県"
     },
     {
       "level": "1",
-      "area": "埼玉県・千葉県"
+      "area": "北海道・秋田県・山形県"
     }
   ],
   "alertLevel": "normal",
   "affectedPrefs": [
-    "茨城県",
-    "福島県",
-    "栃木県",
-    "埼玉県",
-    "千葉県"
+    "岩手県",
+    "青森県",
+    "宮城県",
+    "北海道",
+    "秋田県",
+    "山形県"
   ]
 }
