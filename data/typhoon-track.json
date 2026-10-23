@@ -1,31 +1,31 @@
 {
-  "generated": "2026-10-23 09:25:26+09:00",
+  "generated": "2026-10-23 14:10:05+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "CHAMPI",
       "nameKana": "チャンパー",
       "number": "2630",
-      "reportTime": "2026-10-23T08:45:00+09:00",
+      "reportTime": "2026-10-23T13:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-23T08:00:00+09:00",
-          "lat": 22.4,
-          "lon": 123.9,
+          "time": "2026-10-23T13:00:00+09:00",
+          "lat": 23.4,
+          "lon": 123.5,
           "class": "台風(TY)",
           "pressureHpa": 955,
-          "locationText": "沖縄の南",
+          "locationText": "西表島の南南西約110km",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "推定　１時間後",
-          "time": "2026-10-23T09:00:00+09:00",
-          "lat": 22.5,
-          "lon": 123.8,
+          "time": "2026-10-23T14:00:00+09:00",
+          "lat": 23.5,
+          "lon": 123.4,
           "class": "台風(TY)",
           "pressureHpa": 955,
-          "locationText": "沖縄の南",
+          "locationText": "西表島の南南西約100km",
           "forecastRadiusKm": null
         }
       ]
