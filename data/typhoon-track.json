@@ -1,72 +1,32 @@
 {
-  "generated": "2026-10-24 07:03:40+09:00",
+  "generated": "2026-10-24 09:34:56+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "IN-FA",
-      "nameKana": "インファ",
-      "number": "2631",
-      "reportTime": "2026-10-24T07:05:00+09:00",
+      "name": "CHAMPI",
+      "nameKana": "チャンパー",
+      "number": "2630",
+      "reportTime": "2026-10-24T08:40:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-24T06:00:00+09:00",
-          "lat": 10.5,
-          "lon": 166.9,
-          "class": "台風(TS)",
-          "pressureHpa": 1002,
-          "locationText": "マーシャル諸島",
+          "time": "2026-10-24T08:00:00+09:00",
+          "lat": 24.9,
+          "lon": 122.9,
+          "class": "台風(TY)",
+          "pressureHpa": 975,
+          "locationText": "与那国島の北約50km",
           "forecastRadiusKm": null
         },
         {
-          "timeLabel": "予報　２４時間後",
-          "time": "2026-10-25T06:00:00+09:00",
-          "lat": 11.8,
-          "lon": 166.8,
-          "class": "台風(TS)",
-          "pressureHpa": 994,
-          "locationText": "マーシャル諸島",
-          "forecastRadiusKm": 80
-        },
-        {
-          "timeLabel": "予報　４５時間後",
-          "time": "2026-10-26T03:00:00+09:00",
-          "lat": 14,
-          "lon": 166.2,
-          "class": "台風(STS)",
-          "pressureHpa": 985,
-          "locationText": "ウェーク島近海",
-          "forecastRadiusKm": 155
-        },
-        {
-          "timeLabel": "予報　６９時間後",
-          "time": "2026-10-27T03:00:00+09:00",
-          "lat": 15.4,
-          "lon": 167.8,
+          "timeLabel": "推定　１時間後",
+          "time": "2026-10-24T09:00:00+09:00",
+          "lat": 24.9,
+          "lon": 123,
           "class": "台風(TY)",
-          "pressureHpa": 970,
-          "locationText": "ウェーク島近海",
-          "forecastRadiusKm": 260
-        },
-        {
-          "timeLabel": "予報　９３時間後",
-          "time": "2026-10-28T03:00:00+09:00",
-          "lat": 15.4,
-          "lon": 168.2,
-          "class": "台風(TY)",
-          "pressureHpa": 960,
-          "locationText": "ウェーク島近海",
-          "forecastRadiusKm": 370
-        },
-        {
-          "timeLabel": "予報　１１７時間後",
-          "time": "2026-10-29T03:00:00+09:00",
-          "lat": 16.3,
-          "lon": 164.2,
-          "class": "台風(TY)",
-          "pressureHpa": 955,
-          "locationText": "ウェーク島近海",
-          "forecastRadiusKm": 460
+          "pressureHpa": 975,
+          "locationText": "与那国島の北約40km",
+          "forecastRadiusKm": null
         }
       ]
     }
