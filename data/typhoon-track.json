@@ -1,72 +1,42 @@
 {
-  "generated": "2026-10-25 10:43:36+09:00",
+  "generated": "2026-10-25 15:56:44+09:00",
   "active": true,
   "typhoons": [
     {
-      "name": "IN-FA",
-      "nameKana": "インファ",
-      "number": "2631",
-      "reportTime": "2026-10-25T10:05:00+09:00",
+      "name": "CHAMPI",
+      "nameKana": "チャンパー",
+      "number": "2630",
+      "reportTime": "2026-10-25T15:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-25T09:00:00+09:00",
-          "lat": 11.6,
-          "lon": 165.2,
-          "class": "台風(STS)",
-          "pressureHpa": 994,
-          "locationText": "マーシャル諸島",
+          "time": "2026-10-25T15:00:00+09:00",
+          "lat": 30,
+          "lon": 125.4,
+          "class": "台風(TS)",
+          "pressureHpa": 996,
+          "locationText": "東シナ海",
           "forecastRadiusKm": null
         },
         {
+          "timeLabel": "予報　１２時間後",
+          "time": "2026-10-26T03:00:00+09:00",
+          "lat": 31.2,
+          "lon": 127.6,
+          "class": "温帯低気圧(LOW)",
+          "pressureHpa": 1002,
+          "locationText": "九州の西",
+          "forecastRadiusKm": 65
+        },
+        {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-10-26T09:00:00+09:00",
-          "lat": 13.8,
-          "lon": 164.2,
-          "class": "台風(TY)",
-          "pressureHpa": 980,
-          "locationText": "マーシャル諸島",
-          "forecastRadiusKm": 105
-        },
-        {
-          "timeLabel": "予報　４８時間後",
-          "time": "2026-10-27T09:00:00+09:00",
-          "lat": 14.4,
-          "lon": 164.6,
-          "class": "台風(TY)",
-          "pressureHpa": 970,
-          "locationText": "マーシャル諸島",
-          "forecastRadiusKm": 210
-        },
-        {
-          "timeLabel": "予報　７２時間後",
-          "time": "2026-10-28T09:00:00+09:00",
-          "lat": 14.3,
-          "lon": 163,
-          "class": "台風(TY)",
-          "pressureHpa": 960,
-          "locationText": "マーシャル諸島",
-          "forecastRadiusKm": 300
-        },
-        {
-          "timeLabel": "予報　９６時間後",
-          "time": "2026-10-29T09:00:00+09:00",
-          "lat": 15.1,
-          "lon": 157.9,
-          "class": "台風(TY)",
-          "pressureHpa": 955,
-          "locationText": "南鳥島近海",
-          "forecastRadiusKm": 370
-        },
-        {
-          "timeLabel": "予報　１２０時間後",
-          "time": "2026-10-30T09:00:00+09:00",
-          "lat": 16.7,
-          "lon": 150.4,
-          "class": "台風(TY)",
-          "pressureHpa": 950,
-          "locationText": "南鳥島近海",
-          "forecastRadiusKm": 460
+          "time": "2026-10-26T15:00:00+09:00",
+          "lat": 31.7,
+          "lon": 130.1,
+          "class": "温帯低気圧(LOW)",
+          "pressureHpa": 1006,
+          "locationText": "枕崎市の北北西約50km",
+          "forecastRadiusKm": 95
         }
       ]
     }
