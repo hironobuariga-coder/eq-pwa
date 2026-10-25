@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-26 04:17:38+09:00",
+  "generated": "2026-10-26 06:53:06+09:00",
   "locations": {
     "higashi_rc": {
       "label": "東RC",
@@ -17,12 +17,7 @@
       "areas": [
         {
           "area": "稲沢市",
-          "warnings": [
-            {
-              "name": "雷注意報",
-              "status": "継続"
-            }
-          ]
+          "warnings": []
         }
       ]
     },
@@ -35,6 +30,10 @@
           "warnings": [
             {
               "name": "雷注意報",
+              "status": "継続"
+            },
+            {
+              "name": "強風注意報",
               "status": "継続"
             }
           ]
@@ -50,6 +49,10 @@
           "warnings": [
             {
               "name": "雷注意報",
+              "status": "継続"
+            },
+            {
+              "name": "強風注意報",
               "status": "継続"
             }
           ]
