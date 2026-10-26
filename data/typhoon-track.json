@@ -1,17 +1,17 @@
 {
-  "generated": "2026-10-26 23:10:26+09:00",
+  "generated": "2026-10-27 04:58:23+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "IN-FA",
       "nameKana": "インファ",
       "number": "2631",
-      "reportTime": "2026-10-26T21:45:00+09:00",
+      "reportTime": "2026-10-27T03:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-26T21:00:00+09:00",
-          "lat": 14.1,
+          "time": "2026-10-27T03:00:00+09:00",
+          "lat": 14.2,
           "lon": 162.7,
           "class": "台風(TY)",
           "pressureHpa": 965,
@@ -20,9 +20,9 @@
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-10-27T21:00:00+09:00",
-          "lat": 14.3,
-          "lon": 161.6,
+          "time": "2026-10-28T03:00:00+09:00",
+          "lat": 14.5,
+          "lon": 160.7,
           "class": "台風(TY)",
           "pressureHpa": 950,
           "locationText": "マーシャル諸島",
@@ -30,43 +30,43 @@
         },
         {
           "timeLabel": "予報　４８時間後",
-          "time": "2026-10-28T21:00:00+09:00",
-          "lat": 14.9,
-          "lon": 157.8,
-          "class": "台風(TY)",
-          "pressureHpa": 950,
-          "locationText": "マーシャル諸島",
-          "forecastRadiusKm": 155
-        },
-        {
-          "timeLabel": "予報　７２時間後",
-          "time": "2026-10-29T21:00:00+09:00",
-          "lat": 15.9,
-          "lon": 151.3,
+          "time": "2026-10-29T03:00:00+09:00",
+          "lat": 15.2,
+          "lon": 156.3,
           "class": "台風(TY)",
           "pressureHpa": 950,
           "locationText": "南鳥島近海",
-          "forecastRadiusKm": 185
+          "forecastRadiusKm": 130
         },
         {
-          "timeLabel": "予報　９６時間後",
-          "time": "2026-10-30T21:00:00+09:00",
-          "lat": 18.4,
-          "lon": 144.4,
+          "timeLabel": "予報　７２時間後",
+          "time": "2026-10-30T03:00:00+09:00",
+          "lat": 16.4,
+          "lon": 149.3,
           "class": "台風(TY)",
           "pressureHpa": 950,
           "locationText": "マリアナ諸島",
-          "forecastRadiusKm": 230
+          "forecastRadiusKm": 150
+        },
+        {
+          "timeLabel": "予報　９６時間後",
+          "time": "2026-10-31T03:00:00+09:00",
+          "lat": 19.3,
+          "lon": 143,
+          "class": "台風(TY)",
+          "pressureHpa": 950,
+          "locationText": "マリアナ諸島",
+          "forecastRadiusKm": 185
         },
         {
           "timeLabel": "予報　１２０時間後",
-          "time": "2026-10-31T21:00:00+09:00",
-          "lat": 21.1,
-          "lon": 141.2,
+          "time": "2026-11-01T03:00:00+09:00",
+          "lat": 21.2,
+          "lon": 140.6,
           "class": "台風(TY)",
           "pressureHpa": 950,
           "locationText": "小笠原近海",
-          "forecastRadiusKm": 280
+          "forecastRadiusKm": 220
         }
       ]
     }
