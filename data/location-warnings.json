@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-29 00:29:50+09:00",
+  "generated": "2026-10-29 05:29:49+09:00",
   "locations": {
     "higashi_rc": {
       "label": "東RC",
@@ -41,20 +41,10 @@
         }
       ]
     },
-    "kudanshita": {
-      "label": "九段下オフィス",
-      "cityPrefix": "千代田区",
-      "areas": [
-        {
-          "area": "千代田区",
-          "warnings": [
-            {
-              "name": "強風注意報",
-              "status": "解除"
-            }
-          ]
-        }
-      ]
+    "kumamoto_qct": {
+      "label": "熊Q",
+      "cityPrefix": "熊本市中央区",
+      "areas": []
     }
   }
 }
