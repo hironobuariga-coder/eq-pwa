@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-29 21:48:24+09:00",
+  "generated": "2026-10-30 03:40:27+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "IN-FA",
       "nameKana": "インファ",
       "number": "2631",
-      "reportTime": "2026-10-29T21:45:00+09:00",
+      "reportTime": "2026-10-30T00:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-10-29T21:00:00+09:00",
-          "lat": 16.6,
-          "lon": 151.3,
+          "time": "2026-10-30T00:00:00+09:00",
+          "lat": 16.9,
+          "lon": 150.4,
           "class": "台風(TY)",
           "pressureHpa": 940,
           "locationText": "南鳥島近海",
@@ -20,9 +20,9 @@
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-10-30T09:00:00+09:00",
-          "lat": 17.6,
-          "lon": 148.1,
+          "time": "2026-10-30T12:00:00+09:00",
+          "lat": 18.1,
+          "lon": 147.1,
           "class": "台風(TY)",
           "pressureHpa": 940,
           "locationText": "マリアナ諸島",
@@ -30,16 +30,16 @@
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-10-30T21:00:00+09:00",
-          "lat": 19.3,
-          "lon": 145,
+          "time": "2026-10-31T00:00:00+09:00",
+          "lat": 19.8,
+          "lon": 144.2,
           "class": "台風(TY)",
           "pressureHpa": 940,
           "locationText": "マリアナ諸島",
           "forecastRadiusKm": 65
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-10-31T21:00:00+09:00",
           "lat": 22.4,
           "lon": 143.2,
@@ -49,7 +49,7 @@
           "forecastRadiusKm": 100
         },
         {
-          "timeLabel": "予報　７２時間後",
+          "timeLabel": "予報　６９時間後",
           "time": "2026-11-01T21:00:00+09:00",
           "lat": 21.9,
           "lon": 142.4,
@@ -59,7 +59,7 @@
           "forecastRadiusKm": 185
         },
         {
-          "timeLabel": "予報　９６時間後",
+          "timeLabel": "予報　９３時間後",
           "time": "2026-11-02T21:00:00+09:00",
           "lat": 21.4,
           "lon": 138.4,
@@ -69,7 +69,7 @@
           "forecastRadiusKm": 230
         },
         {
-          "timeLabel": "予報　１２０時間後",
+          "timeLabel": "予報　１１７時間後",
           "time": "2026-11-03T21:00:00+09:00",
           "lat": 21.7,
           "lon": 135.7,
