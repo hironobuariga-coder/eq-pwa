@@ -1,16 +1,6 @@
 {
-  "generated": "2026-10-29 09:17:52+09:00",
+  "generated": "2026-10-29 14:59:47+09:00",
   "locations": {
-    "higashi_rc": {
-      "label": "東RC",
-      "cityPrefix": "川崎市",
-      "areas": [
-        {
-          "area": "川崎市",
-          "warnings": []
-        }
-      ]
-    },
     "nishi_rc": {
       "label": "西RC",
       "cityPrefix": "三田市",
