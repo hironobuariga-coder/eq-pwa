@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-30T08:30:34.712Z",
+  "generated": "2026-10-30T15:49:48.207Z",
   "periods": [
     {
       "road": "常磐",
@@ -8,9 +8,9 @@
       "reason": "",
       "status": "通行止め",
       "start": "2026-10-30T03:00:00.000Z",
-      "end": null,
+      "end": "2026-10-30T03:00:00.000Z",
       "startJST": "10/30 12:00",
-      "endJST": null,
+      "endJST": "10/30 12:00",
       "startTimeJST": "",
       "source": "e_nexco_official_site",
       "snapshots": [
