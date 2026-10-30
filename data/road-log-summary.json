@@ -1,4 +1,21 @@
 {
-  "generated": "2026-10-30T01:52:21.219Z",
-  "periods": []
+  "generated": "2026-10-30T08:30:34.712Z",
+  "periods": [
+    {
+      "road": "常磐",
+      "section": "広野IC〜南相馬IC",
+      "direction": "上下線",
+      "reason": "",
+      "status": "通行止め",
+      "start": "2026-10-30T03:00:00.000Z",
+      "end": null,
+      "startJST": "10/30 12:00",
+      "endJST": null,
+      "startTimeJST": "",
+      "source": "e_nexco_official_site",
+      "snapshots": [
+        "10/30 17:30"
+      ]
+    }
+  ]
 }

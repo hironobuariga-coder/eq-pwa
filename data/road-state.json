@@ -1,3 +1,14 @@
 {
-  "active": {}
+  "active": {
+    "常磐|広野IC〜南相馬IC": {
+      "road": "常磐",
+      "section": "広野IC〜南相馬IC",
+      "direction": "上下線",
+      "reason": "",
+      "firstSeenTs": "2026-10-30T03:00:00.000Z",
+      "lastSeenTs": "2026-10-30T03:00:00.000Z",
+      "startTime": "",
+      "source": "e_nexco_official_site"
+    }
+  }
 }
