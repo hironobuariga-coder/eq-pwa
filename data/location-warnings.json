@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-31 17:56:42+09:00",
+  "generated": "2026-11-01 00:08:24+09:00",
   "locations": {
     "naka_rc": {
       "label": "中RC",
@@ -7,26 +7,6 @@
       "areas": [
         {
           "area": "稲沢市",
-          "warnings": []
-        }
-      ]
-    },
-    "nishi_rc": {
-      "label": "西RC",
-      "cityPrefix": "三田市",
-      "areas": [
-        {
-          "area": "三田市",
-          "warnings": []
-        }
-      ]
-    },
-    "nishi2_rc": {
-      "label": "西第2RC",
-      "cityPrefix": "川西市",
-      "areas": [
-        {
-          "area": "川西市",
           "warnings": []
         }
       ]
