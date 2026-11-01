@@ -1,28 +1,28 @@
 {
-  "generated": "2026-11-01 16:53:03+09:00",
+  "generated": "2026-11-01 23:43:03+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "IN-FA",
       "nameKana": "インファ",
       "number": "2631",
-      "reportTime": "2026-11-01T15:45:00+09:00",
+      "reportTime": "2026-11-01T21:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-11-01T15:00:00+09:00",
-          "lat": 22.4,
-          "lon": 144.2,
+          "time": "2026-11-01T21:00:00+09:00",
+          "lat": 22,
+          "lon": 143.7,
           "class": "台風(TY)",
-          "pressureHpa": 950,
+          "pressureHpa": 955,
           "locationText": "小笠原近海",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-11-02T15:00:00+09:00",
-          "lat": 22.6,
-          "lon": 141.1,
+          "time": "2026-11-02T21:00:00+09:00",
+          "lat": 22.8,
+          "lon": 140.4,
           "class": "台風(TY)",
           "pressureHpa": 955,
           "locationText": "小笠原近海",
@@ -30,42 +30,42 @@
         },
         {
           "timeLabel": "予報　４８時間後",
-          "time": "2026-11-03T15:00:00+09:00",
+          "time": "2026-11-03T21:00:00+09:00",
           "lat": 23.4,
-          "lon": 139.4,
+          "lon": 138.9,
           "class": "台風(TY)",
-          "pressureHpa": 955,
+          "pressureHpa": 950,
           "locationText": "日本の南",
           "forecastRadiusKm": 100
         },
         {
           "timeLabel": "予報　７２時間後",
-          "time": "2026-11-04T15:00:00+09:00",
-          "lat": 25.1,
-          "lon": 138.9,
+          "time": "2026-11-04T21:00:00+09:00",
+          "lat": 25.4,
+          "lon": 138.6,
           "class": "台風(TY)",
-          "pressureHpa": 950,
+          "pressureHpa": 955,
           "locationText": "日本の南",
           "forecastRadiusKm": 150
         },
         {
           "timeLabel": "予報　９６時間後",
-          "time": "2026-11-05T15:00:00+09:00",
-          "lat": 28.6,
-          "lon": 140.9,
+          "time": "2026-11-05T21:00:00+09:00",
+          "lat": 29.7,
+          "lon": 142,
           "class": "台風(TY)",
-          "pressureHpa": 965,
+          "pressureHpa": 970,
           "locationText": "小笠原近海",
           "forecastRadiusKm": 280
         },
         {
           "timeLabel": "予報　１２０時間後",
-          "time": "2026-11-06T15:00:00+09:00",
-          "lat": 33.7,
-          "lon": 147.5,
+          "time": "2026-11-06T21:00:00+09:00",
+          "lat": 39.8,
+          "lon": 156.7,
           "class": "台風(STS)",
           "pressureHpa": 980,
-          "locationText": "日本の東",
+          "locationText": "日本のはるか東",
           "forecastRadiusKm": 400
         }
       ]

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-01 16:53:03+09:00",
+  "generated": "2026-11-01 23:43:03+09:00",
   "locations": {
     "higashi_rc": {
       "label": "東RC",
@@ -27,7 +27,12 @@
       "areas": [
         {
           "area": "三田市",
-          "warnings": []
+          "warnings": [
+            {
+              "name": "強風注意報",
+              "status": "継続"
+            }
+          ]
         }
       ]
     },
@@ -37,7 +42,12 @@
       "areas": [
         {
           "area": "川西市",
-          "warnings": []
+          "warnings": [
+            {
+              "name": "強風注意報",
+              "status": "継続"
+            }
+          ]
         }
       ]
     },
