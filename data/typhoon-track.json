@@ -1,62 +1,52 @@
 {
-  "generated": "2026-11-03 17:39:09+09:00",
+  "generated": "2026-11-04 01:32:53+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "IN-FA",
       "nameKana": "インファ",
       "number": "2631",
-      "reportTime": "2026-11-03T15:45:00+09:00",
+      "reportTime": "2026-11-04T00:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-11-03T15:00:00+09:00",
-          "lat": 23.1,
-          "lon": 138.9,
-          "class": "台風(STS)",
-          "pressureHpa": 975,
+          "time": "2026-11-04T00:00:00+09:00",
+          "lat": 23.5,
+          "lon": 138.8,
+          "class": "台風(TY)",
+          "pressureHpa": 970,
           "locationText": "日本の南",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-11-04T15:00:00+09:00",
-          "lat": 25.1,
-          "lon": 138.3,
-          "class": "台風(STS)",
-          "pressureHpa": 975,
+          "time": "2026-11-05T00:00:00+09:00",
+          "lat": 26.3,
+          "lon": 138.5,
+          "class": "台風(TY)",
+          "pressureHpa": 970,
           "locationText": "日本の南",
           "forecastRadiusKm": 65
         },
         {
-          "timeLabel": "予報　４８時間後",
-          "time": "2026-11-05T15:00:00+09:00",
-          "lat": 29.6,
-          "lon": 140.8,
+          "timeLabel": "予報　４５時間後",
+          "time": "2026-11-05T21:00:00+09:00",
+          "lat": 31.2,
+          "lon": 142.7,
           "class": "台風(STS)",
           "pressureHpa": 975,
-          "locationText": "小笠原近海",
+          "locationText": "日本の東",
           "forecastRadiusKm": 100
         },
         {
-          "timeLabel": "予報　７２時間後",
-          "time": "2026-11-06T15:00:00+09:00",
-          "lat": 40.5,
-          "lon": 155.6,
-          "class": "台風(TY)",
+          "timeLabel": "予報　６９時間後",
+          "time": "2026-11-06T21:00:00+09:00",
+          "lat": 43.7,
+          "lon": 161.1,
+          "class": "温帯低気圧(LOW)",
           "pressureHpa": 970,
           "locationText": "日本のはるか東",
-          "forecastRadiusKm": 220
-        },
-        {
-          "timeLabel": "予報　９６時間後",
-          "time": "2026-11-07T15:00:00+09:00",
-          "lat": 47.9,
-          "lon": 173.9,
-          "class": "温帯低気圧(LOW)",
-          "pressureHpa": 974,
-          "locationText": "アリューシャンの南",
-          "forecastRadiusKm": 370
+          "forecastRadiusKm": 260
         }
       ]
     }
