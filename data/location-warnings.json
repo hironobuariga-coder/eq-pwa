@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-03 10:47:21+09:00",
+  "generated": "2026-11-03 17:39:09+09:00",
   "locations": {
     "naka_rc": {
       "label": "中RC",
@@ -52,12 +52,7 @@
       "areas": [
         {
           "area": "千代田区",
-          "warnings": [
-            {
-              "name": "濃霧注意報",
-              "status": "解除"
-            }
-          ]
+          "warnings": []
         }
       ]
     },
