@@ -1,17 +1,17 @@
 {
-  "generated": "2026-11-04 18:01:57+09:00",
+  "generated": "2026-11-05 02:08:49+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "IN-FA",
       "nameKana": "インファ",
       "number": "2631",
-      "reportTime": "2026-11-04T15:45:00+09:00",
+      "reportTime": "2026-11-05T00:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-11-04T15:00:00+09:00",
-          "lat": 24.9,
+          "time": "2026-11-05T00:00:00+09:00",
+          "lat": 26.2,
           "lon": 138.6,
           "class": "台風(TY)",
           "pressureHpa": 970,
@@ -20,33 +20,33 @@
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-11-05T03:00:00+09:00",
-          "lat": 26.9,
-          "lon": 138.7,
+          "time": "2026-11-05T12:00:00+09:00",
+          "lat": 29,
+          "lon": 140.4,
           "class": "台風(STS)",
           "pressureHpa": 975,
-          "locationText": "日本の南",
+          "locationText": "父島の北西約280km",
           "forecastRadiusKm": 45
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-11-05T15:00:00+09:00",
-          "lat": 29.8,
-          "lon": 141.1,
+          "time": "2026-11-06T00:00:00+09:00",
+          "lat": 33.2,
+          "lon": 145.3,
           "class": "台風(STS)",
           "pressureHpa": 980,
-          "locationText": "父島の北北西約320km",
+          "locationText": "日本の東",
           "forecastRadiusKm": 80
         },
         {
-          "timeLabel": "予報　４８時間後",
-          "time": "2026-11-06T15:00:00+09:00",
-          "lat": 41.9,
-          "lon": 156.3,
+          "timeLabel": "予報　４５時間後",
+          "time": "2026-11-06T21:00:00+09:00",
+          "lat": 45.6,
+          "lon": 161.8,
           "class": "温帯低気圧(LOW)",
           "pressureHpa": 976,
-          "locationText": "日本のはるか東",
-          "forecastRadiusKm": 185
+          "locationText": "千島の東",
+          "forecastRadiusKm": 155
         }
       ]
     }
