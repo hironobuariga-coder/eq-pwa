@@ -1,18 +1,18 @@
 {
-  "generated": "2026-11-09 05:32:01+09:00",
+  "generated": "2026-11-09 08:58:37+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "CEMPAKA",
       "nameKana": "チャンパカ",
       "number": "2632",
-      "reportTime": "2026-11-09T03:45:00+09:00",
+      "reportTime": "2026-11-09T06:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-11-09T03:00:00+09:00",
-          "lat": 23.2,
-          "lon": 135.8,
+          "time": "2026-11-09T06:00:00+09:00",
+          "lat": 23.5,
+          "lon": 135.6,
           "class": "台風(TY)",
           "pressureHpa": 970,
           "locationText": "日本の南",
@@ -20,9 +20,9 @@
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-11-09T15:00:00+09:00",
-          "lat": 23.6,
-          "lon": 134.5,
+          "time": "2026-11-09T18:00:00+09:00",
+          "lat": 23.8,
+          "lon": 134.9,
           "class": "台風(TY)",
           "pressureHpa": 955,
           "locationText": "日本の南",
@@ -30,16 +30,16 @@
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-11-10T03:00:00+09:00",
-          "lat": 23.9,
-          "lon": 135.7,
+          "time": "2026-11-10T06:00:00+09:00",
+          "lat": 24.2,
+          "lon": 136.6,
           "class": "台風(TY)",
           "pressureHpa": 950,
           "locationText": "日本の南",
           "forecastRadiusKm": 65
         },
         {
-          "timeLabel": "予報　４８時間後",
+          "timeLabel": "予報　４５時間後",
           "time": "2026-11-11T03:00:00+09:00",
           "lat": 24.9,
           "lon": 141.7,
@@ -49,7 +49,7 @@
           "forecastRadiusKm": 155
         },
         {
-          "timeLabel": "予報　７２時間後",
+          "timeLabel": "予報　６９時間後",
           "time": "2026-11-12T03:00:00+09:00",
           "lat": 25.4,
           "lon": 148.2,
@@ -59,7 +59,7 @@
           "forecastRadiusKm": 300
         },
         {
-          "timeLabel": "予報　９６時間後",
+          "timeLabel": "予報　９３時間後",
           "time": "2026-11-13T03:00:00+09:00",
           "lat": 24.1,
           "lon": 151,
@@ -69,7 +69,7 @@
           "forecastRadiusKm": 370
         },
         {
-          "timeLabel": "予報　１２０時間後",
+          "timeLabel": "予報　１１７時間後",
           "time": "2026-11-14T03:00:00+09:00",
           "lat": 22.9,
           "lon": 150,
