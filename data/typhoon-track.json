@@ -1,18 +1,18 @@
 {
-  "generated": "2026-11-09 14:51:23+09:00",
+  "generated": "2026-11-10 00:08:04+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "CEMPAKA",
       "nameKana": "チャンパカ",
       "number": "2632",
-      "reportTime": "2026-11-09T12:45:00+09:00",
+      "reportTime": "2026-11-09T21:50:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-11-09T12:00:00+09:00",
-          "lat": 23.9,
-          "lon": 135,
+          "time": "2026-11-09T21:00:00+09:00",
+          "lat": 24.4,
+          "lon": 135.4,
           "class": "台風(TY)",
           "pressureHpa": 980,
           "locationText": "日本の南",
@@ -20,63 +20,53 @@
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-11-10T00:00:00+09:00",
-          "lat": 24.2,
-          "lon": 135.7,
+          "time": "2026-11-10T09:00:00+09:00",
+          "lat": 24.8,
+          "lon": 137.7,
           "class": "台風(TY)",
           "pressureHpa": 970,
           "locationText": "日本の南",
-          "forecastRadiusKm": 55
+          "forecastRadiusKm": 65
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-11-10T12:00:00+09:00",
-          "lat": 24.7,
-          "lon": 138.3,
+          "time": "2026-11-10T21:00:00+09:00",
+          "lat": 25.5,
+          "lon": 141.3,
           "class": "台風(TY)",
-          "pressureHpa": 960,
-          "locationText": "日本の南",
-          "forecastRadiusKm": 80
+          "pressureHpa": 975,
+          "locationText": "父島の南南西約200km",
+          "forecastRadiusKm": 95
         },
         {
-          "timeLabel": "予報　４５時間後",
-          "time": "2026-11-11T09:00:00+09:00",
-          "lat": 25.8,
-          "lon": 144.5,
-          "class": "台風(TY)",
-          "pressureHpa": 970,
-          "locationText": "父島の東南東約270km",
-          "forecastRadiusKm": 185
-        },
-        {
-          "timeLabel": "予報　６９時間後",
-          "time": "2026-11-12T09:00:00+09:00",
-          "lat": 26.2,
-          "lon": 151.4,
+          "timeLabel": "予報　４８時間後",
+          "time": "2026-11-11T21:00:00+09:00",
+          "lat": 27.4,
+          "lon": 150.3,
           "class": "台風(STS)",
           "pressureHpa": 990,
+          "locationText": "南鳥島近海",
+          "forecastRadiusKm": 210
+        },
+        {
+          "timeLabel": "予報　７２時間後",
+          "time": "2026-11-12T21:00:00+09:00",
+          "lat": 27,
+          "lon": 158.3,
+          "class": "台風(TS)",
+          "pressureHpa": 1002,
           "locationText": "南鳥島近海",
           "forecastRadiusKm": 300
         },
         {
-          "timeLabel": "予報　９３時間後",
-          "time": "2026-11-13T09:00:00+09:00",
-          "lat": 24.5,
-          "lon": 154.9,
-          "class": "台風(TS)",
-          "pressureHpa": 1000,
-          "locationText": "南鳥島近海",
-          "forecastRadiusKm": 370
-        },
-        {
-          "timeLabel": "予報　１１７時間後",
-          "time": "2026-11-14T09:00:00+09:00",
-          "lat": 24.6,
-          "lon": 156.2,
+          "timeLabel": "予報　９６時間後",
+          "time": "2026-11-13T21:00:00+09:00",
+          "lat": 25.9,
+          "lon": 159.3,
           "class": "熱帯低気圧(TD)",
           "pressureHpa": 1008,
           "locationText": "南鳥島近海",
-          "forecastRadiusKm": 460
+          "forecastRadiusKm": 370
         }
       ]
     }
