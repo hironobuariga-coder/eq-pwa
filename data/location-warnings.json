@@ -1,13 +1,18 @@
 {
-  "generated": "2026-11-10 22:03:22+09:00",
+  "generated": "2026-11-11 05:26:16+09:00",
   "locations": {
-    "higashi_rc": {
-      "label": "東RC",
-      "cityPrefix": "川崎市",
+    "naka_rc": {
+      "label": "中RC",
+      "cityPrefix": "稲沢市",
       "areas": [
         {
-          "area": "川崎市",
-          "warnings": []
+          "area": "稲沢市",
+          "warnings": [
+            {
+              "name": "乾燥注意報",
+              "status": "発表"
+            }
+          ]
         }
       ]
     },
