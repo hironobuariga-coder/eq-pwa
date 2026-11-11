@@ -1,21 +1,6 @@
 {
-  "generated": "2026-11-11 09:46:41+09:00",
+  "generated": "2026-11-11 16:15:05+09:00",
   "locations": {
-    "naka_rc": {
-      "label": "中RC",
-      "cityPrefix": "稲沢市",
-      "areas": [
-        {
-          "area": "稲沢市",
-          "warnings": [
-            {
-              "name": "乾燥注意報",
-              "status": "発表"
-            }
-          ]
-        }
-      ]
-    },
     "nishi_rc": {
       "label": "西RC",
       "cityPrefix": "三田市",

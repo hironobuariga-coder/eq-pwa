@@ -1,38 +1,38 @@
 {
-  "generated": "2026-11-11 09:46:41+09:00",
+  "generated": "2026-11-11 16:15:05+09:00",
   "active": true,
   "typhoons": [
     {
       "name": "CEMPAKA",
       "nameKana": "チャンパカ",
       "number": "2632",
-      "reportTime": "2026-11-11T09:45:00+09:00",
+      "reportTime": "2026-11-11T15:45:00+09:00",
       "track": [
         {
           "timeLabel": "実況",
-          "time": "2026-11-11T09:00:00+09:00",
-          "lat": 27.7,
-          "lon": 146.6,
+          "time": "2026-11-11T15:00:00+09:00",
+          "lat": 28.8,
+          "lon": 149.5,
           "class": "台風(TY)",
           "pressureHpa": 980,
-          "locationText": "小笠原近海",
+          "locationText": "南鳥島近海",
           "forecastRadiusKm": null
         },
         {
           "timeLabel": "予報　１２時間後",
-          "time": "2026-11-11T21:00:00+09:00",
-          "lat": 29.2,
-          "lon": 152.5,
-          "class": "台風(STS)",
+          "time": "2026-11-12T03:00:00+09:00",
+          "lat": 31,
+          "lon": 156.3,
+          "class": "温帯低気圧(LOW)",
           "pressureHpa": 990,
-          "locationText": "南鳥島近海",
+          "locationText": "日本のはるか東",
           "forecastRadiusKm": 85
         },
         {
           "timeLabel": "予報　２４時間後",
-          "time": "2026-11-12T09:00:00+09:00",
-          "lat": 31.4,
-          "lon": 159.7,
+          "time": "2026-11-12T15:00:00+09:00",
+          "lat": 36.2,
+          "lon": 166,
           "class": "温帯低気圧(LOW)",
           "pressureHpa": 992,
           "locationText": "日本のはるか東",
