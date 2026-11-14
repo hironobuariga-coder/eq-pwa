@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-14 16:26:52+09:00",
+  "generated": "2026-11-14 23:24:11+09:00",
   "locations": {
     "nishi_rc": {
       "label": "西RC",
@@ -9,8 +9,8 @@
           "area": "三田市",
           "warnings": [
             {
-              "name": "濃霧注意報",
-              "status": "解除"
+              "name": "雷注意報",
+              "status": "発表"
             }
           ]
         }
@@ -24,8 +24,8 @@
           "area": "川西市",
           "warnings": [
             {
-              "name": "濃霧注意報",
-              "status": "解除"
+              "name": "雷注意報",
+              "status": "発表"
             }
           ]
         }
