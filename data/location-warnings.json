@@ -1,13 +1,38 @@
 {
-  "generated": "2026-11-17 03:23:52+09:00",
+  "generated": "2026-11-17 10:56:14+09:00",
   "locations": {
+    "higashi_rc": {
+      "label": "東RC",
+      "cityPrefix": "川崎市",
+      "areas": [
+        {
+          "area": "川崎市",
+          "warnings": []
+        }
+      ]
+    },
+    "naka_rc": {
+      "label": "中RC",
+      "cityPrefix": "稲沢市",
+      "areas": [
+        {
+          "area": "稲沢市",
+          "warnings": []
+        }
+      ]
+    },
     "nishi_rc": {
       "label": "西RC",
       "cityPrefix": "三田市",
       "areas": [
         {
           "area": "三田市",
-          "warnings": []
+          "warnings": [
+            {
+              "name": "濃霧注意報",
+              "status": "解除"
+            }
+          ]
         }
       ]
     },
@@ -17,7 +42,12 @@
       "areas": [
         {
           "area": "川西市",
-          "warnings": []
+          "warnings": [
+            {
+              "name": "濃霧注意報",
+              "status": "解除"
+            }
+          ]
         }
       ]
     },
