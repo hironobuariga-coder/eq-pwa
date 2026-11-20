@@ -1,10 +1,10 @@
 {
-  "generated": "2026-11-19 16:34:41+09:00",
+  "generated": "2026-11-20 21:46:11+09:00",
   "source": "jma_xml",
-  "time": "2026/11/19 09:38 (JST)",
+  "time": "2026/11/20 13:49 (JST)",
   "epicenter": "熊本県天草・芦北地方",
   "depth": "約10km",
-  "magnitude": "M3.6",
+  "magnitude": "M3.9",
   "maxShindo": "3",
   "tsunami": "この地震による津波の心配はありません。",
   "shindoAreas": [
@@ -13,14 +13,19 @@
       "area": "熊本県"
     },
     {
+      "level": "2",
+      "area": "鹿児島県"
+    },
+    {
       "level": "1",
-      "area": "長崎県・鹿児島県"
+      "area": "長崎県・宮崎県"
     }
   ],
   "alertLevel": "normal",
   "affectedPrefs": [
     "熊本県",
+    "鹿児島県",
     "長崎県",
-    "鹿児島県"
+    "宮崎県"
   ]
 }
