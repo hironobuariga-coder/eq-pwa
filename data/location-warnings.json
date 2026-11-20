@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20 21:46:11+09:00",
+  "generated": "2026-11-21 05:46:27+09:00",
   "locations": {
     "higashi_rc": {
       "label": "東RC",
@@ -7,16 +7,7 @@
       "areas": [
         {
           "area": "川崎市",
-          "warnings": [
-            {
-              "name": "強風注意報",
-              "status": "継続"
-            },
-            {
-              "name": "波浪注意報",
-              "status": "継続"
-            }
-          ]
+          "warnings": []
         }
       ]
     },
@@ -26,7 +17,12 @@
       "areas": [
         {
           "area": "稲沢市",
-          "warnings": []
+          "warnings": [
+            {
+              "name": "乾燥注意報",
+              "status": "発表"
+            }
+          ]
         }
       ]
     },
@@ -39,6 +35,10 @@
           "warnings": [
             {
               "name": "強風注意報",
+              "status": "継続"
+            },
+            {
+              "name": "乾燥注意報",
               "status": "継続"
             }
           ]
@@ -55,6 +55,10 @@
             {
               "name": "強風注意報",
               "status": "継続"
+            },
+            {
+              "name": "乾燥注意報",
+              "status": "継続"
             }
           ]
         }
@@ -66,12 +70,7 @@
       "areas": [
         {
           "area": "千代田区",
-          "warnings": [
-            {
-              "name": "強風注意報",
-              "status": "継続"
-            }
-          ]
+          "warnings": []
         }
       ]
     },
