@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21 17:51:42+09:00",
+  "generated": "2026-11-22 01:35:22+09:00",
   "locations": {
     "higashi_rc": {
       "label": "東RC",
@@ -11,6 +11,21 @@
         }
       ]
     },
+    "naka_rc": {
+      "label": "中RC",
+      "cityPrefix": "稲沢市",
+      "areas": [
+        {
+          "area": "稲沢市",
+          "warnings": [
+            {
+              "name": "乾燥注意報",
+              "status": "解除"
+            }
+          ]
+        }
+      ]
+    },
     "nishi_rc": {
       "label": "西RC",
       "cityPrefix": "三田市",
@@ -18,10 +33,6 @@
         {
           "area": "三田市",
           "warnings": [
-            {
-              "name": "強風注意報",
-              "status": "継続"
-            },
             {
               "name": "乾燥注意報",
               "status": "継続"
@@ -37,10 +48,6 @@
         {
           "area": "川西市",
           "warnings": [
-            {
-              "name": "強風注意報",
-              "status": "継続"
-            },
             {
               "name": "乾燥注意報",
               "status": "継続"
