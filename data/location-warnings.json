@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-22 01:35:22+09:00",
+  "generated": "2026-11-22 06:51:30+09:00",
   "locations": {
     "higashi_rc": {
       "label": "東RC",
@@ -7,20 +7,10 @@
       "areas": [
         {
           "area": "川崎市",
-          "warnings": []
-        }
-      ]
-    },
-    "naka_rc": {
-      "label": "中RC",
-      "cityPrefix": "稲沢市",
-      "areas": [
-        {
-          "area": "稲沢市",
           "warnings": [
             {
               "name": "乾燥注意報",
-              "status": "解除"
+              "status": "継続"
             }
           ]
         }
@@ -62,7 +52,12 @@
       "areas": [
         {
           "area": "千代田区",
-          "warnings": []
+          "warnings": [
+            {
+              "name": "乾燥注意報",
+              "status": "継続"
+            }
+          ]
         }
       ]
     },
