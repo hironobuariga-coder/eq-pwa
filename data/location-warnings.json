@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-25 12:38:41+09:00",
+  "generated": "2026-11-25 22:29:36+09:00",
   "locations": {
     "higashi_rc": {
       "label": "東RC",
@@ -13,16 +13,6 @@
               "status": "継続"
             }
           ]
-        }
-      ]
-    },
-    "naka_rc": {
-      "label": "中RC",
-      "cityPrefix": "稲沢市",
-      "areas": [
-        {
-          "area": "稲沢市",
-          "warnings": []
         }
       ]
     },
@@ -70,11 +60,6 @@
           ]
         }
       ]
-    },
-    "kumamoto_qct": {
-      "label": "熊Q",
-      "cityPrefix": "熊本市中央区",
-      "areas": []
     }
   }
 }
